@@ -1,40 +1,73 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../App.css';
-import dashboard from './dashboard';
+import Dashboard from './dashboard';
 
-function register() {
+
+function Register() {
+  
+  const [User, setUser] = useState("");
+  const [Email, setEmail] = useState("");
+  const [Password, setPassword] = useState("");
+  const [IsSignIn, setIsSignIn] = useState(false);
+
+  const NameValue = (event) => {
+  event.preventDefault();
+  setUser(event.target.value);
+  };
+
+  const EmailValue = (event) => {
+  setEmail(event.target.value);
+  };
+
+const PasswordValue = (event) => {
+  event.preventDefault();
+  setPassword(event.target.value);
+  };
+
+  const OnSubmit = (event) => {
+    event.preventDefault();
+    setIsSignIn(true);
+  }
 	return (
 		<>
-
-		<br/ ><br/ ><br/ >
-	<form action="./dashboard">
-  <div class="container">
+{IsSignIn ? (
+  <>
+  <br/>
+        <Dashboard User={User}/>
+</>
+      ) : (
+        <>
+ <br/><br/><br/>
+  <form>
+  <div className="container">
     <h1>Sign Up</h1>
     <p>Please fill in this form to create an account.</p>
   <br/ >
 
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required />
+    <label htmlFor="email"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" required onChange={NameValue} value={User}/>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required />
+    <label htmlFor="psw"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required onChange={EmailValue} value={Email} />
 
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" required />
+    <label htmlFor="psw-repeat"><b>Password</b></label>
+    <input type="password" placeholder="Password" name="password" required onChange={PasswordValue} value={Password} />
 
-    <label>
-      <input type="checkbox" checked="checked" name="remember" /> Remember me
-    </label>
 
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+    <p>By creating an account you agree to our <a href="./">Terms & Privacy</a>.</p>
 
-    <div class="clearfix">
-      <button type="button" class="cancelbtn">Cancel</button>
-      <button onChange={<dashboard name="Akshay"/>} type="submit" class="signupbtn">Sign Up</button>
+    <div className="clearfix">
+      <button type="button" className="cancelbtn">Cancel</button>
+      <button type="submit" className="signupbtn" onClick={OnSubmit} >Sign Up</button>
     </div>
   </div></form>
+</>
+      )}
+
+
+		
 		</>
 		)
 };
 
-export default register;
+export default Register;
