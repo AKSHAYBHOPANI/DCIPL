@@ -26,8 +26,31 @@ const PasswordValue = (event) => {
 
   const OnSubmit = (event) => {
     event.preventDefault();
-    setIsSignIn(true);
+    onSubmitSignIn()
   }
+
+  const onSubmitSignIn = () => {
+    fetch('http://localhost:3011/register', {
+      method: 'post',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        email: Email,
+        password: Password,
+        name: User
+      })
+    })
+      .then(response => response.json())
+      .then(user => {
+        if (user) {
+          console.log(user)
+          setIsSignIn(true);
+          /*this.props.loadUser(user)
+          this.props.onRouteChange('home');*/
+        }
+      })
+  }
+
+
 	return (
 		<>
 {IsSignIn ? (
