@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Jost", sans-serif;
+    background-color: black;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 39px;
+}
+
+.logo {
+    position: absolute;
+    width: 130px;
+    height: 127px;
+    left: 0px;
+    top: 0px;
+}
+
+.navbar {
+    position: absolute;
+    text-align: right;
+    width: 700px;
+    height: 39px;
+    left: 620px;
+    top: 35px;
+    word-spacing: 2rem;
+    transition: 0.65 ease;
+}
+
+.about {
+    position: absolute;
+    left: 545px;
+    top: 120px;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+p {
+    position: absolute;
+    width: 1327px;
+    height: 340px;
+    color: white;
+    left: 15px;
+    top: 250px;
+}
+
+.p1 {
+    position: absolute;
+    float: center;
+    color: white;
+    top: 700px;
+    left: 470px;
+}
+
+.image {
+    position: absolute;
+    width: 1036px;
+    height: 447px;
+    left: 193px;
+    top: 900px;
+}
+
+.banner {
+    position: absolute;
+    background: white;
+}
+
+.footer {
+    position: absolute;
+    text-decoration: none;
+    float: left;
+    right: 900px;
+    top: 1445px;
+    word-spacing: 2rem;
+    height: 10px;
+}
+
+.fimage {
+    position: absolute;
+    width: 40%;
+    top: 1445px;
+    left: 1150px;
+    bottom: 200px;
+    right: 10px;
+}
