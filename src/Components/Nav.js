@@ -13,8 +13,8 @@ function Nav() {
   <label className="menu-icon" htmlFor="menu-btn"><span className="navicon"></span></label>
   <ul className="menu">
   <li><Link to="/">Home</Link></li>
-    <li><Link to="/">About</Link></li>
-    <li><Link to="./carrers">Careers</Link></li>
+    <li><Link to="/about">About</Link></li>
+    <li><Link to="./careers">Careers</Link></li>
     <li><Link to="./login">Login</Link></li>
     <li><Link to="./register">Register</Link></li>
   </ul>
