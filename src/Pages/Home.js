@@ -1,7 +1,7 @@
 import React from 'react';
 import './CSS/Home.css';
 import banner from "../assests/banner.png";
-
+import { Link } from "react-router-dom";
 
 function Home() {
 	return (
@@ -13,7 +13,7 @@ function Home() {
         <div className="area-text">
         <h1>YOUR SMART FINANCIAL PLANNER</h1></div>
         <div className="btn">
-        <button button type="submit">PLAY NOW</button>
+        <button type="submit" to="./register"><Link to="./register">PLAN NOW</Link></button>
         </div>
 	
 {/*Features Section*/}
