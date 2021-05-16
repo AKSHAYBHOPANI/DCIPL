@@ -32,6 +32,8 @@ const onSubmitSignIn = () => {
         if (user.id) {
           setName(user.name)
           setIsSignIn(true);
+        } else {
+          alert("Wrong Credentials")
         }
       })
   }

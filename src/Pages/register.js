@@ -40,12 +40,15 @@ const PasswordValue = (event) => {
       })
     })
       .then(response => response.json())
-      .then(user => {
-        if (user) {
-          console.log(user)
+      .then(response => {
+        if (response.ok) {
+          console.log(User)
           setIsSignIn(true);
+          
           /*this.props.loadUser(user)
           this.props.onRouteChange('home');*/
+        } else {
+          alert("Email Already Exists")
         }
       })
   }
@@ -61,30 +64,21 @@ const PasswordValue = (event) => {
       ) : (
         <>
         <main>
- <br/><br/><br/>
-  <form>
-  <div className="container">
-    <h1>Sign Up</h1>
-    <p>Please fill in this form to create an account.</p>
-  <br/ >
-
-    <label htmlFor="email"><b>Name</b></label>
-    <input type="text" placeholder="Enter Name" name="name" required onChange={NameValue} value={User}/>
-
-    <label htmlFor="psw"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required onChange={EmailValue} value={Email} />
-
-    <label htmlFor="psw-repeat"><b>Password</b></label>
-    <input type="password" placeholder="Password" name="password" required onChange={PasswordValue} value={Password} />
-
-
-    <p>By creating an account you agree to our <a href="./">Terms & Privacy</a>.</p>
-
-    <div className="clearfix">
-      <button type="button" className="cancelbtn">Cancel</button>
-      <button type="submit" className="signupbtn" onClick={OnSubmit} >Sign Up</button>
-    </div>
-  </div></form>
+ <div>
+                <div className="logregister_form">  
+                    <h1>Register</h1>
+                    <form action="#" method="post">
+                        <br></br>
+                        <input type="text" name="name" placeholder="Name" required onChange={NameValue} value={User}></input><br></br>
+                        <input type="email" name="email" placeholder="E-Mail" required onChange={EmailValue} value={Email}></input><br></br>
+                        <input type="password" name="password" placeholder="Password"  required onChange={PasswordValue} value={Password}></input><br></br>
+                    </form>
+                </div>
+                <div className= "btn-group">
+                    <button type="submit" onClick={OnSubmit}>Register</button>
+                    
+                </div>
+            </div>
   </main>
 </>
       )}

@@ -75,9 +75,7 @@ function Dashboard({User}) {
 <img src={line3} alt="line3"/>
 <p>23%</p>
 </div>
-<div className="line4">
-<img src={line4} alt="line4" />
-</div>
+
 {/*footer*/}
 <div className="rect14">
 </div>
