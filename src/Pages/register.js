@@ -60,6 +60,7 @@ const PasswordValue = (event) => {
 </>
       ) : (
         <>
+        <main>
  <br/><br/><br/>
   <form>
   <div className="container">
@@ -84,6 +85,7 @@ const PasswordValue = (event) => {
       <button type="submit" className="signupbtn" onClick={OnSubmit} >Sign Up</button>
     </div>
   </div></form>
+  </main>
 </>
       )}
 

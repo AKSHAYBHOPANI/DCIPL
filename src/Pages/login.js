@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import '../App.css';
 import './CSS/login.css';
-
+import Dashboard from './dashboard';
 
 function Login() {
-
+  const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
   const [IsSignIn, setIsSignIn] = useState(false);
@@ -19,7 +19,7 @@ const PasswordValue = (event) => {
   };
 
 const onSubmitSignIn = () => {
-    fetch('http://localhost:3000/signin', {
+    fetch('http://localhost:3011/signin', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -30,23 +30,28 @@ const onSubmitSignIn = () => {
       .then(response => response.json())
       .then(user => {
         if (user.id) {
-          this.props.loadUser(user)
-          this.props.onRouteChange('home');
+          setName(user.name)
           setIsSignIn(true);
         }
       })
   }
 
 	return (
-		<>
-		<main>
+    <>
+    {IsSignIn ? (
+  <>
+  <br/>
+        <Dashboard User={Name}/>
+</>
+      ) : (
+  <main>
             <div>
                 <div className="logregister_form">  
                     <h1>Register/Login</h1>
                     <form action="#" method="post">
                         <br></br>
-                        <input type="email" name="email" placeholder="E-Mail" name="email" required onChange={EmailValue} value={Email}></input><br></br>
-                        <input type="password" name="password" placeholder="Password" name="password" required onChange={PasswordValue} value={Password}></input><br></br>
+                        <input type="email" name="email" placeholder="E-Mail" required onChange={EmailValue} value={Email}></input><br></br>
+                        <input type="password" name="password" placeholder="Password"  required onChange={PasswordValue} value={Password}></input><br></br>
                     </form>
                 </div>
                 <div className= "btn-group">
@@ -55,7 +60,9 @@ const onSubmitSignIn = () => {
                 </div>
             </div>
         </main>
+        )}
 		</>
+
 		)
 };
 

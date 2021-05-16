@@ -30,20 +30,8 @@ function Dashboard({User}) {
         <>
 	    <div className="area">
         
-		 <div className="dashboard">
-        </div>
-		
-<div className="main">
-  <ul>
-          <li class="active"><a href="#">Home</a></li>
-          <li> <a href="#">About</a></li>
-          <li> <a href="#">Carrers</a></li>
-          <li> <a href="#">Register </a> </li>
-          <li> <a href="#">Login </a> </li>
-      </ul>
-</div>
 <div className="content">
-<p>Welcome, User. Today is 14 May 2021</p>
+<p>Welcome, {User} Today is {date.toLocaleString()}</p>
 </div>
 <div className="sub">
 <p>Personal Finance Portfolio</p>
