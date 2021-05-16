@@ -1,10 +1,6 @@
 import React from 'react';
 import './CSS/Home.css';
 import banner from "../assests/banner.png";
-import fb from "../assests/FB 1.png";
-import TW from "../assests/TW 1.png";
-import google from "../assests/GM 1.png";
-import ll from "../assests/LLLLLLLL 1.png";
 
 
 function Home() {

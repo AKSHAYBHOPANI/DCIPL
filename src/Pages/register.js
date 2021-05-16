@@ -41,13 +41,14 @@ const PasswordValue = (event) => {
     })
       .then(response => response.json())
       .then(response => {
-        if (response.ok) {
-          console.log(User)
+        if (response.id) {
+          console.log("user")
           setIsSignIn(true);
           
           /*this.props.loadUser(user)
           this.props.onRouteChange('home');*/
         } else {
+          console.log(response)
           alert("Email Already Exists")
         }
       })

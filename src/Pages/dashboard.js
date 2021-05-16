@@ -1,11 +1,9 @@
 import React, { useState , useEffect }  from 'react';
 import './CSS/dash.css';
-import DCIPL_logo from "../assests/DCIPL_logo.jpg";
 import Ellipse from "../assests/Ellipse 1.png";
 import line1 from "../assests/Line 1.png";
 import line2 from "../assests/Line 2.png";
 import line3 from "../assests/Line 3.png";
-import line4 from "../assests/Line 4.png";
 import fb from "../assests/FB 1.png";
 import TW from "../assests/TW 1.png";
 import google from "../assests/GM 1.png";

@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../assests/logo.jpeg';
 import '../App.css';
 import facebook from "../assests/facebook.png";
 import gplus from "../assests/gplus.png";
@@ -12,9 +11,9 @@ function Footer() {
 		
     <footer>      
             <div className="footer-text">
-                <a href="#">Home</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Contact Us</a>
+                <a href="./">Home</a>
+                <a href="./">Privacy Policy</a>
+                <a href="./">Contact Us</a>
             </div>
             <div className="fimage">
                 <img className="img1" src={facebook} alt="fb"></img>
