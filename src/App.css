@@ -2,18 +2,16 @@ body {
   margin: 0;
   font-family: Helvetica, sans-serif;
   background-color: #f4f4f4;
-
 }
 
 a {
-  color:#000000;
+  color: #000;
 }
 
 /* header */
 
 .header {
-  
-  background: #f4f4f4;
+  background-color: #fff;
   box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
   position: fixed;
   width: 100%;
@@ -25,8 +23,7 @@ a {
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background: #f4f4f4;
- 
+  background-color: #fff;
 }
 
 .header li a {
