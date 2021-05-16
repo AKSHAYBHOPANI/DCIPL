@@ -5,6 +5,7 @@ import Home from './Components/Home';
 import login from './Components/login';
 import register from './Components/register';
 import dashboard from './Components/dashboard';
+import Careers from './Components/Careers';
 
 const Main = () => {
   return (
@@ -13,6 +14,7 @@ const Main = () => {
       <Route exact path='/login' component={login}></Route>
       <Route exact path='/register' component={register}></Route>
       <Route exact path='/dashboard' component={dashboard}></Route>
+      <Route exact path='/Careers' component={Careers}></Route>
     </Switch>
   );
 }
