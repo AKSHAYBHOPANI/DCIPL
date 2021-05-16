@@ -1,12 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../App.css';
 import '../login.css';
-import facebook from "../facebook.png";
-import gplus from "../gplus.png";
-import linkedin from "../linkedin.png";
-import twitter from "../twitter.png";
 
-function login() {
+
+function Login() {
+
+  const [Email, setEmail] = useState("");
+  const [Password, setPassword] = useState("");
+  const [IsSignIn, setIsSignIn] = useState(false);
+
+  const EmailValue = (event) => {
+  setEmail(event.target.value);
+  };
+
+const PasswordValue = (event) => {
+  event.preventDefault();
+  setPassword(event.target.value);
+  };
+
+const onSubmitSignIn = () => {
+    fetch('http://localhost:3000/signin', {
+      method: 'post',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        email: Email,
+        password: Password
+      })
+    })
+      .then(response => response.json())
+      .then(user => {
+        if (user.id) {
+          this.props.loadUser(user)
+          this.props.onRouteChange('home');
+          setIsSignIn(true);
+        }
+      })
+  }
+
 	return (
 		<>
 		<main>
@@ -14,14 +44,14 @@ function login() {
                 <div className="logregister_form">  
                     <h1>Register/Login</h1>
                     <form action="#" method="post">
-                        <input type="text" name="name" placeholder="Name"></input><br></br>
-                        <input type="email" name="email" placeholder="E-Mail"></input><br></br>
-                        <input type="password" name="password" placeholder="Password"></input><br></br>
+                        <br></br>
+                        <input type="email" name="email" placeholder="E-Mail" name="email" required onChange={EmailValue} value={Email}></input><br></br>
+                        <input type="password" name="password" placeholder="Password" name="password" required onChange={PasswordValue} value={Password}></input><br></br>
                     </form>
                 </div>
                 <div className= "btn-group">
-                    <button type="submit">Login</button>
-                    <button type="submit">Register</button>
+                    <button type="submit" onClick={onSubmitSignIn}>Login</button>
+                    
                 </div>
             </div>
         </main>
@@ -29,4 +59,4 @@ function login() {
 		)
 };
 
-export default login;
+export default Login;

@@ -134,7 +134,7 @@ a {
 footer{
     position: fixed;
     width: 100%;
-    height: 50px;
+    
     bottom: 0;
     background: rgba(255, 255, 255, 0.95);
     color: black;
@@ -152,10 +152,14 @@ footer{
     top: 13px;
 }
 
+.footer-text {
+ margin-top: 1rem;
 
-.footer-text > a{
-  padding: 1.5rem;
-  font-size: 1rem;
+}
+ 
+.footer-text > a { 
+  padding: 1rem;
+  font-size: 1.5rem;
 
 }
 

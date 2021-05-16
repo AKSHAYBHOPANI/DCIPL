@@ -83,10 +83,11 @@ function Home() {
 </div>
         <div className="pol6">
             <h1>Trusted Platform</h1>
-        </div></div>
+        
+        </div>
+        </div>
 </div>
 </div>
-
 </>
 )
 };
