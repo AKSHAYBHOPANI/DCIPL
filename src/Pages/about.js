@@ -13,7 +13,7 @@ function about() {
        
     <h1 className="about">About Us</h1>
 
-    <p> Creative Solutions backed by potential impactful results 
+    <p className="text"> Creative Solutions backed by potential impactful results 
      At DC & Co., we understand that change is not always easy. Since 2018, we’ve been helping individuals of various classes
     full their economic and financial needs. Our few years of experience have taught us to always make your personal success
     our priority. Our team of experts is ready to help you develop strategies for not only surviving but thriving in the

@@ -14,7 +14,7 @@ h1 {
     color: white;
 }
 
-p {
+.text {
     position: absolute;
     width: 1327px;
     height: 340px;

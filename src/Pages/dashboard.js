@@ -74,30 +74,7 @@ function Dashboard({User}) {
 <p>23%</p>
 </div>
 
-{/*footer*/}
-<div className="rect14">
-</div>
-<div className="fb">
-<img src={fb} alt="fb"/>
-</div>
-<div className="tw">
-<img src={TW} alt="tw"/>
-</div>
-<div className="google">
-<img src={google} alt="GM 1"/>
-</div>
-<div className="ll">
-<img src={ll} alt="LLLLLLLL 1"/>
-</div>
-<div className="home">
-<p>Home</p>
-</div>
-<div className="privacy">
-<p>Privacy Policy</p>
-</div>
-<div className="contact">
-<p>Contact Us</p>
-</div>
+
 </div>
 </>
 
