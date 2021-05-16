@@ -1,35 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Jost", sans-serif;
-    background-color: black;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 27px;
-    line-height: 39px;
-}
-
-.logo {
-    position: absolute;
-    width: 130px;
-    height: 127px;
-    left: 0px;
-    top: 0px;
-}
-
-.navbar {
-    position: absolute;
-    text-align: right;
-    width: 700px;
-    height: 39px;
-    left: 620px;
-    top: 35px;
-    word-spacing: 2rem;
-    transition: 0.65 ease;
-}
-
 .about {
     position: absolute;
     left: 545px;
