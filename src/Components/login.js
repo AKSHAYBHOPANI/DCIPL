@@ -25,19 +25,6 @@ function login() {
                 </div>
             </div>
         </main>
-        <footer>      
-            <div className="footer">
-                <a href="#">Home</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Contact Us</a>
-            </div>
-            <div className="fimage">
-                <img className="img1" src={facebook} alt="fb"></img>
-                <img className="img2" src={gplus} alt="gp"></img>
-                <img className="img3" src={linkedin} alt="ln"></img>
-                <img className="img4" src={twitter} alt="tw"></img>
-            </div>
-        </footer>
 		</>
 		)
 };

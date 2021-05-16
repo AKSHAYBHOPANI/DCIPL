@@ -25,6 +25,7 @@ function Home() {
   <div className="fea">
     <h1>Features</h1>
     </div>
+    <div className="center" >
     <div className="rect1">
       <h1>INVESTMENT PLANNING</h1>
         </div>
@@ -82,25 +83,8 @@ function Home() {
 </div>
         <div className="pol6">
             <h1>Trusted Platform</h1>
-        </div>
+        </div></div>
 </div>
-</div>
-<div className="footer">
-<h1>Home</h1>
-<h2>Privacy Policy</h2>
-<h3>Contact Us</h3>
-</div>
-<div className="fb">
-<img src={fb} alt="fb"/>
-</div>
-<div className="tw">
-<img src={TW} alt="tw"/>
-</div>
-<div className="google">
-<img src={google} alt="GM 1"/>
-</div>
-<div className="ll">
-<img src={ll} alt="LLLLLLLL 1"/>
 </div>
 
 </>
