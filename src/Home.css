@@ -27,8 +27,8 @@
 
 .nav-area{
 	position: relative;
-	width: 1600px;
-	height:1000px;
+  width: 1440px;
+  height:1000px;
 	left: 0px;
 	top: 0px;
 	border-radius: 0px;
@@ -527,37 +527,42 @@
 }
 .fb
 {
+
 	position: absolute;
 	width: 61px;
 	height: 48px;
 	left: 1069px;
 	top: 1630px;
 	
+
 }
 .tw
 {
 	position: absolute;
-	width: 62px;
+  width: 62px;
 	height: 45px;
 	left: 1138px;
 	top: 1630px;
 	
+
 }
 .google
 {
 	position: absolute;
-	width: 61px;
+  width: 61px;
 	height: 47px;
 	left: 1208px;
 	top: 1630px;
+
 
 }
 .ll
 {
 	position: absolute;
-	width: 61px;
+  width: 61px;
 	height: 47px;
 	left: 1280px;
 	top: 1630px;
 	
 }
+

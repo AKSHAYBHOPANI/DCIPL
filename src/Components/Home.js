@@ -6,9 +6,6 @@ import tw from "../TW 1.jpg";
 import google from "../GM 1.jpg";
 import ll from "../LL1.jpg";
 
-
-
-
 function Home() {
 	return (
 		<>
@@ -21,10 +18,9 @@ function Home() {
         <div className="btn">
         <button button type="submit">PLAY NOW</button>
         </div>
-    
-{/*Features Section*/}
 
-<div className="nav-area">
+{/*Features Section*/}
+  <div className="nav-area">
   <div className="fea">
     <h1>Features</h1>
     </div>
@@ -105,6 +101,8 @@ function Home() {
 
 		</>
 		)
+
+
 };
 
 export default Home;

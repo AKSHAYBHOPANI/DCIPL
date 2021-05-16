@@ -1,0 +1,109 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: Jost;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Jost';
+    font-size: 15px;
+    text-decoration: none;
+}
+main{
+    background-image: url(./bg.jpg);
+    position: absolute;
+    width: 1366px;
+    height: 660px;
+    left: 0px;
+    top: 58px;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.logregister_form{
+    position: relative;
+    top:30%;
+    left:43%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+}
+.logregister_form h1{
+    position: absolute;
+    left: 35%;
+    right: 0%;
+    top: 75%;
+    bottom: 0%;
+    font-family: Jost;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    color: #FFFFFF;
+}
+.logregister_form input{
+    position: relative;
+    width: 500px;
+    height: 45px;
+    left: -50px;
+    top: 240px;
+    font-size: 20px;
+    padding: 20px 15px;
+    font-weight:450;
+    margin:15px 0;
+    border:0;
+    border-radius: 10px;
+}
+.btn-group button{
+    position: relative;
+    left:31.5%;
+    top: 120px;
+    float:left;
+    width: 150px;
+    height: 45px;
+    font-size: 18px;
+    font-weight: 400;
+    border:0;
+    margin: 20px 10px;
+    background-color: black;
+    color: white;
+}
+footer{
+    position: fixed;
+    width: 1366px;
+    height: 50px;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    color: black;
+}
+.footer a{
+    position: relative;
+    font-weight: 450;
+    font-size: 18px;
+    left: 14px;
+    color:black;
+    text-decoration: none;
+    padding-right: 20px;
+    padding-left: 20px;
+    top: 13px;
+}
+
+.fimage{
+    position: absolute;
+    top: 5px;
+    left: 1120px;
+}
+.img1{
+    width: 51px;
+    height: 38px;
+}
+.img2{ 
+    width: 51px;
+    height: 37px;
+}
+.img3{    
+    width: 51px;
+    height: 37px;
+}
+
+.img4{   
+    width: 52px;
+    height: 35px;
+}
