@@ -70,7 +70,7 @@ body {
 	border-radius: 15px;
 	background: rgba(255 ,255, 255,0.95);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	background-image:url(rect1.jpg);
+	background-image:url(../../assests/rect1.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -115,7 +115,7 @@ body {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 15px;
 	background-color: #fff;
-	background-image:url(rect2.jpg);
+	background-image:url(../../assests/rect2.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	
@@ -158,7 +158,7 @@ body {
 	border-radius: 15px;
 	background: rgba(255 ,255, 255,0.95);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	background-image:url(retirement%202.png);
+	background-image:url(../../assests/retirement%202.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	
@@ -201,7 +201,7 @@ body {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image:url(finance%201.jpg);
+	background-image:url(../../assests/finance%201.jpg);
 	border-radius: 15px;
 }
 .rect4 h1{
@@ -243,7 +243,7 @@ body {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image:url(rect5.jpg);
+	background-image:url(../../assests/rect5.jpg);
 	border-radius: 15px;
 }
 .rect5 h1{
@@ -284,7 +284,7 @@ body {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image: url(wealth%201.jpg);
+	background-image: url(../../assests/wealth%201.jpg);
 	border-radius: 15px;
 }
 .rect6 h1{
@@ -347,7 +347,7 @@ body {
 	background-size:cover;
 	background-position:center;
 	background-repeat:no-repeat;
-	background-image:url(Polygon%201.jpg);
+	background-image:url(../../assests/Polygon%201.jpg);
 	}
 .pol1 h1{
 	position: absolute;
@@ -371,7 +371,7 @@ body {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image:url(Polygon%202.jpg);
+	background-image:url(../../assests/Polygon%202.jpg);
 	}
 .pol2 h1{
 	position: absolute;
@@ -395,7 +395,7 @@ body {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image:url(Polygon%203.png);
+	background-image:url(../../assests/Polygon%203.png);
 	}
 .pol3 h1{
 	position: absolute;
@@ -419,7 +419,7 @@ body {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image:url(Polygon%206.jpg);
+	background-image:url(../../assests/Polygon%206.jpg);
 	}
 .pol4 h1{
 	position: absolute;
@@ -443,7 +443,7 @@ body {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image:url(Polygon%205.jpg);
+	background-image:url(../../assests/Polygon%205.jpg);
 	}
 .pol5 h1{
 	position: absolute;
@@ -467,7 +467,7 @@ body {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image:url(Polygon%206.jpg);
+	background-image:url(../../assests/Polygon%206.jpg);
 	}
 .pol6 h1{
 	position: absolute;

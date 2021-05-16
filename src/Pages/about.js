@@ -1,11 +1,11 @@
 import React from 'react';
 import 'about.css';
-import logo from '../logo.jpeg';
-import facebook from '../facebook.png';
-import google from '../g+.png';
-import twitter from '../twitter.png';
-import linkedln from '../linkedln.png';
-import image from '../image.png';
+import logo from '../assests/logo.jpeg';
+import facebook from '../assests/facebook.png';
+import google from '../assests/g+.png';
+import twitter from '../assests/twitter.png';
+import linkedln from '../assests/linkedln.png';
+import image from '../assests/image.png';
 
 
 function about() {

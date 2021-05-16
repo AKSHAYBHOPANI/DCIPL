@@ -1,15 +1,15 @@
 import React, { useState , useEffect }  from 'react';
-import '../dash.css';
-import DCIPL_logo from "../pics/DCIPL_logo.jpg";
-import Ellipse from "../pics/Ellipse 1.png";
-import line1 from "../pics/Line 1.png";
-import line2 from "../pics/Line 2.png";
-import line3 from "../pics/Line 3.png";
-import line4 from "../pics/Line 4.png";
-import fb from "../pics/FB 1.png";
-import TW from "../pics/TW 1.png";
-import google from "../pics/GM 1.png";
-import ll from "../pics/LLLLLLLL 1.png";
+import './CSS/dash.css';
+import DCIPL_logo from "../assests/DCIPL_logo.jpg";
+import Ellipse from "../assests/Ellipse 1.png";
+import line1 from "../assests/Line 1.png";
+import line2 from "../assests/Line 2.png";
+import line3 from "../assests/Line 3.png";
+import line4 from "../assests/Line 4.png";
+import fb from "../assests/FB 1.png";
+import TW from "../assests/TW 1.png";
+import google from "../assests/GM 1.png";
+import ll from "../assests/LLLLLLLL 1.png";
 
 
 function Dashboard({User}) {

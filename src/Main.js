@@ -1,10 +1,10 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import Home from './Components/Home';
-import login from './Components/login';
-import register from './Components/register';
-import dashboard from './Components/dashboard';
+import Home from './Pages/Home';
+import login from './Pages/login';
+import register from './Pages/register';
+import dashboard from './Pages/dashboard';
 
 const Main = () => {
   return (

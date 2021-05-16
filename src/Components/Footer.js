@@ -1,10 +1,10 @@
 import React from 'react';
-import logo from '../logo.jpeg';
+import logo from '../assests/logo.jpeg';
 import '../App.css';
-import facebook from "../facebook.png";
-import gplus from "../gplus.png";
-import linkedin from "../linkedin.png";
-import twitter from "../twitter.png";
+import facebook from "../assests/facebook.png";
+import gplus from "../assests/gplus.png";
+import linkedin from "../assests/linkedin.png";
+import twitter from "../assests/twitter.png";
 
 function Footer() {
 	return (
