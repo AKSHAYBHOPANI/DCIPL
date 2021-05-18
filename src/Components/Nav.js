@@ -22,7 +22,7 @@ function Nav({IsSignIn, setIsSignIn}) {
     <li><a href="./">Logout</a></li>
 
   </ul>
-}
+
 </header>
 </>
       ) : (
