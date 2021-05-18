@@ -4,22 +4,45 @@ import '../App.css';
 
 import { Link } from "react-router-dom";
 
-function Nav() {
+function Nav({IsSignIn, setIsSignIn}) {
+  
 	return (
+<>
+    {IsSignIn ? (
+
+  <>
+  <header className="header">
+  <a href="./"><img src={logo} className="logo" alt=""></img></a>
+  <input className="menu-btn" type="checkbox" id="menu-btn" />
+  <label className="menu-icon" htmlFor="menu-btn"><span className="navicon"></span></label>
+  <ul className="menu">
+  <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="./careers">Careers</a></li>
+    <li><a href="./">Logout</a></li>
+
+  </ul>
+}
+</header>
+</>
+      ) : (
+
 		<>
 		<header className="header">
   <a href="./"><img src={logo} className="logo" alt=""></img></a>
   <input className="menu-btn" type="checkbox" id="menu-btn" />
   <label className="menu-icon" htmlFor="menu-btn"><span className="navicon"></span></label>
   <ul className="menu">
-  <li><Link to="/">Home</Link></li>
-    <li><Link to="/about">About</Link></li>
-    <li><Link to="./careers">Careers</Link></li>
-    <li><Link to="./login">Login</Link></li>
-    <li><Link to="./register">Register</Link></li>
+  <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="./careers">Careers</a></li>
+    <li><a href="./login">Login</a></li>
+    <li><a href="./register">Register</a></li>
   </ul>
 </header>
-		</>
+</>
+     )}
+</>
 		)
 };
 

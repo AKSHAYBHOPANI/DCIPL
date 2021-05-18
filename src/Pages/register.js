@@ -3,12 +3,12 @@ import '../App.css';
 import Dashboard from './dashboard';
 
 
-function Register() {
+function Register({IsSignIn, setIsSignIn}) {
   
   const [User, setUser] = useState("");
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
-  const [IsSignIn, setIsSignIn] = useState(false);
+
 
   const NameValue = (event) => {
   event.preventDefault();

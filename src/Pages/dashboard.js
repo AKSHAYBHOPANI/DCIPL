@@ -4,10 +4,6 @@ import Ellipse from "../assests/Ellipse 1.png";
 import line1 from "../assests/Line 1.png";
 import line2 from "../assests/Line 2.png";
 import line3 from "../assests/Line 3.png";
-import fb from "../assests/FB 1.png";
-import TW from "../assests/TW 1.png";
-import google from "../assests/GM 1.png";
-import ll from "../assests/LLLLLLLL 1.png";
 
 
 function Dashboard({User}) {

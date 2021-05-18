@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './App.css';
 
 //Importing Components 
@@ -7,10 +8,11 @@ import Footer from './Components/Footer';
 import Main from './Main';
 
 function App() {
+	const [IsSignIn, setIsSignIn] = useState(false);
   return (
     <>
-    <Nav />
-    <Main />
+    <Nav IsSignIn={IsSignIn} setIsSignIn={setIsSignIn}/>
+    <Main IsSignIn={IsSignIn} setIsSignIn={setIsSignIn}/>
     <Footer />
     </>
   );

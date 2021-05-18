@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import '../App.css';
 import './CSS/login.css';
 import Dashboard from './dashboard';
 
-function Login() {
+function Login({IsSignIn, setIsSignIn}) {
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
-  const [IsSignIn, setIsSignIn] = useState(false);
+ 
 
   const EmailValue = (event) => {
   setEmail(event.target.value);
@@ -17,6 +17,10 @@ const PasswordValue = (event) => {
   event.preventDefault();
   setPassword(event.target.value);
   };
+
+  const handleIsSignIn = useCallback(event => {
+    setIsSignIn(true);
+  }, [setIsSignIn])
 
 const onSubmitSignIn = () => {
     fetch('http://localhost:3011/signin', {
@@ -31,7 +35,7 @@ const onSubmitSignIn = () => {
       .then(user => {
         if (user.id) {
           setName(user.name)
-          setIsSignIn(true);
+          handleIsSignIn();
         } else {
           alert("Wrong Credentials")
         }
@@ -58,7 +62,7 @@ const onSubmitSignIn = () => {
                 </div>
                 <div className= "btn-group">
                     <button type="submit" onClick={onSubmitSignIn}>Login</button>
-                    
+                    {console.log(IsSignIn)}
                 </div>
             </div>
         </main>

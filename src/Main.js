@@ -1,23 +1,33 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Home from './Pages/Home';
-import login from './Pages/login';
-import register from './Pages/register';
-import about from './Pages/about';
-import careers from './Pages/careers';
-import dashboard from './Pages/dashboard';
+import Login from './Pages/login';
+import Register from './Pages/register';
+import About from './Pages/about';
+import Careers from './Pages/careers';
 
-const Main = () => {
+const Main = ({IsSignIn, setIsSignIn}) => {
   return (
-    <Switch> {/* The Switch decides which component to show based on the current URL.*/}
-      <Route exact path='/' component={Home}></Route>
-      <Route exact path='/login' component={login}></Route>
-      <Route exact path='/register' component={register}></Route>
-      <Route exact path='/about' component={about}></Route>
-      <Route exact path='/careers' component={careers}></Route>
-      <Route exact path='/dashboard' component={dashboard}></Route>
-    </Switch>
+  <Router>
+    <div>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route exact path="/login">
+        <Login IsSignIn={IsSignIn} setIsSignIn={setIsSignIn} />
+      </Route>
+      <Route exact path="/register">
+        <Register IsSignIn={IsSignIn} setIsSignIn={setIsSignIn} />
+      </Route>
+      <Route exact path="/about">
+        <About />
+      </Route>
+      <Route exact path="/careers">
+        <Careers />
+      </Route>
+    </div>
+  </Router>
   );
 }
 
