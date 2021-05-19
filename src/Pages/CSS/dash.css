@@ -406,3 +406,24 @@ top: 965px;
 	left: 281px;
 	top: 961px;
 }
+
+.features {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+
+.features > a > img {
+	position: static;
+	width: 340px;
+	height: 240px;
+	padding: 15px;
+}
+
+.features > a > p {
+	position: static;
+	color: white;
+	text-align: center;
+}

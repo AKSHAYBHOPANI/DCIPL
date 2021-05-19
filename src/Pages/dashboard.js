@@ -4,7 +4,8 @@ import Ellipse from "../assests/Ellipse 1.png";
 import line1 from "../assests/Line 1.png";
 import line2 from "../assests/Line 2.png";
 import line3 from "../assests/Line 3.png";
-
+import rect1 from "../assests/rect1.jpg"; 
+import rect2 from "../assests/rect2.jpg"; 
 
 function Dashboard({User}) {
 
@@ -70,8 +71,22 @@ function Dashboard({User}) {
 <p>23%</p>
 </div>
 
+<div className="features">
+<br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/>
 
+<a href="./features/investment"><img src={rect1}/><p>Investment Planning</p></a>
+<a><img src={rect2}/><p>Tax Planning</p></a>
+<br/><br/><br/><br/><br/>
 </div>
+
+    
+</div>
+
+
 </>
 
 )

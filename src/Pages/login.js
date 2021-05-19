@@ -20,6 +20,7 @@ const PasswordValue = (event) => {
 
   const handleIsSignIn = useCallback(event => {
     setIsSignIn(true);
+    localStorage.setItem("IsSignIn", true);
   }, [setIsSignIn])
 
 const onSubmitSignIn = () => {
@@ -42,6 +43,17 @@ const onSubmitSignIn = () => {
       })
   }
 
+const OnPageLoad = () => {
+const CheckIsSignIn = localStorage.getItem("IsSignIn");
+console.log(CheckIsSignIn)
+if (CheckIsSignIn) {
+  setIsSignIn(true)
+} else {
+  setIsSignIn(false)
+}
+
+}
+
 	return (
     <>
     {IsSignIn ? (
@@ -62,7 +74,7 @@ const onSubmitSignIn = () => {
                 </div>
                 <div className= "btn-group">
                     <button type="submit" onClick={onSubmitSignIn}>Login</button>
-                    {console.log(IsSignIn)}
+                    {OnPageLoad()}
                 </div>
             </div>
         </main>

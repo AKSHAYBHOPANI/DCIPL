@@ -6,6 +6,8 @@ import Login from './Pages/login';
 import Register from './Pages/register';
 import About from './Pages/about';
 import Careers from './Pages/careers';
+import Investment from './Pages/features/investment'
+
 
 const Main = ({IsSignIn, setIsSignIn}) => {
   return (
@@ -25,6 +27,9 @@ const Main = ({IsSignIn, setIsSignIn}) => {
       </Route>
       <Route exact path="/careers">
         <Careers />
+      </Route>
+      <Route exact path="/features/investment">
+        <Investment IsSignIn={IsSignIn} setIsSignIn={setIsSignIn} />
       </Route>
     </div>
   </Router>
