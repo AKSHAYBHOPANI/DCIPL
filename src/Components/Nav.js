@@ -29,7 +29,7 @@ function Nav({IsSignIn, setIsSignIn}) {
     <li><button onClick={LogoutNow} >Logout</button></li>
 
   </ul>
-</div
+</div>
 
 </div>
 </>

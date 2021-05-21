@@ -10,3 +10,12 @@ h2 {
 	text-align: center;
 	
 }
+
+#table,tr {
+	color: white;
+	border: 1px solid white;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}

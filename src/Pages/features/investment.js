@@ -18,22 +18,26 @@ const [OtherIncome, setOtherIncome] = useState("");
   };
 
 const onSubmitSignIn = () => {
-    fetch('http://localhost:3011/login', {
+    fetch('http://localhost:3011/investment', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
-        fixedIncome: FixedIncome,
+        FixedIncome: FixedIncome,
         OtherIncome: OtherIncome
       })
     })
       
+      .then(response => response.json())
       .then(response => {
-        if (response.ok) {
-          console.log(response)
-        } else {
-          const Income= "Fixed Income = " + FixedIncome + " " + "Other Income =" + OtherIncome
-          alert(Income)
-        }
+       let data = JSON.stringify(response)
+       var FS = JSON.parse(data);
+       console.log(FS)
+       var table = ""
+       let x = ""
+        table += "<tr><td>" + "Good =" + FS.Good + "</td></tr>";
+        table += "<tr><td>" + "Average =" + FS.Average + "</td></tr>";
+        table += "<tr><td>" + "Bad =" + FS.Bad + "</td></tr>";
+       document.getElementById("table").innerHTML = table;
       })
   }
 
@@ -50,8 +54,10 @@ const onSubmitSignIn = () => {
                         <input type="text" name="fixed-income" placeholder="Fixed Income (Per Month)" required onChange={FixedIncomeValue} value={FixedIncome}></input><br></br>
                         <input type="text" name="fixed-income" placeholder="Other Income (Per Month)" required onChange={OtherIncomeValue} value={OtherIncome}></input><br></br>
                     </form> 
-                    <button type="submit" onClick={onSubmitSignIn}>Login</button>
-</div>             
+                    <button type="submit" onClick={onSubmitSignIn}>Calculate</button>
+</div> 
+<h2>Financial Stability</h2>
+<table id="table"/>        
 </>
       ) : (
   <Login IsSignIn={IsSignIn} setIsSignIn={setIsSignIn} />
