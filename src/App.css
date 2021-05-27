@@ -238,6 +238,10 @@ footer{
 
 /* 48em = 768px */
 
+label {
+  color: white;
+}
+
 @media (min-width: 48em) {
   .header li {
     float: left;
