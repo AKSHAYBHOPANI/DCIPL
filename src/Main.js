@@ -9,7 +9,7 @@ import Careers from './Pages/careers';
 import Investment from './Pages/features/investment'
 
 
-const Main = ({IsSignIn, setIsSignIn}) => {
+const Main = ({IsSignIn, setIsSignIn, User, setUser, Email, setEmail}) => {
   return (
   <Router>
     <div>
@@ -29,7 +29,7 @@ const Main = ({IsSignIn, setIsSignIn}) => {
         <Careers />
       </Route>
       <Route exact path="/features/investment">
-        <Investment IsSignIn={IsSignIn} setIsSignIn={setIsSignIn} />
+        <Investment IsSignIn={IsSignIn} setIsSignIn={setIsSignIn} User={User} setUser={setUser} Email={Email} setEmail={setEmail} />
       </Route>
     </div>
   </Router>
