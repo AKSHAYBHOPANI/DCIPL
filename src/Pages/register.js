@@ -30,7 +30,7 @@ const PasswordValue = (event) => {
   }
 
   const onSubmitSignIn = () => {
-    fetch('http://localhost:3011/register', {
+    fetch('https://dcipl.yourtechshow.com/register', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
