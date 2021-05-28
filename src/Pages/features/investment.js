@@ -122,9 +122,9 @@ const onSubmitSignIn = () => {
     <>
     {IsSignIn ? (
   <>
-  <br/><br/><br/><br/><br/>
-  <h1>Investment Planning</h1>
-  <h2>On The Basis Of Income</h2>
+  <br/><br/><br/><br/><br/><br/>
+  <h1 className="Title">Investment Planning</h1>
+  <h2 className="Title">On The Basis Of Income</h2>
   <div className="Form">
   <form action="#" method="post">
                         <br></br>
