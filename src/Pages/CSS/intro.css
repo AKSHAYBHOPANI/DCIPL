@@ -1,0 +1,88 @@
+.bg1 img
+{
+   min-height:100vh;
+	width:100%;
+	background-position:center;
+	background-size:cover;
+	position: fixed; 
+  top: 0; 
+  left: 0;
+
+}
+.textbox
+{
+	width:90%;
+	color:#fff;
+	position:absolute;
+	top:30%;
+	left:50%;
+	transform:translate(-50%,50%);
+	text-align:center;
+}
+.textbox h1{
+	font-size:90px;
+	color: white;
+	letter-spacing: 4px;
+	font-family: california;
+	text-shadow: 1px 1px 1px blue,
+             2px 2px 1px blue;
+   }
+.textbox p{
+	margin:10px 0 40px;
+	font-size:34px;
+	color:#fff;
+	 font-family: "Trebuchet MS", Verdana, sans-serif;
+	 word-spacing: 1rem;
+}
+.hero-btn{
+	 display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background: transparent;
+  border: none;
+  border-radius: 5%;
+  box-shadow:0  2px #FFF;
+}
+.hero-btn:active {
+  background-color:transparent;
+  box-shadow: 0 5px transparent;
+  transform: translateY(4px);
+}
+.hero-btn:hover{ background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+	color: black;
+	border:1px solid #000;
+}
+
+@media (max-width: 700px){
+
+	.textbox h1{
+	font-size:30px;
+	color:white;
+	}
+	.textbox p{
+	margin:10px 0 40px;
+	font-size:15px;
+	color:#fff;
+	}
+	.hero-btn{
+		 display: inline-block;
+  padding: 15px 25px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background: transparent;
+  border: none;
+  border-radius: 5%;
+  box-shadow: 0 1px #FFF;
+	
+   }
+
+  }
