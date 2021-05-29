@@ -61,7 +61,7 @@ if (CheckIsSignIn) {
     {IsSignIn ? (
   <>
   <br/>
-        <Dashboard User={Name} Email={Email}/>
+        <Dashboard User={Name}/>
 </>
       ) : (
   <main>

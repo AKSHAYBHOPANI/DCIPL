@@ -4,7 +4,7 @@ import '../CSS/login.css';
 import './CSS/investment.css';
 import Login from '../login';
 
-function Investment({IsSignIn,setIsSignIn, User, setUser, Email, setEmail}) {
+function Investment({IsSignIn,setIsSignIn}) {
 
 const [FixedIncome, setFixedIncome] = useState("");
 const [OtherIncome, setOtherIncome] = useState("");
@@ -72,21 +72,11 @@ const [Liquidity, setLiquidity] = useState("");
   setLiquidity(event.target.value);
   };
 
-const OnPageLoad = () => {
-const email = localStorage.getItem("Email");
-const user = localStorage.getItem("User");
-setUser(user);
-setEmail(email);
-
-}
-
 const onSubmitSignIn = () => {
     fetch('https://dcipl.yourtechshow.com/investment', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
-        name: User,
-        email: Email,
         FixedIncome: FixedIncome,
         OtherIncome: OtherIncome,
         MedianIncome: MedianIncome,
@@ -108,23 +98,35 @@ const onSubmitSignIn = () => {
       
       .then(response => response.json())
       .then(response => {
-       if (response.Age) {
-        alert("Thank You For Submitting Data");
-        console.log(response);
-       } else {
-       alert("You already Submitted The Data.");
-       console.log(response);
-     }
-       })
+       let data = JSON.stringify(response)
+       var FS = JSON.parse(data);
+       console.log(FS)
+       var table = ""
+       let x = ""
+        table += "<tr><td>" + "Total Income =" + FS.TotalIncome + "</td></tr>";
+        table += "<tr><td>" + "Median Income =" + FS.MedianIncome + "</td></tr>";
+        table += "<tr><td>" + "Total Expenses =" + FS.TotalExpenses + "</td></tr>";
+        table += "<tr><td>" + "Savings Income =" + FS.SavingsIncome + "</td></tr>";
+        table += "<tr><td>" + "Age =" + FS.Age + "</td></tr>";
+        table += "<tr><td>" + "Retirement Age =" + FS.RetirementAge + "</td></tr>";
+        table += "<tr><td>" + "Asset Class =" + FS.AssestClass + "</td></tr>";
+        table += "<tr><td>" + "Return =" + FS.Return + "</td></tr>";
+        table += "<tr><td>" + "Time=" + FS.Time + "</td></tr>";
+        table += "<tr><td>" + "Financial Risk=" + FS.FinancialRisk + "</td></tr>";
+        table += "<tr><td>" + "Standard of Living=" + FS.Standard + "</td></tr>";
+        table += "<tr><td>" + "Risk Willingness=" + FS.RiskWillingness + "</td></tr>";
+        table += "<tr><td>" + "Liquidity=" + FS.Liquidity + "</td></tr>";
+       document.getElementById("table").innerHTML = table;
+      })
   }
 
 	return (
     <>
     {IsSignIn ? (
   <>
-  <br/><br/><br/><br/><br/><br/>
-  <h1 className="Title">Investment Planning</h1>
-  <h2 className="Title">On The Basis Of Income</h2>
+  <br/><br/><br/><br/><br/>
+  <h1>Investment Planning</h1>
+  <h2>On The Basis Of Income</h2>
   <div className="Form">
   <form action="#" method="post">
                         <br></br>
@@ -170,9 +172,10 @@ const onSubmitSignIn = () => {
                         </form> <br></br>
                     <button type="submit" onClick={onSubmitSignIn}>Calculate</button>
 </div> 
+<h2>Financial Stability</h2>
+<table id="table"/> 
 
-<br></br>   <br></br> <br></br> 
-{OnPageLoad()} 
+<br></br>   <br></br> <br></br>  
 </>
       ) : (
   <Login IsSignIn={IsSignIn} setIsSignIn={setIsSignIn} />
