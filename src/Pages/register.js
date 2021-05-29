@@ -30,6 +30,7 @@ const PasswordValue = (event) => {
   }
 
   const onSubmitSignIn = () => {
+    document.getElementById('logo').style.display="block";
     fetch('https://dcipl.yourtechshow.com/register', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
@@ -50,6 +51,7 @@ const PasswordValue = (event) => {
         } else {
           console.log(response)
           alert("Email Already Exists")
+          document.getElementById('logo').style.display="none";
         }
       })
   }
@@ -60,7 +62,7 @@ const PasswordValue = (event) => {
 {IsSignIn ? (
   <>
   <br/>
-        <Dashboard User={User}/>
+        <Dashboard User={User} Email={Email}/>
 </>
       ) : (
         <>
@@ -77,7 +79,9 @@ const PasswordValue = (event) => {
                 </div>
                 <div className= "btn-group">
                     <button type="submit" onClick={OnSubmit}>Register</button>
-                    
+                     <div id="logo" class="loadingio-spinner-rolling-kswyn6f3gj7"><div class="ldio-c9p079igqka">
+<div></div>
+</div></div>
                 </div>
             </div>
   </main>

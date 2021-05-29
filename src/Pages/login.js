@@ -24,6 +24,7 @@ const PasswordValue = (event) => {
   }, [setIsSignIn])
 
 const onSubmitSignIn = () => {
+  document.getElementById('logo').style.display="block";
     fetch('https://dcipl.yourtechshow.com/signin', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
@@ -39,6 +40,7 @@ const onSubmitSignIn = () => {
           handleIsSignIn();
         } else {
           alert("Wrong Credentials")
+          document.getElementById('logo').style.display="none";
         }
       })
   }
@@ -59,7 +61,7 @@ if (CheckIsSignIn) {
     {IsSignIn ? (
   <>
   <br/>
-        <Dashboard User={Name}/>
+        <Dashboard User={Name} Email={Email}/>
 </>
       ) : (
   <main>
@@ -75,6 +77,9 @@ if (CheckIsSignIn) {
                 <div className= "btn-group">
                     <button type="submit" onClick={onSubmitSignIn}>Login</button>
                     {OnPageLoad()}
+                    <div id="logo" class="loadingio-spinner-rolling-kswyn6f3gj7"><div class="ldio-c9p079igqka">
+<div></div>
+</div></div>
                 </div>
             </div>
         </main>

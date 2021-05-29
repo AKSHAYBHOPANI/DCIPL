@@ -1,46 +1,113 @@
-.about {
-    position: absolute;
-    left: 545px;
-    top: 120px;
-    text-decoration: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-h1 {
-    text-align: center;
-    color: white;
-}
-
-.text {
-    position: absolute;
-    width: 1327px;
-    height: 340px;
-    color: white;
-    left: 15px;
-    top: 250px;
-}
-
-.p1 {
-    position: absolute;
-    float: center;
-    color: white;
-    top: 700px;
-    left: 470px;
-}
-
-.image {
-    position: absolute;
-    width: 1036px;
-    height: 447px;
-    left: 193px;
-    top: 900px;
-}
-
-.banner {
-    position: absolute;
-    background: white;
-}
-
+    
+        .body {
+            margin: 0;
+            padding: 0;
+            font-family: "Open Sans", sans-serif;
+            box-sizing: border-box;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }  
+        .column {
+            float: left;
+            width: 550px;
+            margin-bottom: 16px;
+            height: 40%;
+        }
+        
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(245, 245, 245, 0.5);
+            margin: 60px;
+            left: 70%;
+            width: 400px;
+            height: 40%;
+        }
+        
+        .about-section {
+            box-sizing: border-box;
+            padding: 100px;
+            text-align: center;
+            background-color: black;
+            color: black;
+        }
+        
+        .container {
+            padding: 0 25px;
+            color: white;
+        }
+        
+        .container::after.row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        .title {
+            color: white;
+        }
+        
+        .inner-container {
+            width: 100%;
+            background-color: #fdfdfd;
+            padding:0px 50px 50px;
+        }
+        .heading{
+            font-size: 40px;
+            right: 140px;
+            padding:20px 80px 10px 10px;
+        }
+        
+        .team {
+            text-align: center;
+            color: white;
+            font-size: 40px;
+        }
+        .founders{
+            height: 400px;
+        }
+        
+        .text {
+            font-size: 18px;
+            color: #545454;
+            line-height: 30px;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: black;
+            background-color: white;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+        }
+        
+        .button:hover {
+            background-color: gray;
+            border-radius: 5px;
+        }
+        
+        @media screen and (max-width:400px){
+            .inner-container {
+                padding: 80px;
+                width: 100px;
+                min-height: auto;
+                max-height: none;
+            }
+            .about-section {
+                background-size: 100%;
+                padding: 100px 100px;
+            }
+        }
