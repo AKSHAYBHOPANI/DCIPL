@@ -4,8 +4,8 @@ import './App.css';
 //Importing Components 
 
 import Nav from './Components/Nav';
-import Footer from './Components/Footer';
 import Main from './Main';
+import Footer from './Components/Footer';
 
 function App() {
 	const [IsSignIn, setIsSignIn] = useState(false);
