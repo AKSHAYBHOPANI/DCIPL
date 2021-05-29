@@ -1,9 +1,6 @@
 import React from 'react';
 import './CSS/about.css';
-import facebook from '../assests/facebook.png';
-import google from '../assests/g+.png';
-import twitter from '../assests/twitter.png';
-import linkedln from '../assests/linkedin.png';
+
 import image from '../assests/image.png';
 
 
@@ -26,13 +23,7 @@ function about() {
     </div>
     <div className="banner"></div>
    
-    <div className="fimage">
-        <img src= {facebook} alt="facebook"></img>
-        <img src= {twitter} alt="twitter"></img>
-        <img src= {google} alt="google"></img>
-        <img src= {linkedln} alt="linkedln"></img>
-    </div>
-    
+       
 		</>
 		)
 };

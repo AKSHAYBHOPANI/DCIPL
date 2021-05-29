@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assests/logo.jpeg';
+import logo from '../assests/log.png';
 import '../App.css';
 
 import { Link } from "react-router-dom";
@@ -29,9 +29,9 @@ function Nav({IsSignIn, setIsSignIn}) {
     <li><button onClick={LogoutNow} >Logout</button></li>
 
   </ul>
-
-
 </header>
+
+
 </>
       ) : (
 
