@@ -17,7 +17,7 @@ function Nav({IsSignIn, setIsSignIn}) {
     {IsSignIn ? (
 
   <>
-  <div className="header">
+  <header className="header">
   <a href="./"><img src={logo} className="logo" alt=""></img></a>
   <input className="menu-btn" type="checkbox" id="menu-btn" />
   <label className="menu-icon" htmlFor="menu-btn"><span className="navicon"></span></label>
@@ -29,9 +29,7 @@ function Nav({IsSignIn, setIsSignIn}) {
     <li><button onClick={LogoutNow} >Logout</button></li>
 
   </ul>
-</div>
-
-</div>
+</header>
 </>
       ) : (
 
