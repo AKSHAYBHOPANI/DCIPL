@@ -1,5 +1,5 @@
 .top {
-  color: rgb(253, 252, 251);
+  color: rgb(236, 232, 227);
   font-size: 3em;
   font-weight: bold;
   text-align: center;
@@ -7,64 +7,44 @@
 .wrap {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 15px;
+  grid-gap: 30px;
   max-width: 1000x;
   padding: 60px;
-  box-shadow: 0 5px 15px rgb(0, 0, 0, 1);
+  box-shadow: 0 5px 50px rgb(245, 240, 240);
   margin: 20px;
   margin-bottom: 30px;
   box-sizing: border-box;
 }
 .box {
-  background-color: whitesmoke;
+  background-color: rgb(236, 220, 228);
   border-radius: 18px;
 }
 .img-responsive {
   width: 100%;
   height: 300px;
 }
-h2 {
+.Header {
   color: black;
 }
 
-b {
+.color {
   display: inline-block;
   text-decoration: none;
-  color: rgb(240, 240, 240);
-  background: rgb(8, 8, 8);
-  border-radius: 4px;
+  color: rgb(241, 237, 237);
+  background: rgb(12, 11, 11);
+  border-radius: 2px;
   padding: 10px 20px;
   font-weight: 500;
   margin-top: 20px;
 }
+@media only screen and (max-width: 200px)
+{
+  top {
+    background-color: rgb(184, 15, 15);
+    width: 100px;
+    min-height: auto;
+    max-height: none;
 
-.banner {
-  position: absolute;
-  width: 150rem;
-  height: 40px;
-  right: 1px;
-  background: white;
-  top: 850px;
-  font-size: 10px;
-}
-.footer {
-  position: absolute;
-  text-decoration: none;
-  float: left;
-  right: 1000px;
-  top: 850px;
-  word-spacing: 2rem;
-  transition: 0.6s ease;
-  padding: 10px;
-}
-.four {
-  position: absolute;
-  float: right;
-  width: 400px;
-  top: 850px;
-  left: 1100px;
-  padding: 5px;
-}
-a {
-  text-decoration: none;
+  }
+  
 }
