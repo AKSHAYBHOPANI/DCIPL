@@ -44,21 +44,3 @@ h1 {
     background: white;
 }
 
-.footer {
-    position: absolute;
-    text-decoration: none;
-    float: left;
-    right: 900px;
-    top: 1445px;
-    word-spacing: 2rem;
-    height: 10px;
-}
-
-.fimage {
-    position: absolute;
-    width: 40%;
-    top: 1445px;
-    left: 1150px;
-    bottom: 200px;
-    right: 10px;
-}
