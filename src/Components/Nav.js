@@ -28,7 +28,7 @@ function Nav({IsSignIn, setIsSignIn}) {
     <li><a href="../careers">Careers</a></li>
     <li><button onClick={LogoutNow} >Logout</button></li>
 
-  </ul>
+  </ul></div>
 </header>
 </>
       ) : (
