@@ -4,11 +4,17 @@ import dhaval from "../assests/dhaval.png";
 import keval from "../assests/keval.png"
 
 
-
 function about() {
     return (
         <>
-       
+          <script>
+            var meta = document.createElement('meta');
+meta.httpEquiv = "X-UA-Compatible";
+meta.content = "IE=edge";
+document.getElementsByTagName('head')[0].appendChild(meta);</script>
+$('head').append('<meta name="viewport" content="width=device-width, initial-scale=1.0"/>');
+
+
         <div className="body">
             <div className="about-section"> 
                 <div className="inner-container">
@@ -48,6 +54,7 @@ function about() {
                     </div>
                 </div>
             </div>
+
         </>
         )
 };
