@@ -65,7 +65,7 @@ if (CheckIsSignIn) {
 </>
       ) : (
 
-          <div className="container">              
+          <div className="contents">              
               <form action="#" method="post" className="signin">  
                   <div class="title"><h2 class="title">login</h2></div>            
                   <div class="input-field"><input type="text" name="name" placeholder="Name"></input></div>

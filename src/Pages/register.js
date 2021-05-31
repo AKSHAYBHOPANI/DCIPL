@@ -66,7 +66,7 @@ const PasswordValue = (event) => {
 </>
       ) : (
 <>
-          <div className="container">             
+          <div className="contents">             
               <form action="#" method="post" className="signin">
                   <div className="title"><h2 className="title">Register</h2></div>
                   <div class="input-field"><input type="text" name="name" placeholder="Name" required onChange={NameValue} value={User}></input></div>
