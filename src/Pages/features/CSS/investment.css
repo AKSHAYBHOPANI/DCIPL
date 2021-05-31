@@ -1,12 +1,13 @@
-h2 {
+.Title {
 	color: white;
 	padding: 10px;
+	text-align: center;
 }
 
 
 .Form {
-	padding-left: 10%;
-	padding-right: 10%;
+	padding-left: 20%;
+	padding-right: 20%;
 	text-align: center;
 	
 }
