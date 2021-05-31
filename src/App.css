@@ -26,6 +26,7 @@ a {
   list-style: none;
   overflow: hidden;
    background: #000;
+   
   
 }
 .header li a {
@@ -38,7 +39,8 @@ a {
   text-transform: uppercase;
   padding: 4px 0;
   transition: 1s;
-  top: 8px;
+  top: 2px;
+
 }
 .header li a::after{
    position: absolute;
@@ -59,6 +61,8 @@ a {
    border-radius: 0px;
    color: black;
    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+
+
 }
 
 
@@ -71,7 +75,7 @@ a {
 }
 
 .logo {
-  width: 85px;
+  width: 45px;
   margin-top: 3px;
 }
 .header .menu {
