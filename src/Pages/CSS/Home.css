@@ -1,246 +1,577 @@
+body {
+	background:#000;
+}
 
-.container{
-	height: 100vh;
-	width: 100vw;
-	background-size: cover;
-	background-position: center;
-	position: relative;
+.area > img {
+	width: 100%;
 }
-.container img{
-	width: 100vw;
-	height: 100vh;
-}
-.text-box{
-	width: 90%;
-	color: black;
+
+.area-text h1{
 	position: absolute;
-	top: 38%;
-	left: 48%;
+	width: 900px;
+	height: 111px;
+	left: 50%;
+	right: 50%;
 	transform: translate(-50%,-50%);
+	top: 20%;
+	font-family: Jost;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 53px;
+	line-height: 92px;
 	text-align: center;
+	color:#000;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.text-box h1{
-	font-size: 60px;
-	font-weight: 600;
+.btn button{
+	position: absolute;
+	width: 150px;
+	height: 40px;
+	left: 50%;
+	right: 50%;
+	transform: translate(-50%,-50%);
+	top: 40%;
+	background-color: white;
 	color: black;
+
+
 }
-.text-box h1:hover{
-	animation-name: example;
-	animation-duration: 5s;
-}
-@keyframes example{
-	from{color:green;}
-	to{color:dodgerblue;}
-}
-.hero-btn1{
-	display: inline-block;
-	text-decoration: none;
-	color: black;
-	border: 1px solid #fff;
-	padding:12px 34px;
-	top:200px;
-	font-size: 20px;
-	background: transparent;
-	position: relative;
-	cursor: pointer;
-}
-.hero-btn1:hover{
-	border: 1px solid #87cefa;
-	background:#87cefa;
-	transition: 1s;
-}
-@media(max-width:1300px){
-	.container{
-		width:100vw;
-		height: 50vh;
-	}
-	.container img{
-		height: 50vh;
-	}
-	.text-box h1{
-		font-size: 20px;
-	}
-	.hero-btn1{
-		padding: 8px 20px;
-		top: 100px;
-		font-size: 14px;
-	}
-}
+
 .nav-area{
 	position: relative;
 	width: 100%;
-	height:1400px;
-	left: 0;
-	top: 0;
+	left: 0px;
+	top: 0px;
 	border-radius: 0px;
-	background-color: black;
-	
+
 }
 .fea{
-	width:80%;
-	margin:auto;
-	text-align:center;
-	padding-top:20px;
-}
-.fea h1{
-	font-size:50px;
-	font-weight:600;
-	color:cornsilk;
-}
-.row{
-	margin:5%;
-	display:flex;
-	justify-content:space-between;
-}
-.col{
-	flex-basis:32%;
-	border-radius:10px;
-	margin-bottom:30px;
-	position: relative;
-	overflow: hidden;
-	box-sizing: border-box;
-	transition: 1s;
-	
-}
-.col:hover{
-	z-index:1.5s;
-	transform: scale(1.1);
-}
-.col img{
+	position: absolute;
 	width: 100%;
-	display: block;
-	border:1px solid #87cefa;
-	transition: 1s;
-}
-
-.layer{
 	height: 100%;
-	width:100%;
-	position:absolute;
-	top:0;
-	left:0;
+	left: 603px;
+	top: 2px;
+	color: #FFF;
 }
-.layer h2{
-	width: 100%;
-	font-weight: 600;
-	color:black;
-	font-size:21px;
-	top: 20%;
-	left: 50%;
+
+.center {
 	position: absolute;
-	transform: translateX(-50%);
-	
-}
-.hero-btn{
-	display: inline-block;
-	text-decoration: none;
-	color:white;
-	border: 1px solid #fff;
-	padding: 8px 26px;
-	background: black;
-	font-size: 15px;
-	top: 60%;
-	position: relative;
-	cursor: pointer;
-}
-.hero-btn:hover{
-	background-color:dimgray;
-	transition-duration: 3s;
+	left: 25%;
+	right: 25%;
+	transform: translate(-25%, -25%);
 }
 
-
-@media(max-width:1300px){
-	.nav-area{
-		width: 100%;
-		height: 4000px;
-	}
-	.fea h1{
-		font-size: 25px;
-	}
-	.row{
-		flex-direction: column;
-	}
-	.layer h2{
-		font-size:20px;
-}
-}
-
-.fea2{
-	width:80%;
-	text-align:center;
-	margin:auto;
-	padding-top:0px;
-}
-.fea3{
-	width:80%;
-	margin:auto;
-	text-align:center;
-	padding-top:0px;
-}
-.fea3 h2{
-	font-size:35px;
-	font-weight:600;
-	color:white;
-}
-@media(max-width:1300px){
-	.fea3 h2{
-		font-size:25px;
-}
-}
-.form{
-	margin: 100px auto;
-	width: 80%;
-	height: 45vh;
-	background-color: white;
+.rect1 {
+	position: absolute;
+	width: 414px;
+	height: 242px;
+	left: 44px;
+	top: 79px;
+	border-radius: 15px;
+	background: rgba(255 ,255, 255,0.95);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-image:url(../../assests/rect1.jpg);
 	background-position: center;
-	background-size: cover;
-	border-radius: 10px;
-	padding: 100px 0;
-	border: 3px solid #ffa07a;
+	background-repeat: no-repeat;
 }
-.row1{
-	margin-top:-2%;
-	display:flex;
-	justify-content:space-between;
-}
-.col1{
-	flex-basis:44%;
-	margin-top: -10px;
-	cursor: pointer;
-	display: flex;
-	
-}
-.col1 img{
-	height: 25px;
-	border-radius: 8px;
-	margin-right: 10px;
-	margin-left: 50px;
-	margin-top: 10px;
-}
-.col1 h2{
-	width: 100%;
-	font-size:22px;
-	color: black;
-	margin-top: 5px;
-	margin-left:80px;
+.rect1 h1{
+	font-family: Jost;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 20px;
+	letter-spacing: 0em;
+	text-align: center;
+	height: 39px;
+	width: 272px;
+	left: 54px;
+	top: 83px;
+	color: #000;
+	border-radius: nullpx;
 	position: absolute;
 }
-.row2{
-	margin-top:10%;
-	display:flex;
-	justify-content:space-between;
+.btn1 button{
+	position: absolute;
+	background-color: #000;
+	width: 140px;
+	left: 164px;
+	top: 220px;
+	height: 45px;
+	font-size: 18px;
+	font-weight: 400;
+	margin: 20px 10px;
+	color: white;
+
 }
-@media(max-width:1300px){
-	.col1 h2{
-		margin-top: -5px;
-		font-size: 22px;
+	
+	
+.rect2 {
+	position: absolute;
+	width: 414px;
+	height: 242px;
+	left: 485px;
+	top: 79px;
+	background: rgba(255 ,255, 255,0.95);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 15px;
+	background-color: #fff;
+	background-image:url(../../assests/rect2.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	
+}
+.rect2 h1{
+	font-family: Jost;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 20px;
+	letter-spacing: 0em;
+	text-align: center;
+	height: 39px;
+	width: 272px;
+	left: 97px;
+	top: 79px;
+	color: #000;
+	border-radius: nullpx;
+	position: absolute;
+	
+}
+.btn2 button{
+	position: absolute;
+	background-color: #000;
+	width: 140px;
+	left: 614px;
+	top: 220px;
+	height: 45px;
+	font-size: 18px;
+	font-weight: 400;
+	margin: 20px 10px;
+	color: white;
+}
+.rect3{
+	position: absolute;
+	width: 413px;
+	height: 236px;
+	left: 915px;
+	top: 81px;
+	border-radius: 15px;
+	background: rgba(255 ,255, 255,0.95);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-image:url(../../assests/retirement%202.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	
+}
+.rect3 h1{
+	font-family: Jost;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 20px;
+	letter-spacing: 0em;
+	text-align: center;
+	height: 39px;
+	width: 272px;
+	left: 58px;
+	top: 76px;
+	color: #000;
+	border-radius: nullpx;
+	position: absolute;
 	}
-	.row1{
-		margin-top: -10%;
-		flex-direction: column;
+.btn3 button{
+	position: absolute;
+	background-color: #000;
+	width: 140px;
+	left: 1056px;
+	top: 220px;
+	height: 45px;
+	font-size: 18px;
+	font-weight: 400;
+	margin: 20px 10px;
+	color: white;
+}
+.rect4 {
+	position: absolute;
+	width: 412px;
+	height: 242px;
+	left: 47px;
+	top: 352px;
+	background: rgba(255 ,255, 255,0.95);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image:url(../../assests/finance%201.jpg);
+	border-radius: 15px;
+}
+.rect4 h1{
+	font-family: Jost;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 20px;
+	letter-spacing: 0em;
+	text-align: center;
+	height: 39px;
+	width: 272px;
+	left: 52px;
+	top: 92px;
+	color: #000;
+	border-radius: nullpx;
+	position: absolute;
 	}
-	.row2{
-		flex-direction:column;
+.btn4 button{
+	position: absolute;
+	background-color: #000;
+	width: 140px;
+	left: 164px;
+	top: 500px;
+	height: 45px;
+	font-size: 18px;
+	font-weight: 400;
+	margin: 20px 10px;
+	color: white;
 	}
 
+.rect5{
+	position: absolute;
+	width: 412px;
+	height: 242px;
+	left: 481px;
+	top: 352px;
+	background: rgba(255 ,255, 255,0.95);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image:url(../../assests/rect5.jpg);
+	border-radius: 15px;
+}
+.rect5 h1{
+	font-family: Jost;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 20px;
+	letter-spacing: 0em;
+	text-align: center;
+	height: 39px;
+	width: 272px;
+	left: 59px;
+	top: 92px;
+	color: #000;
+	border-radius: nullpx;
+	position: absolute;
+}
+.btn5 button{
+	position: absolute;
+	background-color: #000;
+	width: 140px;
+	left: 611px;
+	top: 501px;
+	height: 45px;
+	font-size: 18px;
+	font-weight: 400;
+	margin: 20px 10px;
+	color: white;
+}
+.rect6{
+	position: absolute;
+	width: 412px;
+	height: 242px;
+	left: 914px;
+	top: 352px;
+	background: rgba(255 ,255, 255,0.95);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url(../../assests/wealth%201.jpg);
+	border-radius: 15px;
+}
+.rect6 h1{
+	font-family: Jost;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 20px;
+	letter-spacing: 0em;
+	text-align: center;
+	height: 39px;
+	width: 272px;
+	left: 69px;
+	top: 89px;
+	color: #000;
+	border-radius: nullpx;
+	position: absolute;
+}
+.btn6 button{
+	position: absolute;
+	background-color: #000;
+	width: 140px;
+	left: 1061px;
+	top: 501px;
+	height: 45px;
+	font-size: 18px;
+	font-weight: 400;
+	margin: 20px 10px;
+	color: white;
+}
+.why{
+	position: absolute;
+	width: 180px;
+	height: 68px;
+	left: 583px;
+	top: 588px;
+	font-family: Jost;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 69px;
+	color: #FFF;
+}
+.rect7{
+	position: absolute;
+	width: 1253px;
+	height: 296px;
+	left: 62px;
+	top: 689px;
+	background: rgba(255, 255, 255, 0.95);
+	box-shadow: inset 5px 5px 4px rgba(0, 255, 163, 0.5);
+	border-radius: 15px;
+}
+.pol1{
+	position: absolute;
+	width: 32px;
+	height: 43px;
+	left: 62px;
+	top: 53px;
+	background-size:cover;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-image:url(../../assests/Polygon%201.jpg);
+	}
+.pol1 h1{
+	position: absolute;
+	width: 151px;
+	height: 39px;
+	left: 57px;
+	top: -7px;
+	font-family: Jost;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22px;
+	line-height: 39px;
+	color: #000000;
+}
+.pol2{
+	position: absolute;
+	width:32px;
+	height: 43px;
+	left: 62px;
+	top: 190px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image:url(../../assests/Polygon%202.jpg);
+	}
+.pol2 h1{
+	position: absolute;
+	width: 79px;
+	height: 39px;
+	left: 54px;
+	top: -11px;
+	font-family: Jost;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22px;
+	line-height: 39px;
+	color: #000000;
+}
+.pol3{
+	position: absolute;
+	width: 32px;
+	height: 43px;
+	left: 462px;
+	top: 53px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image:url(../../assests/Polygon%203.png);
+	}
+.pol3 h1{
+	position: absolute;
+	width: 222px;
+	height: 39px;
+	left: 60px;
+	top: -9px;
+	font-family: Jost;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22px;
+	line-height: 39px;
+	color: #000000;
+}
+.pol4{
+	position: absolute;
+	width: 32px;
+	height: 43px;
+	left: 462px;
+	top: 190px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image:url(../../assests/Polygon%206.jpg);
+	}
+.pol4 h1{
+	position: absolute;
+	width: 216px;
+	height: 39px;
+	left: 65px;
+	top: -8px;
+	font-family: Jost;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22px;
+	line-height: 39px;
+	color: #000000;
+}
+.pol5{
+	position: absolute;
+	width: 32px;
+	height: 43px;
+	left: 928px;
+	top: 47px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image:url(../../assests/Polygon%205.jpg);
+	}
+.pol5 h1{
+	position: absolute;
+	width: 206px;
+	height: 39px;
+	left: 56px;
+	top: -6px;
+	font-family: Jost;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22px;
+	line-height: 39px;
+	color: #000000;
+}
+.pol6{
+	position: absolute;
+	width: 32px;
+	height: 43px;
+	left: 928px;
+	top: 183px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image:url(../../assests/Polygon%206.jpg);
+	}
+.pol6 h1{
+	position: absolute;
+	width: 182px;
+	height: 39px;
+	left: 58px;
+	top: -7px;
+	font-family: Jost;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22px;
+	line-height: 39px;
+	color: #000000;
+}
+.footer
+{
+	position: absolute;
+	width: 1380px;
+	height: 68px;
+	left: 0px;
+	top: 1615px;
+	background: rgba(255, 255, 255, 0.95);
+}
+.footer h1
+{
+	position: absolute;
+	width: 70px;
+	height: 39px;
+	font-family: Jost;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 39px;
+	/* identical to box height */
+
+
+	color: #000000;
+	left: 24px;
+	top: 5px;
+}
+.footer h2
+{
+	position: absolute;
+	width: 156px;
+	height: 39px;
+	font-family: Jost;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 39px;
+	/* identical to box height */
+
+
+	color: #000000;
+	left: 108px;
+	top: 3px;
+}
+.footer h3
+{
+	position: absolute;
+	width: 123px;
+	height: 39px;
+	font-family: Jost;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 39px;
+	/* identical to box height */
+
+
+	color: #000000;
+	left: 270px;
+	top: 0px;
+}
+.fb
+{
+	
+position: absolute;
+width: 61px;
+height: 48px;
+left: 1174px;
+top: 963px;
+}
+.tw
+{
+	position: absolute;
+width: 62px;
+height: 45px;
+left: 1237px;
+top: 966px;
+}
+.google
+{
+	position: absolute;
+width: 61px;
+height: 47px;
+left: 1299px;
+top: 965px;
+}
+.ll
+{
+	position: absolute;
+width: 61px;
+height: 47px;
+left: 1360px;
+top: 965px;
 }
