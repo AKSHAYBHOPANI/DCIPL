@@ -128,7 +128,7 @@ fetch('https://dcipl.yourtechshow.com/getInvestmentCsv')
         console.log(response)
         if (response.ok) {
           alert("Export Successfully")
-          window.location.href = "https://dcipl.yourtechshow.com/investments.csv";
+          window.location.href = "https://dcipl.yourtechshow.com/investment.csv";
         } else {
           alert("Error")
         }
