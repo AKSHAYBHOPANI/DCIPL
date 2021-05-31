@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assests/log.png';
+import logo from '../assests/logo.jpeg';
 import '../App.css';
 
 import { Link } from "react-router-dom";
@@ -17,23 +17,21 @@ function Nav({IsSignIn, setIsSignIn}) {
     {IsSignIn ? (
 
   <>
-  <header className="header">
+  <div className="header">
   <a href="./"><img src={logo} className="logo" alt=""></img></a>
   <input className="menu-btn" type="checkbox" id="menu-btn" />
   <label className="menu-icon" htmlFor="menu-btn"><span className="navicon"></span></label>
-		
-  <ul className="menu">
+		<div className="menu">
+  <ul>
   <li><a href="../">Home</a></li>
     <li><a href="../about">About</a></li>
     <li><a href="../careers">Careers</a></li>
     <li><button onClick={LogoutNow} >Logout</button></li>
 
-
   </ul>
-</header>
+</div>
 
-
-
+</div>
 </>
       ) : (
 
@@ -43,7 +41,7 @@ function Nav({IsSignIn, setIsSignIn}) {
   <input className="menu-btn" type="checkbox" id="menu-btn" />
   <label className="menu-icon" htmlFor="menu-btn"><span className="navicon"></span></label>
   <ul className="menu">
-  <li><a href="/Home">Home</a></li>
+  <li><a href="/">Home</a></li>
     <li><a href="/about">About</a></li>
     <li><a href="./careers">Careers</a></li>
     <li><a href="./login">Login</a></li>

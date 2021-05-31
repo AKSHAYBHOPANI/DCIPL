@@ -61,17 +61,17 @@ if (CheckIsSignIn) {
     {IsSignIn ? (
   <>
   <br/>
-        <Dashboard User={Name} Email={Email}/>
+        <Dashboard User={Name}/>
 </>
       ) : (
   <main>
             <div>
                 <div className="logregister_form">  
-                    <h2>Login/Register</h2>
+                    <h1>Register/Login</h1>
                     <form action="#" method="post">
                         <br></br>
-                        <input type="email" name="email" placeholder="Enter E-Mail ID" required onChange={EmailValue} value={Email}></input><br></br>
-                        <input type="password" name="password" placeholder="Enter your Password"  required onChange={PasswordValue} value={Password}></input><br></br>
+                        <input type="email" name="email" placeholder="E-Mail" required onChange={EmailValue} value={Email}></input><br></br>
+                        <input type="password" name="password" placeholder="Password"  required onChange={PasswordValue} value={Password}></input><br></br>
                     </form>
                 </div>
                 <div className= "btn-group">

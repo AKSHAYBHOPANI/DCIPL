@@ -62,7 +62,7 @@ const PasswordValue = (event) => {
 {IsSignIn ? (
   <>
   <br/>
-        <Dashboard User={User} Email={Email}/>
+        <Dashboard User={User}/>
 </>
       ) : (
         <>
