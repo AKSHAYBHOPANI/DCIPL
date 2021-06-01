@@ -2,6 +2,7 @@ body {  margin: 0;
   padding:0;
   font-family: Helvetica, sans-serif;
   background-color: #f4f4f4;
+  box-sizing: border-box;
  
 }
 
@@ -178,14 +179,15 @@ footer{
   font-size: 1rem;
   font-weight: 300;
  min-height: 18vh;
+ background-color: grey;
   color: white;
   width: 100%;
   padding: 70px 0;
   line-height: 1.5;
   position: absolute;
   text-decoration: none;
-   top: 1550px;
-  
+   top: 1650px;
+ 
 
   
   
@@ -225,8 +227,9 @@ padding: 0 15px;
   bottom: -10px;
   height: 3px;
   width: 100px;
+  
   box-sizing: border-box;
-  background-color: rgb(149, 11, 57);
+  background-color: #3ad4af;
 }
 .footer-col ul li:not(:last-child){
   color: white;
@@ -275,7 +278,7 @@ padding: 0 15px;
   height: 3px;
   width: 100px;
   box-sizing: border-box;
-  background-color: rgb(149, 11, 57);
+  background-color: #3ad4af;
 }
 .footer-col ul li:not(:last-child){
   color: white;
@@ -293,7 +296,7 @@ padding: 0 15px;
   transition:all 0.3s ease ;
 }
 .footer-col ul li a:hover{
-  color: rgb(149, 11, 57);
+  color: #e6eeec;
   text-decoration: none;
 
 }
@@ -302,7 +305,7 @@ padding: 0 15px;
   display:inline-block;
  height: 40px;
  width: 40px;
- background-color: rgb(170, 165, 165);
+ background-color: #3ad4af;
  margin: 0 10px 10px 0;
  text-align: center;
  line-height: 40px;
@@ -311,7 +314,7 @@ padding: 0 15px;
  transition: all 0.65s ease;
 }
 .footer-col .fimage a:hover{
-  color: rgb(149, 11, 57);
+  color:#3ad4af;
   background-color: white;
 }
 footer input[type='email']{
@@ -333,18 +336,18 @@ footer input[type='submit']{
   cursor: pointer;
   font-weight:800;
   padding: 10px ;
-  color: black;
-  background-color: rgb(149, 11, 57);
+  color: white;
+  background-color:#3ad4af;
 }
 footer input[type='submit']:hover{
-  background-color: rgb(223, 167, 185);
+  background-color:#0e4437;
 }
 
-@media (max-width: 1229px){
+@media (max-width: 1280px){
   
   footer{
     padding: 50px;
-    top: 1455px;
+    top: 1805px;
   }
   .footer-col{
     flex-direction: column;
@@ -356,9 +359,10 @@ footer input[type='submit']:hover{
  
   }
 
-  @media (max-width: 768px){
+  @media (max-width: 968px){
   footer{
   padding: 40px;
+  top:1950px;
 }
 .footer-col{
   flex-direction: column;
@@ -368,7 +372,7 @@ footer input[type='submit']:hover{
  }
 
 .footer-col ul li a:hover{
-  color: rgb(149, 11, 57);
+  color: #3ad4af;
   text-decoration: none;
 
 }
@@ -387,7 +391,7 @@ footer input[type='submit']:hover{
  transition: all 0.65s ease;
 }
 .footer-col .fimage a:hover{
-  color: rgb(149, 11, 57);
+  color: #3ad4af;
   background-color: white;
 }
 footer input[type='email']{
@@ -408,14 +412,14 @@ footer input[type='submit']{
   cursor: pointer;
   font-weight:800;
   padding: 10px ;
-  color: black;
-  background-color: rgb(149, 11, 57);
+  color: white;
+  background-color: #3ad4af;
 
   margin-top: 10px;
   margin-left: 20px;
 }
 footer input[type='submit']:hover{
-  background-color: rgb(223, 167, 185);
+  background-color:#196150;
 }
   }
 
@@ -430,7 +434,7 @@ footer input[type='submit']:hover{
 
   }
   footer{
-    top: 1200px;
+    top: 1950px;
   }
     }
 /* Loader */

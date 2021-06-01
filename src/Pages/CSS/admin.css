@@ -1,0 +1,29 @@
+h2 {
+	color: white;
+	text-align: center;
+	font-size: 2rem;
+}
+
+table, td, th {
+  border: 1px solid white;
+  color: white;
+  padding: 1rem;
+}
+
+table {
+  width: 100vw;
+  border-collapse: collapse;
+}
+
+.button-a{
+	width: 50px;
+	padding: 10px;
+	background-color: white;
+	color: black;
+}
+
+.menu-container {
+	text-align: center;
+	display: flex;
+	justify-content: space-around;
+}
