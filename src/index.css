@@ -35,13 +35,31 @@ hr {
 
 /* Set a style for all buttons */
 button {
-  background-color: #4CAF50;
-  color: white;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  font-family: "Lato";
+  font-size: 1.3rem;;
+  color: #ecf0f1;
+  padding: 4px 0;
+  transition: 1s;
+  top: 11px;
+  background-color: seagreen;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+button::after{
+   position: absolute;
+  content: "";
   width: 100%;
-  opacity: 0.9;
+  height: 3px;
+  top: 100%;
+  left: 0;
+  background:black;
+  transition: transform 0.5s;
+  transform: scaleX(0);
+  transform-origin: right;
+
 }
 
 button:hover {

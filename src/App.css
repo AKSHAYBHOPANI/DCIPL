@@ -39,7 +39,8 @@ a {
   text-transform: uppercase;
   padding: 4px 0;
   transition: 1s;
-  top: 8px;
+  top: 2px;
+
 }
 .header li a::after{
    position: absolute;
