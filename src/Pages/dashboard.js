@@ -31,6 +31,7 @@ localStorage.setItem("Email", Email);
 <div className="content">
 <p>Welcome, {User} Today is {date.toLocaleString()}</p>
 </div>
+<div className="text">
 <div className="sub">
 <p>Personal Finance Portfolio</p>
 </div>
@@ -58,6 +59,7 @@ localStorage.setItem("Email", Email);
 <div className="h2sub3">
 <p>Rs XXXX</p>
 </div>
+</div>
 <div className="pie">
 <img src={Ellipse} alt="ellipse"/>
 </div>
@@ -74,19 +76,15 @@ localStorage.setItem("Email", Email);
 <p>23%</p>
 </div>
 
+<div className="images">
 <div className="features">
-<br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/>
-
-<a href="./features/investment"><img src={rect1}/><p>Investment Planning</p></a>
-<a><img src={rect2}/><p>Tax Planning</p></a>
-<br/><br/><br/><br/><br/>
+<a href="./features/investment"><img src={rect1}/><p>Investment Planning</p></a></div>
 </div>
-
- {OnPageLoad()}  
+<div className="images">
+<div className="features">
+<a><img src={rect2}/><p>Tax Planning</p></a>
+</div>
+</div>
 </div>
 
 
