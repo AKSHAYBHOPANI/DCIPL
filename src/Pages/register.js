@@ -65,26 +65,20 @@ const PasswordValue = (event) => {
         <Dashboard User={User} Email={Email}/>
 </>
       ) : (
-        <>
-        <main>
- <div>
-                <div className="logregister_form">  
-                    <h1>Register</h1>
-                    <form action="#" method="post">
-                        <br></br>
-                        <input type="text" name="name" placeholder="Name" required onChange={NameValue} value={User}></input><br></br>
-                        <input type="email" name="email" placeholder="E-Mail" required onChange={EmailValue} value={Email}></input><br></br>
-                        <input type="password" name="password" placeholder="Password"  required onChange={PasswordValue} value={Password}></input><br></br>
-                    </form>
-                </div>
-                <div className= "btn-group">
-                    <button type="submit" onClick={OnSubmit}>Register</button>
-                     <div id="logo" class="loadingio-spinner-rolling-kswyn6f3gj7"><div class="ldio-c9p079igqka">
-<div></div>
-</div></div>
-                </div>
-            </div>
-  </main>
+<>
+          <div className="contents">             
+              <form action="#" method="post" className="signin">
+                  <div className="title"><h2 className="title">Register</h2></div>
+                  <div class="input-field"><input type="text" name="name" placeholder="Name" required onChange={NameValue} value={User}></input></div>
+                  <div class="input-field"><input type="email" name="email" placeholder="E-Mail" required onChange={EmailValue} value={Email}></input></div>
+                  <div class="input-field"><input type="password" name="password" placeholder="Password"  required onChange={PasswordValue} value={Password}></input></div>
+                  <div className= "btn-group">
+                      <button class="btn" type="submit" onClick={OnSubmit}>Register</button>
+                      <div id="logo" class="loadingio-spinner-rolling-kswyn6f3gj7"><div class="ldio-c9p079igqka">
+                      </div></div>
+                  </div>
+              </form>
+          </div>
 </>
       )}
 
