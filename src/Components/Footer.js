@@ -2,11 +2,10 @@ import React from 'react';
 import '../App.css';
 import { Link } from "react-router-dom";
 
-
 function Footer() {
-	return (
-		<>
-		
+    return (
+        <>
+        
     <footer>      
               <div className="footer-text">
                  <div className="footer-col">
@@ -70,9 +69,9 @@ function Footer() {
             </div>
            </div>
         </footer>
-  
-		</>
-		)
+    
+        </>
+        )
 };
 
 export default Footer;
