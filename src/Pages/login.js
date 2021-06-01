@@ -64,23 +64,25 @@ if (CheckIsSignIn) {
         <Dashboard User={Name} Email={Email}/>
 </>
       ) : (
-
-          <div className="contents">              
-              <form action="#" method="post" className="signin">  
-                  <div class="title"><h2 class="title">login</h2></div>            
-                  <div class="input-field"><input type="text" name="name" placeholder="Name"></input></div>
-                  <div class="input-field"><input type="email" name="email" placeholder="Enter E-Mail ID" required onChange={EmailValue} value={Email}></input></div>
-                  <div class="input-field"><input type="password" name="password" placeholder="Enter your Password"  required onChange={PasswordValue} value={Password}></input></div>
-                  <div className= "btn-group">
-                      <button class="btn" type="submit" onClick={onSubmitSignIn}>Login</button>
-                      {OnPageLoad()}
-                      <div id="logo" class="loadingio-spinner-rolling-kswyn6f3gj7"><div class="ldio-c9p079igqka">
-                      </div></div>
-                      <button class="btn" type="submit">Register</button>
-                  </div>
-              </form>              
-          </div>
-
+  <main>
+            <div>
+                <div className="logregister_form">  
+                    <h2>Login/Register</h2>
+                    <form action="#" method="post">
+                        <br></br>
+                        <input type="email" name="email" placeholder="Enter E-Mail ID" required onChange={EmailValue} value={Email}></input><br></br>
+                        <input type="password" name="password" placeholder="Enter your Password"  required onChange={PasswordValue} value={Password}></input><br></br>
+                    </form>
+                </div>
+                <div className= "btn-group">
+                    <button type="submit" onClick={onSubmitSignIn}>Login</button>
+                    {OnPageLoad()}
+                    <div id="logo" class="loadingio-spinner-rolling-kswyn6f3gj7"><div class="ldio-c9p079igqka">
+<div></div>
+</div></div>
+                </div>
+            </div>
+        </main>
         )}
 		</>
 
