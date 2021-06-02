@@ -23,7 +23,7 @@ function Home() {
 <div className="container"><img src={image} alt="img"></img>
         <div class="text-box">
             <h1>YOUR SMART FINANCIAL <br />PLANNER</h1>
-            <a href="" class="hero-btn1">Play now</a>
+            <a href="./register" class="hero-btn1">PLAN NOW</a>
         </div>
     </div>
 
