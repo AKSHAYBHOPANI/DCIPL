@@ -187,7 +187,7 @@ footer{
   line-height: 1.5;
   position: absolute;
   text-decoration: none;
-   top: 1650px;
+   top: 1850px;
  
 
   
@@ -348,7 +348,8 @@ footer input[type='submit']:hover{
   
   footer{
     padding: 50px;
-    top: 1805px;
+    top: 1305px;
+    position: relative;
   }
   .footer-col{
     flex-direction: column;
@@ -360,10 +361,10 @@ footer input[type='submit']:hover{
  
   }
 
-  @media (max-width: 968px){
+  @media (max-width: 768px){
   footer{
   padding: 40px;
-  top:1950px;
+  top:1550px;
 }
 .footer-col{
   flex-direction: column;
@@ -435,7 +436,7 @@ footer input[type='submit']:hover{
 
   }
   footer{
-    top: 1950px;
+    top: 1250px;
   }
     }
 /* Loader */
