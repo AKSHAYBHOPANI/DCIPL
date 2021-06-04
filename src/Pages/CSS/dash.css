@@ -1,4 +1,4 @@
-.dashboard
+.area
 {
 position: relative;
 width: auto;
@@ -35,7 +35,7 @@ align-items: center;
 position: absolute;
 display: flex;
 flex-basis: 20%;
-left: 390px;
+
 top: 100px;
 box-sizing: border-box;
 text-align: justify;
@@ -44,18 +44,17 @@ font-family: Jost;
 font-style: normal;
 font-weight: normal;
 font-size: 36px;
-line-height: 52px;
-/* identical to box height */
+
 
 text-align: center;
 
 color: rgba(255, 255, 255, 0.95);
 }
 .text{
-	transform: translate(0%,-70%);
-	left: 150px;
+
+	right: 150px;
 	top: 250px;
-	display:block;
+	
 
 }
 .sub
@@ -384,15 +383,13 @@ top: 965px;
 }
 .images{
 	padding-left:150px;
-	margin-left: 40px;
-	padding-bottom: 0px;
-	margin-bottom: 0px;
-	margin: 40px;
-	float:left;
-	top: 250%;
-	left: 30%;
-	transform: translate(20%,250%);
-	width: 30%;
+	
+	
+	margin-top:900px;
+	
+	
+	
+	
 	position: static;
 }
 @media screen and (max-width:320px) {
@@ -441,7 +438,7 @@ top: 965px;
 	*{
 		height: auto;
 	}
-	.dashboard{
+	.area{
 		height:1126px;
 	}
 	.content{

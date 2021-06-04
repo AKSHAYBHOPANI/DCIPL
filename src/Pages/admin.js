@@ -148,10 +148,10 @@ fetch('https://dcipl.yourtechshow.com/getInvestmentCsv')
     {IsSignIn ? (
   <>
   <div>
-<br/><br/><br/><br/><br/><br/><br/><br/>
-<h2>Welcome, Admin Today is {date.toLocaleString()}</h2>
+<br/><br/><br/><br/>
+<h2>Welcome, <span className="admin">Admin</span> <br/>Today is {date.toLocaleString()}</h2>
 <br/>
-<h2>Total Registered Users = {UsersCount}</h2><br/>
+<h2 className ="register">Total Registered Users = {UsersCount}</h2><br/>
 <div className="menu-container">
 <button className="button-a" onClick={GetUsers}>Users</button>
 <button className="button-a" onClick={GetInvestment}>Investment</button>
