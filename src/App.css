@@ -179,15 +179,16 @@ footer{
  
   font-size: 1rem;
   font-weight: 300;
- min-height: 18vh;
+ min-height: 14vh;
  background-color: grey;
   color: white;
   width: 100%;
   padding: 70px 0;
   line-height: 1.5;
-  position: absolute;
+  position: relative;
   text-decoration: none;
-   top: 1850px;
+   top: 700px;
+   padding: 3.0625rem 1.25rem 1.875rem;
  
 
   
@@ -203,10 +204,9 @@ flex-wrap: wrap;
 margin-bottom: 0;
 
 }
-ul{
+ footer ul{
 list-style: none;
 }
-
 
 .footer-col{
 width: 25%;
@@ -227,8 +227,7 @@ padding: 0 15px;
   left: 0;
   bottom: -10px;
   height: 3px;
-  width: 100px;
-  
+  width: 100px;  
   box-sizing: border-box;
   background-color: #3ad4af;
 }
@@ -246,56 +245,11 @@ padding: 0 15px;
   display: block;
   font-family: sans-serif;
   transition:all 0.3s ease ;
-
-
 display: flex;
 flex-wrap: wrap;
 margin-bottom: 0;
-
-}
-ul{
-list-style: none;
 }
 
-
-.footer-col{
-width: 25%;
-padding: 0 15px;
-
-}
-.footer-col h4{
-  font-size: 24px;
-  color: white;
-   font-weight: 500;
-  position: relative;
-  margin-bottom: 30px;
-  font-family: sans-serif;
-}
-.footer-col h4::before{
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  height: 3px;
-  width: 100px;
-  box-sizing: border-box;
-  background-color: #3ad4af;
-}
-.footer-col ul li:not(:last-child){
-  color: white;
-  font-size: 20px;
-  margin-bottom: 10px;
-   
-}
- .footer-col ul li a{
-  font-size: 18px;
-  color: white;
-  font-weight: 300;
-  text-decoration: none;
-  display: block;
-  font-family: sans-serif;
-  transition:all 0.3s ease ;
-}
 .footer-col ul li a:hover{
   color: #e6eeec;
   text-decoration: none;
@@ -348,7 +302,7 @@ footer input[type='submit']:hover{
   
   footer{
     padding: 50px;
-    top: 1305px;
+    top: 800px;
     position: relative;
   }
   .footer-col{
@@ -364,7 +318,8 @@ footer input[type='submit']:hover{
   @media (max-width: 768px){
   footer{
   padding: 40px;
-  top:1550px;
+  top:500px;
+  position:relative;
 }
 .footer-col{
   flex-direction: column;
@@ -436,7 +391,7 @@ footer input[type='submit']:hover{
 
   }
   footer{
-    top: 1250px;
+    top: 400px;
   }
     }
 /* Loader */
@@ -479,3 +434,21 @@ footer input[type='submit']:hover{
 }
 .ldio-c9p079igqka div { box-sizing: content-box; }
 
+/*global class button */
+button{
+  border: none;
+  height: 50%;
+  outline: none;
+  text-align: center;
+  border-radius: 18px;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight:800;
+ margin-top: 10px;
+  color: white;
+  background-color:#3ad4af;
+  width:150px;
+  margin-right: 5px;
+  margin-bottom: 20px;
+
+}
