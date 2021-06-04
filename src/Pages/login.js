@@ -23,7 +23,8 @@ const PasswordValue = (event) => {
     localStorage.setItem("IsSignIn", true);
   }, [setIsSignIn])
 
-const onSubmitSignIn = () => {
+const onSubmitSignIn = (e) => {
+  e.preventDefault();
   document.getElementById('logo').style.display="block";
     fetch('https://dcipl.yourtechshow.com/signin', {
       method: 'post',
@@ -68,17 +69,18 @@ if (CheckIsSignIn) {
             <div>
                 <div className="logregister_form">  
                     <h2>Login/Register</h2>
-                    <form action="#" method="post">
+                    <form onSubmit={onSubmitSignIn}>
                         <br></br>
                         <input type="email" name="email" placeholder="Enter E-Mail ID" required onChange={EmailValue} value={Email}></input><br></br>
                         <input type="password" name="password" placeholder="Enter your Password"  required onChange={PasswordValue} value={Password}></input><br></br>
+                    <div className= "btn-group">
+                    <button type="submit">Login</button></div>
                     </form>
                 </div>
-                <div className= "btn-group">
-                    <button type="submit" onClick={onSubmitSignIn}>Login</button>
+                
                     {OnPageLoad()}
                     <div id="logo" class="loadingio-spinner-rolling-kswyn6f3gj7"><div class="ldio-c9p079igqka">
-<div></div>
+<div>
 </div></div>
                 </div>
             </div>

@@ -80,7 +80,9 @@ setEmail(email);
 
 }
 
-const onSubmitSignIn = () => {
+const onSubmitSignIn = (e) => {
+  e.preventDefault();
+  document.getElementById('logo').style.display="block";
     fetch('https://dcipl.yourtechshow.com/investment', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
@@ -111,9 +113,11 @@ const onSubmitSignIn = () => {
        if (response.Age) {
         alert("Thank You For Submitting Data");
         console.log(response);
+        document.getElementById('logo').style.display="none";
        } else {
-       alert("You already Submitted The Data.");
+       alert("Error, Something Went Wrong.");
        console.log(response);
+       document.getElementById('logo').style.display="none";
      }
        })
   }
@@ -126,49 +130,51 @@ const onSubmitSignIn = () => {
   <h1 className="Title">Investment Planning</h1>
   <h2 className="Title">On The Basis Of Income</h2>
   <div className="Form">
-  <form action="#" method="post">
+  <form onSubmit={onSubmitSignIn}>
                         <br></br>
-                        <input type="text" name="fixed-income" placeholder="Fixed Income (Per Month)" required onChange={FixedIncomeValue} value={FixedIncome}></input><br></br>
-                        <input type="text" name="fixed-income" placeholder="Other Income (Per Month)" required onChange={OtherIncomeValue} value={OtherIncome}></input><br></br>
-                        <input type="text" name="fixed-income" placeholder="Median Income (Per Month)" required onChange={MedianIncomeValue} value={MedianIncome}></input><br></br>
-                        <input type="text" name="fixed-income" placeholder="Total Expenses (Per Month)" required onChange={TotalExpensesValue} value={TotalExpenses}></input><br></br>
-                        <input type="text" name="fixed-income" placeholder="Income Available For Investment (Savings)" required onChange={SavingsIncomeValue} value={SavingsIncome}></input><br></br>
-                        <input type="text" name="fixed-income" placeholder="Current Age" required onChange={AgeValue} value={Age}></input><br></br>
-                        <input type="text" name="fixed-income" placeholder="Retirement Age Proposed" required onChange={RetirementAgeValue} value={RetirementAge}></input><br></br>
+                        <input type="number" name="fixed-income" placeholder="Fixed Income (Per Month)" required onChange={FixedIncomeValue} value={FixedIncome}></input><br></br>
+                        <input type="number" name="fixed-income" placeholder="Other Income (Per Month)" required onChange={OtherIncomeValue} value={OtherIncome}></input><br></br>
+                        <input type="number" name="fixed-income" placeholder="Median Income (Per Month)" required onChange={MedianIncomeValue} value={MedianIncome}></input><br></br>
+                        <input type="number" name="fixed-income" placeholder="Total Expenses (Per Month)" required onChange={TotalExpensesValue} value={TotalExpenses} max={parseInt(FixedIncome) + parseInt(OtherIncome) + parseInt(MedianIncome)}></input><br></br>
+                        <input type="number" name="fixed-income" placeholder="Income Available For Investment (Savings)" required onChange={SavingsIncomeValue} value={SavingsIncome} max={parseInt(FixedIncome) + parseInt(OtherIncome) + parseInt(MedianIncome)}></input><br></br>
+                        <input type="number" name="fixed-income" placeholder="Current Age" required onChange={AgeValue} value={Age} max="100" min="18"></input><br></br>
+                        <input type="number" name="fixed-income" placeholder="Retirement Age Proposed" required onChange={RetirementAgeValue} value={RetirementAge} min="25" max="100"></input><br></br>
                         <input type="text" name="fixed-income" placeholder="Assest Class" required onChange={AssestClassValue} value={AssestClass}></input><br></br>
-                        <input type="text" name="fixed-income" placeholder="Return" required onChange={ReturnValue} value={Return}></input><br></br>
-                        <input type="text" name="fixed-income" placeholder="Risk" required onChange={RiskValue} value={Risk}></input><br></br>
-                        <input type="text" name="fixed-income" placeholder="Time Duration For Investment (In Years)" required onChange={TimeValue} value={Time}></input><br></br>
+                        <input type="number" name="fixed-income" placeholder="Return (%)" required onChange={ReturnValue} value={Return} max="100"></input><br></br>
+                        <input type="number" name="fixed-income" placeholder="Risk" required onChange={RiskValue} value={Risk}></input><br></br>
+                        <input type="number" name="fixed-income" placeholder="Time Duration For Investment (In Years)" required onChange={TimeValue} value={Time} min="1"></input><br></br>
                         <label>Financial Risk - </label>
-                          <select onChange={FinancialRiskValue} value={FinancialRisk}>
+                          <select onChange={FinancialRiskValue} value={FinancialRisk} required>
                           <option value="">Select</option>
                             <option value="High">High</option>
                             <option value="Medium">Medium</option>
                             <option value="Low">Low</option>
                           </select>
                           <label>  Standard Of Living - </label>
-                          <select onChange={StandardValue} value={Standard}>
+                          <select onChange={StandardValue} value={Standard} required>
                            <option value="">Select</option>
                             <option value="High">High</option>
                             <option value="Medium">Medium</option>
                             <option value="Low">Low</option>
                           </select>
                           <label>  Risk Willingness - </label>
-                          <select onChange={RiskWillingnessValue} value={RiskWillingness} >
+                          <select onChange={RiskWillingnessValue} value={RiskWillingness} required>
                            <option value="">Select</option>
                             <option value="High">High</option>
                             <option value="Medium">Medium</option>
                             <option value="Low">Low</option>
                           </select>
                           <label>  Liquidity - </label>
-                          <select onChange={LiquidityValue} value={Liquidity}>
+                          <select onChange={LiquidityValue} value={Liquidity} required>
                            <option value="">Select</option>
                             <option value="High">High</option>
                             <option value="Medium">Medium</option>
                             <option value="Low">Low</option>
                           </select>
+                          <button type="submit">Calculate</button>
                         </form> <br></br>
-                    <button type="submit" onClick={onSubmitSignIn}>Calculate</button>
+                        <div id="logo" class="loadingio-spinner-rolling-kswyn6f3gj7"><div class="ldio-c9p079igqka">
+</div></div>
 </div> 
 
 <br></br>   <br></br> <br></br> 
