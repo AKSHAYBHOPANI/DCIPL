@@ -38,6 +38,8 @@ const onSubmitSignIn = (e) => {
       .then(user => {
         if (user.id) {
           setName(user.name)
+          localStorage.setItem("User", user.name);
+          localStorage.setItem("Email", Email);
           handleIsSignIn();
         } else {
           alert("Wrong Credentials")
@@ -62,7 +64,7 @@ if (CheckIsSignIn) {
     {IsSignIn ? (
   <>
   <br/>
-        <Dashboard User={Name} Email={Email}/>
+        <Dashboard User={Name} Email={Email} setUser={setName} setEmail={setEmail}/>
 </>
       ) : (
   <main>

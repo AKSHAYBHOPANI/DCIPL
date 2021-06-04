@@ -7,7 +7,7 @@ import line3 from "../assests/Line 3.png";
 import rect1 from "../assests/rect1.jpg"; 
 import rect2 from "../assests/rect2.jpg"; 
 
-function Dashboard({User, Email}) {
+function Dashboard({User,setUser, Email, setEmail}) {
 
  var [date,setDate] = useState(new Date());
     
@@ -20,8 +20,10 @@ function Dashboard({User, Email}) {
     });
 
 const OnPageLoad = () => {
-localStorage.setItem("User", User);
-localStorage.setItem("Email", Email);
+User = localStorage.getItem("User");
+setUser(User)
+Email = localStorage.getItem("Email");
+setEmail(Email)
 }
                            
 	return (
@@ -86,7 +88,7 @@ localStorage.setItem("Email", Email);
 </div>
 </div>
 </div>
-
+{OnPageLoad()}
 
 </>
 
