@@ -1,12 +1,12 @@
 
-.container{
+.ho-container{
 	height: 100vh;
 	width: 100vw;
 	background-size: cover;
 	background-position: center;
 	position: relative;
 }
-.container img{
+.ho-container img{
 	width: 100vw;
 	height: 100vh;
 }
@@ -68,11 +68,11 @@
 	transition: 1s;
 }
 @media(max-width:1300px){
-	.container{
+	.ho-container{
 		width:100vw;
 		height: 50vh;
 	}
-	.container img{
+	.ho-container img{
 		height: 50vh;
 	}
 	.text-box h1{
@@ -84,7 +84,7 @@
 		font-size: 14px;
 	}
 }
-.nav-area{
+.home-area{
 	position: relative;
 	width: 100%;
 	height:1400px;
@@ -143,7 +143,8 @@
 	font-weight: 600;
 	color:black;
 	font-size:21px;
-	top: 20%;
+	top: 10%;
+	text-align: center;
 	left: 50%;
 	position: absolute;
 	transform: translateX(-50%);
@@ -168,7 +169,7 @@
 
 
 @media(max-width:1300px){
-	.nav-area{
+	.home-area{
 		width: 100%;
 		height: 2500px;
 	}
@@ -198,6 +199,7 @@
 .fea3 h2{
 	font-size:35px;
 	font-weight:600;
+	text-align: center;
 	color:white;
 }
 @media(max-width:1300px){
@@ -205,10 +207,10 @@
 		font-size:25px;
 }
 }
-.form{
+.home-form{
 	margin: 100px auto;
 	width: 80%;
-	height: 53vh;
+	height: 55vh;
 	background-color: white;
 	background-position: center;
 	background-size: cover;
@@ -221,21 +223,21 @@
 	display:flex;
 	justify-content:space-between;
 }
-.column{
+.h-column{
 	flex-basis:44%;
 	margin-top: -10px;
 	cursor: pointer;
 	display: flex;
 	
 }
-.column img{
+.h-column img{
 	height: 25px;
 	border-radius: 8px;
 	margin-right: 15px;
 	margin-left: 50px;
 	margin-top: 5px;
 }
-.column h2{
+.h-column h2{
 	width: 100%;
 	font-size:22px;
 	color: black;
@@ -250,11 +252,11 @@
 	justify-content:space-between;
 }
 @media(max-width:1300px){
-	.column h2{
+	.h-column h2{
 		font-size: 20px;
 	}
 	.row1{
-		margin-top: -10%;
+		margin-top: -19%;
 		flex-direction: column;
 	}
 	.row2{
