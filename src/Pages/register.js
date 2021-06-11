@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../App.css';
+import './CSS/register.css';
 import Dashboard from './dashboard';
 
 
@@ -64,25 +65,23 @@ const PasswordValue = (event) => {
       ) : (
         <>
         <main>
- <div>
-                <div className="logregister_form">  
-                    <h1>Register</h1>
+              <div className="reg-container">
+                <h1 className="neon" data-text="Register">Register</h1>
+                <div className="reg-signup">  
                     <form onSubmit={onSubmitSignIn}>
-                        <br></br>
-                        <input type="name" name="name" placeholder="Name" required onChange={NameValue} value={User}></input><br></br>
-                        <input type="email" name="email" placeholder="E-Mail" required onChange={EmailValue} value={Email}></input><br></br>
-                        <input type="password" name="password" placeholder="Password"  required onChange={PasswordValue} value={Password}></input><br></br>
-                    <div className= "btn-group">
-                    <button type="submit">Register</button></div>
-                    </form>
+                      <div class="reg-input-field"><input type="name" name="name" placeholder="Name" required onChange={NameValue} value={User}></input></div>
+                      <div class="reg-input-field"><input type="email" name="email" placeholder="E-Mail" required onChange={EmailValue} value={Email}></input></div>
+                      <div class="reg-input-field"><input type="password" name="password" placeholder="Password"  required onChange={PasswordValue} value={Password}></input></div>
+                      <div className= "reg-button-group">
+                        <button className="reg-button" type="submit">Register</button>
+                        <button className="reg-button" type="submit"><a href="./login">Login</a></button>
+                      </div>
+                    </form>                  
                 </div>
+              </div>
                 
-                     <div id="logo" class="loadingio-spinner-rolling-kswyn6f3gj7"><div class="ldio-c9p079igqka">
-<div>
-</div></div>
-                </div>
-            </div>
-  </main>
+                     <div id="logo" class="loadingio-spinner-rolling-kswyn6f3gj7"><div class="ldio-c9p079igqka"></div></div>
+          </main>
 </>
       )}
 
