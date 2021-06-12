@@ -68,25 +68,23 @@ if (CheckIsSignIn) {
 </>
       ) : (
   <main>
-            <div>
-                <div className="logregister_form">  
-                    <h2>Login/Register</h2>
+            <div className="login-container">
+                <h1 className="neon" data-text="Register">Login</h1>
+                <div className="login-signin">  
                     <form onSubmit={onSubmitSignIn}>
-                        <br></br>
-                        <input type="email" name="email" placeholder="Enter E-Mail ID" required onChange={EmailValue} value={Email}></input><br></br>
-                        <input type="password" name="password" placeholder="Enter your Password"  required onChange={PasswordValue} value={Password}></input><br></br>
-                    <div className= "btn-group">
-                    <button type="submit">Login</button></div>
+                      <div class="login-input-field"><input type="email" name="email" placeholder="Enter E-Mail ID" required onChange={EmailValue} value={Email}></input></div>
+                      <div class="login-input-field"><input type="password" name="password" placeholder="Enter your Password"  required onChange={PasswordValue} value={Password}></input></div>
+                      <div className= "login-button-group">
+                        <button className="login-button" type="submit">login</button>
+                        <button className="login-button" type="submit"><a href="./register">Register</a></button>
+                      </div>
                     </form>
                 </div>
-                
-                    {OnPageLoad()}
-                    <div id="logo" class="loadingio-spinner-rolling-kswyn6f3gj7"><div class="ldio-c9p079igqka">
-<div>
-</div></div>
-                </div>
             </div>
-        </main>
+              
+                {OnPageLoad()}
+                <div id="logo" class="loadingio-spinner-rolling-kswyn6f3gj7"><div class="ldio-c9p079igqka"></div></div>
+  </main>
         )}
 		</>
 
