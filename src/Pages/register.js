@@ -80,7 +80,9 @@ const PasswordValue = (event) => {
                 </div>
               </div>
                 
-                     <div id="logo" class="loadingio-spinner-rolling-kswyn6f3gj7"><div class="ldio-c9p079igqka"></div></div>
+            <div id="logo" class="loadingio-spinner-rolling-kswyn6f3gj7"><div class="ldio-c9p079igqka">
+<div></div>
+</div></div>
           </main>
 </>
       )}
