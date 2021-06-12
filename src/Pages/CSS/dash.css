@@ -371,16 +371,14 @@ top: 965px;
 	width:300px;
 	height:300px;
 }
-.features>a>p{
+.features a p{
 	color:#fff;
 	padding: 5px;
 	text-align: center;
 
 
 }
-.features{
-	border:1px solid black;
-}
+
 .images{
 	padding-left:150px;
 	
@@ -392,49 +390,99 @@ top: 965px;
 	
 	position: static;
 }
-@media screen and (max-width:320px) {
+@media screen and (max-width:568px)  {
 	.content{
-		font-size: 15px;
+		font-size: 25px;
 		justify-content: space-between;
 		width:50%;
+		left:30px;
 	}
 	.images{
 		width: 30%;
-		top: 100%;
-	    left: 100%;
-	transform: translate(-100%,-100%);
+		top: 350%;
+	    left: 10%;
+	transform: translate(-200%,120%);
 	}
 	.features img{
 		width: 175px;
 		height:175px;
+		padding-left:30px;
+		
 	}
+	.features a p{
+		padding-left:50px;
+	}
+	
 	.text{
 		transform: translate(-30%,50%);
 		left: 20px;
 		top: 350px;
-		display:block;
-		font-size: 10px;
+		font-size: 5px;
 		width:30%;
 	
 	}
 	.pie{
-		width: 260px;
-		height: 268px;
+		width:68px;
+		height:168px;
+		left: 20px;
+		top: 366px;
+		
 	}
 	.line1{
 		width: 55px;
 	height: 42px;
+	left:196px;
+	top:405px;
 	}
 	.line2{
 		width:55px;
 		height:42px;
+		left:20px;
+		top:536px;
 	}
 	.line3{
-		width:6px ;
-		height: 206px;
+		
+		left:150px;
+		top:376px;
+	}
+	.sub{
+		left: 70px;
+top: 300px;
+	}
+	.h1{
+		left:50px;
+		top:350px;
+	}
+	.sub1{
+		left:50px;
+		top:400px;
+	}
+	.sub2{
+		left:50px;
+		top:450px;
+	}
+	.sub3{
+		left:50px;
+		top:500px;
+	}
+	.h2{
+		left:350px;
+		top:350px;
+	}
+	.h2sub1{
+		left:350px;
+		top:400px;
+	}
+	.h2sub2{
+		left:350px;
+		top:450px;
+	}
+	.h2sub3{
+		left:350px;
+		top:500px;
 	}
 }
-@media screen and (max-width:768px) {
+@media screen and (min-width:568px) and (max-width:968px) {
 	*{
 		height: auto;
 	}
@@ -445,25 +493,59 @@ top: 965px;
 		font-size: 30px;
 		width:50%;
 	}
+	
+	.sub{
+		left: 150px;
+top: 850px;
+	}
+	.h1{
+		left:100px;
+		top:900px;
+	}
+	.sub1{
+		left:100px;
+		top:950px;
+	}
+	.sub2{
+		left:100px;
+		top:1000px;
+	}
+	.sub3{
+		left:100px;
+		top:1050px;
+	}
+	.h2{
+		left:450px;
+		top:900px;
+	}
+	.h2sub1{
+		left:450px;
+		top:950px;
+	}
+	.h2sub2{
+		left:450px;
+		top:1000px;
+	}
+	.h2sub3{
+		left:450px;
+		top:1050px;
+	}
 	.images{
 		width: 50%;
-		top: 70%;
+		top: 90%;
 	    left: 30%;
-	transform: translate(50%,290%);
+	transform: translate(-30%,150%);
 	padding-bottom: 5%;
 	margin-bottom: 3%;
 	
 	}
 	.features img{
-		width: 350px;
+		width: 300px;
 		height:225px;
 	}
 	.text{
-		transform: translate(-40%,50%);
-		left: 50px;
-		top: 180px;
-		display:block;
-		font-size: 20px;
+		
+		font-size: 30px;
 		width:50%;
 	
 	}
