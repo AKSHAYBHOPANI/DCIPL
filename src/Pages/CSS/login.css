@@ -15,25 +15,43 @@
     position: absolute;
     width: 600px;
     height: 500px;
-    top: 75%;
+    top: 83%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
+.login-container h1{
+    position: absolute;
+    top:20%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 10;
+    padding: 0 20px;
+    color: #fff;
+}
+
 .login-container h1:hover{
-	animation-name: letters;
-	animation-duration: 3s;
-    letter-spacing: 5px;
-    text-transform: capitalize;
-    font-weight: 300;
+    font-size: 45px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, .05);
+    background-image: url(../../assests/login-title-bg.png);
+    background-repeat: repeat-x;
+    -webkit-background-clip: text;
+    animation: animate 15s linear infinite;
 }
 
-@keyframes letters{
-	from{color:linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);}
-	to{color:black;}
+@keyframes animate{
+    0%{
+        background-position: left 0px top 10px;
+    }
+    40%{
+        background-position: left 800px top 10px;
+    }
 }
 
-.login-container .neon{
+/*.login-container .neon{
     position: absolute;
     top:15%;
     left: 50%;
@@ -68,7 +86,7 @@
     z-index: -1;
     opacity: 0.6;
     filter: blur(30px);
-}
+}*/
 
 .login-signin form{
     position: static;
@@ -155,15 +173,15 @@
 @media (max-width: 700px){
 
     .login-container .neon{
-        font-size:2.2em;
+        font-size:3em;
     }
 
-    .login-signup{
+    .login-signin{
         background-color:transparent;
         position: absolute;
         width: 550px;
         height: 500px;
-        top: 70%;
+        top: 90%;
         left: 50%;
         transform: translate(-50%, -50%);
     }

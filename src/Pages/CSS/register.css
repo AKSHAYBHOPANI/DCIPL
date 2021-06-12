@@ -15,7 +15,7 @@
     position: absolute;
     width: 600px;
     height: 500px;
-    top: 70%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -155,7 +155,7 @@
 @media (max-width: 700px){
 
     .reg-container .neon{
-        font-size:2.2em;
+        font-size:2.5em;
     }
 
     .reg-signup{
@@ -163,7 +163,7 @@
         position: absolute;
         width: 550px;
         height: 500px;
-        top: 70%;
+        top: 80%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
