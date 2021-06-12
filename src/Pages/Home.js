@@ -20,7 +20,7 @@ function Home() {
 		<>
 {/*Banner Section*/}
 
-<div className="container"><img src={image} alt="img"></img>
+<div className="ho-container"><img src={image} alt="img"></img>
         <div class="text-box">
             <h1>YOUR SMART FINANCIAL <br />PLANNER</h1>
             <a href="./register" class="hero-btn1">PLAN NOW</a>
@@ -28,7 +28,7 @@ function Home() {
     </div>
 
 {/* feature section */}
-<div className="nav-area">
+<div className="home-area">
     <section className="fea">
         <h1>Features</h1>
             <div className="row">
@@ -87,32 +87,32 @@ function Home() {
     <h2>Why DC&CO</h2>
 </section>
     
-    <div class="form">
+    <div class="home-form">
         <div className="row1">
-            <div className="column"><img src={image7} alt="img7"></img>
+            <div className="h-column"><img src={image7} alt="img7"></img>
                 <h2>Fast Planning</h2>
             </div>
 
-            <div className="column"><img src={image8} alt="img8"></img>
+            <div className="h-column"><img src={image8} alt="img8"></img>
                     <h2>Complete Solutions</h2>
                 </div>
 
-                <div className="column"><img src={image9} alt="img9"></img>
+                <div className="h-column"><img src={image9} alt="img9"></img>
                     <h2>Premiuim Support</h2>
                 </div>
         </div>
 
             <div className="row2">
-                    <div className="column"><img src={image10} alt="img10"></img>
+                    <div className="h-column"><img src={image10} alt="img10"></img>
                             <h2>Secure</h2>
                     </div>
     
-                    <div className="column"><img src={image11} alt="img11"></img>
+                    <div className="h-column"><img src={image11} alt="img11"></img>
                             <h2>Responsive Design</h2>
                     </div>
             
             
-                    <div className="column"><img src={image12} alt="img12"></img>
+                    <div className="h-column"><img src={image12} alt="img12"></img>
                             <h2>Trusted Platform</h2>
                     </div>
             
