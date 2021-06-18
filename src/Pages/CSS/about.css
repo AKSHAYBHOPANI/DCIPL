@@ -3,105 +3,101 @@
     padding: 0;
     font-family: "Jost";
     box-sizing: border-box;
-
-    min-height: 350vh;
+    min-height: 100vh;
     align-items: center;
     justify-content: center;
-    background-color: black;
-    position: static;
-}
-.vertical-1 {
-    float: left;
-    padding: 8px; 
-    width: 400px;
-    padding-bottom: 16px;
-    background-color: black;
-    margin-right: 50px;
-    position: static;
-}
-
-.sheet-1 {
-    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.5);
-    margin:40px 40px 0 40px;
-    transition: 1s;
-    position: static;
-}
-.sheet-1:hover{
-    z-index:1.5s;
-    transform: scale(1.1);
-    position: static;
-}
-
-.cont-1 {
-    padding: 150px;
-    text-align: center;
-    background-color: black;
-    color: black;
     position: static;
 
 }
-
-.describe-1 {
-    font-size: 15px;
-    color: white;
-    padding: 0 80px;
-    line-height: 10px;
-    position: static;
-  
-}
-
-.describe-1::after,
-.segment-1::after {
-    content: "";
-    clear: both;
-    display: inline-block;
-    position: static;
-}
-
-.term-1 {
-    color: white;
-    line-height: 10px;
-    position: static;
-}
-
 .storage-1 {
-    width: 100%;
-    background-color: #fdfdfd;
+    padding: 60px;
+    text-align: center;
     align-items: center;
+    width: 100%;
+    position: static;
+}
+.storage-1 > h1 {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    align-items: center;
+    color: white;
+    position: static;
+}
+
+
+.storage-1 > p{
+    font-size: 18px;
+    color: #545454;
+    line-height: 30px;
+    text-align: justify;
+    width: 100%;
+    background-color: white;
     padding: 80px;
     position: static;
 }
 
-.character-1 {
-    font-size: 13px;
-    color: #545454;
-    line-height: 30px;
-    text-align: justify;
-    padding-bottom: 30px;
+.storage-1 > p > span > i {
+    font-size: 25px;
+    font-weight: bold;
+    color: #138D75;
+    padding-left: 240px;
     position: static;
 }
 
 .caption-1 {
-    margin: 40px;
+    margin: 40px 0 40px 50px;
     color: white;
-    font-size: 30px;
+    font-size: 3em;
+    text-align: center;
+    font-weight: bold;
+    align-items: center;
+    position: static;
+}
+
+.segment-1 {
+  margin:150px;
+  display: flex;
+  justify-content: space-between;
+  position: static;
+}
+
+.sheet-1{
+   flex-basis: 400px;
+   background: #1f363d;
+   box-sizing: border-box;
+   transition: 0.5s;
+   position: static;
+}
+
+
+.sheet-1:hover{
+    border: 1px solid white;
+    position: static;
+    
+}
+
+.sheet-1 > img{
+  width: 100%;
+}
+
+.sheet-1 > h1 {
+    font-size: 25px;
+    color: white;
+    padding: 0 0 10px 10px;
+    line-height: 10px;
     text-align: center;
     position: static;
 }
 
-.creator-1 > img{
-    width: 100%;
+.sheet-1 > p {
+    color: white;
+    line-height: 10px;
+    margin:0 20px 16px 155px;
     position: static;
 }
 
-.character-1 > span {
-    font-size: 20px;
-    font-weight: inherit;
-    color: black;
-    position: static;
-}
-
-.switch-1 {
+.sheet-1 > a {
     display: inline-block;
     text-decoration: none;
     color: white;
@@ -110,33 +106,57 @@
     background: transparent;
     text-align: center;
     cursor: pointer;
-    margin-bottom: 6px;
+    margin: 0 10px 16px 147px;
     position: static;
 }
 
-.switch-1:hover {
-    border: 1px solid white;
+.sheet-1 > a:hover {
+    border: none;
     background: rgb(40, 180, 99);
     transition: 1s;
     position: static;
 }
 
-@media screen and (max-width: 920px) {
+@media(max-width: 1300px) {
 
-   .cont-1 {
-        font-size: 20px;
-        padding: 0;
-        
+   .storage-1 {
+        font-size: 5px;
+        padding: 60px 0 0 0;
    }
-   
-    .describe-1,.term-1{
+   .storage-1 > h1{
+        font-size: 50px;
+   }
+   .storage-1 > p > span > i{
+        padding-left: 1px;
+   }
+   .caption-1{
+        font-size: 50px;
+        margin-left: 10px;
+   }
+    .sheet-1{
         font-size: 10px;
-        padding: 5px;
+        flex-direction: column;
+        width: 280px;
+        margin: 0 auto;
 
     }
-    .vertical-1{
-        margin-left: 40px;
+    .sheet-1 > p {
+        margin-left: 100px;
+        font-size: 17px;
     }
-
-
+    .sheet-1 > a {
+        margin-left: 90px;
+        font-size: 14px;
+    }
+    .sheet-1 > img{
+        width: 280px;
+        align-items: center;
+    }
+    .sheet-1:hover{
+         border: none;  
+    }
+    .segment-1{
+        margin: 0;
+        display: block;
+    }
 }
