@@ -39,7 +39,7 @@ fetch('https://dcipl.yourtechshow.com/users')
 
 const GetInvestment = () => {
   document.getElementById('logo').style.display="block";
-fetch('http://127.0.0.1:8000/investment')
+fetch('https://dcipl.yourtechshow.com/investment')
       .then(response => response.json())
       .then(response => {
         console.log(response)
