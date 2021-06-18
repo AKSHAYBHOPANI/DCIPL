@@ -39,7 +39,7 @@ fetch('https://dcipl.yourtechshow.com/users')
 
 const GetInvestment = () => {
   document.getElementById('logo').style.display="block";
-fetch('https://dcipl.yourtechshow.com/investment')
+fetch('http://127.0.0.1:8000/investment')
       .then(response => response.json())
       .then(response => {
         console.log(response)
@@ -51,20 +51,22 @@ fetch('https://dcipl.yourtechshow.com/investment')
       txt += "<th>Name</th>"
       txt += "<th>Email</th>"
       txt += "<th>Total Income</th>" 
-      txt += "<th>Median Income</th>"
       txt += "<th>Total Expenses</th>"
-      txt += "<th>Total Income</th>"
-      txt += "<th>Savings Income</th>"
-      txt += "<th>Age</th>"
-      txt += "<th>Retirement Age</th>"
-      txt += "<th>Assest Class</th>"
-      txt += "<th>Return</th>"
-      txt += "<th>Risk</th>"
+      txt += "<th>Assests</th>"
+      txt += "<th>Liabilities</th>"
+      txt += "<th>Investable Amount</th>"
+      txt += "<th>Target Amount</th>"
       txt += "<th>Time</th>"
-      txt += "<th>Financial Risk</th>"
-      txt += "<th>Standard</th>"
-      txt += "<th>Risk Willingness</th>"
-      txt += "<th>Liquidity</th>"
+      txt += "<th>Income Stability</th>"
+      txt += "<th>Surplus</th>"
+      txt += "<th>Margin</th>"
+      txt += "<th>Break Even</th>"
+      txt += "<th>Margin Of Safety</th>"
+      txt += "<th>Margin Of Safety Rs</th>"
+      txt += "<th>Burn Rate</th>"
+      txt += "<th>Return</th>"
+      txt += "<th>NetWorth</th>"
+      txt += "<th>Risk Ability</th>"
       txt += "</tr>"
         for (i = 0; i < response.length; i++) {
         
@@ -73,20 +75,23 @@ fetch('https://dcipl.yourtechshow.com/investment')
       txt += "<td>" + JSON.stringify(response[i].name) + "</td>";
       txt += "<td>" + JSON.stringify(response[i].email) + "</td>";
       txt += "<td>" + JSON.stringify(response[i].totalincome) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].medianincome) + "</td>";
       txt += "<td>" + JSON.stringify(response[i].totalexpenses) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].totalincome) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].savingsincome) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].age) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].retirementage) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].assestclass) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].return) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].risk) + "</td>";
+      txt += "<td>" + JSON.stringify(response[i].assests) + "</td>";
+      txt += "<td>" + JSON.stringify(response[i].liabilities) + "</td>";
+      txt += "<td>" + JSON.stringify(response[i].investableamount) + "</td>";
+      txt += "<td>" + JSON.stringify(response[i].targetamount) + "</td>";
       txt += "<td>" + JSON.stringify(response[i].time) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].financialrisk) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].standard) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].riskwillingness) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].liquidity) + "</td>";
+      txt += "<td>" + JSON.stringify(response[i].incomestability) + "</td>";
+      txt += "<td>" + JSON.stringify(response[i].surplus) + "</td>";
+      txt += "<td>" + JSON.stringify(response[i].margin) + "</td>";
+      txt += "<td>" + JSON.stringify(response[i].breakeven) + "</td>";
+      txt += "<td>" + JSON.stringify(response[i].marginofsafety) + "</td>";
+      txt += "<td>" + JSON.stringify(response[i].marginofsafetyrs) + "</td>";
+      txt += "<td>" + JSON.stringify(response[i].burnrate) + "</td>";
+      txt += "<td>" + JSON.stringify(response[i].return) + "</td>";
+      txt += "<td>" + JSON.stringify(response[i].networth) + "</td>";
+      txt += "<td>" + JSON.stringify(response[i].riskability) + "</td>";
+
       txt += "</tr>"
 }
        txt += "</table>" 
