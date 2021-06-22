@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import { Link } from "react-router-dom";
+
 
 function Footer() {
     return (
@@ -51,10 +51,10 @@ function Footer() {
             <h4 className="h4-text">Connect</h4>
            
             <ul className="fimage"  >
-               <li> <a href="#"><i class ="fab fa-facebook"></i></a>
-                <a href="#"><i class ="fab fa-twitter"></i></a>
-                <a href="#"><i class ="fab fa-instagram"></i></a>
-                <a href="#"><i class ="fab fa-linkedin"></i></a>
+               <li> <a href="./"><i class ="fab fa-facebook"></i></a>
+                <a href="./"><i class ="fab fa-twitter"></i></a>
+                <a href="./"><i class ="fab fa-instagram"></i></a>
+                <a href="./"><i class ="fab fa-linkedin"></i></a>
                 </li>
                 <li>
 <form>

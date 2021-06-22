@@ -4,8 +4,6 @@ import Login from './login';
 
 function Admin() {
 const [IsSignIn, setIsSignIn] = useState(false);
-const [User, setUser] = useState("");
-const [Email, setEmail] = useState("");
 const [UsersCount, setUsersCount] = useState("");
 var [date,setDate] = useState(new Date());
 const GetUsers = () => {
@@ -173,7 +171,7 @@ fetch('https://dcipl.yourtechshow.com/getInvestmentCsv')
 </div>
 </div>
 {GetStats()}
-<div id="logo" class="loadingio-spinner-rolling-kswyn6f3gj7"><div class="ldio-c9p079igqka">
+<div id="logo" className="loadingio-spinner-rolling-kswyn6f3gj7"><div className="ldio-c9p079igqka">
 <div></div>
 </div></div>
 </>

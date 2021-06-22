@@ -72,8 +72,8 @@ if (CheckIsSignIn) {
                 <h1 className="neon" data-text="Register">Login</h1>
                 <div className="login-signin">  
                     <form onSubmit={onSubmitSignIn}>
-                      <div class="login-input-field"><input type="email" name="email" placeholder="Enter E-Mail ID" required onChange={EmailValue} value={Email}></input></div>
-                      <div class="login-input-field"><input type="password" name="password" placeholder="Enter your Password"  required onChange={PasswordValue} value={Password}></input></div>
+                      <div className="login-input-field"><input type="email" name="email" placeholder="Enter E-Mail ID" required onChange={EmailValue} value={Email}></input></div>
+                      <div className="login-input-field"><input type="password" name="password" placeholder="Enter your Password"  required onChange={PasswordValue} value={Password}></input></div>
                       <div className= "login-button-group">
                         <button className="login-button" type="submit">login</button>
                         <button className="login-button" type="submit"><a href="./register">Register</a></button>
@@ -83,7 +83,7 @@ if (CheckIsSignIn) {
             </div>
               
                 {OnPageLoad()}
-               <div id="logo" class="loadingio-spinner-rolling-kswyn6f3gj7"><div class="ldio-c9p079igqka">
+               <div id="logo" className="loadingio-spinner-rolling-kswyn6f3gj7"><div className="ldio-c9p079igqka">
 <div></div>
 </div></div>
   </main>

@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState} from 'react';
 import '../../App.css';
 import '../CSS/login.css';
 import './CSS/investment.css';
@@ -79,7 +79,7 @@ CheckIsFormSubmitted();
 }
 
 const CheckIsFormSubmitted = () => {
-    fetch('https://dcipl.yourtechshow.com/IsInvestmentFormSubmitted', {
+    fetch('http://127.0.0.1:8000/IsInvestmentFormSubmitted', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -103,7 +103,7 @@ const CheckIsFormSubmitted = () => {
 const onSubmitSignIn = (e) => {
   e.preventDefault();
   document.getElementById('logo').style.display="block";
-    fetch('https://dcipl.yourtechshow.com/investment', {
+    fetch('http://127.0.0.1:8000/investment', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -174,7 +174,7 @@ const onSubmitSignIn = (e) => {
                         <input type="number" name="fixed-income" placeholder="Time Duration For Investment (In Years)" required onChange={TimeValue} value={Time} min="1"></input><br></br>
                         <label>Income Stability - </label>
                           <select onChange={IncomeStabilityValue} value={IncomeStability} required>
-                          <option value="" selected disabled hidden>Choose Here</option>
+                          <option value="" defaultValue disabled hidden>Choose Here</option>
                           <option value="Very Unstable">Very Unstable</option>
                             <option value="Unstable">Unstable</option>
                             <option value="Somewhat Stable">Somewhat Stable</option>
@@ -185,7 +185,7 @@ const onSubmitSignIn = (e) => {
                           <button type="submit">Calculate</button>
                         </form> <br></br>
 </div> 
-<div id="logo" class="loadingio-spinner-rolling-kswyn6f3gj7"><div class="ldio-c9p079igqka">
+<div id="logo" className="loadingio-spinner-rolling-kswyn6f3gj7"><div className="ldio-c9p079igqka">
 <div></div>
 </div></div>
 <br></br>   <br></br> <br></br> 

@@ -69,9 +69,9 @@ const PasswordValue = (event) => {
                 <h1 className="neon" data-text="Register">Register</h1>
                 <div className="reg-signup">  
                     <form onSubmit={onSubmitSignIn}>
-                      <div class="reg-input-field"><input type="name" name="name" placeholder="Name" required onChange={NameValue} value={User}></input></div>
-                      <div class="reg-input-field"><input type="email" name="email" placeholder="E-Mail" required onChange={EmailValue} value={Email}></input></div>
-                      <div class="reg-input-field"><input type="password" name="password" placeholder="Password"  required onChange={PasswordValue} value={Password}></input></div>
+                      <div className="reg-input-field"><input type="name" name="name" placeholder="Name" required onChange={NameValue} value={User}></input></div>
+                      <div className="reg-input-field"><input type="email" name="email" placeholder="E-Mail" required onChange={EmailValue} value={Email}></input></div>
+                      <div className="reg-input-field"><input type="password" name="password" placeholder="Password"  required onChange={PasswordValue} value={Password}></input></div>
                       <div className= "reg-button-group">
                         <button className="reg-button" type="submit">Register</button>
                         <button className="reg-button" type="submit"><a href="./login">Login</a></button>
@@ -80,7 +80,7 @@ const PasswordValue = (event) => {
                 </div>
               </div>
                 
-            <div id="logo" class="loadingio-spinner-rolling-kswyn6f3gj7"><div class="ldio-c9p079igqka">
+            <div id="logo" className="loadingio-spinner-rolling-kswyn6f3gj7"><div className="ldio-c9p079igqka">
 <div></div>
 </div></div>
           </main>

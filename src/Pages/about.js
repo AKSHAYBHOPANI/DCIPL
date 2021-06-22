@@ -26,7 +26,7 @@ function about() {
                             <h1>Dhaval C</h1>
                             <p>CEO & Founder<br/><br/>
                             xyz@gmail.com</p>
-                            <a href="">Contact</a>
+                            <a href="./">Contact</a>
                         </div>
 
                         <div className="sheet-1">
@@ -34,7 +34,7 @@ function about() {
                             <h1>Keval C</h1>
                             <p>CEO & Founder<br/><br/>
                             xyz@gmail.com</p>
-                            <a href="">Contact</a>
+                            <a href="./">Contact</a>
                         </div>
                     </div>
         </div>

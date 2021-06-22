@@ -13,7 +13,6 @@ import image9 from "../assests/pol3.png";
 import image10 from "../assests/pol5.jpg";
 import image11 from "../assests/pol6.jpg";
 import image12 from "../assests/pol4.jpg";
-import { Link } from "react-router-dom";
 
 function Home() {
 	return (
@@ -21,9 +20,9 @@ function Home() {
 {/*Banner Section*/}
 
 <div className="ho-container"><img src={image} alt="img"></img>
-        <div class="text-box">
+        <div className="text-box">
             <h1>YOUR SMART FINANCIAL <br />PLANNER</h1>
-            <a href="./register" class="hero-btn1">PLAN NOW</a>
+            <a href="./register" className="hero-btn1">PLAN NOW</a>
         </div>
     </div>
 
@@ -36,21 +35,21 @@ function Home() {
 <div className="col"><img src={image1} alt="img1"></img>
     <div className="layer">
             <h2>INVESTMENT PLANNING</h2>
-            <a href="" className="de-btn">Details</a>
+            <a href="./" className="de-btn">Details</a>
     </div>
 </div>
 
 <div className="col"><img src={image2} alt="img2"></img>
     <div className="layer">
             <h2>TAX PLANNING</h2>
-            <a href="" className="de-btn">Details</a>
+            <a href="./" className="de-btn">Details</a>
     </div>
 </div>
 
 <div className="col"><img src={image3} alt="img3"></img>
     <div className="layer">
             <h2>RETIREMENT PLANNING</h2>
-            <a href="" className="de-btn">Details</a>
+            <a href="./" className="de-btn">Details</a>
     </div>
 </div>
 </div>
@@ -62,21 +61,21 @@ function Home() {
 <div className="col"><img src={image4} alt="img4"></img>
     <div className="layer">
         <h2>FINANCE PLANNING</h2>
-        <a href="" className="de-btn">Details</a>
+        <a href="./" className="de-btn">Details</a>
     </div>
 </div>
 
 <div className="col"><img src={image5} alt="img5"></img>
     <div className="layer">
         <h2>ESTATE  PLANNING</h2>
-        <a href="" className="de-btn">Details</a>
+        <a href="./" className="de-btn">Details</a>
     </div>
 </div>
 
 <div className="col"><img src={image6} alt="img6"></img>
     <div className="layer">
         <h2>WEALTH PLANNING</h2>
-        <a href="" className="de-btn">Details</a>
+        <a href="./" className="de-btn">Details</a>
     </div>
 </div>
 
@@ -87,7 +86,7 @@ function Home() {
     <h2>Why DC&CO</h2>
 </section>
     
-    <div class="home-form">
+    <div className="home-form">
         <div className="row1">
             <div className="h-column"><img src={image7} alt="img7"></img>
                 <h2>Fast Planning</h2>
