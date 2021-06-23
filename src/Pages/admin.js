@@ -65,6 +65,7 @@ fetch('https://dcipl.yourtechshow.com/investment')
       txt += "<th>Return</th>"
       txt += "<th>NetWorth</th>"
       txt += "<th>Risk Ability</th>"
+      txt += "<th>Target Return</th>"
       txt += "</tr>"
         for (i = 0; i < response.length; i++) {
         
@@ -89,10 +90,10 @@ fetch('https://dcipl.yourtechshow.com/investment')
       txt += "<td>" + JSON.stringify(response[i].return) + "</td>";
       txt += "<td>" + JSON.stringify(response[i].networth) + "</td>";
       txt += "<td>" + JSON.stringify(response[i].riskability) + "</td>";
-
+      txt += "<td>" + JSON.stringify(response[i].targetreturn) + "</td>";
       txt += "</tr>"
 }
-       txt += "</table>" 
+       txt += "</table>"
       document.getElementById('users').innerHTML=txt;
       document.getElementById('logo').style.display="none";
       })

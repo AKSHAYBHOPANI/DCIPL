@@ -2,9 +2,11 @@ import React from 'react';
 import '../../App.css';
 
 
-function PortfolioHigh() {
+function PortfolioHigh(targetreturn) {
     return (
         <>
+{targetreturn.targetreturn>=15 ? (
+  <>
     <table>
 <thead>
   <tr>
@@ -93,7 +95,9 @@ function PortfolioHigh() {
 </table>
 
 <br></br>
-
+</>
+) : (
+<>
 <table>
 <thead>
   <tr>
@@ -261,6 +265,7 @@ function PortfolioHigh() {
 </table>    
     
         </>
+        )} </>
         )
 };
 

@@ -2,12 +2,21 @@ import React, { useState, useCallback } from 'react';
 import '../App.css';
 import './CSS/login.css';
 import Dashboard from './dashboard';
+import FacebookLogin from 'react-facebook-login';
 
 function Login({IsSignIn, setIsSignIn}) {
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
  
+ const responseFacebook = (response) => {
+  console.log(response);
+  setName(response.name);
+  setEmail(response.email);
+  handleIsSignIn();
+  localStorage.setItem("User", response.name);
+  localStorage.setItem("Email", Email);
+}
 
   const EmailValue = (event) => {
   setEmail(event.target.value);
@@ -78,6 +87,12 @@ if (CheckIsSignIn) {
                         <button className="login-button" type="submit">login</button>
                         <button className="login-button" type="submit"><a href="./register">Register</a></button>
                       </div>
+                       <FacebookLogin
+    appId="612293356405016"
+    
+    fields="name,email,picture"
+    callback={responseFacebook} 
+    cssClass="reg-button"/>
                     </form>
                 </div>
             </div>

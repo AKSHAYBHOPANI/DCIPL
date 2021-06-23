@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../App.css';
 import './CSS/register.css';
 import Dashboard from './dashboard';
-
+import FacebookLogin from 'react-facebook-login';
 
 function Register({IsSignIn, setIsSignIn}) {
   
@@ -10,7 +10,14 @@ function Register({IsSignIn, setIsSignIn}) {
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
 
-
+const responseFacebook = (response) => {
+  console.log(response);
+  setUser(response.name);
+  setEmail(response.email);
+  setIsSignIn(true);
+  localStorage.setItem("User", response.name);
+  localStorage.setItem("Email", Email);
+}
   const NameValue = (event) => {
   event.preventDefault();
   setUser(event.target.value);
@@ -67,7 +74,7 @@ const PasswordValue = (event) => {
         <main>
               <div className="reg-container">
                 <h1 className="neon" data-text="Register">Register</h1>
-                <div className="reg-signup">  
+                    <div className="reg-signup">
                     <form onSubmit={onSubmitSignIn}>
                       <div className="reg-input-field"><input type="name" name="name" placeholder="Name" required onChange={NameValue} value={User}></input></div>
                       <div className="reg-input-field"><input type="email" name="email" placeholder="E-Mail" required onChange={EmailValue} value={Email}></input></div>
@@ -76,6 +83,12 @@ const PasswordValue = (event) => {
                         <button className="reg-button" type="submit">Register</button>
                         <button className="reg-button" type="submit"><a href="./login">Login</a></button>
                       </div>
+                      <FacebookLogin
+    appId="612293356405016"
+    
+    fields="name,email,picture"
+    callback={responseFacebook} 
+    cssClass="reg-button"/>
                     </form>                  
                 </div>
               </div>

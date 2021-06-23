@@ -2,9 +2,11 @@ import React from 'react';
 import '../../App.css';
 
 
-function PortfolioLow() {
+function PortfolioLow(targetreturn) {
     return (
         <>
+{targetreturn.targetreturn>=8 ? (
+  <>
 <table class="tg">
 <thead>
   <tr>
@@ -92,6 +94,9 @@ function PortfolioLow() {
   </tbody>
 </table>
 <br></br>
+</>
+) : (
+<>
 <table class="tg">
 <thead>
   <tr>
@@ -181,6 +186,7 @@ function PortfolioLow() {
 </table>
     
         </>
+         )} </>
         )
 };
 
