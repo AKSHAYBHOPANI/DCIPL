@@ -13,9 +13,9 @@ function Login({IsSignIn, setIsSignIn}) {
   console.log(response);
   setName(response.name);
   setEmail(response.email);
-  handleIsSignIn();
   localStorage.setItem("User", response.name);
-  localStorage.setItem("Email", Email);
+  localStorage.setItem("Email", response.email);
+  handleIsSignIn();
 }
 
   const EmailValue = (event) => {
@@ -35,7 +35,7 @@ const PasswordValue = (event) => {
 const onSubmitSignIn = (e) => {
   e.preventDefault();
   document.getElementById('logo').style.display="block";
-    fetch('https://dcipl.yourtechshow.com/signin', {
+    fetch('https://server.yourtechshow.com/signin', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({

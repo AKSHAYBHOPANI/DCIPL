@@ -16,7 +16,7 @@ const responseFacebook = (response) => {
   setEmail(response.email);
   setIsSignIn(true);
   localStorage.setItem("User", response.name);
-  localStorage.setItem("Email", Email);
+  localStorage.setItem("Email", response.email);
 }
   const NameValue = (event) => {
   event.preventDefault();
@@ -36,7 +36,7 @@ const PasswordValue = (event) => {
   const onSubmitSignIn = (e) => {
     e.preventDefault();
     document.getElementById('logo').style.display="block";
-    fetch('https://dcipl.yourtechshow.com/register', {
+    fetch('https://server.yourtechshow.com/register', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
