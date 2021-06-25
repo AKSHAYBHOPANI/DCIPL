@@ -8,7 +8,7 @@ const [UsersCount, setUsersCount] = useState("");
 var [date,setDate] = useState(new Date());
 const GetUsers = () => {
   document.getElementById('logo').style.display="block";
-fetch('https://dcipl.yourtechshow.com/users')
+fetch('https://server.yourtechshow.com/users')
       .then(response => response.json())
       .then(response => {
       	console.log(response)
@@ -37,7 +37,7 @@ fetch('https://dcipl.yourtechshow.com/users')
 
 const GetInvestment = () => {
   document.getElementById('logo').style.display="block";
-fetch('https://dcipl.yourtechshow.com/investment')
+fetch('https://server.yourtechshow.com/investment')
       .then(response => response.json())
       .then(response => {
         console.log(response)
@@ -100,7 +100,7 @@ fetch('https://dcipl.yourtechshow.com/investment')
 }
 
 const GetStats = () => {
-fetch('https://dcipl.yourtechshow.com/stats-users')
+fetch('https://server.yourtechshow.com/stats-users')
       .then(response => response.json())
       .then(response => {
         setUsersCount(response.users)
@@ -110,13 +110,13 @@ fetch('https://dcipl.yourtechshow.com/stats-users')
 
 const GetUsersCSV = () => {
   document.getElementById('logo').style.display="block";
-fetch('https://dcipl.yourtechshow.com/getUserCsv')
+fetch('https://server.yourtechshow.com/getUserCsv')
     
       .then(response => {
         console.log(response)
         if (response.ok) {
           alert("Export Successfully")
-          window.location.href = "https://dcipl.yourtechshow.com/users.csv";
+          window.location.href = "https://server.yourtechshow.com/users.csv";
         } else {
           alert("Error")
         }
@@ -126,13 +126,13 @@ fetch('https://dcipl.yourtechshow.com/getUserCsv')
 
 const GetInvestmentsCSV = () => {
   document.getElementById('logo').style.display="block";
-fetch('https://dcipl.yourtechshow.com/getInvestmentCsv')
+fetch('https://server.yourtechshow.com/getInvestmentCsv')
     
       .then(response => {
         console.log(response)
         if (response.ok) {
           alert("Export Successfully")
-          window.location.href = "https://dcipl.yourtechshow.com/investment.csv";
+          window.location.href = "https://server.yourtechshow.com/investment.csv";
         } else {
           alert("Error")
         }

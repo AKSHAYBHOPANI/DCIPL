@@ -85,7 +85,7 @@ CheckIsFormSubmitted();
 }
 
 const CheckIsFormSubmitted = () => {
-    fetch('https://dcipl.yourtechshow.com/IsInvestmentFormSubmitted', {
+    fetch('https://server.yourtechshow.com/IsInvestmentFormSubmitted', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -109,7 +109,7 @@ const CheckIsFormSubmitted = () => {
 const onSubmitSignIn = (e) => {
   e.preventDefault();
   document.getElementById('logo').style.display="block";
-    fetch('https://dcipl.yourtechshow.com/investment', {
+    fetch('https://server.yourtechshow.com/investment', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
