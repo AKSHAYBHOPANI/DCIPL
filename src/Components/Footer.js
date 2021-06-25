@@ -13,7 +13,7 @@ function Footer() {
               <ul>
                 <li><a href="./">Home</a></li>
                 <li><a href="./">About</a></li>
-                <li><a href="./">Career</a></li>
+                <li><a href="./">Careers</a></li>
                 <li><a href="./">Blog</a></li>
                 <li><a href="./">Contact/Support</a></li>
               
@@ -37,20 +37,20 @@ function Footer() {
             <div className="footer-col"  >
             <h4 className="h4-text">Contact Info</h4>
            <ul className="info">
-           <li><span><i className="fa fa-map-marker"></i></span>
-           <span>  DC Ikigai Private Limited, 
-                        Dombivli East, Thane,
-                        Maharashtra - 421201 </span>
+           <li><i className="fa fa-map-marker"></i>
+             DC Ikigai Private Limited, 
+                        Dombivli East,Thane,
+                        Maharashtra - 421201 
            </li>
            <li>
-               <span><i className="fa fa-phone"></i></span>
-               <p><a href ="tel:999999999">9999999999</a></p>
+               <i className="fa fa-phone"></i>
+             9999999999
            </li>
            <li>
-               <span>
+               
                    <i className="fa fa-envelope"></i>
-               </span>
-               <p><a href="mailto:info@gmail.com">info@gmail.com</a></p>
+              
+               info@gmail.com
            </li>
                 </ul> 
                 </div>
@@ -67,7 +67,7 @@ function Footer() {
                 <li>
 <form>
     <input className="email-box" type ="email" placeholder="Email ID" required></input>
-    &nbsp;  &nbsp;
+    
     <input className= "submit-btn" type ="submit" value ="Sign Up"></input>
     
 </form>
