@@ -4,8 +4,6 @@ import Login from './login';
 
 function Admin() {
 const [IsSignIn, setIsSignIn] = useState(false);
-const [User, setUser] = useState("");
-const [Email, setEmail] = useState("");
 const [UsersCount, setUsersCount] = useState("");
 var [date,setDate] = useState(new Date());
 const GetUsers = () => {
@@ -67,6 +65,7 @@ fetch('https://dcipl.yourtechshow.com/investment')
       txt += "<th>Return</th>"
       txt += "<th>NetWorth</th>"
       txt += "<th>Risk Ability</th>"
+      txt += "<th>Target Return</th>"
       txt += "</tr>"
         for (i = 0; i < response.length; i++) {
         
@@ -91,10 +90,10 @@ fetch('https://dcipl.yourtechshow.com/investment')
       txt += "<td>" + JSON.stringify(response[i].return) + "</td>";
       txt += "<td>" + JSON.stringify(response[i].networth) + "</td>";
       txt += "<td>" + JSON.stringify(response[i].riskability) + "</td>";
-
+      txt += "<td>" + JSON.stringify(response[i].targetreturn) + "</td>";
       txt += "</tr>"
 }
-       txt += "</table>" 
+       txt += "</table>"
       document.getElementById('users').innerHTML=txt;
       document.getElementById('logo').style.display="none";
       })
@@ -173,7 +172,7 @@ fetch('https://dcipl.yourtechshow.com/getInvestmentCsv')
 </div>
 </div>
 {GetStats()}
-<div id="logo" class="loadingio-spinner-rolling-kswyn6f3gj7"><div class="ldio-c9p079igqka">
+<div id="logo" className="loadingio-spinner-rolling-kswyn6f3gj7"><div className="ldio-c9p079igqka">
 <div></div>
 </div></div>
 </>

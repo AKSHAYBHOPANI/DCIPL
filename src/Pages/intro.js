@@ -1,14 +1,13 @@
 import React from 'react';// JavaScript Document
 import './CSS/intro.css';
 import image from "../assests/bg3.png";
-import { Link } from "react-router-dom";
 
 
 function intro() {
 	return(
 	<>
 	<div className="bg1">
-	<img src={image} alt="image"/>
+	<img src={image} alt="image1"/>
 	</div>
   <div className="textbox">
   <h1>Derive Capital</h1>

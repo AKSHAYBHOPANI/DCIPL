@@ -2,7 +2,6 @@ import React from 'react';
 import logo from '../assests/log.png';
 import '../App.css';
 
-import { Link } from "react-router-dom";
 
 function LogoutNow() {
   alert("You have Successfully Logged Out. Hope to see you again.")

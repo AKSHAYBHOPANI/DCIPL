@@ -80,11 +80,11 @@ setEmail(Email)
 
 <div className="images">
 <div className="features">
-<a href="./features/investment"><img src={rect1}/><p>Investment Planning</p></a></div>
+<a href="./features/investment"><img alt="" src={rect1}/><p>Investment Planning</p></a></div>
 </div>
 <div className="images">
 <div className="features">
-<a><img src={rect2}/><p>Tax Planning</p></a>
+<a href="./"><img alt="" src={rect2}/><p>Tax Planning</p></a>
 </div>
 </div>
 </div>

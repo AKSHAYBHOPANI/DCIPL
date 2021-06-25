@@ -2,12 +2,21 @@ import React, { useState, useCallback } from 'react';
 import '../App.css';
 import './CSS/login.css';
 import Dashboard from './dashboard';
+import FacebookLogin from 'react-facebook-login';
 
 function Login({IsSignIn, setIsSignIn}) {
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
  
+ const responseFacebook = (response) => {
+  console.log(response);
+  setName(response.name);
+  setEmail(response.email);
+  handleIsSignIn();
+  localStorage.setItem("User", response.name);
+  localStorage.setItem("Email", Email);
+}
 
   const EmailValue = (event) => {
   setEmail(event.target.value);
@@ -72,18 +81,24 @@ if (CheckIsSignIn) {
                 <h1 className="neon" data-text="Register">Login</h1>
                 <div className="login-signin">  
                     <form onSubmit={onSubmitSignIn}>
-                      <div class="login-input-field"><input type="email" name="email" placeholder="Enter E-Mail ID" required onChange={EmailValue} value={Email}></input></div>
-                      <div class="login-input-field"><input type="password" name="password" placeholder="Enter your Password"  required onChange={PasswordValue} value={Password}></input></div>
+                      <div className="login-input-field"><input type="email" name="email" placeholder="Enter E-Mail ID" required onChange={EmailValue} value={Email}></input></div>
+                      <div className="login-input-field"><input type="password" name="password" placeholder="Enter your Password"  required onChange={PasswordValue} value={Password}></input></div>
                       <div className= "login-button-group">
                         <button className="login-button" type="submit">login</button>
                         <button className="login-button" type="submit"><a href="./register">Register</a></button>
                       </div>
+                       <FacebookLogin
+    appId="612293356405016"
+    
+    fields="name,email,picture"
+    callback={responseFacebook} 
+    cssClass="reg-button"/>
                     </form>
                 </div>
             </div>
               
                 {OnPageLoad()}
-               <div id="logo" class="loadingio-spinner-rolling-kswyn6f3gj7"><div class="ldio-c9p079igqka">
+               <div id="logo" className="loadingio-spinner-rolling-kswyn6f3gj7"><div className="ldio-c9p079igqka">
 <div></div>
 </div></div>
   </main>
