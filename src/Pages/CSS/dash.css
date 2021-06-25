@@ -2,7 +2,7 @@
 {
 position: relative;
 width: auto;
-height: 1030px;
+
 background: #000000;
 display: flex;
 justify-content: center;
@@ -483,9 +483,7 @@ top: 300px;
 	}
 }
 @media screen and (min-width:568px) and (max-width:968px) {
-	*{
-		height: auto;
-	}
+	
 	.area{
 		height:1126px;
 	}
