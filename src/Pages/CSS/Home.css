@@ -1,10 +1,12 @@
 
+
 .ho-container{
 	height: 100vh;
 	width: 100vw;
 	background-size: cover;
 	background-position: center;
 	position: relative;
+	top: 0; 
 }
 .ho-container img{
 	width: 100vw;
@@ -87,7 +89,7 @@
 .home-area{
 	position: relative;
 	width: 100%;
-	height:1400px;
+	/* height:1400px; */
 	left: 0;
 	top: 0;
 	border-radius: 0px;
@@ -171,7 +173,7 @@
 @media(max-width:1300px){
 	.home-area{
 		width: 100%;
-		height: 2500px;
+		/* height: 4300px; */
 	}
 	.fea h1{
 		font-size: 25px;
@@ -264,3 +266,21 @@
 	}
 
 }
+@media(max-width:768px){
+	.home-area{
+		
+		height: 2600px;
+	}}
+
+
+		@media(max-width:700px){
+			.home-area{
+				
+				height: 2500px;
+			}}
+			@media(max-width:574px){
+				.home-area{
+					
+					height: 2200px;
+				}}
+			

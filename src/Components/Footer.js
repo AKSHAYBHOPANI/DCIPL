@@ -10,17 +10,25 @@ function Footer() {
               <div className="footer-text">
                  <div className="footer-col">
               <h4 className="h4-text">About Us</h4>
-            <p>At DC & Co., we understand that change is not always easy. Since 2018, we’ve been helping individuals of various classes full their economic and financial needs. Our few years of experience have taught us to always make your personal success our priority. Our team of experts is ready to help you develop strategies for not only surviving but thriving in the future. </p>
+              <ul>
+                <li><a href="./">Home</a></li>
+                <li><a href="./">About</a></li>
+                <li><a href="./">Career</a></li>
+                <li><a href="./">Blog</a></li>
+                <li><a href="./">Contact/Support</a></li>
+              
+                                
+                </ul>
                             </div>
 
               <div className="footer-col"  >
                 <h4 className="h4-text">Company</h4>
                 <ul>
-                <li><a href="./">Newsletter</a></li>
-                <li><a href="./">Career</a></li>
-                <li><a href="./">Blog</a></li>
+                
+                <li><a href="./">Pricing and Refund policy</a></li>
                 <li><a href="./">Term of use</a></li>
                <li> <a href="./">Privacy Policy</a></li>
+               <li><a href="./">Security policy</a></li>
                 
                 
                 </ul>
@@ -65,7 +73,7 @@ function Footer() {
 </form>
                 </li>
                 <li>
-                    <div>&copy; 2021 DC & CO. All rights reserved.</div>
+                    <div className="para">&copy; 2021 DC & CO. All rights reserved.</div>
                 </li></ul>
             </div>
            </div>

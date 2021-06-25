@@ -179,20 +179,16 @@ footer{
   font-size: 1rem;
   font-weight: 300;
  min-height: 12vh;
- background-color: rgb(88, 84, 84);
+ /* background-color: rgb(88, 84, 84); */
   color: white;
   width: 100%;
    line-height: 1;
   position: relative;
   text-decoration: none;
-   top:800px;
-  
-
+  padding: 10px ;
+   /* top:1000px; */
+   /* margin-top: 80px; */
    
- 
-
-  
-  
 }
 
 
@@ -210,7 +206,7 @@ list-style: none;
 
 .footer-col{
 width: 25%;
-padding: 0 15px;
+padding: 0 25px;
 
 }
 .footer-col .h4-text{
@@ -243,7 +239,7 @@ padding: 0 15px;
   color: white;
   font-weight: 300;
   text-decoration: none;
-  display: block;
+ 
   font-family: sans-serif;
   transition:all 0.3s ease ;
   display: flex;
@@ -274,7 +270,7 @@ padding: 0 15px;
   background-color: white;
 }
 footer .email-box{
-  width: 14vw;
+  width: 12vw;
   
   font-size: 18px;
   text-align: center;
@@ -298,33 +294,43 @@ footer .email-box{
 .submit-btn:hover{
   background-color:#2d6356;
 }
+.para{
+  font-size: small;
+}
 
-@media (max-width: 1300px){
+/* @media (max-width: 1300px){
   
   footer{
     padding: 40px;
-    top: 1800px;
-    position: relative;
+    /* top: 1600px; */
+    /* position: relative; */
+    /* margin-top: 400px;
   }
   .footer-col{
     flex-direction: column;
   }
   .submit-btn{
+  
+    width:100px ; */
+   
+  /* } */
+  /* .submit-btn{
     margin-top: 10px;
     margin-left: 20px;
-  }
+  } */
  
-  }
+   
 
   @media (max-width: 768px){
   footer{
   padding: 40px;
-  top:500px;
+  /* top:800px; */
   position:relative;
+  margin-top: 160px;
 }
 .footer-col{
   flex-direction: column;
-  margin-bottom: 30px;
+  margin-bottom: -10px;
   width: 100%;
   padding: 40px;
  }
@@ -340,7 +346,7 @@ footer .email-box{
   display:inline-block;
  height: 40px;
  width: 40px;
- background-color: rgb(170, 165, 165);
+ background-color: #3ad4af;
  margin: 0 10px 10px 0;
  text-align: center;
  line-height: 40px;
@@ -353,7 +359,7 @@ footer .email-box{
   background-color: white;
 }
 footer .email-box{
-  width: 14vw;  
+  width: 15vw;  
   font-size: 18px;
   text-align: center;
   padding: 7px 7px 7px 7px;
@@ -372,9 +378,9 @@ footer .email-box{
   padding: 10px ;
   color: white;
   background-color: #3ad4af;
-
+  width:100px ;
   margin-top: 10px;
-  margin-left: 20px;
+  margin-left: -10px;
 }
  .submit-btn:hover{
   background-color:#16886d;
@@ -392,9 +398,10 @@ footer .email-box{
 
   }
   footer{
-    top: 400px;
-  }
-    }
+   margin-top: -100px;
+
+  
+    }}
 /* Loader */
 
 @keyframes ldio-c9p079igqka {

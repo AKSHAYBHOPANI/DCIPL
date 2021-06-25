@@ -1,12 +1,18 @@
 import React from 'react';// JavaScript Document
 import './CSS/blog.css';
+import video from "../assests/finance.mp4";
 
 
 function blog() {
 	return(
 	<>
-	<div><h1>OUR BLOGS</h1></div>
 
+<div className="blog1">
+
+<video src={video}  autoPlay="true" /> 
+            
+
+</div>
 
 
 
