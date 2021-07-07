@@ -9,7 +9,7 @@ import AssetClassLow from "../../Components/Investment/AssestClassLow";
 import PortfolioHigh from "../../Components/Investment/PortfolioHigh";
 import PortfolioMedium from "../../Components/Investment/PortfolioMedium";
 import PortfolioLow from "../../Components/Investment/PortfolioLow";
-function Investment({IsSignIn,setIsSignIn, User, setUser, Email, setEmail}) {
+function Investment({Profile, setProfile}) {
 
 const [FixedIncome, setFixedIncome] = useState("");
 const [VariableIncome, setVariableIncome] = useState("");
@@ -77,10 +77,8 @@ if (Data.riskability==="high") {
   };
 
 const OnPageLoad = () => {
-const email = localStorage.getItem("Email");
-const user = localStorage.getItem("User");
-setUser(user);
-setEmail(email);
+const Profile = localStorage.getItem("Profile");
+
 CheckIsFormSubmitted();
 }
 
@@ -89,7 +87,7 @@ const CheckIsFormSubmitted = () => {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
-        Email: Email,
+        Email: Profile.email,
 
       })
     })
@@ -109,12 +107,12 @@ const CheckIsFormSubmitted = () => {
 const onSubmitSignIn = (e) => {
   e.preventDefault();
   document.getElementById('logo').style.display="block";
-    fetch('https://server.yourtechshow.com/investment', {
+    fetch('http://127.0.0.1:8000/investment', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
-        User: User,
-        Email: Email,
+        User: Profile.name,
+        Email: Profile.Email,
         FixedIncome: FixedIncome,
         VariableIncome: VariableIncome,
         FixedExpenses: FixedExpenses,
@@ -146,13 +144,13 @@ const onSubmitSignIn = (e) => {
 
 	return (
     <>
-    {IsSignIn ? (
+    {Profile.IsSignIn ? (
   <>
   {IsFormSubmitted ? (
   <> 
 <br></br><br></br><br></br>
 
-<h1>Congratulations {User}, Your Investment Portfolio Is Generated ✅</h1>
+<h1>Congratulations {Profile.name}, Your Investment Portfolio Is Generated ✅</h1>
 <h2> Your Current Net Worth is {Data.networth}</h2>
 <h2>It will take {Data.targetamount/Data.investableamount} Years To Raise {Data.targetamount} if you invest {Data.investableamount} Per Year.</h2>
 <h2>Suggested Assest Classes To Invest In (Tailored just for you) - </h2>
@@ -202,7 +200,7 @@ const onSubmitSignIn = (e) => {
 )}
 </>
       ) : (
-  <Login IsSignIn={IsSignIn} setIsSignIn={setIsSignIn} />
+  <Login Profile={Profile} setProfile={setProfile}/>
         )}
 		</>
 

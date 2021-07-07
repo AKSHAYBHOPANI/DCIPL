@@ -4,7 +4,7 @@ import './CSS/login.css';
 import Dashboard from './dashboard';
 import FacebookLogin from 'react-facebook-login';
 
-function Login({IsSignIn, setIsSignIn}) {
+function Login(Profile) {
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
@@ -13,9 +13,7 @@ function Login({IsSignIn, setIsSignIn}) {
   console.log(response);
   setName(response.name);
   setEmail(response.email);
-  localStorage.setItem("User", response.name);
-  localStorage.setItem("Email", response.email);
-  handleIsSignIn();
+  
 }
 
   const EmailValue = (event) => {
@@ -27,10 +25,7 @@ const PasswordValue = (event) => {
   setPassword(event.target.value);
   };
 
-  const handleIsSignIn = useCallback(event => {
-    setIsSignIn(true);
-    localStorage.setItem("IsSignIn", true);
-  }, [setIsSignIn])
+
 
 const onSubmitSignIn = (e) => {
   e.preventDefault();
@@ -46,10 +41,12 @@ const onSubmitSignIn = (e) => {
       .then(response => response.json())
       .then(user => {
         if (user.id) {
-          setName(user.name)
-          localStorage.setItem("User", user.name);
-          localStorage.setItem("Email", Email);
-          handleIsSignIn();
+          Profile.setProfile(prevState => {
+    return Object.assign({}, prevState, { id: user.id, name: user.name,
+    email: user.email,
+    IsSignIn: true,
+    IsonBoarding: false });
+  });
         } else {
           alert("Wrong Credentials")
           document.getElementById('logo').style.display="none";
@@ -58,22 +55,24 @@ const onSubmitSignIn = (e) => {
   }
 
 const OnPageLoad = () => {
-const CheckIsSignIn = localStorage.getItem("IsSignIn");
-console.log(CheckIsSignIn)
+const CheckIsSignInRes = localStorage.getItem("Profile");
+const CheckIsSignIn = JSON.parse(CheckIsSignInRes)
 if (CheckIsSignIn) {
-  setIsSignIn(true)
+ Profile.setProfile(CheckIsSignIn)
+console.log(CheckIsSignIn)
 } else {
-  setIsSignIn(false)
+   console.log(CheckIsSignIn)
 }
 
 }
 
 	return (
     <>
-    {IsSignIn ? (
+    {Profile.Profile.IsSignIn ? (
   <>
   <br/>
-        <Dashboard User={Name} Email={Email} setUser={setName} setEmail={setEmail}/>
+        <Dashboard Profile={Profile}/>
+        {localStorage.setItem("Profile", JSON.stringify(Profile.Profile))}
 </>
       ) : (
   <main>
@@ -98,6 +97,7 @@ if (CheckIsSignIn) {
             </div>
               
                 {OnPageLoad()}
+                
                <div id="logo" className="loadingio-spinner-rolling-kswyn6f3gj7"><div className="ldio-c9p079igqka">
 <div></div>
 </div></div>

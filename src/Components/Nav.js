@@ -5,17 +5,15 @@ import '../App.css';
 
 function LogoutNow() {
   alert("You have Successfully Logged Out. Hope to see you again.")
-  localStorage.removeItem("IsSignIn");
-  localStorage.removeItem("User");
-  localStorage.removeItem("Email");
+  localStorage.removeItem("Profile");
   window.location.reload();
 }
 
-function Nav({IsSignIn, setIsSignIn}) {
+function Nav(Profile) {
   
 	return (
 <>
-    {IsSignIn ? (
+    {Profile.Profile.IsSignIn ? (
 
   <>
   <header className="header">

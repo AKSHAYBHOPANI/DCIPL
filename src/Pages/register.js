@@ -4,7 +4,7 @@ import './CSS/register.css';
 import Dashboard from './dashboard';
 import FacebookLogin from 'react-facebook-login';
 
-function Register({IsSignIn, setIsSignIn}) {
+function Register(Profile) {
   
   const [User, setUser] = useState("");
   const [Email, setEmail] = useState("");
@@ -14,9 +14,7 @@ const responseFacebook = (response) => {
   console.log(response);
   setUser(response.name);
   setEmail(response.email);
-  setIsSignIn(true);
-  localStorage.setItem("User", response.name);
-  localStorage.setItem("Email", response.email);
+
 }
   const NameValue = (event) => {
   event.preventDefault();
@@ -49,10 +47,12 @@ const PasswordValue = (event) => {
       .then(response => {
         if (response.id) {
           console.log("user")
-          setIsSignIn(true);
-          
-          /*this.props.loadUser(user)
-          this.props.onRouteChange('home');*/
+           Profile.setProfile(prevState => {
+    return Object.assign({}, prevState, { id: response.id, name: response.name,
+    email: response.email,
+    IsSignIn: true,
+    IsonBoarding: false });
+  });   
         } else {
           console.log(response)
           alert("Email Already Exists")
@@ -64,10 +64,11 @@ const PasswordValue = (event) => {
 
 	return (
 		<>
-{IsSignIn ? (
+{Profile.Profile.IsSignIn ? (
   <>
   <br/>
-        <Dashboard User={User} Email={Email} setUser={setUser} setEmail={setEmail}/>
+        <Dashboard Profile={Profile}/>
+        {localStorage.setItem("Profile", JSON.stringify(Profile.Profile))}
 </>
       ) : (
         <>
