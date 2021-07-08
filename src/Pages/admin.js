@@ -2,7 +2,7 @@ import React, { useState , useEffect }  from 'react';
 import './CSS/admin.css';
 import Login from './login';
 
-function Admin() {
+function Admin(Profile) {
 const [IsSignIn, setIsSignIn] = useState(false);
 const [UsersCount, setUsersCount] = useState("");
 var [date,setDate] = useState(new Date());
@@ -149,10 +149,10 @@ fetch('https://server.yourtechshow.com/getInvestmentCsv')
                            
 	return (
        <>
-    {IsSignIn ? (
+    {Profile.Profile.IsSignIn ? (
   <>
   <div>
-<br/><br/><br/><br/>
+<br/><br/><br/><br/>{console.log(Profile)}
 <h2>Welcome, <span className="admin">Admin</span> <br/>Today is {date.toLocaleString()}</h2>
 <br/>
 <h2 className ="register">Total Registered Users = {UsersCount}</h2><br/>
@@ -178,7 +178,7 @@ fetch('https://server.yourtechshow.com/getInvestmentCsv')
 </>
       ) : (
 <div>
-<Login IsSignIn={IsSignIn} setIsSignIn={setIsSignIn}/>
+<Login Profile={Profile} setProfile={Profile.setProfile}/>
 </div>
         )}
 		</>

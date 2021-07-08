@@ -37,7 +37,7 @@ const Main = ({Profile, setProfile}) => {
         <Blog />
       </Route>
       <Route exact path="/admin">
-        <Admin />
+        <Admin Profile={Profile} setProfile={setProfile} />
       </Route>
       <Route exact path="/features/investment">
         <Investment Profile={Profile} setProfile={setProfile} />

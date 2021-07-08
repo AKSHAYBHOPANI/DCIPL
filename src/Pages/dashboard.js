@@ -238,7 +238,7 @@ for his investments as possible</label>
                             <option value="Stable" >Strongly Disagree</option>
                           </select><br/>
 
-<label>Q. 19 Using given five year illustration, choose   
+<label>Using given five year illustration, choose   
 which scenario appeals to you the most: <br/> 
 
  </label>
@@ -252,7 +252,7 @@ which scenario appeals to you the most: <br/>
                        
                           </select><br/>
 
-<label>Q. 20 Prospects for future, in general
+<label>Prospects for future, in general
 how do you describe your own outlook 
 of the financial markets for the time periods listed
 For Short term (0- 5 Years)</label>
