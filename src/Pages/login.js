@@ -45,7 +45,7 @@ const onSubmitSignIn = (e) => {
     return Object.assign({}, prevState, { id: user.id, name: user.name,
     email: user.email,
     IsSignIn: true,
-    IsonBoarding: true });
+    IsonBoarding: false });
   });
         } else {
           alert("Wrong Credentials")
