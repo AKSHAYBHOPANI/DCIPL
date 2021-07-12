@@ -13,6 +13,8 @@ const [age, setage] = useState("");
 const [assets, setassets] = useState("");
 const [liabilities, setliabilities] = useState("");
 const [cibil, setcibil] = useState("");
+const [fixedincome, setfixedincome] = useState("");
+const [fixedexpense, setfixedexpense] = useState("");
 const [expectedSal, setexpectedSal] = useState("");
 const [withdrawPrincipal, setwithdrawPrincipal] = useState("");
 const [period, setperiod] = useState("");
@@ -49,17 +51,20 @@ const OnPageLoad = () => {
 
 const onSubmitSignIn = (e) => {
   e.preventDefault();
+  console.log(Profile)
   document.getElementById('logo').style.display="block";
-    fetch('http://127.0.0.1:8000/onboarding', {
+    fetch('https://server.yourtechshow.com/onboarding', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
-       name: Profile.name,
-       email: Profile.email,
+       name: Profile.Profile.Profile.name,
+       email: Profile.Profile.Profile.email,
        age: age,
        assets: assets,
        liabilities: liabilities,
        cibil: cibil,
+       fixedincome: fixedincome,
+       fixedexpense: fixedexpense,
        expectedSal: expectedSal,
        withdrawPrincipal: withdrawPrincipal,
        period: period,
@@ -75,16 +80,14 @@ const onSubmitSignIn = (e) => {
        portfolio: portfolio,
        outlookShorterm: outlookShorterm,
        outlookLongterm: outlookLongterm,
-       objective: objective,
-       riskWillingness: riskWillingness,
-       riskability: riskability          
+       objective: objective         
               
       })
     })
       
       .then(response => response.json())
       .then(response => {
-       if (response) {
+       if (response.age) {
         console.log(Profile)
         alert("Thank You For Submitting Data");
         console.log(response);
@@ -185,6 +188,10 @@ const onSubmitSignIn = (e) => {
     <input type="number" name="assests" id="assests" placeholder="Assests" required onChange={(event) => {setassets(event.target.value)}} value={assets}></input>
 <label for="liabilities">Liabilities: </label>
     <input type="number" name="liabilities" id="liabilities" placeholder="Liabilities" required onChange={(event) => {setliabilities(event.target.value)}} value={liabilities}></input>
+<label for="cibil">Fixed Income </label>
+    <input type="number" name="fixedincome" id="fixedincome" placeholder="Fixed Income" required onChange={(event) => {setfixedincome(event.target.value)}} value={fixedincome}></input>
+<label for="cibil">Fixed Expense </label>
+    <input type="number" name="fixedexpense" id="fixedexpense" placeholder="Fixed Expense" required onChange={(event) => {setfixedexpense(event.target.value)}} value={fixedexpense}></input>
 <label for="cibil">CIBIL Score: </label>
     <input type="number" name="cibil" id="cibil" placeholder="CIBIL Score" required onChange={(event) => {setcibil(event.target.value)}} value={cibil}></input>
 <label for="">What is the expected salary of the individual?</label>
