@@ -61,7 +61,7 @@ fetch('https://server.yourtechshow.com/onboarding-data')
       txt += "<th>Recurring</th>" 
       txt += "<th>Withdraw Principle</th>" 
       txt += "<th>Period</th>" 
-      txt += "<th>Source On Income</th>" 
+      txt += "<th>Source Of Income</th>" 
       txt += "<th>Major Expenses</th>" 
       txt += "<th>Stock Invest</th>" 
       txt += "<th>Bond Invest</th>"
@@ -84,7 +84,7 @@ fetch('https://server.yourtechshow.com/onboarding-data')
       txt += "<td>" + JSON.stringify(response[i].name) + "</td>";
       txt += "<td>" + JSON.stringify(response[i].email) + "</td>";
       txt += "<td>" + JSON.stringify(response[i].age) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].assests) + "</td>";
+      txt += "<td>" + JSON.stringify(response[i].assets) + "</td>";
       txt += "<td>" + JSON.stringify(response[i].liabilities) + "</td>";
       txt += "<td>" + JSON.stringify(response[i].cibil) + "</td>";
       txt += "<td>" + JSON.stringify(response[i].fixedincome) + "</td>";
@@ -96,7 +96,7 @@ fetch('https://server.yourtechshow.com/onboarding-data')
       txt += "<td>" + JSON.stringify(response[i].reccuring) + "</td>";
       txt += "<td>" + JSON.stringify(response[i].withdrawprincipal) + "</td>";
       txt += "<td>" + JSON.stringify(response[i].period) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].sorceofincome) + "</td>";
+      txt += "<td>" + JSON.stringify(response[i].sourceofincome) + "</td>";
       txt += "<td>" + JSON.stringify(response[i].majorexpense) + "</td>";
       txt += "<td>" + JSON.stringify(response[i].stockinvest) + "</td>";
       txt += "<td>" + JSON.stringify(response[i].bondnvest) + "</td>";
