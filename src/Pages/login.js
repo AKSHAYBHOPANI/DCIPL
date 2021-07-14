@@ -2,12 +2,19 @@ import React, { useState, useCallback } from 'react';
 import '../App.css';
 import './CSS/login.css';
 import Dashboard from './dashboard';
+import FacebookLogin from 'react-facebook-login';
 
-function Login({IsSignIn, setIsSignIn}) {
+function Login(Profile) {
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
  
+ const responseFacebook = (response) => {
+  console.log(response);
+  setName(response.name);
+  setEmail(response.email);
+  
+}
 
   const EmailValue = (event) => {
   setEmail(event.target.value);
@@ -18,14 +25,12 @@ const PasswordValue = (event) => {
   setPassword(event.target.value);
   };
 
-  const handleIsSignIn = useCallback(event => {
-    setIsSignIn(true);
-    localStorage.setItem("IsSignIn", true);
-  }, [setIsSignIn])
 
-const onSubmitSignIn = () => {
+
+const onSubmitSignIn = (e) => {
+  e.preventDefault();
   document.getElementById('logo').style.display="block";
-    fetch('https://dcipl.yourtechshow.com/signin', {
+    fetch('https://server.yourtechshow.com/signin', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -36,8 +41,12 @@ const onSubmitSignIn = () => {
       .then(response => response.json())
       .then(user => {
         if (user.id) {
-          setName(user.name)
-          handleIsSignIn();
+          Profile.setProfile(prevState => {
+    return Object.assign({}, prevState, { id: user.id, name: user.name,
+    email: user.email,
+    IsSignIn: true,
+    IsonBoarding: false });
+  });
         } else {
           alert("Wrong Credentials")
           document.getElementById('logo').style.display="none";
@@ -46,43 +55,53 @@ const onSubmitSignIn = () => {
   }
 
 const OnPageLoad = () => {
-const CheckIsSignIn = localStorage.getItem("IsSignIn");
-console.log(CheckIsSignIn)
+const CheckIsSignInRes = localStorage.getItem("Profile");
+const CheckIsSignIn = JSON.parse(CheckIsSignInRes)
 if (CheckIsSignIn) {
-  setIsSignIn(true)
+ Profile.setProfile(CheckIsSignIn)
+console.log(CheckIsSignIn)
 } else {
-  setIsSignIn(false)
+   console.log(CheckIsSignIn)
 }
 
 }
 
 	return (
     <>
-    {IsSignIn ? (
+    {Profile.Profile.IsSignIn ? (
   <>
   <br/>
-        <Dashboard User={Name} Email={Email}/>
+        <Dashboard Profile={Profile}/>
+        {localStorage.setItem("Profile", JSON.stringify(Profile.Profile))}
 </>
       ) : (
   <main>
-            <div>
-                <div className="logregister_form">  
-                    <h2>Login/Register</h2>
-                    <form action="#" method="post">
-                        <br></br>
-                        <input type="email" name="email" placeholder="Enter E-Mail ID" required onChange={EmailValue} value={Email}></input><br></br>
-                        <input type="password" name="password" placeholder="Enter your Password"  required onChange={PasswordValue} value={Password}></input><br></br>
+            <div className="login-container">
+                <h1 className="neon" data-text="Register">Login</h1>
+                <div className="login-signin">  
+                    <form onSubmit={onSubmitSignIn}>
+                      <div className="login-input-field"><input type="email" name="email" placeholder="Enter E-Mail ID" required onChange={EmailValue} value={Email}></input></div>
+                      <div className="login-input-field"><input type="password" name="password" placeholder="Enter your Password"  required onChange={PasswordValue} value={Password}></input></div>
+                      <div className= "login-button-group">
+                        <button className="login-button" type="submit">login</button>
+                        <button className="login-button" type="submit"><a href="./register">Register</a></button>
+                      </div>
+                       <FacebookLogin
+    appId="612293356405016"
+    
+    fields="name,email,picture"
+    callback={responseFacebook} 
+    cssClass="reg-button"/>
                     </form>
                 </div>
-                <div className= "btn-group">
-                    <button type="submit" onClick={onSubmitSignIn}>Login</button>
-                    {OnPageLoad()}
-                    <div id="logo" class="loadingio-spinner-rolling-kswyn6f3gj7"><div class="ldio-c9p079igqka">
+            </div>
+              
+                {OnPageLoad()}
+                
+               <div id="logo" className="loadingio-spinner-rolling-kswyn6f3gj7"><div className="ldio-c9p079igqka">
 <div></div>
 </div></div>
-                </div>
-            </div>
-        </main>
+  </main>
         )}
 		</>
 

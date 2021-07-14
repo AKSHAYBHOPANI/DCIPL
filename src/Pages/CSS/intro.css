@@ -1,6 +1,12 @@
+.bg1 {
+
+	height:100vh;
+	width:100%;
+}
+
 .bg1 img
 {
-   min-height:100vh;
+	min-height:100vh;
 	width:100%;
 	background-position:center;
 	background-size:cover;
@@ -14,7 +20,7 @@
 	width:90%;
 	color:#fff;
 	position:absolute;
-	top:30%;
+	top:10%;
 	left:50%;
 	transform:translate(-50%,50%);
 	text-align:center;

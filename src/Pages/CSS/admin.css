@@ -1,25 +1,53 @@
+*{
+	box-sizing: border-box;
+	 font-family: 'Jost', sans-serif;
+	
+}
+.admin{
+	color: rgb(156, 151, 151);
+	font-size: 20px;
+}
 h2 {
 	color: white;
-	text-align: center;
-	font-size: 2rem;
+	text-align: left;
+	margin-left:10px;
+	font-size: 1.2rem;
+}
+table{
+  background-color:white ;
+
+}
+th{
+	border: 3px solid rgb(87, 85, 85);
+	font-size: 20px;	
+	font-weight: bold;
+	
+	height:8vh;
+	background-color: rgb(108, 137, 145);
 }
 
-table, td, th {
-  border: 1px solid white;
-  color: white;
+td {
+  border: 1px solid rgb(61, 64, 65);
+  color: black;
   padding: 1rem;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 table {
   width: 100vw;
   border-collapse: collapse;
 }
+.register{
+	font-size: 20px;
+	color: blue;
+}
 
 .button-a{
-	width: 50px;
+	
 	padding: 10px;
-	background-color: white;
-	color: black;
+    color: black;
+	margin-left:60px;
 }
 
 .menu-container {

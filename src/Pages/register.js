@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 import '../App.css';
+import './CSS/register.css';
 import Dashboard from './dashboard';
+import FacebookLogin from 'react-facebook-login';
 
-
-function Register({IsSignIn, setIsSignIn}) {
+function Register(Profile) {
   
   const [User, setUser] = useState("");
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
 
+const responseFacebook = (response) => {
+  console.log(response);
+  setUser(response.name);
+  setEmail(response.email);
 
+}
   const NameValue = (event) => {
   event.preventDefault();
   setUser(event.target.value);
@@ -24,14 +30,11 @@ const PasswordValue = (event) => {
   setPassword(event.target.value);
   };
 
-  const OnSubmit = (event) => {
-    event.preventDefault();
-    onSubmitSignIn()
-  }
 
-  const onSubmitSignIn = () => {
+  const onSubmitSignIn = (e) => {
+    e.preventDefault();
     document.getElementById('logo').style.display="block";
-    fetch('https://dcipl.yourtechshow.com/register', {
+    fetch('https://server.yourtechshow.com/register', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -44,10 +47,12 @@ const PasswordValue = (event) => {
       .then(response => {
         if (response.id) {
           console.log("user")
-          setIsSignIn(true);
-          
-          /*this.props.loadUser(user)
-          this.props.onRouteChange('home');*/
+           Profile.setProfile(prevState => {
+    return Object.assign({}, prevState, { id: response.id, name: response.name,
+    email: response.email,
+    IsSignIn: true,
+    IsonBoarding: false });
+  });   
         } else {
           console.log(response)
           alert("Email Already Exists")
@@ -59,32 +64,40 @@ const PasswordValue = (event) => {
 
 	return (
 		<>
-{IsSignIn ? (
+{Profile.Profile.IsSignIn ? (
   <>
   <br/>
-        <Dashboard User={User} Email={Email}/>
+        <Dashboard Profile={Profile}/>
+        {localStorage.setItem("Profile", JSON.stringify(Profile.Profile))}
 </>
       ) : (
         <>
         <main>
- <div>
-                <div className="logregister_form">  
-                    <h1>Register</h1>
-                    <form action="#" method="post">
-                        <br></br>
-                        <input type="text" name="name" placeholder="Name" required onChange={NameValue} value={User}></input><br></br>
-                        <input type="email" name="email" placeholder="E-Mail" required onChange={EmailValue} value={Email}></input><br></br>
-                        <input type="password" name="password" placeholder="Password"  required onChange={PasswordValue} value={Password}></input><br></br>
-                    </form>
+              <div className="reg-container">
+                <h1 className="neon" data-text="Register">Register</h1>
+                    <div className="reg-signup">
+                    <form onSubmit={onSubmitSignIn}>
+                      <div className="reg-input-field"><input type="name" name="name" placeholder="Name" required onChange={NameValue} value={User}></input></div>
+                      <div className="reg-input-field"><input type="email" name="email" placeholder="E-Mail" required onChange={EmailValue} value={Email}></input></div>
+                      <div className="reg-input-field"><input type="password" name="password" placeholder="Password"  required onChange={PasswordValue} value={Password}></input></div>
+                      <div className= "reg-button-group">
+                        <button className="reg-button" type="submit">Register</button>
+                        <button className="reg-button" type="submit"><a href="./login">Login</a></button>
+                      </div>
+                      <FacebookLogin
+    appId="612293356405016"
+    
+    fields="name,email,picture"
+    callback={responseFacebook} 
+    cssClass="reg-button"/>
+                    </form>                  
                 </div>
-                <div className= "btn-group">
-                    <button type="submit" onClick={OnSubmit}>Register</button>
-                     <div id="logo" class="loadingio-spinner-rolling-kswyn6f3gj7"><div class="ldio-c9p079igqka">
+              </div>
+                
+            <div id="logo" className="loadingio-spinner-rolling-kswyn6f3gj7"><div className="ldio-c9p079igqka">
 <div></div>
 </div></div>
-                </div>
-            </div>
-  </main>
+          </main>
 </>
       )}
 

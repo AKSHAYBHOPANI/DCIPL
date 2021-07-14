@@ -6,11 +6,12 @@ import Home from './Pages/Home';
 import Login from './Pages/login';
 import Register from './Pages/register';
 import About from './Pages/about';
+import Blog from './Pages/blog';
 import Careers from './Pages/careers';
 import Investment from './Pages/features/investment';
 import Admin from './Pages/admin'
 
-const Main = ({IsSignIn, setIsSignIn, User, setUser, Email, setEmail}) => {
+const Main = ({Profile, setProfile}) => {
   return (
   <Router>
     <div>
@@ -21,10 +22,10 @@ const Main = ({IsSignIn, setIsSignIn, User, setUser, Email, setEmail}) => {
         <Home />
       </Route>
       <Route exact path="/login">
-        <Login IsSignIn={IsSignIn} setIsSignIn={setIsSignIn} />
+        <Login Profile={Profile} setProfile={setProfile}/>
       </Route>
       <Route exact path="/register">
-        <Register IsSignIn={IsSignIn} setIsSignIn={setIsSignIn} />
+        <Register Profile={Profile} setProfile={setProfile} />
       </Route>
       <Route exact path="/about">
         <About />
@@ -32,11 +33,14 @@ const Main = ({IsSignIn, setIsSignIn, User, setUser, Email, setEmail}) => {
       <Route exact path="/careers">
         <Careers />
       </Route>
+      <Route exact path="/blog">
+        <Blog />
+      </Route>
       <Route exact path="/admin">
-        <Admin IsSignIn={IsSignIn} setIsSignIn={setIsSignIn} User={User} setUser={setUser} Email={Email} setEmail={setEmail}/>
+        <Admin Profile={Profile} setProfile={setProfile} />
       </Route>
       <Route exact path="/features/investment">
-        <Investment IsSignIn={IsSignIn} setIsSignIn={setIsSignIn} User={User} setUser={setUser} Email={Email} setEmail={setEmail} />
+        <Investment Profile={Profile} setProfile={setProfile} />
       </Route>
     </div>
   </Router>

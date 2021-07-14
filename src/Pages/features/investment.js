@@ -1,181 +1,206 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState} from 'react';
 import '../../App.css';
 import '../CSS/login.css';
 import './CSS/investment.css';
 import Login from '../login';
-
-function Investment({IsSignIn,setIsSignIn, User, setUser, Email, setEmail}) {
+import AssetClassHigh from "../../Components/Investment/AssestClassHigh";
+import AssetClassMedium from "../../Components/Investment/AssestClassMedium";
+import AssetClassLow from "../../Components/Investment/AssestClassLow";
+import PortfolioHigh from "../../Components/Investment/PortfolioHigh";
+import PortfolioMedium from "../../Components/Investment/PortfolioMedium";
+import PortfolioLow from "../../Components/Investment/PortfolioLow";
+function Investment({Profile, setProfile}) {
 
 const [FixedIncome, setFixedIncome] = useState("");
-const [OtherIncome, setOtherIncome] = useState("");
-const [MedianIncome, setMedianIncome] = useState("");
-const [TotalExpenses, setTotalExpenses] = useState("");
-const [SavingsIncome, setSavingsIncome] = useState("");
-const [Age, setAge] = useState("");
-const [RetirementAge, setRetirementAge] = useState("");
-const [AssestClass, setAssestClass] = useState("");
-const [Return, setReturn] = useState("");   
-const [Risk, setRisk] = useState("");  
+const [VariableIncome, setVariableIncome] = useState("");
+const [FixedExpenses, setFixedExpenses] = useState("");
+const [VariableExpenses, setVariableExpenses] = useState("");
+const [Assests, setAssests] = useState("");
+const [Liabilities, setLiabilities] = useState("");
+const [TargetAmount, setTargetAmount] = useState(""); 
 const [Time, setTime] = useState("");
-const [FinancialRisk, setFinancialRisk] = useState("");
-const [Standard, setStandard] = useState("");
-const [RiskWillingness, setRiskWillingness] = useState("");
-const [Liquidity, setLiquidity] = useState("");     
-  
+const [IncomeStability, setIncomeStability] = useState("");
+const [IsFormSubmitted, setIsFormSubmitted] = useState(false);    
+const [Data, setData] = useState("");
+var AssetClass;
+var Portfolio;
+if (Data.riskability==="high") {
+  AssetClass = <AssetClassHigh />
+} else if (Data.riskability==="Medium") {
+  AssetClass = <AssetClassMedium />
+} else if (Data.riskability==="Low") {
+  AssetClass = <AssetClassLow />
+}
+
+if (Data.riskability==="high") {
+  Portfolio = <PortfolioHigh targetreturn={Data.targetreturn}/>
+} else if (Data.riskability==="Medium") {
+  Portfolio = <PortfolioMedium targetreturn={Data.targetreturn} />
+} else if (Data.riskability==="Low") {
+  Portfolio = <PortfolioLow targetreturn={Data.targetreturn}/>
+}
+
  const FixedIncomeValue = (event) => {
   setFixedIncome(event.target.value);
   };
 
-  const OtherIncomeValue = (event) => {
-  setOtherIncome(event.target.value);
+  const VariableIncomeValue = (event) => {
+  setVariableIncome(event.target.value);
   };
 
-  const MedianIncomeValue = (event) => {
-  setMedianIncome(event.target.value);
+  const FixedExpensesValue = (event) => {
+  setFixedExpenses(event.target.value);
   };
 
-  const TotalExpensesValue = (event) => {
-  setTotalExpenses(event.target.value);
+  const VariableExpensesValue = (event) => {
+  setVariableExpenses(event.target.value);
   };
 
-  const SavingsIncomeValue = (event) => {
-  setSavingsIncome(event.target.value);
+  const AssestsValue = (event) => {
+  setAssests(event.target.value);
   };
-  const AgeValue = (event) => {
-  setAge(event.target.value);
+
+  const LiabilitiesValue = (event) => {
+  setLiabilities(event.target.value);
   };
-  const RetirementAgeValue = (event) => {
-  setRetirementAge(event.target.value);
+
+  const TargetAmountValue = (event) => {
+  setTargetAmount(event.target.value);
   };
-  const AssestClassValue = (event) => {
-  setAssestClass(event.target.value);
-  };
-  const ReturnValue = (event) => {
-  setReturn(event.target.value);
-  };
-  const RiskValue = (event) => {
-  setRisk(event.target.value);
-  };
+  
   const TimeValue = (event) => {
   setTime(event.target.value);
   };
-  const FinancialRiskValue = (event) => {
-  setFinancialRisk(event.target.value);
-  };
-  const StandardValue = (event) => {
-  setStandard(event.target.value);
-  };
-  const RiskWillingnessValue = (event) => {
-  setRiskWillingness(event.target.value);
-  };
-  const LiquidityValue = (event) => {
-  setLiquidity(event.target.value);
+
+  const IncomeStabilityValue = (event) => {
+  setIncomeStability(event.target.value);
   };
 
 const OnPageLoad = () => {
-const email = localStorage.getItem("Email");
-const user = localStorage.getItem("User");
-setUser(user);
-setEmail(email);
+const Profile = localStorage.getItem("Profile");
 
+CheckIsFormSubmitted();
 }
 
-const onSubmitSignIn = () => {
-    fetch('https://dcipl.yourtechshow.com/investment', {
+const CheckIsFormSubmitted = () => {
+    fetch('https://server.yourtechshow.com/IsInvestmentFormSubmitted', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
-        name: User,
-        email: Email,
-        FixedIncome: FixedIncome,
-        OtherIncome: OtherIncome,
-        MedianIncome: MedianIncome,
-        TotalExpenses: TotalExpenses,
-        SavingsIncome: SavingsIncome,
-        Age: Age,
-        RetirementAge: RetirementAge,
-        AssestClass: AssestClass,
-        Return: Return,
-        Risk: Risk,
-        Time: Time,
-        FinancialRisk: FinancialRisk,
-        Standard: Standard,
-        RiskWillingness: RiskWillingness,
-        Liquidity: Liquidity
+        Email: Profile.email,
 
       })
     })
       
       .then(response => response.json())
       .then(response => {
-       if (response.Age) {
+       if (response.email) {
+        setIsFormSubmitted(true);
+        setData(response);
+        console.log(response)
+       } else {
+       setIsFormSubmitted(false);
+     }
+       })
+  }
+
+const onSubmitSignIn = (e) => {
+  e.preventDefault();
+  document.getElementById('logo').style.display="block";
+    fetch('https://server.yourtechshow.com/investment', {
+      method: 'post',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        User: Profile.name,
+        Email: Profile.Email,
+        FixedIncome: FixedIncome,
+        VariableIncome: VariableIncome,
+        FixedExpenses: FixedExpenses,
+        VariableExpenses: VariableExpenses,
+        Assests: Assests,
+        Liabilities: Liabilities,
+        TargetAmount: TargetAmount,
+        Time: Time,
+        IncomeStability: IncomeStability
+
+      })
+    })
+      
+      .then(response => response.json())
+      .then(response => {
+       if (response.time) {
         alert("Thank You For Submitting Data");
         console.log(response);
+        document.getElementById('logo').style.display="none";
+        setIsFormSubmitted(true);
+        setData(response);
        } else {
-       alert("You already Submitted The Data.");
+       alert("Error, Something Went Wrong.");
        console.log(response);
+       document.getElementById('logo').style.display="none";
      }
        })
   }
 
 	return (
     <>
-    {IsSignIn ? (
+    {Profile.IsSignIn ? (
   <>
-  <br/><br/><br/><br/><br/><br/>
+  {IsFormSubmitted ? (
+  <> 
+<br></br><br></br><br></br>
+{console.log(Profile)}
+<h1>Congratulations {Profile.name}, Your Investment Portfolio Is Generated ✅</h1>
+<h2> Your Current Net Worth is {Data.networth}</h2>
+<h2>It will take {Data.targetamount/Data.investableamount} Years To Raise {Data.targetamount} if you invest {Data.investableamount} Per Year.</h2>
+<h2>Suggested Assest Classes To Invest In (Tailored just for you) - </h2>
+
+{AssetClass}
+
+<h2>Suggested Portfolio's To Invest In (as per your Target Return of {Data.targetreturn}%) - </h2>
+
+{Portfolio}
+
+</>
+) : (
+<>
+<br/><br/><br/><br/><br/><br/>
   <h1 className="Title">Investment Planning</h1>
   <h2 className="Title">On The Basis Of Income</h2>
   <div className="Form">
-  <form action="#" method="post">
+  <form onSubmit={onSubmitSignIn}>
                         <br></br>
-                        <input type="text" name="fixed-income" placeholder="Fixed Income (Per Month)" required onChange={FixedIncomeValue} value={FixedIncome}></input><br></br>
-                        <input type="text" name="fixed-income" placeholder="Other Income (Per Month)" required onChange={OtherIncomeValue} value={OtherIncome}></input><br></br>
-                        <input type="text" name="fixed-income" placeholder="Median Income (Per Month)" required onChange={MedianIncomeValue} value={MedianIncome}></input><br></br>
-                        <input type="text" name="fixed-income" placeholder="Total Expenses (Per Month)" required onChange={TotalExpensesValue} value={TotalExpenses}></input><br></br>
-                        <input type="text" name="fixed-income" placeholder="Income Available For Investment (Savings)" required onChange={SavingsIncomeValue} value={SavingsIncome}></input><br></br>
-                        <input type="text" name="fixed-income" placeholder="Current Age" required onChange={AgeValue} value={Age}></input><br></br>
-                        <input type="text" name="fixed-income" placeholder="Retirement Age Proposed" required onChange={RetirementAgeValue} value={RetirementAge}></input><br></br>
-                        <input type="text" name="fixed-income" placeholder="Assest Class" required onChange={AssestClassValue} value={AssestClass}></input><br></br>
-                        <input type="text" name="fixed-income" placeholder="Return" required onChange={ReturnValue} value={Return}></input><br></br>
-                        <input type="text" name="fixed-income" placeholder="Risk" required onChange={RiskValue} value={Risk}></input><br></br>
-                        <input type="text" name="fixed-income" placeholder="Time Duration For Investment (In Years)" required onChange={TimeValue} value={Time}></input><br></br>
-                        <label>Financial Risk - </label>
-                          <select onChange={FinancialRiskValue} value={FinancialRisk}>
-                          <option value="">Select</option>
-                            <option value="High">High</option>
-                            <option value="Medium">Medium</option>
-                            <option value="Low">Low</option>
+                        <input type="number" name="fixed-income" placeholder="Fixed Income (Per Month)" required onChange={FixedIncomeValue} value={FixedIncome}></input><br></br>
+                        <input type="number" name="fixed-income" placeholder="Variable Income (Per Month)" required onChange={VariableIncomeValue} value={VariableIncome}></input><br></br>
+                        <input type="number" name="fixed-income" placeholder="Fixed Expenses (Per Month)" required onChange={FixedExpensesValue} value={FixedExpenses} max={parseInt(FixedIncome)}></input><br></br>
+                        <input type="number" name="fixed-income" placeholder="Variable Expenses (Per Month)" required onChange={VariableExpensesValue} value={VariableExpenses} max={parseInt(VariableIncome)}></input><br></br>
+                        <input type="number" name="fixed-income" placeholder="Assests" required onChange={AssestsValue} value={Assests}></input><br></br>
+                        <input type="number" name="fixed-income" placeholder="Liabilities" required onChange={LiabilitiesValue} value={Liabilities}></input><br></br>
+                        <input type="number" name="fixed-income" placeholder="Target Amount (Goal)" required onChange={TargetAmountValue} value={TargetAmount} min={parseInt(FixedIncome)}></input><br></br>
+                        <input type="number" name="fixed-income" placeholder="Time Duration For Investment (In Years)" required onChange={TimeValue} value={Time} min="1"></input><br></br>
+                        <label>Income Stability - </label>
+                          <select onChange={IncomeStabilityValue} value={IncomeStability} required>
+                          <option value="" defaultValue disabled hidden>Choose Here</option>
+                          <option value="Very Unstable">Very Unstable</option>
+                            <option value="Unstable">Unstable</option>
+                            <option value="Somewhat Stable">Somewhat Stable</option>
+                            <option value="Stable" >Stable</option>
+                            <option value="Very Stable">Very Stable</option>
                           </select>
-                          <label>  Standard Of Living - </label>
-                          <select onChange={StandardValue} value={Standard}>
-                           <option value="">Select</option>
-                            <option value="High">High</option>
-                            <option value="Medium">Medium</option>
-                            <option value="Low">Low</option>
-                          </select>
-                          <label>  Risk Willingness - </label>
-                          <select onChange={RiskWillingnessValue} value={RiskWillingness} >
-                           <option value="">Select</option>
-                            <option value="High">High</option>
-                            <option value="Medium">Medium</option>
-                            <option value="Low">Low</option>
-                          </select>
-                          <label>  Liquidity - </label>
-                          <select onChange={LiquidityValue} value={Liquidity}>
-                           <option value="">Select</option>
-                            <option value="High">High</option>
-                            <option value="Medium">Medium</option>
-                            <option value="Low">Low</option>
-                          </select>
+                          
+                          <button type="submit">Calculate</button>
                         </form> <br></br>
-                    <button type="submit" onClick={onSubmitSignIn}>Calculate</button>
 </div> 
-
+<div id="logo" className="loadingio-spinner-rolling-kswyn6f3gj7"><div className="ldio-c9p079igqka">
+<div></div>
+</div></div>
 <br></br>   <br></br> <br></br> 
-{OnPageLoad()} 
+{OnPageLoad()}
+</>
+)}
 </>
       ) : (
-  <Login IsSignIn={IsSignIn} setIsSignIn={setIsSignIn} />
+  <Login Profile={Profile} setProfile={setProfile}/>
         )}
 		</>
 
