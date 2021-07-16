@@ -4,8 +4,7 @@ import Ellipse from "../assests/Ellipse 1.png";
 import line1 from "../assests/Line 1.png";
 import line2 from "../assests/Line 2.png";
 import line3 from "../assests/Line 3.png";
-import rect1 from "../assests/rect1.jpg"; 
-import rect2 from "../assests/rect2.jpg"; 
+
 
 function Dashboard({User, Email}) {
 
@@ -31,6 +30,9 @@ localStorage.setItem("Email", Email);
 <div className="content">
 <p>Welcome, {User} Today is {date.toLocaleString()}</p>
 </div>
+ 
+     
+      </div>
 <div className="text">
 <div className="sub">
 <p>Personal Finance Portfolio</p>
@@ -83,7 +85,6 @@ localStorage.setItem("Email", Email);
 <div className="images">
 <div className="features">
 <a><img src={rect2}/><p>Tax Planning</p></a>
-</div>
 </div>
 </div>
 
