@@ -13,7 +13,14 @@ function Login(Profile) {
   console.log(response);
   setName(response.name);
   setEmail(response.email);
-  
+  if (response.userID) {
+  Profile.setProfile(prevState => {
+    return Object.assign({}, prevState, { id: response.id, name: response.name,
+    email: response.email,
+    IsSignIn: true,
+    IsonBoarding: true });
+  });
+  } else {}
 }
 
   const EmailValue = (event) => {
@@ -45,7 +52,7 @@ const onSubmitSignIn = (e) => {
     return Object.assign({}, prevState, { id: user.id, name: user.name,
     email: user.email,
     IsSignIn: true,
-    IsonBoarding: false });
+    IsonBoarding: true });
   });
         } else {
           alert("Wrong Credentials")
