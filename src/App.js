@@ -8,13 +8,18 @@ import Main from './Main';
 import Footer from './Components/Footer';
 
 function App() {
-	const [IsSignIn, setIsSignIn] = useState(false);
-	const [User, setUser] = useState("");
-	const [Email, setEmail] = useState("");
+  const[Profile, setProfile] = useState({
+    id: '',
+    name: '',
+    email: '',
+    IsSignIn: '' ,
+    IsonBoarding:''
+    })
+	
   return (
     <>
-    <Nav IsSignIn={IsSignIn} setIsSignIn={setIsSignIn}/>
-    <Main IsSignIn={IsSignIn} setIsSignIn={setIsSignIn} User={User} setUser={setUser} Email={Email} setEmail={setEmail}/>
+    <Nav Profile = {Profile} setProfile={setProfile}/>
+    <Main Profile = {Profile} setProfile={setProfile}/>
     <Footer />
     </>
   );
