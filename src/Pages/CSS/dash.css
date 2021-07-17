@@ -1,4 +1,4 @@
-form {text-align: left;}
+.form99 {text-align: left;}
 
 a {
 	color: #3ad4af;
@@ -6,15 +6,92 @@ a {
 
 .area
 {
-position: relative;
-width: auto;
 
-background: #000000;
-display: flex;
-justify-content: center;
-align-items: center;
+width:100%;
+min-height: 100vh;
+color: white;
+
 }
-.area ul
+.area ul li{
+	list-style: none;
+
+}
+.side-menu{
+	position:relative;
+	background: #275b85;
+	min-height: 30rem;
+	width: 300px;
+	display: flex;
+	border-radius: 20px;
+	flex-direction: column;
+}
+.side-menu .brand-name{
+	height: 12vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color:#3ad4af;
+	
+}
+
+.side-menu li{
+	font-size: 24px;
+	padding: 17px 0px;
+	color: white;
+	display: flex;
+	align-items: center;
+	
+
+}
+.side-menu li a{
+	color: #ffff;
+	text-decoration: none;
+}
+.area li:hover{
+background: rgb(97, 145, 184);
+  border-radius: 10px;
+  font-weight: 550;
+  margin-left: 5px;
+  transition: all ease-in 250ms;
+}
+.content1{
+	
+	margin-top: -760px;
+	margin-left: 300px;
+	min-height: 90vh;
+	display: flex;
+	
+	
+}
+.content1 .cards77{
+	padding: 10px 5px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	border-radius: 30px;
+}
+.content1 .cards77 .card00{
+	width: 150px;
+	height: 100px;
+	background-color: rgb(35, 44, 75);
+	margin: 10px 5px;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .16),0 6px 20px 0 rgba(240, 229, 229, 0.19) ;
+}
+.box00 h1, h3{
+	font-size: 16px;
+	color: #fff;
+	letter-spacing: 1px;
+	text-align: center;
+
+}
+
+
+/* .area ul
 {
 	list-style: none;
 	line-height: -20px;
@@ -35,28 +112,29 @@ align-items: center;
 	font-size:20px;
 	padding:5px 20px;
 	color:#000;
-	}
+	} */
 .content
 {
-position: absolute;
-display: flex;
-flex-basis: 20%;
 
-top: 100px;
+
+top: 30px;
 box-sizing: border-box;
-text-align: justify;
 line-height: 1.7;
 font-family: Jost;
-font-style: normal;
-font-weight: normal;
-font-size: 36px;
+
+font-size: 23px;
 
 
 text-align: center;
 
-color: rgba(255, 255, 255, 0.95);
+color: #ffff;
 }
-.text{
+.area .content p{
+	text-align: left;
+	margin-top: 50px;
+	padding-right: 690px;
+}
+/* .text{
 
 	right: 150px;
 	top: 250px;
@@ -77,12 +155,12 @@ font-size: 32px;
 line-height: 45px;
 /* identical to box height */
 
-text-align: center;
+/* text-align: center;
 
-color: rgba(255, 255, 255, 0.95);
-}
-.h1
-{
+color: rgba(255, 255, 255, 0.95); */
+
+/* .h1 */
+/* {
 	position: absolute;
 width: 138px;
 height: 52px;
@@ -96,7 +174,7 @@ font-size: 32px;
 line-height: 45px;
 /* identical to box height */
 
-text-align: center;
+/* text-align: center;
 
 color: rgba(255, 255, 255, 0.95);
 }
@@ -115,7 +193,7 @@ font-size: 32px;
 line-height: 45px;
 /* identical to box height */
 
-text-align: center;
+/* text-align: center;
 
 color: rgba(255, 255, 255, 0.95);
 }
@@ -134,7 +212,7 @@ font-size: 32px;
 line-height: 45px;
 /* identical to box height */
 
-
+/* 
 color: rgba(255, 255, 255, 0.95);
 }
 .sub2
@@ -142,8 +220,8 @@ color: rgba(255, 255, 255, 0.95);
 	position: absolute;
 width: 203px;
 height: 52px;
-left: 724px;
-top: 598px;
+left: 724px;  */ 
+/* top: 598px;
 
 font-family: Jost;
 font-style: normal;
@@ -152,7 +230,7 @@ font-size: 32px;
 line-height: 45px;
 /* identical to box height */
 
-text-align: center;
+/* text-align: center;
 
 color: rgba(255, 255, 255, 0.95);
 }
@@ -168,10 +246,10 @@ font-family: Jost;
 font-style: normal;
 font-weight: normal;
 font-size: 32px;
-line-height: 45px;
+line-height: 45px;  */
 /* identical to box height */
 
-text-align: center;
+/* text-align: center;
 
 color: rgba(255, 255, 255, 0.95);
 }
@@ -189,7 +267,7 @@ color: rgba(255, 255, 255, 0.95);
 	line-height: 45px;
 	/* identical to box height */
 
-	text-align: center;
+	/* text-align: center;
 	color: rgba(255, 255, 255, 0.95);
 }
 .h2sub2
@@ -203,9 +281,9 @@ color: rgba(255, 255, 255, 0.95);
 	font-style: normal;
 	font-weight: normal;
 	font-size: 22px;
-	line-height: 45px;
+	line-height: 45px;  */ 
 	/* identical to box height */
-
+/* 
 	text-align: center;
 	color: rgba(255, 255, 255, 0.95);
 }
@@ -220,9 +298,9 @@ color: rgba(255, 255, 255, 0.95);
 	font-style: normal;
 	font-weight: normal;
 	font-size: 22px;
-	line-height: 45px;
+	line-height: 45px; */
 	/* identical to box height */
-
+/* 
 	text-align: center;
 	color: rgba(255, 255, 255, 0.95);
 }
@@ -258,7 +336,7 @@ background-color:#000;
 	font-size: 36px;
 	line-height: 52px;
 	/* identical to box height */
-	text-align: center;
+	/* text-align: center;
 	color: #000000;
 }
 .line2
@@ -280,10 +358,10 @@ background-color:#000;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 36px;
-	line-height: 52px;
+	line-height: 52px; */ 
 	/* identical to box height */
 
-	text-align: center;
+	/* text-align: center;
 	color: #000000;
 }
 .line3
@@ -307,14 +385,14 @@ background-color:#000;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 36px;
-	line-height: 52px;
+	line-height: 52px; */
 	/* identical to box height */
 
-	text-align: center;
+	/* text-align: center;
 	color: #000000;
-}
+} */
 
-.ll
+/* .ll
 {
 position: absolute;
 width: 61px;
@@ -331,9 +409,9 @@ top: 965px;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 27px;
-	line-height: 32px;
+	line-height: 32px; */
 	/* identical to box height */
-
+/* 
 
 	color: #000000;
 	left: 15px;
@@ -348,9 +426,9 @@ top: 965px;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 27px;
-	line-height: 32px;
+	line-height: 32px; */
 	/* identical to box height */
-
+/* 
 
 	color: #000000;
 	left: 102px;
@@ -367,9 +445,9 @@ top: 965px;
 	font-size: 27px;
 	line-height: 32px;
 	flex-basis: 60%;
-	display: flex;
+	display: flex; */
 	/* identical to box height */
-	color: #000000;
+	/* color: #000000;
 	left: 281px;
 	top: 961px;
 }
@@ -395,8 +473,8 @@ top: 965px;
 	
 	
 	position: static;
-}
-@media screen and (max-width:568px)  {
+} */
+/* @media screen and (max-width:568px)  {
 	.content{
 		font-size: 25px;
 		justify-content: space-between;
@@ -487,8 +565,8 @@ top: 300px;
 		left:350px;
 		top:500px;
 	}
-}
-@media screen and (min-width:568px) and (max-width:968px) {
+} */
+/* @media screen and (min-width:568px) and (max-width:968px) {
 	
 	.area{
 		height:1126px;
@@ -551,6 +629,5 @@ top: 850px;
 		
 		font-size: 30px;
 		width:50%;
-	
 	}
-}
+	}*/
