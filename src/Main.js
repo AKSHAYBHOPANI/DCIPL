@@ -9,6 +9,7 @@ import About from './Pages/about';
 import Blog from './Pages/blog';
 import Careers from './Pages/careers';
 import Investment from './Pages/features/investment';
+import Wealth from './Pages/features/wealth';
 import Admin from './Pages/admin'
 
 const Main = ({Profile, setProfile}) => {
@@ -41,6 +42,9 @@ const Main = ({Profile, setProfile}) => {
       </Route>
       <Route exact path="/features/investment">
         <Investment Profile={Profile} setProfile={setProfile} />
+      </Route>
+      <Route exact path="/features/wealth">
+      <Wealth Profile={Profile} setProfile={setProfile} />
       </Route>
     </div>
   </Router>
