@@ -1,12 +1,13 @@
 import React, { useState , useEffect }  from 'react';
 import './CSS/dash.css';
-import Ellipse from "../assests/Ellipse 1.png";
-import line1 from "../assests/Line 1.png";
-import line2 from "../assests/Line 2.png";
-import line3 from "../assests/Line 3.png";
-import rect1 from "../assests/rect1.jpg"; 
-import rect2 from "../assests/rect2.jpg"; 
+// import Ellipse from "../assests/Ellipse 1.png";
+// import line1 from "../assests/Line 1.png";
+// import line2 from "../assests/Line 2.png";
+// import line3 from "../assests/Line 3.png";
+// import rect1 from "../assests/rect1.jpg"; 
+// import rect2 from "../assests/rect2.jpg"; 
 import Portfolio from "../assests/portfolio.png";
+import { Link } from 'react-router-dom';
 
 function Dashboard(Profile) {
 
@@ -116,7 +117,78 @@ const onSubmitSignIn = (e) => {
 <div className="content">
 <p>Welcome, {Profile.Profile.Profile.name} Today is {date.toLocaleString()}</p>
 </div>
-<div className="text">
+<div className="side-menu">
+  <div className="brand-name">
+    <h1>DASHBOARD</h1>
+  </div>
+  <ul>
+  
+  <li><a href ='./features/investment' >Investment Planning</a></li>
+  <li><a href ='' >Wealth Planning</a></li>
+  <li><a href ='./features/retirement' >Retirement Planning</a></li>
+  <li><a href ='./features/tax' >Tax Planning</a></li>
+  <li><a href ='' >Mutual fund</a></li>
+  <li><a href ='' >Insurance</a></li>
+  </ul>
+</div>
+
+<div className="content1">
+  <div className="cards77">
+    <div className="card00">
+      <div className="box00">
+        <h1>30,000</h1>
+        <h3>Investment Planning</h3>
+      </div>
+    </div>
+  </div>
+ 
+  <div className="cards77">
+    <div className="card00">
+      <div className="box00">
+        <h1>100,000</h1>
+        <h3>Wealth Planning</h3>
+      </div>
+    </div>
+  </div>
+ 
+  <div className="cards77">
+    <div className="card00">
+      <div className="box00">
+        <h1>80,000</h1>
+        <h3>Retirement Planning</h3>
+      </div>
+    </div>
+   </div>
+   <div className="cards77">
+    <div className="card00">
+      <div className="box00">
+        <h1>50,000</h1>
+        <h3>Tax Planning</h3>
+      </div>
+    </div>
+   </div>
+   <div className="cards77">
+    <div className="card00">
+      <div className="box00">
+        <h1>90,000</h1>
+        <h3>Mutual Fund</h3>
+      </div>
+    </div>
+   </div>
+   <div className="cards77">
+    <div className="card00">
+      <div className="box00">
+        <h1>60,000</h1>
+        <h3>Insurance</h3>
+      </div>
+    </div>
+   </div>
+</div>
+
+           </div>
+
+
+{/* <div className="text">
 <div className="sub">
 <p>Personal Finance Portfolio</p>
 </div>
@@ -169,8 +241,9 @@ const onSubmitSignIn = (e) => {
 <div className="features">
 <a href="./"><img alt="" src={rect2}/><p>Tax Planning</p></a>
 </div>
-</div>
-</div>
+<div className="images"><a href="./features/retirement"><img alt="" src={rect2}/><p>Retirement Planning</p></a></div>
+</div> */}
+
 {OnPageLoad()}
 
 
@@ -181,7 +254,7 @@ const onSubmitSignIn = (e) => {
       <h1>Onboarding</h1>
       <h2>Welcome {Profile.Profile.Profile.name} to DCIPL, There are few things needed before we can start your Financial Planning</h2>
       <br/>
-      <div className="Form">
+      <div className="Form99">
       <form onSubmit={onSubmitSignIn}>
 <label for="age">Age: </label>
     <input type="number" name="age" id="age" placeholder="Age" required onChange={(event) => {setage(event.target.value)}} value={age}></input>

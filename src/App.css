@@ -179,15 +179,14 @@ footer{
   font-size: 1rem;
   font-weight: 300;
  min-height: 12vh;
- /* background-color: rgb(88, 84, 84); */
+
   color: white;
-  width: 100%;
+  width: 100vw;
    line-height: 1;
   position: relative;
   text-decoration: none;
   padding: 10px ;
-   /* top:1000px; */
-   /* margin-top: 80px; */
+  
    
 }
 
@@ -203,14 +202,17 @@ margin-bottom: 0;
  footer ul{
 list-style: none;
 }
-
+.fa{
+color: blue;
+  padding-right: 9px;
+}
 .footer-col{
 width: 25%;
 padding: 0 25px;
 
 }
 .footer-col .h4-text{
-  font-size: 24px;
+  font-size: 20px;
   color: white;
    font-weight: 500;
   position: relative;
@@ -230,12 +232,12 @@ padding: 0 25px;
 }
 .footer-col ul li:not(:last-child){
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 10px;
    
 }
  .footer-col ul li a{
-  font-size: 18px;
+  font-size: 16px;
   color: white;
   font-weight: 300;
   text-decoration: none;
@@ -270,9 +272,9 @@ padding: 0 25px;
   background-color: white;
 }
 footer .email-box{
-  width: 12vw;
-  
-  font-size: 18px;
+  width: 100px;
+  margin-left: -10px;
+  font-size: 12px;
   text-align: center;
   padding: 7px 7px 7px 7px;
   border-radius: 15px;
@@ -282,13 +284,13 @@ footer .email-box{
 .submit-btn{
     border: 1px solid #3ad4af;
    text-align: center;
-  border-radius: 18px;
-  font-size: 17px;
+  border-radius: 15px;
+  font-size: 12px;
   cursor: pointer;
   font-weight:800;
   padding: 7px ;
   color: white;
-  width:150px;
+  width:100px;
   background-color:#3ad4af;
 }
 .submit-btn:hover{
@@ -298,39 +300,18 @@ footer .email-box{
   font-size: small;
 }
 
-/* @media (max-width: 1300px){
-  
-  footer{
-    padding: 40px;
-    /* top: 1600px; */
-    /* position: relative; */
-    /* margin-top: 400px;
-  }
-  .footer-col{
-    flex-direction: column;
-  }
-  .submit-btn{
-  
-    width:100px ; */
-   
-  /* } */
-  /* .submit-btn{
-    margin-top: 10px;
-    margin-left: 20px;
-  } */
- 
-   
+
 
   @media (max-width: 768px){
   footer{
   padding: 40px;
-  /* top:800px; */
+ 
   position:relative;
-  margin-top: 160px;
+  margin-top: 60px;
 }
 .footer-col{
   flex-direction: column;
-  margin-bottom: -10px;
+  margin-bottom: -80px;
   width: 100%;
   padding: 40px;
  }
@@ -378,7 +359,7 @@ footer .email-box{
   padding: 10px ;
   color: white;
   background-color: #3ad4af;
-  width:100px ;
+  width:80px ;
   margin-top: 10px;
   margin-left: -10px;
 }
@@ -391,17 +372,46 @@ footer .email-box{
   .footer-col{
     width: 100%;
     margin-top: 30px;
+    margin-bottom: -100px;
     
   }
   footer .footer-text{
     padding: 40px;
 
   }
-  footer{
-   margin-top: -100px;
+
 
   
-    }}
+    }
+    @media (max-width: 400px){
+      .footer-col{
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: -100px;
+        
+      }
+      footer .footer-text{
+        padding: 0px;
+        font-size: 8px;
+        
+    
+      }
+      footer{
+       margin-top:20px;
+       font-size:10px;
+    
+      
+        }
+        footer .email-box{
+          width: 90px;  
+          font-size: 8px;
+          text-align: center;
+      
+         
+        }
+        .footer-col .h4-text{
+          font-size: 11px;
+        }}
 /* Loader */
 
 @keyframes ldio-c9p079igqka {
