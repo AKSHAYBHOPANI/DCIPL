@@ -149,7 +149,7 @@ const onSubmitSignIn = (e) => {
   {IsFormSubmitted ? (
   <> 
 <br></br><br></br><br></br>
-
+{console.log(Profile)}
 <h1>Congratulations {Profile.name}, Your Investment Portfolio Is Generated ✅</h1>
 <h2> Your Current Net Worth is {Data.networth}</h2>
 <h2>It will take {Data.targetamount/Data.investableamount} Years To Raise {Data.targetamount} if you invest {Data.investableamount} Per Year.</h2>

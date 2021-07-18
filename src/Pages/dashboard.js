@@ -6,6 +6,7 @@ import line2 from "../assests/Line 2.png";
 import line3 from "../assests/Line 3.png";
 import rect1 from "../assests/rect1.jpg"; 
 import rect2 from "../assests/rect2.jpg"; 
+import Portfolio from "../assests/portfolio.png";
 
 function Dashboard(Profile) {
 
@@ -13,6 +14,8 @@ const [age, setage] = useState("");
 const [assets, setassets] = useState("");
 const [liabilities, setliabilities] = useState("");
 const [cibil, setcibil] = useState("");
+const [fixedincome, setfixedincome] = useState("");
+const [fixedexpense, setfixedexpense] = useState("");
 const [expectedSal, setexpectedSal] = useState("");
 const [withdrawPrincipal, setwithdrawPrincipal] = useState("");
 const [period, setperiod] = useState("");
@@ -49,17 +52,20 @@ const OnPageLoad = () => {
 
 const onSubmitSignIn = (e) => {
   e.preventDefault();
+  console.log(Profile)
   document.getElementById('logo').style.display="block";
-    fetch('http://127.0.0.1:8000/onboarding', {
+    fetch('https://server.yourtechshow.com/onboarding', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
-       name: Profile.name,
-       email: Profile.email,
+       name: Profile.Profile.Profile.name,
+       email: Profile.Profile.Profile.email,
        age: age,
        assets: assets,
        liabilities: liabilities,
        cibil: cibil,
+       fixedincome: fixedincome,
+       fixedexpense: fixedexpense,
        expectedSal: expectedSal,
        withdrawPrincipal: withdrawPrincipal,
        period: period,
@@ -75,16 +81,14 @@ const onSubmitSignIn = (e) => {
        portfolio: portfolio,
        outlookShorterm: outlookShorterm,
        outlookLongterm: outlookLongterm,
-       objective: objective,
-       riskWillingness: riskWillingness,
-       riskability: riskability          
+       objective: objective         
               
       })
     })
       
       .then(response => response.json())
       .then(response => {
-       if (response) {
+       if (response.age) {
         console.log(Profile)
         alert("Thank You For Submitting Data");
         console.log(response);
@@ -185,13 +189,17 @@ const onSubmitSignIn = (e) => {
     <input type="number" name="assests" id="assests" placeholder="Assests" required onChange={(event) => {setassets(event.target.value)}} value={assets}></input>
 <label for="liabilities">Liabilities: </label>
     <input type="number" name="liabilities" id="liabilities" placeholder="Liabilities" required onChange={(event) => {setliabilities(event.target.value)}} value={liabilities}></input>
-<label for="cibil">CIBIL Score: </label>
+<label for="cibil">Fixed Income </label>
+    <input type="number" name="fixedincome" id="fixedincome" placeholder="Fixed Income" required onChange={(event) => {setfixedincome(event.target.value)}} value={fixedincome}></input>
+<label for="cibil">Fixed Expense </label>
+    <input type="number" name="fixedexpense" id="fixedexpense" placeholder="Fixed Expense" required onChange={(event) => {setfixedexpense(event.target.value)}} value={fixedexpense}></input>
+<label for="cibil">CIBIL Score - <a href="https://www.cibil.com/freecibilscore">Check Now</a> </label>
     <input type="number" name="cibil" id="cibil" placeholder="CIBIL Score" required onChange={(event) => {setcibil(event.target.value)}} value={cibil}></input>
-<label for="">What is the expected salary of the individual?</label>
+<label for="">What is your expected salary?</label>
     <input type="" name="" id="" required onChange={(event) => {setexpectedSal(event.target.value)}} value={expectedSal}></input>
-    <label for="">By when does the individual expect to start withdrawing principal?</label>
+    <label for="">By when does you expect to start withdrawing principal?</label>
     <input type="" name="" id="" required onChange={(event) => {setwithdrawPrincipal(event.target.value)}} value={withdrawPrincipal}></input>
-    <label for="">Once the individual begins using the money he/she accumulated,they expect to use that money for a period of </label>
+    <label for="">Once you begin using the money you accumulated,you expect to use that money for a period of </label>
     <input type="" name="" id="" required onChange={(event) => {setperiod(event.target.value)}} value={period}></input>
     <label>Current and future source of income: - </label>
                           <select required onChange={(event) => {setsourceOfIncome(event.target.value)}} value={sourceOfIncome}>
@@ -202,98 +210,98 @@ const onSubmitSignIn = (e) => {
                             <option value="Stable" >Stable</option>
                             <option value="Very Stable">Very Stable</option>
                           </select><br/>
-     <label>What is individual's response to the statement: Aside from portfolio, individual have adequate liquid assets to meet major expenses in next 6-9 months </label>
+     <label>Aside from portfolio, Do you have adequate liquid assets to meet major expenses in next 6-9 months ? </label>
                           <select required onChange={(event) => {setmajorExpense(event.target.value)}} value={majorExpense}>
                           <option value="" defaultValue disabled hidden>Choose Here</option>
-                          <option value="Very Unstable">Agree</option>
-                            <option value="Unstable">Neutral</option>
-                            <option value="Somewhat Stable">Disagree</option>
-                            <option value="Stable" >Stable</option>
-                            <option value="Very Stable">Strongly Disagree</option>
+                          <option value="Strongly Agree">Strongly Agree</option>
+                          <option value="Agree">Agree</option>
+                            <option value="Neutral">Neutral</option>
+                            <option value="Disagree">Disagree</option>
+                            <option value="Strongly Disagree">Strongly Disagree</option>
                           </select><br/>
                           
-    <label>If the individual owned a stock investment portfolio that lost more than 25% in 7 months, he/she would</label>
+    <label>If you owned a stock investment portfolio that lost more than 25% in 7 months, you would</label>
                           <select required onChange={(event) => {setstockInvest(event.target.value)}} value={stockInvest}>
                           <option value="" defaultValue disabled hidden>Choose Here</option>
-                          <option value="Very Unstable">Sell all remaining investments</option>
-                            <option value="Unstable">Sell a portion of remaining investments</option>
-                            <option value="Somewhat Stable">Hold on to investments and sell nothing</option>
-                            <option value="Stable" >Buy more of the investments</option>
+                          <option value="Sell all remaining investments">Sell all remaining investments</option>
+                            <option value="Sell a portion of remaining investments">Sell a portion of remaining investments</option>
+                            <option value="Hold on to investments and sell nothing">Hold on to investments and sell nothing</option>
+                            <option value="Buy more of the investments" >Buy more of the investments</option>
                           </select><br/>
 
-   <label>If the individual owned a bond investment portfolio that lost
-9% in 11 months, he/she would</label>
+   <label>If you owned a bond investment portfolio that lost
+9% in 11 months, you would</label>
                           <select required onChange={(event) => {setbondInvest(event.target.value)}} value={bondInvest}>
                           <option value="" defaultValue disabled hidden>Choose Here</option>
-                          <option value="Very Unstable">Sell all remaining investments</option>
-                            <option value="Unstable">Sell a portion of remaining investments</option>
-                            <option value="Somewhat Stable">Hold on to investments and sell nothing</option>
-                            <option value="Stable" >Buy more of the investments</option>
+                          <option value="Sell all remaining investments">Sell all remaining investments</option>
+                            <option value="Sell a portion of remaining investments">Sell a portion of remaining investments</option>
+                            <option value="Hold on to investments and sell nothing">Hold on to investments and sell nothing</option>
+                            <option value="Buy more of the investments" >Buy more of the investments</option>
                           </select><br/>
 
-   <label>Before individual makes a decision on any investment, individual needs to
-consider how individual feel about the prospect of potential loss of principal.
+   <label>Before you make a decision on any investment, you need to
+consider how you feel about the prospect of potential loss of principal.
 This is a basic principle of investing: the higher return you seek, the more risk you face.
-Based on the individual's feelings about risk and potential returns, his/her goal is to</label>
+Based on your feelings about risk and potential returns, your goal is to</label>
                           <select required onChange={(event) => {setgoal(event.target.value)}} value={goal}>
                           <option value="" defaultValue disabled hidden>Choose Here</option>
-                          <option value="Very Unstable">Potentially increase portfolio’s value as quickly as possible while accepting higher levels of risk or loss of principal</option>
-                            <option value="Unstable">Potentially increase my portfolio’s value at a moderate pace while accepting moderate to high levels of risk or loss of principal</option>
-                            <option value="Somewhat Stable">Get Income as a Primary concern, Capital Appreciation as Secondary</option>
-                            <option value="Stable" >Secure the safety of my hard earned investment principal</option>
+                          <option value="Potentially increase portfolio’s value as quickly as possible while accepting higher levels of risk or loss of principal">Potentially increase portfolio’s value as quickly as possible while accepting higher levels of risk or loss of principal</option>
+                            <option value="Potentially increase my portfolio’s value at a moderate pace while accepting moderate to high levels of risk or loss of principal">Potentially increase my portfolio’s value at a moderate pace while accepting moderate to high levels of risk or loss of principal</option>
+                            <option value="Get Income as a Primary concern, Capital Appreciation as Secondary">Get Income as a Primary concern, Capital Appreciation as Secondary</option>
+                            <option value="Secure the safety of my hard earned investment principal" >Secure the safety of my hard earned investment principal</option>
                           </select><br/>
 
-   <label>How many years individual has been investing in Financial Markets?</label>
+   <label>How many years have you been investing in Financial Markets?</label>
                           <select required onChange={(event) => {setyearsInvested(event.target.value)}} value={yearsInvested}>
                           <option value="" defaultValue disabled hidden>Choose Here</option>
-                          <option value="Very Unstable">Never Invested</option>
-                            <option value="Unstable">one - seven years</option>
-                            <option value="Somewhat Stable">eight - fifteen years</option>
-                            <option value="Stable" >More than fifteen years</option>
+                          <option value="Never Invested">Never Invested</option>
+                            <option value="one - seven years">one - seven years</option>
+                            <option value="eight - fifteen years">eight - fifteen years</option>
+                            <option value="More than fifteen years" >More than fifteen years</option>
                           </select><br/>
 
-   <label>Assuming normal market conditions individual expects his/her portfolio to, overtime:</label>
+   <label>Assuming normal market conditions you expect your portfolio to, overtime:</label>
                           <select required onChange={(event) => {setovertime(event.target.value)}} value={overtime}>
                           <option value="" defaultValue disabled hidden>Choose Here</option>
-                          <option value="Very Unstable">Outpace the market, have higher volatility</option>
-                            <option value="Unstable">Generally keep pace with the market</option>
-                            <option value="Somewhat Stable">have lower risk and lower returns</option>
-                            <option value="Stable" >have a high degree of stability with modest returns</option>
+                          <option value="Outpace the market, have higher volatility">Outpace the market, have higher volatility</option>
+                            <option value="Generally keep pace with the market">Generally keep pace with the market</option>
+                            <option value="have lower risk and lower returns">have lower risk and lower returns</option>
+                            <option value="have a high degree of stability with modest returns" >have a high degree of stability with modest returns</option>
                           </select><br/>
                         
-  <label>Individual would prefer investments that have yearly:</label>
+  <label>You would prefer investments that have yearly:</label>
                           <select required onChange={(event) => {setyearlyExpect(event.target.value)}} value={yearlyExpect}>
                           <option value="" defaultValue disabled hidden>Choose Here</option>
-                          <option value="Very Unstable">virtually risk free rate of return of 4%</option>
-                            <option value="Unstable">Potential gain of 6% and a potential loss of 2%</option>
-                            <option value="Somewhat Stable">Potential gain of 8% and a potential loss of 4%</option>
-                            <option value="Stable" >Potential gain of 12% and a potential loss of 8%</option>
-                            <option value="Stable" >Potential gain of 20% and a potential loss of 15%</option>
+                          <option value="virtually risk free rate of return of 4%">virtually risk free rate of return of 4%</option>
+                            <option value="Potential gain of 6% and a potential loss of 2%">Potential gain of 6% and a potential loss of 2%</option>
+                            <option value="Potential gain of 8% and a potential loss of 4%">Potential gain of 8% and a potential loss of 4%</option>
+                            <option value="Potential gain of 12% and a potential loss of 8%" >Potential gain of 12% and a potential loss of 8%</option>
+                            <option value="Potential gain of 20% and a potential loss of 15%" >Potential gain of 20% and a potential loss of 15%</option>
                           </select><br/>
 
-    <label>Individual believes that he/she can endure significant ups and downs
-in the market, because he is looking for as much long-term growth
-for his investments as possible</label>
+    <label>Do you believe that you can endure significant ups and downs
+in the market, because you are looking for as much long-term growth
+for your investments as possible</label>
                           <select required onChange={(event) => {setlongtermGrowth(event.target.value)}} value={longtermGrowth}>
                           <option value="" defaultValue disabled hidden>Choose Here</option>
-                          <option value="Very Unstable">Strongly Agree</option>
-                            <option value="Unstable">Agree</option>
-                            <option value="Somewhat Stable">Neutral</option>
-                            <option value="Stable" >Disagree</option>
-                            <option value="Stable" >Strongly Disagree</option>
+                          <option value="Strongly Agree">Strongly Agree</option>
+                            <option value="Agree">Agree</option>
+                            <option value="Neutral">Neutral</option>
+                            <option value="Disagree" >Disagree</option>
+                            <option value="Strongly Disagree" >Strongly Disagree</option>
                           </select><br/>
 
 <label>Using given five year illustration, choose   
-which scenario appeals to you the most: <br/> 
+which scenario appeals to you the most: <br/><br/> 
 
- </label>
+ </label><img width="100%" src={Portfolio} alt="Portfolio"/><br/><br/>
 
                           <select required onChange={(event) => {setportfolio(event.target.value)}} value={portfolio}>
                           <option value="" defaultValue disabled hidden>Choose Here</option>
-                          <option value="Very Unstable">Portfolio 1</option>
-                            <option value="Unstable">Portfolio 2</option>
-                            <option value="Somewhat Stable">Portfolio 3</option>
-                            <option value="Stable" >Portfolio 4</option>
+                          <option value="Portfolio 1">Portfolio 1</option>
+                            <option value="Portfolio 2">Portfolio 2</option>
+                            <option value="Portfolio 3">Portfolio 3</option>
+                            <option value="Portfolio 4" >Portfolio 4</option>
                        
                           </select><br/>
 
@@ -304,32 +312,32 @@ For Short term (0- 5 Years)</label>
 
                           <select required onChange={(event) => {setoutlookLongterm(event.target.value)}} value={outlookLongterm}>
                           <option value="" defaultValue disabled hidden>Choose Here</option>
-                          <option value="Very Unstable">Very Positive</option>
-                            <option value="Unstable">Modestly Positive</option>
-                            <option value="Somewhat Stable">Neutral</option>
-                            <option value="Stable" >Very Negative</option>
-                            <option value="Stable" >Unsure</option>
+                          <option value="Very Positive">Very Positive</option>
+                            <option value="Modestly Positive">Modestly Positive</option>
+                            <option value="Neutral">Neutral</option>
+                            <option value="Negative" >Negative</option>
+                            <option value="Very Negative" >Very Negative</option>
                           </select><br/>
 
 <label>For Long term (more than 5 years)</label>
 
                           <select required onChange={(event) => {setoutlookShorterm(event.target.value)}} value={outlookShorterm}>
                           <option value="" defaultValue disabled hidden>Choose Here</option>
-                          <option value="Very Unstable">Very Positive</option>
-                            <option value="Unstable">Modestly Positive</option>
-                            <option value="Somewhat Stable">Neutral</option>
-                            <option value="Stable" >Very Negative</option>
-                            <option value="Stable" >Unsure</option>
+                          <option value="Very Positive">Very Positive</option>
+                            <option value="Modestly Positive">Modestly Positive</option>
+                            <option value="Neutral">Neutral</option>
+                            <option value="Negative" >Negative</option>
+                            <option value="Very Negative" >Very Negative</option>
                           </select><br/>
 
 <label>What is your primary objective for this investment portfolio:</label>
 
                           <select required onChange={(event) => {setobjective(event.target.value)}} value={objective}>
                           <option value="" defaultValue disabled hidden>Choose Here</option>
-                          <option value="Very Unstable">Growth</option>
-                            <option value="Unstable">To generate income</option>
-                            <option value="Somewhat Stable">To accumulate assets for retirement</option>
-                            <option value="Stable" >To assure the safety for principal</option>
+                          <option value="Growth">Growth</option>
+                            <option value="To generate income">To generate income</option>
+                            <option value="To accumulate assets for retirement">To accumulate assets for retirement</option>
+                            <option value="To assure the safety for principal" >To assure the safety for principal</option>
                       
                           </select><br/>
 

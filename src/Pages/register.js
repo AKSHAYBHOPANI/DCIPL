@@ -14,7 +14,14 @@ const responseFacebook = (response) => {
   console.log(response);
   setUser(response.name);
   setEmail(response.email);
-
+  if (response.userID) {
+  Profile.setProfile(prevState => {
+    return Object.assign({}, prevState, { id: response.id, name: response.name,
+    email: response.email,
+    IsSignIn: true,
+    IsonBoarding: false });
+  });
+  } else {}
 }
   const NameValue = (event) => {
   event.preventDefault();
