@@ -96,18 +96,17 @@ const CheckIsFormSubmitted = () => {
 const onSubmitSignIn = (e) => {
   e.preventDefault();
   document.getElementById('logo').style.display="block";
-    fetch('https://server.yourtechshow.com/retirement', {
+    fetch('http://127.0.0.1:8000/retirement', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
-        User: Profile.name,
-        Email: Profile.Email,
-        
+        name: Profile.name,
+        email: Profile.email,
         Assests: Assests,
         Liabilities: Liabilities,
-        TargetAmount: TargetAmount,
-        Time: Time,
-        IncomeStability: IncomeStability
+        targetamount: TargetAmount,
+        time: Time,
+        totalRisk: IncomeStability
 
       })
     })

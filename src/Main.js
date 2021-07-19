@@ -50,7 +50,8 @@ const Main = ({Profile, setProfile}) => {
 
       <Route exact path="/features/wealth">
       <Wealth Profile={Profile} setProfile={setProfile} />
-
+       </Route>
+       
       <Route exact path="/features/retirement">
         <Retirement Profile={Profile} setProfile={setProfile} />
 
