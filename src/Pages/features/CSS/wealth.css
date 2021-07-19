@@ -1,0 +1,44 @@
+h1 {
+	color: white;
+}
+
+.Title1 {
+	color: white;
+	padding: 10px;
+	text-align: center;
+}
+
+
+.Form7 {
+	padding-left: 20%;
+	padding-right: 20%;
+	text-align: center;
+
+}
+input {
+	width: 100%;
+	padding: 1rem;
+	margin: 10px;
+}
+
+select {
+	padding: 1rem;
+	text-align: center;
+	margin: 5px;
+}
+
+label {
+	color:white;
+}
+
+input:invalid {
+  border: 2px red;
+}
+
+
+
+input:valid {
+  border: 2px solid black;
+} 
+  
+
