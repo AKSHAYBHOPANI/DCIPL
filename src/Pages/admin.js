@@ -275,6 +275,11 @@ fetch('https://server.yourtechshow.com/getInvestmentCsv')
 <button className="button-a" onClick={GetInvestmentsCSV}>Export Tax Data</button>
 </div>
 </div>
+<div className="menu-container">
+<a className="button" href="./features/PortfolioAllocation">Portfolio Allocation Low</a>
+<a className="button" href="./features/PortfolioAllocation">Portfolio Allocation Medium</a>
+<a className="button" href="./features/PortfolioAllocation">Portfolio Allocation High</a>
+</div>
 {GetStats()}
 <div id="logo" className="loadingio-spinner-rolling-kswyn6f3gj7"><div className="ldio-c9p079igqka">
 <div></div>
