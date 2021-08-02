@@ -25,13 +25,13 @@ fetch('http://localhost:8000/portfolio-data')
         for (i = 0; i < response.length; i++) {
         
       txt += "<tr>"
-      txt += "<td>" + JSON.stringify(response[i].assetclass) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].allocation) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].allocationamount) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].totalincome) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].weightedreturnamount) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].assests) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].weightedsd) + "</td>";
+      txt += "<td>" + response[i].assetclass + "</td>";
+      txt += "<td>" + response[i].allocation + "</td>";
+      txt += "<td>" + response[i].allocationamount + "</td>";
+      txt += "<td>" + response[i].totalincome + "</td>";
+      txt += "<td>" + response[i].weightedreturnamount + "</td>";
+      txt += "<td>" + response[i].assests + "</td>";
+      txt += "<td>" + response[i].weightedsd + "</td>";
       
       txt += "</tr>"
 }
