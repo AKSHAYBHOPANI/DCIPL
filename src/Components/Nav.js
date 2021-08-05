@@ -26,6 +26,7 @@ function Nav(Profile) {
     <li><a href="../about">About</a></li>
     <li><a href="../blog">Blog</a></li>
     <li><a href="../careers">Careers</a></li>
+    <li><a href="../profile">Profile</a></li>
     <li><button onClick={LogoutNow} >Logout</button></li>
 
 
