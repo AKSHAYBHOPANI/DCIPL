@@ -56,7 +56,7 @@ var txt = ""
     
 
        } else {
-       alert("Error, Something Went Wrong.");
+       alert("Error, Profile Not Found.");
        console.log(response);
      }
        })
