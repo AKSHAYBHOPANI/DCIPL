@@ -9,12 +9,11 @@ import About from './Pages/about';
 import Blog from './Pages/blog';
 import Careers from './Pages/careers';
 import Investment from './Pages/features/investment';
-
 import Wealth from './Pages/features/wealth';
-
 import Retirement from './Pages/features/retirement';
-
-import Admin from './Pages/admin'
+import PortfolioAllocation from './Pages/features/PortfolioAllocation.js';
+import Admin from './Pages/admin';
+import MyProfile from './Pages/profile';
 
 const Main = ({Profile, setProfile}) => {
   return (
@@ -56,6 +55,17 @@ const Main = ({Profile, setProfile}) => {
         <Retirement Profile={Profile} setProfile={setProfile} />
 
       </Route>
+
+      <Route exact path="/profile">
+        <MyProfile Profile={Profile} setProfile={setProfile} />
+
+      </Route>
+
+      <Route exact path="/features/PortfolioAllocation">
+        <PortfolioAllocation Profile={Profile} setProfile={setProfile} />
+
+      </Route>
+
     </div>
   </Router>
   );

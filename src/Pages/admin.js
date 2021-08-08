@@ -23,10 +23,10 @@ fetch('https://server.yourtechshow.com/users')
       txt += "</tr>"
       	for (i = 0; i < response.length; i++) {
       txt += "<tr>"
-  		txt += "<td>" + JSON.stringify(response[i].id) + "</td>";
-  		txt += "<td>" + JSON.stringify(response[i].name) + "</td>";
-  		txt += "<td>" + JSON.stringify(response[i].email) + "</td>";
-  		txt += "<td>" + JSON.stringify(response[i].joined) + "</td>";
+  		txt += "<td>" + response[i].id + "</td>";
+  		txt += "<td>" + response[i].name + "</td>";
+  		txt += "<td>" + response[i].email + "</td>";
+  		txt += "<td>" + response[i].joined + "</td>";
     	txt += "</tr>"
 }
       txt += "</table>"	
@@ -80,38 +80,38 @@ fetch('https://server.yourtechshow.com/onboarding-data')
       txt += "</tr>"
         for (i = 0; i < response.length; i++) {
       txt += "<tr>"
-      txt += "<td>" + JSON.stringify(response[i].id) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].name) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].email) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].age) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].assets) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].liabilities) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].cibil) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].fixedincome) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].fixedexpense) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].expectedsal) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].debt_by_income) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].foir) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].debt_by_assets) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].reccuring) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].withdrawprincipal) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].period) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].sourceofincome) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].majorexpense) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].stockinvest) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].bondnvest) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].goal) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].yearsinvested) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].overtime) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].yearlyexpect) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].longtermgrowth) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].portfolio) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].outlookshorterm) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].outlooklongterm) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].objective) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].riskwillingness) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].riskability) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].totalrisk) + "</td>";
+      txt += "<td>" + response[i].id + "</td>";
+      txt += "<td>" + response[i].name + "</td>";
+      txt += "<td>" + response[i].email + "</td>";
+      txt += "<td>" + response[i].age + "</td>";
+      txt += "<td>" + response[i].assets + "</td>";
+      txt += "<td>" + response[i].liabilities + "</td>";
+      txt += "<td>" + response[i].cibil + "</td>";
+      txt += "<td>" + response[i].fixedincome + "</td>";
+      txt += "<td>" + response[i].fixedexpense + "</td>";
+      txt += "<td>" + response[i].expectedsal + "</td>";
+      txt += "<td>" + response[i].debt_by_income + "</td>";
+      txt += "<td>" + response[i].foir + "</td>";
+      txt += "<td>" + response[i].debt_by_assets + "</td>";
+      txt += "<td>" + response[i].reccuring + "</td>";
+      txt += "<td>" + response[i].withdrawprincipal + "</td>";
+      txt += "<td>" + response[i].period + "</td>";
+      txt += "<td>" + response[i].sourceofincome + "</td>";
+      txt += "<td>" + response[i].majorexpense + "</td>";
+      txt += "<td>" + response[i].stockinvest + "</td>";
+      txt += "<td>" + response[i].bondnvest + "</td>";
+      txt += "<td>" + response[i].goal + "</td>";
+      txt += "<td>" + response[i].yearsinvested + "</td>";
+      txt += "<td>" + response[i].overtime + "</td>";
+      txt += "<td>" + response[i].yearlyexpect + "</td>";
+      txt += "<td>" + response[i].longtermgrowth + "</td>";
+      txt += "<td>" + response[i].portfolio + "</td>";
+      txt += "<td>" + response[i].outlookshorterm + "</td>";
+      txt += "<td>" + response[i].outlooklongterm + "</td>";
+      txt += "<td>" + response[i].objective + "</td>";
+      txt += "<td>" + response[i].riskwillingness + "</td>";
+      txt += "<td>" + response[i].riskability + "</td>";
+      txt += "<td>" + response[i].totalrisk + "</td>";
       txt += "</tr>"
 }
       txt += "</table>" 
@@ -155,27 +155,27 @@ fetch('https://server.yourtechshow.com/investment')
         for (i = 0; i < response.length; i++) {
         
       txt += "<tr>"
-      txt += "<td>" + JSON.stringify(response[i].id) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].name) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].email) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].totalincome) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].totalexpenses) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].assests) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].liabilities) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].investableamount) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].targetamount) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].time) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].incomestability) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].surplus) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].margin) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].breakeven) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].marginofsafety) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].marginofsafetyrs) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].burnrate) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].return) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].networth) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].riskability) + "</td>";
-      txt += "<td>" + JSON.stringify(response[i].targetreturn) + "</td>";
+      txt += "<td>" + response[i].id + "</td>";
+      txt += "<td>" + response[i].name + "</td>";
+      txt += "<td>" + response[i].email + "</td>";
+      txt += "<td>" + response[i].totalincome + "</td>";
+      txt += "<td>" + response[i].totalexpenses + "</td>";
+      txt += "<td>" + response[i].assests + "</td>";
+      txt += "<td>" + response[i].liabilities + "</td>";
+      txt += "<td>" + response[i].investableamount + "</td>";
+      txt += "<td>" + response[i].targetamount + "</td>";
+      txt += "<td>" + response[i].time + "</td>";
+      txt += "<td>" + response[i].incomestability + "</td>";
+      txt += "<td>" + response[i].surplus + "</td>";
+      txt += "<td>" + response[i].margin + "</td>";
+      txt += "<td>" + response[i].breakeven + "</td>";
+      txt += "<td>" + response[i].marginofsafety + "</td>";
+      txt += "<td>" + response[i].marginofsafetyrs + "</td>";
+      txt += "<td>" + response[i].burnrate + "</td>";
+      txt += "<td>" + response[i].return + "</td>";
+      txt += "<td>" + response[i].networth + "</td>";
+      txt += "<td>" + response[i].riskability + "</td>";
+      txt += "<td>" + response[i].targetreturn + "</td>";
       txt += "</tr>"
 }
        txt += "</table>"
@@ -274,6 +274,11 @@ fetch('https://server.yourtechshow.com/getInvestmentCsv')
 <button className="button-a" onClick={GetInvestmentsCSV}>Export Investments Data</button>
 <button className="button-a" onClick={GetInvestmentsCSV}>Export Tax Data</button>
 </div>
+</div>
+<div className="menu-container">
+<a className="button" href="./features/PortfolioAllocation">Portfolio Allocation Low</a>
+<a className="button" href="./features/PortfolioAllocation">Portfolio Allocation Medium</a>
+<a className="button" href="./features/PortfolioAllocation">Portfolio Allocation High</a>
 </div>
 {GetStats()}
 <div id="logo" className="loadingio-spinner-rolling-kswyn6f3gj7"><div className="ldio-c9p079igqka">

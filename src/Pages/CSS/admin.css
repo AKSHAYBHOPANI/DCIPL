@@ -50,6 +50,21 @@ table {
 	margin-left:60px;
 }
 
+.button{
+    outline: none;
+    text-align: center;
+    border-radius: 18px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 800;
+    margin-top: 10px;
+    color: black;
+    background-color: #3ad4af;
+    width: 150px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+}
+
 .menu-container {
 	text-align: center;
 	display: flex;
