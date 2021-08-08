@@ -112,7 +112,7 @@ const onSubmitSignIn = (e) => {
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
         User: Profile.name,
-        Email: Profile.Email,
+        Email: Profile.email,
         FixedIncome: FixedIncome,
         VariableIncome: VariableIncome,
         FixedExpenses: FixedExpenses,
