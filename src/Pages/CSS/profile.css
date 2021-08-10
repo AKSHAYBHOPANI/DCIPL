@@ -1,0 +1,101 @@
+.main-profile {
+  position: relative;
+  width: 100%;
+  height: 990px;
+  color: white;
+  background: black;
+  box-sizing: border-box;
+}
+.main-profile h2 {
+  font-size: 18px;
+}
+.main-profile span {
+  display: flex;
+  font-size: 14px;
+  margin-left: 1180px;
+  margin-top: -100px;
+  color: goldenrod;
+}
+.main-profile h3 {
+  position: absolute;
+  width: 136px;
+  height: 23px;
+  left: 100px;
+  top: 264px;
+  color: goldenrod;
+  text-decoration: underline;
+}
+
+.verified-img-part {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  left: 101px;
+  top: 333px;
+
+  border: 1px solid white;
+  box-sizing: border-box;
+  box-shadow: 0px 8px 16px -8px rgba(207, 189, 189, 0.3),
+    0px 13px 27px -5px rgba(50, 50, 93, 0.25);
+  border-radius: 50%;
+}
+.verified-img-part .verified-img {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 99.27px;
+  top: 2px;
+}
+.verified-img-part p {
+  position: absolute;
+  width: 64px;
+  height: 20px;
+  left: 38px;
+  top: 159px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+
+  color: #2fc63c;
+}
+.personal-details-form {
+  position: absolute;
+  width: 556px;
+  height: 320px;
+  left: 502px;
+  top: 308px;
+  display: flex;
+}
+.personal-details-form input {
+  position: absolute;
+  width: 250px;
+  height: 47px;
+  left: 302px;
+
+  background: #ffffff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.personal-details-form label {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+
+  color: #ffffff;
+}
+.personal-details-form button {
+  padding: 14px 24px;
+
+  width: 122px;
+  height: 48px;
+  margin-right: 110px;
+  top: 100px;
+
+  background: goldenrod;
+  box-shadow: 3px 5px 25px rgba(0, 180, 216, 0.1),
+    1px 3px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 54px;
+}

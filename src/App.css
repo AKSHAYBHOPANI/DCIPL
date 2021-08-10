@@ -210,7 +210,7 @@ footer ul {
   height: 3px;
   width: 100px;
   box-sizing: border-box;
-  background-color: #3ad4af;
+  background-color: goldenrod;
 }
 .footer-col ul li:not(:last-child) {
   color: white;
@@ -238,7 +238,7 @@ footer ul {
   display: inline-block;
   height: 40px;
   width: 40px;
-  background-color: #3ad4af;
+  background-color: goldenrod;
   margin: 0 10px 10px 0;
   text-align: center;
   line-height: 40px;
@@ -247,7 +247,7 @@ footer ul {
   transition: all 0.65s ease;
 }
 .footer-col .fimage a:hover {
-  color: #3ad4af;
+  color: goldenrod;
   background-color: white;
 }
 footer .email-box {
@@ -261,7 +261,7 @@ footer .email-box {
   border: none;
 }
 .submit-btn {
-  border: 1px solid #3ad4af;
+  border: 1px solid goldenrod;
   text-align: center;
   border-radius: 15px;
   font-size: 12px;
@@ -270,7 +270,7 @@ footer .email-box {
   padding: 7px;
   color: white;
   width: 70px;
-  background-color: #3ad4af;
+  background-color: goldenrod;
 }
 .submit-btn:hover {
   background-color: #2d6356;
@@ -294,7 +294,7 @@ footer .email-box {
   }
 
   .footer-col ul li a:hover {
-    color: #3ad4af;
+    color: goldenrod;
     text-decoration: none;
   }
 
@@ -302,7 +302,7 @@ footer .email-box {
     display: inline-block;
     height: 40px;
     width: 40px;
-    background-color: #3ad4af;
+    background-color: goldenrod;
     margin: 0 10px 10px 0;
     text-align: center;
     line-height: 40px;
@@ -311,7 +311,7 @@ footer .email-box {
     transition: all 0.65s ease;
   }
   .footer-col .fimage a:hover {
-    color: #3ad4af;
+    color: goldenrod;
     background-color: white;
   }
   footer .email-box {
@@ -333,7 +333,7 @@ footer .email-box {
     font-weight: 800;
     padding: 10px;
     color: white;
-    background-color: #3ad4af;
+    background-color: goldenrod;
     width: 80px;
     margin-top: 10px;
     margin-left: -10px;
@@ -425,17 +425,20 @@ footer .email-box {
 /*global class button */
 button {
   border: none;
-  height: 50%;
+
   outline: none;
   text-align: center;
-  border-radius: 18px;
-  font-size: 20px;
+  font-size: 18px;
   cursor: pointer;
-  font-weight: 800;
-  margin-top: 10px;
+  font-weight: 600;
   color: white;
-  background-color: #3ad4af;
-  width: 150px;
+  background-color: goldenrod;
   margin-right: 5px;
-  margin-bottom: 20px;
+  padding: 14px 20px;
+  width: 112px;
+  height: 42px;
+
+  box-shadow: 3px 5px 25px rgba(0, 180, 216, 0.1),
+    1px 3px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 54px;
 }
