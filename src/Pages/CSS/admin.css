@@ -1,29 +1,27 @@
-*{
-	box-sizing: border-box;
-	 font-family: 'Jost', sans-serif;
-	
+* {
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
 }
-.admin{
-	color: rgb(156, 151, 151);
-	font-size: 20px;
+.admin {
+  color: rgb(156, 151, 151);
+  font-size: 20px;
 }
 h2 {
-	color: white;
-	text-align: left;
-	margin-left:10px;
-	font-size: 1.2rem;
+  color: white;
+  text-align: left;
+  margin-left: 10px;
+  font-size: 1.2rem;
 }
-table{
-  background-color:white ;
+table {
+  background-color: white;
+}
+th {
+  border: 3px solid rgb(87, 85, 85);
+  font-size: 20px;
+  font-weight: bold;
 
-}
-th{
-	border: 3px solid rgb(87, 85, 85);
-	font-size: 20px;	
-	font-weight: bold;
-	
-	height:8vh;
-	background-color: rgb(108, 137, 145);
+  height: 8vh;
+  background-color: rgb(108, 137, 145);
 }
 
 td {
@@ -38,35 +36,34 @@ table {
   width: 100vw;
   border-collapse: collapse;
 }
-.register{
-	font-size: 20px;
-	color: blue;
+.register {
+  font-size: 20px;
+  color: blue;
 }
 
-.button-a{
-	
-	padding: 10px;
-    color: black;
-	margin-left:60px;
+.button-a {
+  padding: 10px;
+  color: black;
+  margin-left: 60px;
 }
 
-.button{
-    outline: none;
-    text-align: center;
-    border-radius: 18px;
-    font-size: 20px;
-    cursor: pointer;
-    font-weight: 800;
-    margin-top: 10px;
-    color: black;
-    background-color: #3ad4af;
-    width: 150px;
-    margin-right: 5px;
-    margin-bottom: 20px;
+.button {
+  outline: none;
+  text-align: center;
+  border-radius: 18px;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 800;
+  margin-top: 10px;
+  color: black;
+  background-color: goldenrod;
+  width: 150px;
+  margin-right: 5px;
+  margin-bottom: 20px;
 }
 
 .menu-container {
-	text-align: center;
-	display: flex;
-	justify-content: space-around;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
 }
