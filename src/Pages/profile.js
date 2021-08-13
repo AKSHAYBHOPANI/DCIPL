@@ -40,24 +40,8 @@ function MyProfile({ Profile, setProfile }) {
           console.log(response);
           setData(response);
 
-          var txt = "";
-          var i = "";
-          txt += "<table>";
-          txt += "<tr>";
-          txt += "<th>ID</th>";
-          txt += "<th>Name</th>";
-          txt += "<th>Email</th>";
-          txt += "<th>Joined</th>";
-          txt += "</tr>";
-
-          txt += "<tr>";
-          txt += "<td>" + response.id + "</td>";
-          txt += "<td>" + response.name + "</td>";
-          txt += "<td>" + response.email + "</td>";
-          txt += "<td>" + response.joined + "</td>";
-          txt += "</tr>";
-          txt += "</table>";
-          document.getElementById("users").innerHTML = txt;
+        
+          
         } else {
           alert("Error, Profile Not Found.");
           console.log(response);
@@ -84,9 +68,7 @@ function MyProfile({ Profile, setProfile }) {
                 {date.toLocaleString()}
               </span>
             </h2>
-            <table>
-              <div id="users"></div>
-            </table>
+           
             <h3>Personal Detail</h3>
             <div className="verified-img-part">
               <div className="verified-img">
@@ -99,23 +81,13 @@ function MyProfile({ Profile, setProfile }) {
             </div>
             <div className="personal-details-form">
               <form action="">
-                <label forhtml="fname">First Name</label>
+                <label forhtml="fname">Name</label>
                 <input
                   id="fname"
                   type="text"
-                  placeholder="First Name"
+                  placeholder={Data.name}
                   required
                 />
-                <br />
-                <br />
-                <br />
-                <label forhtml="lname">Last Name</label>
-                <input
-                  id="lname"
-                  type="text"
-                  placeholder="Last Name"
-                  required
-                />{" "}
                 <br />
                 <br />
                 <br />
@@ -143,30 +115,33 @@ function MyProfile({ Profile, setProfile }) {
                 <input
                   id="contact"
                   type="text"
-                  placeholder="Mobile No.**"
+                  placeholder="Mobile No"
                   required
                 />{" "}
                 <br />
                 <br />
                 <br />
-                <label forhtml="whatsapp">Whatsapp No.</label>
-                <input
-                  id="whatsapp"
-                  type="text"
-                  placeholder="WhatsApp No."
-                />{" "}
-                <br />
-                <br />
-                <br />
-                <label forhtml="email">Email ID</label>
+                <label forhtml="email">Email Id</label>
                 <input
                   id="email"
-                  type="email"
-                  placeholder="Email ID**"
+                  type="text"
+                  placeholder={Data.email}
                   required
                 />{" "}
-                <button>Save</button>
-                <button>Edit</button>
+                <br />
+                <br />
+                <br />
+                <label forhtml="contact">Joined</label>
+                <input
+                  id="contact"
+                  type="text"
+                  placeholder={Data.joined}
+                  required
+                />{" "}
+                <br />
+                <br />
+                <br />
+            
               </form>
             </div>
             <br />
