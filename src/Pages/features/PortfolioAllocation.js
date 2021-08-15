@@ -64,11 +64,11 @@ fetch('http://localhost:8000/portfolio-data')
         
       txt += "<tr>"
       txt += "<td>" + response[i].assetclass + "</td>";
+      txt += "<td>" + response[i].allocationpp + "</td>";
       txt += "<td>" + response[i].allocation + "</td>";
-      txt += "<td>" + response[i].allocationamount + "</td>";
-      txt += "<td>" + response[i].totalincome + "</td>";
-      txt += "<td>" + response[i].weightedreturnamount + "</td>";
-      txt += "<td>" + response[i].assests + "</td>";
+      txt += "<td>" + response[i].weightedreturnpp + "</td>";
+      txt += "<td>" + response[i].weightedreturn + "</td>";
+      txt += "<td>" + response[i].sd + "</td>";
       txt += "<td>" + response[i].weightedsd + "</td>";
       
       txt += "</tr>"
