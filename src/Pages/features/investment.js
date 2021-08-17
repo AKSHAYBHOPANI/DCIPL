@@ -33,11 +33,11 @@ if (Data.riskability==="high") {
 }
 
 if (Data.riskability==="high") {
-  Portfolio = <PortfolioHigh targetreturn={Data.targetreturn}/>
+  Portfolio = <PortfolioHigh targetreturn={Data.targetreturn} email={Profile.email}/>
 } else if (Data.riskability==="Medium") {
-  Portfolio = <PortfolioMedium targetreturn={Data.targetreturn} />
+  Portfolio = <PortfolioMedium targetreturn={Data.targetreturn} email={Profile.email} />
 } else if (Data.riskability==="Low") {
-  Portfolio = <PortfolioLow targetreturn={Data.targetreturn}/>
+  Portfolio = <PortfolioLow targetreturn={Data.targetreturn} email={Profile.email}/>
 }
 
  const FixedIncomeValue = (event) => {

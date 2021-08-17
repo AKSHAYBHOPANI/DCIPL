@@ -2,11 +2,11 @@ import React from 'react';
 import '../../App.css';
 
 
-function PortfolioLow(targetreturn) {
+function PortfolioLow({targetreturn, email}) {
 
 const GetPortfolioLow = () => {
-  
-fetch('http://localhost:8000/portfolio-data')
+  console.log(email)
+fetch(`http://localhost:8000/portfolio-data/${email}`)
       .then(response => response.json())
       .then(response => {
         console.log(response)

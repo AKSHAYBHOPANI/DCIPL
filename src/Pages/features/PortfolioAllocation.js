@@ -161,10 +161,7 @@ const onSubmitSignIn = (e) => {
       body: JSON.stringify({
         name: Profile.name,
         email: Profile.email,
-        assetClass: AssetClass,
-        allocation: Allocation,
-        weightedReturn: weightedReturn,
-        SD: SD
+       
       })
     })
       
@@ -289,15 +286,16 @@ const onSubmitSignIn = (e) => {
                         <input type="text" name="fixed-income" placeholder="Return%" required onChange={(event)=> {setReturn6(event.target.value)}} value={Return6} min="1"></input><br></br>
                         <input type="text" name="fixed-income" placeholder="SD" required onChange={(event)=> {setSD6(event.target.value)}} value={SD6}></input><br></br>
                           
-                          <button type="submit">Upload</button>
-                        </form> <br></br>
+                          <button type="submit">Upload</button><br/>
+                        </form><br/><button onClick={onSubmitSignIn}>View</button> <br></br>
 </div> 
 <div id="logo" className="loadingio-spinner-rolling-kswyn6f3gj7"><div className="ldio-c9p079igqka">
 <div></div>
 </div></div>
+
 <br></br><br></br>
 
-<div className="Form">
+{/*<div className="Form">
   <form onSubmit={onSubmitSignIn}>
                         <br></br>
 
@@ -311,7 +309,7 @@ const onSubmitSignIn = (e) => {
 </div> 
 <div id="logo" className="loadingio-spinner-rolling-kswyn6f3gj7"><div className="ldio-c9p079igqka">
 <div></div>
-</div></div>
+</div></div>*/}
 <br></br> <br></br> 
 </>
 )}
