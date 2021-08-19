@@ -6,7 +6,7 @@ function PortfolioHigh({targetreturn, email}) {
 
 const GetPortfolioHigh = () => {
   
-fetch(`http://localhost:8000/portfolio-data/${email}`)
+fetch(`https://server.yourtechshow.com/portfolio-data/${email}`)
       .then(response => response.json())
       .then(response => {
         console.log(response)
@@ -44,19 +44,13 @@ fetch(`http://localhost:8000/portfolio-data/${email}`)
 
     return (
         <>
-{targetreturn.targetreturn>=11 ? (
-  <>
+
   <table>
 <div id="users"></div>
 </table>
 {GetPortfolioHigh()}
 </>
-) : (
-<>
-<iframe id="iframe" src="https://docs.google.com/spreadsheets/d/1HVkiobjGnwy_lsS2FbWE3DZp4PUQhlHmWDSy7olLuCk/gviz/tq?tqx=out:html&tq&gid=1546856446" frameborder="0" scrolling="no"></iframe>
-    
-        </>
-        )} </>
+
         )
 };
 

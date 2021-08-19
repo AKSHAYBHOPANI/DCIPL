@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.7073d55a.chunk.css",
-    "main.js": "/static/js/main.5ea4cadf.chunk.js",
-    "main.js.map": "/static/js/main.5ea4cadf.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.664b4a50.js",
-    "runtime-main.js.map": "/static/js/runtime-main.664b4a50.js.map",
-    "static/js/2.468aa9d3.chunk.js": "/static/js/2.468aa9d3.chunk.js",
-    "static/js/2.468aa9d3.chunk.js.map": "/static/js/2.468aa9d3.chunk.js.map",
-    "static/js/3.381db62b.chunk.js": "/static/js/3.381db62b.chunk.js",
-    "static/js/3.381db62b.chunk.js.map": "/static/js/3.381db62b.chunk.js.map",
+    "main.css": "/static/css/main.17cb86df.chunk.css",
+    "main.js": "/static/js/main.f76121c0.chunk.js",
+    "main.js.map": "/static/js/main.f76121c0.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8dff6786.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8dff6786.js.map",
+    "static/js/2.7495c595.chunk.js": "/static/js/2.7495c595.chunk.js",
+    "static/js/2.7495c595.chunk.js.map": "/static/js/2.7495c595.chunk.js.map",
+    "static/js/3.b62d34c6.chunk.js": "/static/js/3.b62d34c6.chunk.js",
+    "static/js/3.b62d34c6.chunk.js.map": "/static/js/3.b62d34c6.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.7073d55a.chunk.css.map": "/static/css/main.7073d55a.chunk.css.map",
-    "static/js/2.468aa9d3.chunk.js.LICENSE.txt": "/static/js/2.468aa9d3.chunk.js.LICENSE.txt",
+    "static/css/main.17cb86df.chunk.css.map": "/static/css/main.17cb86df.chunk.css.map",
+    "static/js/2.7495c595.chunk.js.LICENSE.txt": "/static/js/2.7495c595.chunk.js.LICENSE.txt",
     "static/media/ban.cc317eb4.png": "/static/media/ban.cc317eb4.png",
     "static/media/register.css": "/static/media/bg.9b9d4c16.jpg",
     "static/media/bg3.0c265a0c.png": "/static/media/bg3.0c265a0c.png",
@@ -20,6 +20,7 @@
     "static/media/finance.b5ca2d29.mp4": "/static/media/finance.b5ca2d29.mp4",
     "static/media/finance1.80cd8197.jpg": "/static/media/finance1.80cd8197.jpg",
     "static/media/first.0a2b9570.jpg": "/static/media/first.0a2b9570.jpg",
+    "static/media/iconveri.7f283fdc.svg": "/static/media/iconveri.7f283fdc.svg",
     "static/media/image 2.c47d9ac6.png": "/static/media/image 2.c47d9ac6.png",
     "static/media/keval.e2c7e977.png": "/static/media/keval.e2c7e977.png",
     "static/media/log.3a144107.png": "/static/media/log.3a144107.png",
@@ -32,9 +33,9 @@
     "static/media/wealth.82f1e52e.png": "/static/media/wealth.82f1e52e.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.664b4a50.js",
-    "static/js/2.468aa9d3.chunk.js",
-    "static/css/main.7073d55a.chunk.css",
-    "static/js/main.5ea4cadf.chunk.js"
+    "static/js/runtime-main.8dff6786.js",
+    "static/js/2.7495c595.chunk.js",
+    "static/css/main.17cb86df.chunk.css",
+    "static/js/main.f76121c0.chunk.js"
   ]
 }

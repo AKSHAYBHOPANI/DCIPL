@@ -42,9 +42,11 @@ const [AllocatedWeight6, setAllocatedWeight6] = useState("");
 const [Return6, setReturn6] = useState("");
 const [SD6, setSD6] = useState("");
 
+const [id, setid] = useState("");
+
 const GetPortfolioLow = () => {
   
-fetch('http://localhost:8000/portfolio-data')
+fetch('https://server.yourtechshow.com/portfolio-data')
       .then(response => response.json())
       .then(response => {
         console.log(response)
@@ -81,7 +83,7 @@ fetch('http://localhost:8000/portfolio-data')
 
 const GetPortfolioLowEquity = () => {
   
-fetch('http://localhost:8000/portfolioequity-data')
+fetch(`https://server.yourtechshow.com/portfolioequity-data/${id}`)
       .then(response => response.json())
       .then(response => {
         console.log(response)
@@ -155,7 +157,7 @@ fetch('http://localhost:8000/portfolioequity-data')
 const onSubmitSignIn = (e) => {
   e.preventDefault();
   document.getElementById('logo').style.display="block";
-    fetch('http://localhost:8000/investmentPortfolio', {
+    fetch(`https://server.yourtechshow.com/Table2/${id}`, {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -184,13 +186,13 @@ const onSubmitSignIn = (e) => {
   const onSubmitSignInEquity = (e) => {
   e.preventDefault();
   document.getElementById('logo').style.display="block";
-    fetch('http://localhost:8000/investmentPortfolioEquity', {
+    fetch(`https://server.yourtechshow.com/Table2/${id}`, {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
         name: Profile.name,
         email: Profile.email,
-      Equity: Equity,
+      equity: Equity,
       allocatedWeight: AllocatedWeight,
       Return: Return,
       SD: SD,
@@ -260,6 +262,18 @@ const onSubmitSignIn = (e) => {
 <br/><br/><br/><br/><br/><br/>
   <h1 className="Title">Portfolio Allocation Interface</h1> 
   <div className="Form">
+  <select onChange={(event)=> {setid(event.target.value)}} value={id} required>
+                          <option value="" defaultValue disabled hidden>Choose Here</option>
+                          <option value="tablehigh1">Table High 1</option>
+                            <option value="tablehigh2">Table High 2</option>
+                            <option value="tablehigh3">Table High 3</option>
+                          <option value="tablemedium1">Table Medium 1</option>
+                            <option value="tablemedium2">Table Medium 2</option>
+                            <option value="tablemedium3">Table Medium 3</option>
+                          <option value="tablelow1">Table Low 1</option>
+                            <option value="tablelow2">Table Low 2</option>
+                            <option value="tablelow3">Table Low 3</option>
+                          </select>
   <form onSubmit={onSubmitSignInEquity}>
                         <br></br>
                         <input type="text" name="fixed-income" placeholder="Equity" required onChange={(event)=> {setEquity(event.target.value)}} value={Equity}></input><br></br>

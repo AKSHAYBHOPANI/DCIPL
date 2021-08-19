@@ -6,7 +6,7 @@ function PortfolioMedium({targetreturn, email}) {
 
 const GetPortfolioMedium = () => {
   
-fetch(`http://localhost:8000/portfolio-data/${email}`)
+fetch(`https://server.yourtechshow.com/portfolio-data/${email}`)
       .then(response => response.json())
       .then(response => {
         console.log(response)
@@ -44,19 +44,14 @@ fetch(`http://localhost:8000/portfolio-data/${email}`)
 
     return (
         <>
-        {targetreturn.targetreturn>=11 ? (
-  <>
+       
 <table>
 <div id="users"></div>
 </table>
 {GetPortfolioMedium()}      
 </>
-) : (
-<>
-<iframe id="iframe" src="https://docs.google.com/spreadsheets/d/1HVkiobjGnwy_lsS2FbWE3DZp4PUQhlHmWDSy7olLuCk/gviz/tq?tqx=out:html&tq&gid=175990139" frameborder="0" scrolling="no"></iframe>
-    
-        </>
-        )} </>
+
+      
         )
 };
 

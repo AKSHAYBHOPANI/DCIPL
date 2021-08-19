@@ -22,23 +22,31 @@ const [Time, setTime] = useState("");
 const [IncomeStability, setIncomeStability] = useState("");
 const [IsFormSubmitted, setIsFormSubmitted] = useState(false);    
 const [Data, setData] = useState("");
+var Id;
 var AssetClass;
 var Portfolio;
+var table;
+
+
 if (Data.riskability==="high") {
   AssetClass = <AssetClassHigh />
-} else if (Data.riskability==="Medium") {
+} else if (Data.riskability==="medium") {
   AssetClass = <AssetClassMedium />
-} else if (Data.riskability==="Low") {
+} else if (Data.riskability==="low") {
   AssetClass = <AssetClassLow />
 }
 
 if (Data.riskability==="high") {
   Portfolio = <PortfolioHigh targetreturn={Data.targetreturn} email={Profile.email}/>
-} else if (Data.riskability==="Medium") {
+} else if (Data.riskability==="medium") {
   Portfolio = <PortfolioMedium targetreturn={Data.targetreturn} email={Profile.email} />
-} else if (Data.riskability==="Low") {
+} else if (Data.riskability==="low") {
   Portfolio = <PortfolioLow targetreturn={Data.targetreturn} email={Profile.email}/>
 }
+
+table=1;
+
+
 
  const FixedIncomeValue = (event) => {
   setFixedIncome(event.target.value);
@@ -76,9 +84,9 @@ if (Data.riskability==="high") {
   setIncomeStability(event.target.value);
   };
 
+
 const OnPageLoad = () => {
 const Profile = localStorage.getItem("Profile");
-
 CheckIsFormSubmitted();
 }
 
@@ -129,15 +137,46 @@ const onSubmitSignIn = (e) => {
       .then(response => response.json())
       .then(response => {
        if (response.time) {
-        alert("Thank You For Submitting Data");
         console.log(response);
-        document.getElementById('logo').style.display="none";
-        setIsFormSubmitted(true);
         setData(response);
+        if (response.targetreturn>=14.40) {
+          var count = 1
+        } else if (response.targetreturn>=10.75) {
+          var count = 2
+        } else if (response.targetreturn>=7.67) {
+          var count = 3
+        }
+        Id=`table${response.riskability}${count}`
+        console.log(Id);
+        onSubmitInvestment(Id);
+        document.getElementById('logo').style.display="none";
+        alert("Thank You For Submitting Data");
        } else {
        alert("Error, Something Went Wrong.");
        console.log(response);
        document.getElementById('logo').style.display="none";
+     }
+       })
+  }
+
+  const onSubmitInvestment = (Id) => {
+    fetch(`https://server.yourtechshow.com/investmentPortfolio/${Id}`, {
+      method: 'post',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        name: Profile.name,
+        email: Profile.email,
+
+      })
+    })
+      
+      .then(response => response.json())
+      .then(response => {
+       if (response.name) {
+        console.log(response);
+        setIsFormSubmitted(true);
+       } else {
+       alert("Error, Something Went Wrong.");
      }
        })
   }

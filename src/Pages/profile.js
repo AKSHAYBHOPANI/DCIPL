@@ -31,7 +31,7 @@ function MyProfile({ Profile, setProfile }) {
   });
 
   const onSubmitSignIn = (e) => {
-    fetch(`http://127.0.0.1:8000/profile/${Profile.email}`, {
+    fetch(`https://server.yourtechshow.com/profile/${Profile.email}`, {
       method: "get",
     })
       .then((response) => response.json())
