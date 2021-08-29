@@ -156,31 +156,9 @@ fetch(`https://server.yourtechshow.com/portfolioequity-data/${id}`)
 
 const onSubmitSignIn = (e) => {
   e.preventDefault();
-  document.getElementById('logo').style.display="block";
-    fetch(`https://server.yourtechshow.com/Table2/${id}`, {
-      method: 'post',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        name: Profile.name,
-        email: Profile.email,
-       
-      })
-    })
-      
-      .then(response => response.json())
-      .then(response => {
-       if (response.email) {
-        alert("Thank You For Submitting Data");
-        console.log(response);
-        document.getElementById('logo').style.display="none";
-        setIsFormSubmitted(true);
-        setData(response);
-       } else {
-       alert("Error, Something Went Wrong.");
-       console.log(response);
-       document.getElementById('logo').style.display="none";
-     }
-       })
+  document.getElementById('logo').style.display="none";
+  setIsFormSubmitted(true);
+        
   }
 
   const onSubmitSignInEquity = (e) => {
@@ -295,6 +273,7 @@ const onSubmitSignIn = (e) => {
                         <input type="text" name="fixed-income" placeholder="Crypto" required onChange={(event)=> {setCrypto(event.target.value)}} value={Crypto}></input><br></br>
                         <input type="text" name="fixed-income" placeholder="Allocated Weight" required onChange={(event)=> {setAllocatedWeight5(event.target.value)}} value={AllocatedWeight5} min="1"></input><br></br>
                         <input type="text" name="fixed-income" placeholder="Return %" required onChange={(event)=> {setReturn5(event.target.value)}} value={Return5} min="1"></input><br></br>
+                        <input type="text" name="fixed-income" placeholder="SD" required onChange={(event)=> {setSD5(event.target.value)}} value={SD5}></input><br></br>
                         <input type="text" name="fixed-income" placeholder="Forex" required onChange={(event)=> {setForex(event.target.value)}} value={Forex} min="1"></input><br></br>
                         <input type="text" name="fixed-income" placeholder="Allocated Weight" required onChange={(event)=> {setAllocatedWeight6(event.target.value)}} value={AllocatedWeight6} min="1"></input><br></br>
                         <input type="text" name="fixed-income" placeholder="Return%" required onChange={(event)=> {setReturn6(event.target.value)}} value={Return6} min="1"></input><br></br>
