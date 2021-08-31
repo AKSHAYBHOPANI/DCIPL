@@ -27,7 +27,7 @@ function Footer() {
                 
                 <li><a href="./">Pricing and Refund policy</a></li>
                 <li><a href="./">Term of use</a></li>
-               <li> <a href="./">Privacy Policy</a></li>
+               <li> <a href="./policy">Privacy Policy</a></li>
                <li><a href="./">Security policy</a></li>
                 
                 
