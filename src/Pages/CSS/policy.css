@@ -1,0 +1,356 @@
+.Policy-Page{
+    height: 9600px;
+}
+
+.text {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  margin-top: 123px;
+  min-height: 12307px;
+  width: 1349px;
+}
+.policyheader-container{
+    position: absolute;
+    width: 646px;
+    height: 368px;
+    left: 39px;
+    top: 260px;
+}
+
+.policyheader-content{
+position: absolute;
+width: 680px;
+height: 59px;
+left: 49px;
+top: 10px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: bold;
+font-size: 50px;
+line-height: 59px;
+/* identical to box height */
+
+
+color: #a9a9a9;
+}
+.policyheader-content1{
+position: absolute;
+width: 646px;
+height: 140px;
+left: 39px;
+top: 100px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 174.69%;
+/* or 35px */
+
+
+color: #696969;
+}
+
+.policyheder-image{
+position: absolute;
+left: 422px;
+top: -212.51px;
+
+}
+.Terms-header {
+position: absolute;
+width: 321px;
+height: 48px;
+left: 95px;
+top: 539px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 600;
+font-size: 35px;
+line-height: 137.4%;
+/* identical to box height, or 48px */
+
+
+color: #a9a9a9;
+}
+
+.Terms-Eclipse{
+position: absolute;
+top : 535px;
+left: 30px;
+    
+}
+
+.Terms-Content{
+    position: absolute;
+    width: 1320px;
+    height: 311px;
+    left: 24px;
+    top: 601px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 139.69%;
+    /* or 25px */
+    
+    
+    color: #696969
+    
+}
+
+.TermsUse-header{
+position: absolute;
+width: 211px;
+height: 50.79px;
+left: 95px;
+top: 800px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 600;
+font-size: 35px;
+line-height: 137.4%;
+/* or 48px */
+
+
+color: #a9a9a9;
+
+}
+
+.TermsUse-Eclipse{
+    position: absolute;
+    top : 802px;
+    left: 30px;
+        
+}
+.TermsUse-Content{
+    position: absolute;
+    width: 1320px;
+    height: 311px;
+    left: 24px;
+    top: 855px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 139.69%;
+    /* or 25px */
+       
+    color: #696969
+
+}
+
+.ProtectionHeader{
+    position: absolute;
+    width: 819px;
+    height: 48px;
+    left: 95px;
+    top: 2556px;
+    
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 137.4%;
+    /* identical to box height, or 48px */
+    
+    
+    color: #a9a9a9;
+    
+
+}
+.Protection-Eclipse{
+    position: absolute;
+    top : 2556px;
+    left: 30px;
+        
+
+}
+.Protection-Content{
+position: absolute;
+width: 1320px;
+height: 108px;
+left: 24px;
+top: 2600px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 139.69%;
+/* or 25px */
+
+
+color: #696969
+}
+.Limitation-header{
+    
+position: absolute;
+width: 767px;
+height: 48px;
+left: 95px;
+top: 2689px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 600;
+font-size: 35px;
+line-height: 137.4%;
+/* identical to box height, or 48px */
+
+
+color: #a9a9a9;
+
+}
+.Limitation-Eclipse{
+    position: absolute;
+    top : 2689px;
+    left: 30px;
+
+}
+.Limitation-Content{
+position: absolute;
+width: 1320px;
+height: 311px;
+left: 20px;
+top: 2730px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 139.69%;
+/* or 25px */
+
+
+color: #696969
+
+}
+
+.policy-header{position: absolute;
+width: 245px;
+height: 48px;
+left: 102px;
+top: 2970px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 600;
+font-size: 35px;
+line-height: 137.4%;
+/* identical to box height, or 48px */
+
+
+color: #a9a9a9;
+}
+.policy-Eclipse{
+    position: absolute;
+    top : 2970px;
+    left: 30px;
+
+}
+.policy-content{
+position: absolute;
+width: 1320px;
+height: 311px;
+left: 20px;
+top: 3010px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 139.69%;
+/* or 25px */
+
+
+color: #696969
+
+}
+.Security-header{
+position: absolute;
+width: 245px;
+height: 48px;
+left: 102px;
+top: 8100px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 600;
+font-size: 35px;
+line-height: 137.4%;
+/* identical to box height, or 48px */
+
+
+color: #a9a9a9;
+
+}
+.Security-Eclipse{
+    position: absolute;
+    top : 8100px;
+    left: 30px;
+}
+.Security-content{
+    position: absolute;
+    width: 1320px;
+    height: 311px;
+    left: 20px;
+    top: 8150px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 139.69%;
+    /* or 25px */
+    
+    
+    color: #696969
+}
+.confidentiality-header{
+position: absolute;
+width: 245px;
+height: 48px;
+left: 102px;
+top: 9210px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 600;
+font-size: 35px;
+line-height: 137.4%;
+/* identical to box height, or 48px */
+
+
+color: #a9a9a9;
+}
+.confidentiality-Eclipse{
+    position: absolute;
+    top : 9210px;
+    left: 30px;
+}
+.Confidentiality-content{
+    position: absolute;
+    width: 1320px;
+    height: 311px;
+    left: 20px;
+    top: 9260px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 139.69%;
+    /* or 25px */
+    
+    
+    color: #696969
+
+}
