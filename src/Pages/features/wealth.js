@@ -14,7 +14,8 @@ function Wealth({Profile, setProfile}) {
 
 	const [Assests, setAssests] = useState("");
 const [Liabilities, setLiabilities] = useState("");
-const [TargetAmount, setTargetAmount] = useState(""); 
+const [TargetAmount, setTargetAmount] = useState("");
+const [TotalRisk, setTotalRisk] = useState("");
 const [Time, setTime] = useState("");
 const [IncomeStability, setIncomeStability] = useState("");
 const [IsFormSubmitted, setIsFormSubmitted] = useState(false);    
@@ -49,6 +50,10 @@ if (Data.riskability==="high") {
 
   const TargetAmountValue = (event) => {
   setTargetAmount(event.target.value);
+  };
+
+  const TotalRiskValue = (event) => {
+  setTotalRisk(event.target.value);
   };
 
   const TimeValue = (event) => {
@@ -93,14 +98,11 @@ const onSubmitSignIn = (e) => {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
-        User: Profile.name,
-        Email: Profile.Email,
-
-        Assests: Assests,
-        Liabilities: Liabilities,
+        name: Profile.name,
+        email: Profile.Email,
         TargetAmount: TargetAmount,
+        totalRisk: TotalRisk,
         Time: Time,
-        IncomeStability: IncomeStability
 
       })
     })
@@ -128,7 +130,7 @@ const onSubmitSignIn = (e) => {
   <> 
 <br></br><br></br><br></br>
 {console.log(Profile)}
-<h1>Congratulations {Profile.name}, Your Investment Portfolio Is Generated ✅</h1>
+<h1>Congratulations {Profile.name}, Your Wealth Planning Report Is Generated ✅</h1>
 <h2> Your Current Net Worth is {Data.networth}</h2>
 <h2>It will take {Data.targetamount/Data.investableamount} Years To Raise {Data.targetamount} if you invest {Data.investableamount} Per Year.</h2>
 <h2>Suggested Assest Classes To Invest In (Tailored just for you) - </h2>
@@ -149,20 +151,17 @@ const onSubmitSignIn = (e) => {
   <form onSubmit={onSubmitSignIn}>
                         <br></br>
 
-                        <input type="number" name="fixed-income" placeholder="Assests" required onChange={AssestsValue} value={Assests}></input><br></br>
-                        <input type="number" name="fixed-income" placeholder="Liabilities" required onChange={LiabilitiesValue} value={Liabilities}></input><br></br>
                         <input type="number" name="fixed-income" placeholder="Target Amount (Goal)" required onChange={TargetAmountValue} value={TargetAmount}></input><br></br>
-                        <input type="number" name="fixed-income" placeholder="Time Duration For Investment (In Years)" required onChange={TimeValue} value={Time} min="1"></input><br></br>
-                        <label>Income Stability - </label>
-                          <select onChange={IncomeStabilityValue} value={IncomeStability} required>
+                        <label>Total Risk - </label>
+                          <select onChange={TotalRiskValue} value={TotalRisk} required>
                           <option value="" defaultValue disabled hidden>Choose Here</option>
-                          <option value="Very Unstable">Very Unstable</option>
-                            <option value="Unstable">Unstable</option>
-                            <option value="Somewhat Stable">Somewhat Stable</option>
-                            <option value="Stable" >Stable</option>
-                            <option value="Very Stable">Very Stable</option>
+                          <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
                           </select>
-
+                        <input type="number" name="fixed-income" placeholder="Time Duration For Investment (In Years)" required onChange={TimeValue} value={Time} min="1"></input><br></br>
+                        
+                          <br/><br/>
                           <button type="submit">Calculate</button>
                         </form> <br></br>
 </div> 
