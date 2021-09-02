@@ -54,6 +54,7 @@ fetch('https://server.yourtechshow.com/portfolio-data')
         var i =""
         txt += "<table>"
         txt += "<tr>"
+      txt += "<th>Email</th>"
       txt += "<th>Assest Class</th>"
       txt += "<th>Allocation%</th>"
       txt += "<th>Allocation</th>" 
@@ -65,6 +66,7 @@ fetch('https://server.yourtechshow.com/portfolio-data')
         for (i = 0; i < response.length; i++) {
         
       txt += "<tr>"
+      txt += "<td>" + response[i].email + "</td>";
       txt += "<td>" + response[i].assetclass + "</td>";
       txt += "<td>" + response[i].allocationpp + "</td>";
       txt += "<td>" + response[i].allocation + "</td>";
@@ -94,7 +96,6 @@ fetch(`https://server.yourtechshow.com/portfolioequity-data/${id}`)
       txt += "<th>Equity</th>"
       txt += "<th>Allocated Weight</th>"
       txt += "<th>Return%</th>" 
-      txt += "<th>Weighted Return%</th>"
       txt += "<th>SD</th>"
       txt += "<th>Fixed Income</th>"
       txt += "<th>AllocatedWeight</th>"
@@ -123,7 +124,6 @@ fetch(`https://server.yourtechshow.com/portfolioequity-data/${id}`)
       txt += "<td>" + response[i].equity + "</td>";
       txt += "<td>" + response[i].allocatedweight + "</td>";
       txt += "<td>" + response[i].return + "</td>";
-      txt += "<td>" + response[i].weightedreturn + "</td>";
       txt += "<td>" + response[i].sd + "</td>";
       txt += "<td>" + response[i].fixedincome + "</td>";
       txt += "<td>" + response[i].allocatedweight2 + "</td>";
@@ -156,7 +156,6 @@ fetch(`https://server.yourtechshow.com/portfolioequity-data/${id}`)
 
 const onSubmitSignIn = (e) => {
   e.preventDefault();
-  document.getElementById('logo').style.display="none";
   setIsFormSubmitted(true);
         
   }

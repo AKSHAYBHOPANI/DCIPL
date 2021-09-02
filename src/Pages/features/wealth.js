@@ -65,7 +65,7 @@ CheckIsFormSubmitted();
 }
 
 const CheckIsFormSubmitted = () => {
-    fetch('https://server.yourtechshow.com/IsInvestmentFormSubmitted', {
+    fetch('https://server.yourtechshow.com/IsWealthFormSubmitted', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -89,7 +89,7 @@ const CheckIsFormSubmitted = () => {
 const onSubmitSignIn = (e) => {
   e.preventDefault();
   document.getElementById('logo').style.display="block";
-    fetch('https://server.yourtechshow.com/investment', {
+    fetch('https://server.yourtechshow.com/wealth', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({

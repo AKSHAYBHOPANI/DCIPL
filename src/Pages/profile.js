@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 // import "../App.css";
 // import "./CSS/login.css";
 import "./CSS/profile.css";
-import icon from "../assests/iconveri.svg";
 // import "./features/CSS/investment.css";
 import Login from "./login";
 import AssetClassHigh from ".././Components/Investment/AssestClassHigh";
@@ -48,7 +47,7 @@ function MyProfile({ Profile, setProfile }) {
         }
       });
   };
-
+let icon =  "https://avatars.dicebear.com/api/avataaars/${Profile.name}.svg";
   return (
     <>
       {Profile.IsSignIn ? (

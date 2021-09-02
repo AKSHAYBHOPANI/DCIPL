@@ -41,10 +41,11 @@
 }
 .verified-img-part .verified-img {
   position: absolute;
-  width: 24px;
-  height: 24px;
-  left: 99.27px;
-  top: 2px;
+  width: 80%;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
 }
 .verified-img-part p {
   position: absolute;
