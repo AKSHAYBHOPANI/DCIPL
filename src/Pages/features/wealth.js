@@ -15,8 +15,8 @@ function Wealth({Profile, setProfile}) {
 	const [Assests, setAssests] = useState("");
 const [Liabilities, setLiabilities] = useState("");
 const [TargetAmount, setTargetAmount] = useState("");
-const [TotalRisk, setTotalRisk] = useState("");
 const [Time, setTime] = useState("");
+const [Plan, setPlan] = useState("");
 const [IncomeStability, setIncomeStability] = useState("");
 const [IsFormSubmitted, setIsFormSubmitted] = useState(false);    
 const [Data, setData] = useState("");
@@ -52,12 +52,12 @@ if (Data.riskability==="high") {
   setTargetAmount(event.target.value);
   };
 
-  const TotalRiskValue = (event) => {
-  setTotalRisk(event.target.value);
-  };
-
   const TimeValue = (event) => {
   setTime(event.target.value);
+  };
+
+   const PlanValue = (event) => {
+  setPlan(event.target.value);
   };
 
   const IncomeStabilityValue = (event) => {
@@ -94,15 +94,15 @@ const CheckIsFormSubmitted = () => {
 const onSubmitSignIn = (e) => {
   e.preventDefault();
   document.getElementById('logo').style.display="block";
-    fetch('https://server.yourtechshow.com/wealth', {
+    fetch('http://127.0.0.1:8000/wealth', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
         name: Profile.name,
-        email: Profile.Email,
+        email: Profile.email,
         TargetAmount: TargetAmount,
-        totalRisk: TotalRisk,
         Time: Time,
+        PlanType: Plan
 
       })
     })
@@ -152,15 +152,15 @@ const onSubmitSignIn = (e) => {
                         <br></br>
 
                         <input type="number" name="fixed-income" placeholder="Target Amount (Goal)" required onChange={TargetAmountValue} value={TargetAmount}></input><br></br>
-                        <label>Total Risk - </label>
-                          <select onChange={TotalRiskValue} value={TotalRisk} required>
-                          <option value="" defaultValue disabled hidden>Choose Here</option>
-                          <option value="Low">Low</option>
-                            <option value="Medium">Medium</option>
-                            <option value="High">High</option>
-                          </select>
                         <input type="number" name="fixed-income" placeholder="Time Duration For Investment (In Years)" required onChange={TimeValue} value={Time} min="1"></input><br></br>
                         
+                        <label>Plan Type - </label>
+                          <select onChange={PlanValue} value={Plan} required>
+                          <option value="" defaultValue disabled hidden>Choose Here</option>
+                          <option value="Girl Child Plan">Girl Child Plan</option>
+                            <option value="Child Education Plan">Child Education Plan</option>
+                            <option value="Normal Plan">Normal Plan</option>
+                          </select>
                           <br/><br/>
                           <button type="submit">Calculate</button>
                         </form> <br></br>
