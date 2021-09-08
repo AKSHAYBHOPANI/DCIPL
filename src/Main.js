@@ -12,6 +12,7 @@ import Investment from './Pages/features/investment';
 import Wealth from './Pages/features/wealth';
 import Retirement from './Pages/features/retirement';
 import PortfolioAllocation from './Pages/features/PortfolioAllocation.js';
+import WealthPortfolioAllocation from './Pages/features/wealthPortfolioAllocation.js';
 import Admin from './Pages/admin';
 import MyProfile from './Pages/profile';
 import Policy from './Pages/policy';
@@ -64,6 +65,10 @@ const Main = ({Profile, setProfile}) => {
 
       <Route exact path="/features/PortfolioAllocation">
         <PortfolioAllocation Profile={Profile} setProfile={setProfile} />
+
+      </Route>
+      <Route exact path="/features/wealthPortfolioAllocation">
+        <WealthPortfolioAllocation Profile={Profile} setProfile={setProfile} />
 
       </Route>
       <Route exact path="/policy">

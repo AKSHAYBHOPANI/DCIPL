@@ -70,7 +70,7 @@ CheckIsFormSubmitted();
 }
 
 const CheckIsFormSubmitted = () => {
-    fetch('https://server.yourtechshow.com/IsWealthFormSubmitted', {
+    fetch('http://127.0.0.1:8000/IsWealthFormSubmitted', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -131,13 +131,12 @@ const onSubmitSignIn = (e) => {
 <br></br><br></br><br></br>
 {console.log(Profile)}
 <h1>Congratulations {Profile.name}, Your Wealth Planning Report Is Generated ✅</h1>
-<h2> Your Current Net Worth is {Data.networth}</h2>
-<h2>It will take {Data.targetamount/Data.investableamount} Years To Raise {Data.targetamount} if you invest {Data.investableamount} Per Year.</h2>
+<h2>You need to Deposit Amount {Data.depositperyear} Per Year to Raise {Data.targetamount}</h2>
 <h2>Suggested Assest Classes To Invest In (Tailored just for you) - </h2>
 
 {AssetClass}
 
-<h2>Suggested Portfolio's To Invest In (as per your Target Return of {Data.targetreturn}%) - </h2>
+<h2>Suggested Portfolio's To Invest In (as per your Target Return of {Data.return}%) - </h2>
 
 {Portfolio}
 
