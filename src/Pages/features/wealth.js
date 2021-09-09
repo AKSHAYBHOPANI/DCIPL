@@ -9,6 +9,7 @@ import AssetClassLow from "../../Components/Investment/AssestClassLow";
 import PortfolioHigh from "../../Components/Investment/PortfolioHigh";
 import PortfolioMedium from "../../Components/Investment/PortfolioMedium";
 import PortfolioLow from "../../Components/Investment/PortfolioLow";
+import WealthPortfolio from "../../Components/Wealth/Portfolio";
 
 function Wealth({Profile, setProfile}) {
 
@@ -22,23 +23,17 @@ const [IsFormSubmitted, setIsFormSubmitted] = useState(false);
 const [Data, setData] = useState("");
 var AssetClass;
 var Portfolio;
-if (Data.riskability==="high") {
+if (Data.totalrisk==="High") {
   AssetClass = <AssetClassHigh />
-} else if (Data.riskability==="Medium") {
+} else if (Data.totalrisk==="Medium") {
   AssetClass = <AssetClassMedium />
-} else if (Data.riskability==="Low") {
+} else if (Data.totalrisk==="Low") {
   AssetClass = <AssetClassLow />
 }
 
-if (Data.riskability==="high") {
-  Portfolio = <PortfolioHigh targetreturn={Data.targetreturn}/>
-} else if (Data.riskability==="Medium") {
-  Portfolio = <PortfolioMedium targetreturn={Data.targetreturn} />
-} else if (Data.riskability==="Low") {
-  Portfolio = <PortfolioLow targetreturn={Data.targetreturn}/>
-}
-
-
+if (Data.plan) {
+  Portfolio = <WealthPortfolio targetreturn={Data.targetreturn}/>
+} 
 
  const AssestsValue = (event) => {
   setAssests(event.target.value);
@@ -109,15 +104,39 @@ const onSubmitSignIn = (e) => {
      .then(response => response.json())
       .then(response => {
        if (response.time) {
-        alert("Thank You For Submitting Data");
         console.log(response);
-        document.getElementById('logo').style.display="none";
-        setIsFormSubmitted(true);
         setData(response);
+        
+        console.log();
+        onSubmitWealth();
+        document.getElementById('logo').style.display="none";
+        alert("Thank You For Submitting Data");
        } else {
        alert("Error, Something Went Wrong.");
        console.log(response);
        document.getElementById('logo').style.display="none";
+     }
+       })
+  }
+
+const onSubmitWealth = () => {
+    fetch(`http://127.0.0.1:8000/wealthPortfolio`, {
+      method: 'post',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        name: Profile.name,
+        email: Profile.email,
+
+      })
+    })
+      
+      .then(response => response.json())
+      .then(response => {
+       if (response.name) {
+        console.log(response);
+        setIsFormSubmitted(true);
+       } else {
+       alert("Error, Something Went Wrong.");
      }
        })
   }

@@ -41,7 +41,10 @@ const [Forex, setForex] = useState("");
 const [AllocatedWeight6, setAllocatedWeight6] = useState("");
 const [Return6, setReturn6] = useState("");
 const [SD6, setSD6] = useState("");
-
+const [OtherInvestments, setOtherInvestments] = useState("");
+const [AllocatedWeight7, setAllocatedWeight7] = useState("");
+const [Return7, setReturn7] = useState("");
+const [SD7, setSD7] = useState("");
 const [id, setid] = useState("");
 
 const GetPortfolioLow = () => {
@@ -85,7 +88,7 @@ fetch('http://127.0.0.1:8000/wealth-portfolio-data')
 
 const GetPortfolioLowEquity = () => {
   
-fetch(`http://127.0.0.1:8000/portfolioequity-data/${id}`)
+fetch(`http://127.0.0.1:8000/wealthportfolioequity-data/${id}`)
       .then(response => response.json())
       .then(response => {
         console.log(response)
@@ -117,6 +120,10 @@ fetch(`http://127.0.0.1:8000/portfolioequity-data/${id}`)
       txt += "<th>AllocatedWeight</th>"
       txt += "<th>Return%</th>"
       txt += "<th>SD</th>"
+      txt += "<th>Other Investments</th>"
+      txt += "<th>AllocatedWeight</th>"
+      txt += "<th>Return%</th>"
+      txt += "<th>SD</th>"
       txt += "</tr>"
         for (i = 0; i < response.length; i++) {
         
@@ -145,7 +152,10 @@ fetch(`http://127.0.0.1:8000/portfolioequity-data/${id}`)
       txt += "<td>" + response[i].allocatedweight6 + "</td>";
       txt += "<td>" + response[i].return6 + "</td>";
       txt += "<td>" + response[i].sd6 + "</td>";
-      
+      txt += "<td>" + response[i].otherinvestment + "</td>";
+      txt += "<td>" + response[i].allocatedweight7 + "</td>";
+      txt += "<td>" + response[i].return7 + "</td>";
+      txt += "<td>" + response[i].sd7 + "</td>";
       txt += "</tr>"
 }
        txt += "</table>"
@@ -193,7 +203,11 @@ const onSubmitSignIn = (e) => {
       forex: Forex,
       allocatedWeight6: AllocatedWeight6,
       return6: Return6,
-      SD6: SD6
+      SD6: SD6,
+      OtherInvestments: OtherInvestments,
+      allocatedWeight7: AllocatedWeight6,
+      return6: Return7,
+      SD6: SD7
       })
     })
       
@@ -242,15 +256,22 @@ const onSubmitSignIn = (e) => {
   <div className="Form">
   <select onChange={(event)=> {setid(event.target.value)}} value={id} required>
                           <option value="" defaultValue disabled hidden>Choose Here</option>
-                          <option value="tablehigh1">Table High 1</option>
-                            <option value="tablehigh2">Table High 2</option>
-                            <option value="tablehigh3">Table High 3</option>
-                          <option value="tablemedium1">Table Medium 1</option>
-                            <option value="tablemedium2">Table Medium 2</option>
-                            <option value="tablemedium3">Table Medium 3</option>
-                          <option value="tablelow1">Table Low 1</option>
-                            <option value="tablelow2">Table Low 2</option>
-                            <option value="tablelow3">Table Low 3</option>
+                          <option value="longtermhigh_girl">Long Term High Girl</option>
+                          <option value="longtermhigh_education">Long Term High Education</option>
+                          <option value="longtermhigh_normal">Long Term High Normal</option>
+                          <option value="longtermmedium_girl">Long Term Medium Girl</option>
+                          <option value="longtermmedium_education">Long Term Medium Education</option>
+                          <option value="longtermmedium_normal">Long Term Medium Normal</option>
+                          <option value="longtermlow_girl">Long Term Low Girl</option>
+                          <option value="longtermlow_education">Long Term Low Education</option>
+                          <option value="longtermlow_normal">Long Term Low Normal</option>
+                             <option value="mediumtermhigh">Medium Term High</option>
+                            <option value="mediumtermmedium">Medium Term Medium</option>
+                            <option value="mediumtermlow">Medium Term Low</option>
+                             <option value="shorttermhigh">Short Term High</option>
+                            <option value="shorttermmedium">Short Term Medium</option>
+                            <option value="shorttermlow">Short Term Low</option>
+                          
                           </select>
   <form onSubmit={onSubmitSignInEquity}>
                         <br></br>
@@ -278,7 +299,10 @@ const onSubmitSignIn = (e) => {
                         <input type="text" name="fixed-income" placeholder="Allocated Weight" required onChange={(event)=> {setAllocatedWeight6(event.target.value)}} value={AllocatedWeight6} min="1"></input><br></br>
                         <input type="text" name="fixed-income" placeholder="Return%" required onChange={(event)=> {setReturn6(event.target.value)}} value={Return6} min="1"></input><br></br>
                         <input type="text" name="fixed-income" placeholder="SD" required onChange={(event)=> {setSD6(event.target.value)}} value={SD6}></input><br></br>
-                          
+                        <input type="text" name="fixed-income" placeholder="Other Investments" required onChange={(event)=> {setOtherInvestments(event.target.value)}} value={OtherInvestments}></input><br></br>
+                        <input type="text" name="fixed-income" placeholder="Allocated Weight" required onChange={(event)=> {setAllocatedWeight7(event.target.value)}} value={AllocatedWeight7}></input><br></br>
+                        <input type="text" name="fixed-income" placeholder="Return%" required onChange={(event)=> {setReturn7(event.target.value)}} value={Return7}></input><br></br>
+                        <input type="text" name="fixed-income" placeholder="SD" required onChange={(event)=> {setSD7(event.target.value)}} value={SD7}></input><br></br> 
                           <button type="submit">Upload</button><br/>
                         </form><br/><button onClick={onSubmitSignIn}>View</button> <br></br>
 </div> 
