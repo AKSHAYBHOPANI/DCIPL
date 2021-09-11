@@ -1,7 +1,7 @@
 import React, { useState} from 'react';
 import '../../App.css';
 import '../CSS/login.css';
-import './CSS/retirement.css';
+import './CSS/wealth.css';
 import Login from '../login';
 import AssetClassHigh from "../../Components/Investment/AssestClassHigh";
 import AssetClassMedium from "../../Components/Investment/AssestClassMedium";
@@ -9,43 +9,33 @@ import AssetClassLow from "../../Components/Investment/AssestClassLow";
 import PortfolioHigh from "../../Components/Investment/PortfolioHigh";
 import PortfolioMedium from "../../Components/Investment/PortfolioMedium";
 import PortfolioLow from "../../Components/Investment/PortfolioLow";
+import WealthPortfolio from "../../Components/Wealth/Portfolio";
 
+function Reterment({Profile, setProfile}) {
 
-function Retirement({Profile, setProfile}) {
-
-
-const [Assests, setAssests] = useState("");
+  const [Assests, setAssests] = useState("");
 const [Liabilities, setLiabilities] = useState("");
-const [TargetAmount, setTargetAmount] = useState(""); 
+const [TargetAmount, setTargetAmount] = useState("");
 const [Time, setTime] = useState("");
+const [Plan, setPlan] = useState("");
 const [IncomeStability, setIncomeStability] = useState("");
 const [IsFormSubmitted, setIsFormSubmitted] = useState(false);    
 const [Data, setData] = useState("");
 var AssetClass;
 var Portfolio;
-if (Data.riskability==="high") {
+if (Data.totalrisk==="High") {
   AssetClass = <AssetClassHigh />
-} else if (Data.riskability==="Medium") {
+} else if (Data.totalrisk==="Medium") {
   AssetClass = <AssetClassMedium />
-} else if (Data.riskability==="Low") {
+} else if (Data.totalrisk==="Low") {
   AssetClass = <AssetClassLow />
 }
 
-if (Data.riskability==="high") {
-  Portfolio = <PortfolioHigh targetreturn={Data.targetreturn}/>
-} else if (Data.riskability==="Medium") {
-  Portfolio = <PortfolioMedium targetreturn={Data.targetreturn} />
-} else if (Data.riskability==="Low") {
-  Portfolio = <PortfolioLow targetreturn={Data.targetreturn}/>
-}
+if (Data.plan) {
+  Portfolio = <WealthPortfolio targetreturn={Data.targetreturn} email={Data.email}/>
+} 
 
- 
-
-
-  
-
-
-  const AssestsValue = (event) => {
+ const AssestsValue = (event) => {
   setAssests(event.target.value);
   };
 
@@ -56,23 +46,26 @@ if (Data.riskability==="high") {
   const TargetAmountValue = (event) => {
   setTargetAmount(event.target.value);
   };
-  
+
   const TimeValue = (event) => {
   setTime(event.target.value);
+  };
+
+   const PlanValue = (event) => {
+  setPlan(event.target.value);
   };
 
   const IncomeStabilityValue = (event) => {
   setIncomeStability(event.target.value);
   };
-
-const OnPageLoad = () => {
+  const OnPageLoad = () => {
 const Profile = localStorage.getItem("Profile");
 
 CheckIsFormSubmitted();
 }
 
 const CheckIsFormSubmitted = () => {
-    fetch('https://server.yourtechshow.com/IsRetirementFormSubmitted', {
+    fetch('http://127.0.0.1:8000/IsRetirementFormSubmitted', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -80,7 +73,6 @@ const CheckIsFormSubmitted = () => {
 
       })
     })
-      
       .then(response => response.json())
       .then(response => {
        if (response.email) {
@@ -93,6 +85,7 @@ const CheckIsFormSubmitted = () => {
        })
   }
 
+
 const onSubmitSignIn = (e) => {
   e.preventDefault();
   document.getElementById('logo').style.display="block";
@@ -102,23 +95,21 @@ const onSubmitSignIn = (e) => {
       body: JSON.stringify({
         name: Profile.name,
         email: Profile.email,
-        Assests: Assests,
-        Liabilities: Liabilities,
-        targetamount: TargetAmount,
-        time: Time,
-        totalRisk: IncomeStability
+        TargetAmount: TargetAmount,
+        Time: Time
 
       })
     })
-      
-      .then(response => response.json())
+     .then(response => response.json())
       .then(response => {
        if (response.time) {
-        alert("Thank You For Submitting Data");
         console.log(response);
-        document.getElementById('logo').style.display="none";
-        setIsFormSubmitted(true);
         setData(response);
+        
+        console.log();
+        onSubmitWealth();
+        document.getElementById('logo').style.display="none";
+        alert("Thank You For Submitting Data");
        } else {
        alert("Error, Something Went Wrong.");
        console.log(response);
@@ -127,7 +118,29 @@ const onSubmitSignIn = (e) => {
        })
   }
 
-	return (
+const onSubmitWealth = () => {
+    fetch(`http://127.0.0.1:8000/retirementPortfolio`, {
+      method: 'post',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        name: Profile.name,
+        email: Profile.email,
+
+      })
+    })
+      
+      .then(response => response.json())
+      .then(response => {
+       if (response.name) {
+        console.log(response);
+        setIsFormSubmitted(true);
+       } else {
+       alert("Error, Something Went Wrong.");
+     }
+       })
+  }
+
+  return (
     <>
     {Profile.IsSignIn ? (
   <>
@@ -135,41 +148,31 @@ const onSubmitSignIn = (e) => {
   <> 
 <br></br><br></br><br></br>
 {console.log(Profile)}
-<h1>Congratulations {Profile.name}, Your Investment Portfolio Is Generated ✅</h1>
-<h2> Your Current Net Worth is {Data.networth}</h2>
-<h2>It will take {Data.targetamount/Data.investableamount} Years To Raise {Data.targetamount} if you invest {Data.investableamount} Per Year.</h2>
+<h1>Congratulations {Profile.name}, Your Retirement Planning Report Is Generated ✅</h1>
+<h2>You need to Deposit Amount {Data.depositperyear} Per Year to Raise {Data.targetamount}</h2>
 <h2>Suggested Assest Classes To Invest In (Tailored just for you) - </h2>
 
 {AssetClass}
 
-<h2>Suggested Portfolio's To Invest In (as per your Target Return of {Data.targetreturn}%) - </h2>
+<h2>Suggested Portfolio's To Invest In (as per your Target Return of {Data.return}%) - </h2>
 
 {Portfolio}
 
 </>
 ) : (
-<><div className="retire-plan">
+<><div className="wealth-plan">
 <br/><br/><br/><br/><br/><br/>
   <h1 className="Title1">Retirement Planning</h1>
   <h2 className="Title1">On The Basis Of Investment</h2>
   <div className="Form7">
   <form onSubmit={onSubmitSignIn}>
                         <br></br>
-                        
-                        <input type="number" name="fixed-income" placeholder="Assests" required onChange={AssestsValue} value={Assests}></input><br></br>
-                        <input type="number" name="fixed-income" placeholder="Liabilities" required onChange={LiabilitiesValue} value={Liabilities}></input><br></br>
+
                         <input type="number" name="fixed-income" placeholder="Target Amount (Goal)" required onChange={TargetAmountValue} value={TargetAmount}></input><br></br>
                         <input type="number" name="fixed-income" placeholder="Time Duration For Investment (In Years)" required onChange={TimeValue} value={Time} min="1"></input><br></br>
-                        <label>Income Stability - </label>
-                          <select onChange={IncomeStabilityValue} value={IncomeStability} required>
-                          <option value="" defaultValue disabled hidden>Choose Here</option>
-                          <option value="Very Unstable">Very Unstable</option>
-                            <option value="Unstable">Unstable</option>
-                            <option value="Somewhat Stable">Somewhat Stable</option>
-                            <option value="Stable" >Stable</option>
-                            <option value="Very Stable">Very Stable</option>
-                          </select>
-                          
+                        
+                      
+                          <br/><br/>
                           <button type="submit">Calculate</button>
                         </form> <br></br>
 </div> 
@@ -185,9 +188,9 @@ const onSubmitSignIn = (e) => {
       ) : (
   <Login Profile={Profile} setProfile={setProfile}/>
         )}
-		</>
+    </>
 
-		)
+    )
 };
 
-export default Retirement;
+export default Reterment;

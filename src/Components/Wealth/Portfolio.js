@@ -5,8 +5,7 @@ import '../../App.css';
 function Portfolio({targetreturn, email}) {
 
 const GetPortfolioHigh = () => {
-  
-fetch(`http://127.0.0.1:8000/wealth-portfolio-data/${email}`)
+fetch(`https://server.yourtechshow.com/wealth-portfolio-data/${email}`)
       .then(response => response.json())
       .then(response => {
         console.log(response)
@@ -19,7 +18,6 @@ fetch(`http://127.0.0.1:8000/wealth-portfolio-data/${email}`)
       txt += "<th>Allocation</th>" 
       txt += "<th>Weighted Return%</th>"
       txt += "<th>Weighted Return</th>"
-      txt += "<th>SD</th>"
       txt += "<th>Weighted SD</th>"
       txt += "</tr>"
         for (i = 0; i < response.length; i++) {
@@ -30,7 +28,6 @@ fetch(`http://127.0.0.1:8000/wealth-portfolio-data/${email}`)
       txt += "<td>" + response[i].allocation + "</td>";
       txt += "<td>" + response[i].weightedreturnpp + "</td>";
       txt += "<td>" + response[i].weightedreturn + "</td>";
-      txt += "<td>" + response[i].sd + "</td>";
       txt += "<td>" + response[i].weightedsd + "</td>";
       
       txt += "</tr>"

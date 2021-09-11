@@ -32,7 +32,7 @@ if (Data.totalrisk==="High") {
 }
 
 if (Data.plan) {
-  Portfolio = <WealthPortfolio targetreturn={Data.targetreturn}/>
+  Portfolio = <WealthPortfolio targetreturn={Data.targetreturn} email={Data.email}/>
 } 
 
  const AssestsValue = (event) => {
@@ -65,7 +65,7 @@ CheckIsFormSubmitted();
 }
 
 const CheckIsFormSubmitted = () => {
-    fetch('http://127.0.0.1:8000/IsWealthFormSubmitted', {
+    fetch('https://server.yourtechshow.com/IsWealthFormSubmitted', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -89,7 +89,7 @@ const CheckIsFormSubmitted = () => {
 const onSubmitSignIn = (e) => {
   e.preventDefault();
   document.getElementById('logo').style.display="block";
-    fetch('http://127.0.0.1:8000/wealth', {
+    fetch('https://server.yourtechshow.com/wealth', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -120,7 +120,7 @@ const onSubmitSignIn = (e) => {
   }
 
 const onSubmitWealth = () => {
-    fetch(`http://127.0.0.1:8000/wealthPortfolio`, {
+    fetch(`https://server.yourtechshow.com/wealthPortfolio`, {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({

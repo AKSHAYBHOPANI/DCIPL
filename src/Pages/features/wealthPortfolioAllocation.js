@@ -49,7 +49,7 @@ const [id, setid] = useState("");
 
 const GetPortfolioLow = () => {
   
-fetch('http://127.0.0.1:8000/wealth-portfolio-data')
+fetch('https://server.yourtechshow.com/wealth-portfolio-data')
       .then(response => response.json())
       .then(response => {
         console.log(response)
@@ -88,7 +88,7 @@ fetch('http://127.0.0.1:8000/wealth-portfolio-data')
 
 const GetPortfolioLowEquity = () => {
   
-fetch(`http://127.0.0.1:8000/wealthportfolioequity-data/${id}`)
+fetch(`https://server.yourtechshow.com/wealthportfolioequity-data/${id}`)
       .then(response => response.json())
       .then(response => {
         console.log(response)
@@ -173,7 +173,7 @@ const onSubmitSignIn = (e) => {
   const onSubmitSignInEquity = (e) => {
   e.preventDefault();
   document.getElementById('logo').style.display="block";
-    fetch(`http://127.0.0.1:8000/Table2Wealth`, {
+    fetch(`https://server.yourtechshow.com/Table2Wealth`, {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
