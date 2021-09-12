@@ -9,7 +9,7 @@ import AssetClassLow from "../../Components/Investment/AssestClassLow";
 import PortfolioHigh from "../../Components/Investment/PortfolioHigh";
 import PortfolioMedium from "../../Components/Investment/PortfolioMedium";
 import PortfolioLow from "../../Components/Investment/PortfolioLow";
-import WealthPortfolio from "../../Components/Wealth/Portfolio";
+import RetirementPortfolio from "../../Components/Retirement/Portfolio";
 
 function Reterment({Profile, setProfile}) {
 
@@ -32,7 +32,7 @@ if (Data.totalrisk==="High") {
 }
 
 if (Data.plan) {
-  Portfolio = <WealthPortfolio targetreturn={Data.targetreturn} email={Data.email}/>
+  Portfolio = <RetirementPortfolio targetreturn={Data.targetreturn} email={Data.email}/>
 } 
 
  const AssestsValue = (event) => {
@@ -65,7 +65,7 @@ CheckIsFormSubmitted();
 }
 
 const CheckIsFormSubmitted = () => {
-    fetch('http://127.0.0.1:8000/IsRetirementFormSubmitted', {
+    fetch('https://server.yourtechshow.com/IsRetirementFormSubmitted', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -89,7 +89,7 @@ const CheckIsFormSubmitted = () => {
 const onSubmitSignIn = (e) => {
   e.preventDefault();
   document.getElementById('logo').style.display="block";
-    fetch('http://127.0.0.1:8000/retirement', {
+    fetch('https://server.yourtechshow.com/retirement', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -119,7 +119,7 @@ const onSubmitSignIn = (e) => {
   }
 
 const onSubmitWealth = () => {
-    fetch(`http://127.0.0.1:8000/retirementPortfolio`, {
+    fetch(`https://server.yourtechshow.com/retirementPortfolio`, {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -149,7 +149,6 @@ const onSubmitWealth = () => {
 <br></br><br></br><br></br>
 {console.log(Profile)}
 <h1>Congratulations {Profile.name}, Your Retirement Planning Report Is Generated ✅</h1>
-<h2>You need to Deposit Amount {Data.depositperyear} Per Year to Raise {Data.targetamount}</h2>
 <h2>Suggested Assest Classes To Invest In (Tailored just for you) - </h2>
 
 {AssetClass}

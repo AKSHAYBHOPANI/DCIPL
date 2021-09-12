@@ -2,10 +2,10 @@ import React from 'react';
 import '../../App.css';
 
 
-function RetirementPortfolio({targetreturn, email}) {
+function Portfolio({targetreturn, email}) {
 
 const GetPortfolioHigh = () => {
-fetch(`https://server.yourtechshow.com/retirement-portfolio-data/${email}`)
+fetch(`https://server.yourtechshow.com/wealth-portfolio-data/${email}`)
       .then(response => response.json())
       .then(response => {
         console.log(response)
@@ -51,4 +51,4 @@ fetch(`https://server.yourtechshow.com/retirement-portfolio-data/${email}`)
         )
 };
 
-export default RetirementPortfolio;
+export default Portfolio;

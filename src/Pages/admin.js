@@ -278,6 +278,7 @@ fetch('https://server.yourtechshow.com/getInvestmentCsv')
 <div className="menu-container">
 <a className="button" href="./features/PortfolioAllocation">Update Investment Portfolio Allocation</a>
 <a className="button" href="./features/wealthPortfolioAllocation">Update Wealth Portfolio Allocation</a>
+<a className="button" href="./features/RetirementPortfolioAllocation">Update Retirement Portfolio Allocation</a>
 </div>
 {GetStats()}
 <div id="logo" className="loadingio-spinner-rolling-kswyn6f3gj7"><div className="ldio-c9p079igqka">
