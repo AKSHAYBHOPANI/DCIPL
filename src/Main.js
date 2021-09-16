@@ -17,7 +17,7 @@ import RetirementPortfolioAllocation from './Pages/features/RetirementPortfolioA
 import Admin from './Pages/admin';
 import MyProfile from './Pages/profile';
 import Policy from './Pages/policy';
-
+import Paytm from './Components/Paytm'
 const Main = ({Profile, setProfile}) => {
   return (
   <Router>
@@ -78,6 +78,10 @@ const Main = ({Profile, setProfile}) => {
       </Route>
       <Route exact path="/policy">
         <Policy />
+      </Route>
+
+      <Route exact path="/paytm">
+        <Paytm />
       </Route>
 
     </div>
