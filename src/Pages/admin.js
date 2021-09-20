@@ -264,21 +264,23 @@ fetch('https://server.yourtechshow.com/getInvestmentCsv')
 <button className="button-a" onClick={GetInvestment}>Investment</button>
 <button className="button-a" onClick={GetUsers}>Tax</button>
 </div>
-
+<br/>
 <table>
 <div id="users"></div>
 </table>
 <div className="menu-container">
-<button className="button-a" onClick={GetUsersCSV}>Export Users Data</button>
-<button className="button-a" onClick={GetOnboardingCSV}>Export Onboarding Data</button>
-<button className="button-a" onClick={GetInvestmentsCSV}>Export Investments Data</button>
-<button className="button-a" onClick={GetInvestmentsCSV}>Export Tax Data</button>
+<a className="button" onClick={GetUsersCSV}>Export Users Data</a>
+<a className="button" onClick={GetOnboardingCSV}>Export Onboarding Data</a>
+<a className="button" onClick={GetInvestmentsCSV}>Export Investments Data</a>
+<a className="button" onClick={GetInvestmentsCSV}>Export Tax Data</a>
 </div>
 </div>
+<br/>
 <div className="menu-container">
 <a className="button" href="./features/PortfolioAllocation">Update Investment Portfolio Allocation</a>
 <a className="button" href="./features/wealthPortfolioAllocation">Update Wealth Portfolio Allocation</a>
 <a className="button" href="./features/RetirementPortfolioAllocation">Update Retirement Portfolio Allocation</a>
+<a className="button" href="./features/TaxPortfolioAllocation">Update Tax Portfolio Allocation</a>
 </div>
 {GetStats()}
 <div id="logo" className="loadingio-spinner-rolling-kswyn6f3gj7"><div className="ldio-c9p079igqka">
