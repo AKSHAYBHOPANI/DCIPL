@@ -1,61 +1,114 @@
-import React from 'react';
-import logo from '../assests/log.png';
-import '../App.css';
-
+import React from "react";
+import logo from "../assests/logo.png";
+import { Link } from "react-router-dom";
+// import "./CSS/App.css";
 
 function LogoutNow() {
-  alert("You have Successfully Logged Out. Hope to see you again.")
+  alert("You have Successfully Logged Out. Hope to see you again.");
   localStorage.removeItem("Profile");
   window.location.reload();
 }
 
+function slideshow() {
+  var x = document.getElementById("check-class");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
 function Nav(Profile) {
-  
-	return (
-<>
-    {Profile.Profile.IsSignIn ? (
+  return (
+    <>
+      {Profile.Profile.IsSignIn ? (
+        <>
+          <nav className="main-nav">
+            <div className="logo">
+              <a href="../">
+                <img src={logo} className="logo1" alt=""></img>
+              </a>
+            </div>
+            <div className="menu-link" id="check-class">
+              <ul>
+                <li>
+                  <a href="../">HOME</a>
+                </li>
+                <li>
+                  <a href="../about">ABOUT</a>
+                </li>
+                <li>
+                  <a href="../service">SERVICES</a>{" "}
+                </li>
 
-  <>
-  <header className="header">
-  <a href="./"><img src={logo} className="logo" alt=""></img></a>
-  <input className="menu-btn" type="checkbox" id="menu-btn" />
-  <label className="menu-icon" htmlFor="menu-btn"><span className="navicon"></span></label>
-		
-  <ul className="menu">
-  <li><a href="../">Home</a></li>
-    <li><a href="../about">About</a></li>
-    <li><a href="../blog">Blog</a></li>
-    <li><a href="../careers">Careers</a></li>
-    <li><a href="../profile">Profile</a></li>
-    <li><button onClick={LogoutNow} >Logout</button></li>
-
-
-  </ul>
-</header>
-
-
-
-</>
+                <li>
+                  <a href="./profile">PROFILE</a>
+                </li>
+                <li>
+                  <a href="" onClick={LogoutNow}>
+                    Logout
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <Link to="" className="mobile-icon" onClick={slideshow}>
+              <i className="fas fa-bars"></i>
+            </Link>
+          </nav>
+        </>
       ) : (
+        <>
+          <nav className="main-nav">
+            <div className="logo">
+              <a href="../">
+                <img src={logo} className="logo1" alt=""></img>
+              </a>
+            </div>
+            <div className="menu-link" id="check-class">
+              <ul>
+                <li>
+                  <a href="../">
+                    <i className="fa fa-home"></i> HOME
+                  </a>
+                </li>
 
-		<>
-		<header className="header">
-  <a href="./"><img src={logo} className="logo" alt=""></img></a>
-  <input className="menu-btn" type="checkbox" id="menu-btn" />
-  <label className="menu-icon" htmlFor="menu-btn"><span className="navicon"></span></label>
-  <ul className="menu">
-  <li><a href="/Home">Home</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="./blog">Blog</a></li>
-    <li><a href="./careers">Careers</a></li>
-    <li><a href="./login">Dashboard</a></li>
-    <li><a href="./register">Register</a></li>
-  </ul>
-</header>
-</>
-     )}
-</>
-		)
-};
+                <li>
+                  <a href="../about">
+                    <i className="fa fa-user"></i>ABOUT
+                  </a>
+                </li>
+                <li>
+                  <a href="../service">
+                    <i className="fa fa-clone"></i>SERVICES
+                  </a>{" "}
+                </li>
+                <li>
+                  <a href="../blog">
+                    <i className="fa fa-clipboard"></i>BLOG
+                  </a>
+                </li>
+                <li>
+                  <a href="../careers">
+                    <i className="fa fa-users"></i>CAREERS
+                  </a>
+                </li>
+                <li>
+                  <a href="../contact">
+                    <i className="fa fa-calendar"></i>CONTACT
+                  </a>
+                </li>
+                <li>
+                  <a href="./register">Join</a>
+                </li>
+              </ul>
+            </div>
+            <Link to="" className="mobile-icon" onClick={slideshow}>
+              <i className="fas fa-bars"></i>
+            </Link>
+          </nav>
+        </>
+      )}
+    </>
+  );
+}
 
 export default Nav;
