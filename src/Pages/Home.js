@@ -1,137 +1,737 @@
-import React from 'react';
-import './CSS/Home.css';
-import image from "../assests/ban.png";
-import image1 from "../assests/image 2.png";
-import image2 from "../assests/tax 1.png";
-import image3 from "../assests/retire.png";
-import image4 from "../assests/finance1.jpg";
-import image5 from "../assests/estate.png";
-import image6 from "../assests/wealth.png";
-import image7 from "../assests/pol1.jpg";
-import image8 from "../assests/pol2.jpg";
-import image9 from "../assests/pol3.png";
-import image10 from "../assests/pol5.jpg";
-import image11 from "../assests/pol6.jpg";
-import image12 from "../assests/pol4.jpg";
+import React, { useState } from "react";
+import "./CSS/Home.css";
+import { useHistory } from "react-router-dom";
+import derivebox from "../assests/deriveup.svg";
+import image28 from "../assests/tax1.png";
+import image29 from "../assests/cash1.png";
+import image31 from "../assests/bank111.png";
+import image33 from "../assests/hm1.png";
+import image27 from "../assests/planning1.png";
+import gplay from "../assests/g-play.png";
+import image4 from "../assests/grid-1.svg";
+import { Link } from "react-router-dom";
+import image10 from "../assests/grid-5.svg";
+import image26 from "../assests/budget1.png";
+import arrow from "../assests/arrow.svg";
+import tripv from "../assests/tripv.mp4";
+import image6 from "../assests/grid-2.svg";
+import image12 from "../assests/grid-6.svg";
+import logo from "../assests/logo.jpg";
+import Machine from "../assests/big-img.svg";
+import Carousel from "react-elastic-carousel";
+import card from "../assests/card.png";
+import image8 from "../assests/grid-3.svg";
+import piggy from "../assests/piggy.png";
+import estimate from "../assests/esti.svg";
+import happy from "../assests/happy.svg";
+import atm from "../assests/atm.png";
+import mobile from "../assests/money1.png";
+import hdfc from "../assests/a-hdfc.svg";
+import icici from "../assests/a-icici.svg";
+import sbi from "../assests/a-sbi.svg";
+import image17 from "../assests/big-img9.svg";
+import bajaj from "../assests/bajaj.jpeg";
+import man2 from "../assests/man2.jpg";
+import man3 from "../assests/man3.jpg";
+import woman1 from "../assests/woman1.jpg";
+import man from "../assests/man-p.png";
+import kotak from "../assests/a-kotak.svg";
+import idfc from "../assests/a-idfc.svg";
+import sriram from "../assests/sriram.png";
+import AppointmentModal from "../Pages/modal/AppointmentModal";
+// import Postmodal from "../Pages/modal/Postmodal";s
 
-function Home() {
-	return (
-		<>
-{/*Banner Section*/}
+// Progress Bar
+window.addEventListener(
+  "scroll",
+  () => {
+    document.body.style.setProperty(
+      "--scroll",
+      window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+    );
+    document.body.style.setProperty(
+      "--scroll-per",
+      `${(window.pageYOffset / document.body.offsetHeight) * 110}%`
+    );
+  },
+  false
+);
 
-<div className="ho-container"><img src={image} alt="img"></img>
-        <div className="text-box">
-            <h1>YOUR SMART FINANCIAL <br />PLANNER</h1>
-            <a href="./register" className="hero-btn1">PLAN NOW</a>
+const Box_component = ({ Icon, Text }) => {
+  const [isShown, setIsShown] = useState(false);
+  let history = useHistory();
+
+  function handleClick() {
+    history.push("/register");
+  }
+
+  return (
+    <div
+      onMouseEnter={() => setIsShown(true)}
+      onMouseLeave={() => setIsShown(false)}
+      onClick={handleClick}
+      className="box33"
+    >
+      <img src={Icon} className="icon_design" alt="" />
+      <h5 className="box_text">{Text}</h5>
+      {isShown && (
+        <div className="box-inner">
+          <h5 className="box_text2">{Text}</h5>
+          <button className="btnviewdoc">View Solutions</button>
         </div>
+      )}
     </div>
+  );
+};
 
-{/* feature section */}
-<div className="home-area">
-    <section className="fea">
-        <h1>Features</h1>
-            <div className="row">
+const Home = () => {
+  const [postIsOpen, setPostIsOpen] = useState(false);
+  const [toggle, setToggle] = React.useState(true);
+  const [appointmentIsOpen, setAppointmentIsOpen] = useState(false);
+  function handleClick() {
+    history.push("/register");
+  }
 
-<div className="col"><img src={image1} alt="img1"></img>
-    <div className="layer">
-            <h2>INVESTMENT PLANNING</h2>
-            <a href="./" className="de-btn">Details</a>
-    </div>
-</div>
+  const img_arr = [
+    bajaj,
+    sriram,
+    icici,
+    kotak,
+    idfc,
+    sbi,
+    bajaj,
+    hdfc,
+    icici,
+    kotak,
+    idfc,
+    sbi,
+  ];
+  let history = useHistory();
+  const img_arr3 = [
+    estimate,
+    atm,
+    //  icici, sbi, kotak, hdfc, icici, sbi, kotak
+  ];
+  const img_arr4 = [
+    "EMI Calculator",
+    "ICICI",
+    "SBI",
+    "KOTAK",
+    "HDFC",
+    "ICICI",
+    "SBI",
+    "KOTAK",
+  ];
 
-<div className="col"><img src={image2} alt="img2"></img>
-    <div className="layer">
-            <h2>TAX PLANNING</h2>
-            <a href="./" className="de-btn">Details</a>
-    </div>
-</div>
+  // Statistics
+  var project = setInterval(projectDone, 10);
+  var clients = setInterval(happyClients, 10);
+  var service = setInterval(service, 10);
 
-<div className="col"><img src={image3} alt="img3"></img>
-    <div className="layer">
-            <h2>RETIREMENT PLANNING</h2>
-            <a href="./" className="de-btn">Details</a>
-    </div>
-</div>
-</div>
-</section>
+  let count1 = 1;
+  let count2 = 1;
+  let count3 = 1;
 
-<section className="fea2">
-    <div className="row">
+  function projectDone() {
+    count1++;
+    document.querySelector("#number1").innerHTML = count1;
+    if (count1 == 500) {
+      clearInterval(project);
+    }
+  }
 
-<div className="col"><img src={image4} alt="img4"></img>
-    <div className="layer">
-        <h2>FINANCE PLANNING</h2>
-        <a href="./" className="de-btn">Details</a>
-    </div>
-</div>
+  function happyClients() {
+    count2++;
+    document.querySelector("#number2").innerHTML = count2;
+    if (count2 == 89) {
+      clearInterval(clients);
+    }
+  }
 
-<div className="col"><img src={image5} alt="img5"></img>
-    <div className="layer">
-        <h2>ESTATE  PLANNING</h2>
-        <a href="./" className="de-btn">Details</a>
-    </div>
-</div>
+  function service() {
+    count3++;
+    document.querySelector("#number3").innerHTML = count3;
+    if (count3 == 359) {
+      clearInterval(service);
+    }
+  }
 
-<div className="col"><img src={image6} alt="img6"></img>
-    <div className="layer">
-        <h2>WEALTH PLANNING</h2>
-        <a href="./" className="de-btn">Details</a>
-    </div>
-</div>
+  return (
+    <>
+      <div className="progress"></div>
+      <div className="overall">
+        <section className="first-box">
+          <div className="first-box-left">
+            <h6> DERIVE CAPITAL</h6>
+            <h3>
+              The <span>smart </span>
+              next gen <span> money app</span>
+            </h3>
+            <img src={derivebox} alt="#"></img>
+            <div className="s-box">
+              <h4>
+                <h1>#DERIVEUP </h1> to begin saving 3X more than others!
+              </h4>
+            </div>{" "}
+            <img src={gplay} alt="#"></img>
+            {/* <h5>to begin saving 3X more than others!</h5> */}
+            <div class="mobile-input p-1">
+              <label for="userMobile" class="sr-only">
+                Enter your mobile number
+              </label>{" "}
+              <input
+                id="userMobile"
+                autofocus="autofocus"
+                type="tel"
+                name="user-mobile"
+                placeholder="Enter your mobile number"
+              />{" "}
+              <button id="join-btn-top" class="btn theme-btn fo-sm-16">
+                Get App Link
+              </button>
+            </div>
+          </div>
+          {/* <div className="g-play">
+          <a href="">
+            {" "}
+            <img src={gplay} alt="#"></img>
+          </a>
+        </div>{" "} */}
+          <div className="first-box-right">
+            <div class="wrapper-main1">
+              <div class="carousel">
+                <div class="carousel__item">
+                  <div class="carousel__item-head">🚀</div>
+                  <div class="carousel__item-body">
+                    <p class="title-slide">Save money to buy the future.</p>
+                    <p>Derive Capital</p>
+                  </div>
+                </div>
+                <div class="carousel__item">
+                  <div class="carousel__item-head">🏠</div>
+                  <div class="carousel__item-body">
+                    <p class="title-slide">Start earning more today.</p>
+                    <p>Derive Capital</p>
+                  </div>
+                </div>
+                <div class="carousel__item">
+                  <div class="carousel__item-head">💴</div>
+                  <div class="carousel__item-body">
+                    <p class="title-slide">A better financial approach.</p>
+                    <p>Derive Capital</p>
+                  </div>
+                </div>
+                <div class="carousel__item">
+                  <div class="carousel__item-head">💸</div>
+                  <div class="carousel__item-body">
+                    <p class="title-slide">
+                      Towards a better financial future.
+                    </p>
+                    <p>Derive Capital</p>
+                  </div>
+                </div>
+                <div class="carousel__item">
+                  <div class="carousel__item-head">💹</div>
+                  <div class="carousel__item-body">
+                    <p class="title-slide">Where your money lives and grows.</p>
+                    <p>Derive Capital</p>
+                  </div>
+                </div>
+                <div class="carousel__item">
+                  <div class="carousel__item-head">💱</div>
+                  <div class="carousel__item-body">
+                    <p class="title-slide">Five-star service guaranteed.</p>
+                    <p>Derive Capital</p>
+                  </div>
+                </div>
+                <div class="carousel__item">
+                  <div class="carousel__item-head">💶</div>
+                  <div class="carousel__item-body">
+                    <p class="title-slide">Quality in everything we do.</p>
+                    <p>Derive Capital</p>
+                  </div>
+                </div>
+                <div class="carousel__item">
+                  <div class="carousel__item-head">💰</div>
+                  <div class="carousel__item-body">
+                    <p class="title-slide">We know money.</p>
+                    <p>Derive Capital</p>
+                  </div>
+                </div>
+                <div class="carousel__item">
+                  <div class="carousel__item-head">💷</div>
+                  <div class="carousel__item-body">
+                    <p class="title">Start earning more today.</p>
+                    <p>Derive Capital</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* <Link to="" className="float56" onClick={() => setPostIsOpen(true)}>
+        <i className="fa fa-info"></i>
+      </Link>
+      <Postmodal
+        postIsOpen={postIsOpen}
+        setPostIsOpen={setPostIsOpen}
+      ></Postmodal> */}
+        <div className="social-icons">
+          <a className="s-icons" href="#">
+            <i className="fab fa-facebook-f"></i>
+          </a>
+          <a className="s-icons" href="#">
+            <i className="fab fa-linkedin-in"></i>
+          </a>
+          <a className="s-icons" href="#">
+            <i className="fab fa-instagram"></i>
+          </a>
+          <a className="s-icons" href="#">
+            <i className="fab fa-twitter"></i>
+          </a>
+          <a className="s-icons" href="#">
+            <i className="fab fa-youtube"></i>
+          </a>
+        </div>
+        {/* page-2 */}
+        <section className="second-box">
+          <div className="second-box-left">
+            <img className="grid-1" src={image4} alt="#"></img>
+            {/* <div className="box-13"></div> */}
+            <h1>
+              ALL FINANCIAL SOLUTIONS
+              <span> UNDER ONE ROOF</span>
+            </h1>
+            <p>
+              Get all your financial footprint under one app without the hassle
+              of juggling between different apps. Track your net worth with
+              extreme ease.
+            </p>
+          </div>{" "}
+          <div className="second-box-right">
+            <div className="categories">
+              <div className="row1">
+                <Box_component Icon={image28} Text={"Tax Planning"} />
+                <Box_component Icon={image26} Text={"Investment Planning"} />
+                <Box_component Icon={image29} Text={"Wealth Planning"} />
+              </div>
+              <div className="row1">
+                <Box_component Icon={image33} Text={"Retirement Planning"} />
+                <Box_component Icon={image31} Text={"Estate Planning"} />
+                <Box_component Icon={image27} Text={"Mutual Fund"} />
+              </div>
+            </div>
+          </div>
+        </section>{" "}
+        <section className="second-box">
+          {" "}
+          <div className="second-box-left">
+            <img className="grid-2" src={image6} alt="#"></img>
+            {/* <div className="box14"></div> */}
+            <h1>
+              UNDERSTAND YOUR
+              <span id="text-3"> MONEY BETTER</span>
+            </h1>
+            <p>
+              Because tracking it isn’t enough. Derive gives you helpful
+              insights on how you can spend and save smarter. Pay bills and
+              track subscriptions with automatic reminders to avoid nasty
+              surprises.
+            </p>
+          </div>{" "}
+          <div className="second-box-right">
+            {/* <div className="img-third-box"> */}
+            <div className="box-animate">
+              {" "}
+              {/* <i class="fas fa-quote-left fa2"></i>{" "} */}
+              <div className="text-animate">
+                {/* <i
+                class="fas
+          fa-quote-right fa1"
+              ></i>{" "} */}
+                <div>
+                  <h3>
+                    {" "}
+                    Top-ranking financial services guaranteed. Financial advice
+                    to get you back where you belong. We handle your money with
+                    high standards. Our business is to understand your business.
+                    It’s time to seek financial advice from experts. We
+                    guarantee the worthiness of every money transaction.
+                    Creative financial solutions. Giving your savings the
+                    opportunity to grow.
+                  </h3>{" "}
+                  <Link to="" onClick={() => setAppointmentIsOpen(true)}>
+                    Book Appointment
+                  </Link>
+                  <AppointmentModal
+                    appointmentIsOpen={appointmentIsOpen}
+                    setAppointmentIsOpen={setAppointmentIsOpen}
+                  ></AppointmentModal>
+                </div>{" "}
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="second-box">
+          <div className="second-box-left">
+            <img className="grid-3" src={image8} alt="#"></img>
+            {/* <div className="box-15"></div> */}
+            <h1>
+              BUILD YOUR
+              <span> OWN CARD</span>
+            </h1>
+            <p className="text-11">
+              A card that is as dynamic as you are. Choose offers that suit you
+              the best and withdraw free credit limit on the same.
+            </p>
+          </div>
+          <div className="second-box-right">
+            <div className="wrapper-main">
+              <div className="outer-main">
+                <div className="card-main">
+                  <div class="content-main">
+                    <div className="img-main">
+                      <img src={logo} alt="" />
+                    </div>
+                    <div className="details-main">
+                      <span className="name-main">Derive Capital</span>
+                      <p>Own Card</p>
+                    </div>
+                  </div>
+                  <a href="#">Follow</a>
+                </div>
+                <div className="card-main">
+                  <div className="content-main">
+                    <div className="img-main">
+                      <img src={logo} alt="" />
+                    </div>
+                    <div className="details-main">
+                      <span className="name-main">Derive Capital</span>
+                      <p>Own Card</p>
+                    </div>
+                  </div>
+                  <a href="#">Follow</a>
+                </div>
+                <div className="card-main">
+                  <div className="content-main">
+                    <div className="img-main">
+                      <img src={logo} alt="" />
+                    </div>
+                    <div className="details-main">
+                      <span className="name-main">Derive Capital</span>
+                      <p>Own Card</p>
+                    </div>
+                  </div>
+                  <a href="#">Follow</a>
+                </div>
+                <div className="card-main">
+                  <div className="content-main">
+                    <div className="img-main">
+                      <img src={logo} alt="" />
+                    </div>
+                    <div className="details-main">
+                      <span className="name-main">Derive Capital</span>
+                      <p>Own Card</p>
+                    </div>
+                  </div>
+                  <a href="#">Follow</a>
+                </div>
+                {/* <div className="card-main">
+                  <div className="content-main">
+                    <div className="img-main">
+                      <img src="#" alt="" />
+                    </div>
+                    <div className="details-main">
+                      <span className="name-main">Adrina Calvo</span>
+                      <p>Teacher & Advertiser</p>
+                    </div>
+                  </div>
+                  <a href="#">Follow</a>
+                </div> */}
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="second-box">
+          <div className="second-box-left">
+            <img className="grid-4" src={image10} alt="#"></img>
+            <div className="box-16"></div>
+            <h1>
+              PUT SAVINGS ON
+              <span> AUTOPILOT</span>
+            </h1>
+            <p>
+              MacBook ? Bali trip with gang ? Derive makes it happen. We’ll set
+              your extra money aside automatically. What’s more? You can share
+              jars & save together with friends & family!
+            </p>{" "}
+          </div>
+          {/* <img className="grid-4" src={image10} alt="#"></img> */}
+          <div className="second-box-right">
+            <div id="slider12">
+              <figure>
+                <img src={mobile} alt="derive" />
+                <img src="https://wallpapercave.com/wp/gjn73LT.jpg" />
+                <img src="https://wallpapercave.com/wp/qSmBitH.jpg" />
+                <img src="https://wallpapercave.com/wp/2pslYMY.jpg" />
+                <img src="https://wallpapercave.com/wp/oksvZpw.jpg" />
+                <img src="https://wallpapercave.com/wp/DzloWhZ.jpg" />
+              </figure>
+            </div>
+            {/* <video loop autoPlay className="big-img5" muted>
+              <source src={tripv} type="video/mp4" />
+            </video> */}
+          </div>
+        </section>
+        <section className="second-box">
+          {" "}
+          <div className="second-box-left">
+            <img className="grid-5" src={image12} alt="#"></img>
+            <div className="box-17"></div>
+            <h1>
+              DERIVE COACH TO THE
+              <span> RESCUE!</span>
+            </h1>
+            <p>
+              How to budget? Am I spending too fast? How can I sort my salary
+              better? Derive coach will be the financial manager aka saviour
+              sitting in your pocket. And it’s available 24x7.
+            </p>
+          </div>{" "}
+          <div className="second-box-right">
+            <div class="imgLoader"></div>
 
-</div>
-</section>
+            <div class="container55">
+              {/* <h1 class="title55">
+                Turning pages
+                <br />
+                with css
+              </h1> */}
 
-<section className="fea3">
-    <h2>Why DC&CO</h2>
-</section>
-    
-    <div className="home-form">
-        <div className="row1">
-            <div className="h-column"><img src={image7} alt="img7"></img>
-                <h2>Fast Planning</h2>
+              {/* <div class="credit55">
+                * Images loaded randomly from Picsum.photos
+              </div> */}
+
+              <div class="book55">
+                <div class="gap55"></div>
+                <div class="pages55">
+                  <div class="page55"></div>
+                  <div class="page55"></div>
+                  <div class="page55"></div>
+                  <div class="page55"></div>
+                  <div class="page55"></div>
+                  <div class="page55"></div>
+                </div>
+                <div class="flips">
+                  <div class="flip flip1">
+                    <div class="flip flip2">
+                      <div class="flip flip3">
+                        <div class="flip flip4">
+                          <div class="flip flip5">
+                            <div class="flip flip6">
+                              <div class="flip flip7"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="second-box">
+          <div className="container-padding popular-sites">
+            <h2>Useful Links</h2>
+
+            <Carousel
+              // breakPoints={
+              //   window.innerWidth > 1230
+              //     ? breakPoints3
+              //     : window.innerWidth > 990
+              //     ? breakPoints2
+              //     : window.innerWidth > 900
+              //     ? breakPoints2
+              //     : breakPoints1
+              // }
+              showArrows={true}
+              autoPlay={true}
+              showThumbs={false}
+              infiniteLoop={true}
+              showStatus={false}
+              showIndicators={true}
+            >
+              {img_arr3.map((img1, index) => (
+                <div onClick={handleClick} className="sites-card">
+                  <img src={img1} alt="" />
+                  <h3>{img_arr4[index]}</h3>
+                </div>
+              ))}
+            </Carousel>
+          </div>
+        </section>
+        <section className="second-box">
+          <div className="control-container">
+            <div className="scroller">
+              <h1 className="others">Others</h1>{" "}
+              <h1 className="derivers">DERIVERS</h1>{" "}
+              <button className="dragger" onClick={() => setToggle(true)}>
+                <img alt="mover" className="lazyLoad isLoaded" src={arrow} />
+              </button>{" "}
+              <img alt="Derive Capital" className="" src={happy} />
+            </div>
+          </div>
+        </section>
+        <section className="third-box">
+          <div className="second-box-left">
+            <img src={image17} alt="#" height="450" width="550"></img>
+          </div>{" "}
+          <div className="second-box-right">
+            <h1>
+              DERIVE GIVES SECURITY & <span>CONTROL ON THE GO!</span>
+            </h1>
+            <p>
+              We’ve implemented the highest standards for fraud protection and
+              compliance with bank-grade security of 256-bit encryption and
+              promise to never sell your data.
+            </p>
+          </div>
+        </section>
+        <section className="second-box">
+          <section id="client">
+            <div className="client-heading">
+              <span>Testimonials</span>
             </div>
 
-            <div className="h-column"><img src={image8} alt="img8"></img>
-                    <h2>Complete Solutions</h2>
+            <div className="c-box-container">
+              <div className="client-box">
+                <img src={man2} alt="Derive Capital" />
+
+                <div className="star">
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
                 </div>
 
-                <div className="h-column"><img src={image9} alt="img9"></img>
-                    <h2>Premiuim Support</h2>
+                <p>
+                  If you're looking for random paragraphs, you've come to the
+                  right place. When a random word or a random sentence isn't
+                  quite enough, the next logical step is to find a random
+                  paragraph.{" "}
+                </p>
+
+                <a href="#">Read More</a>
+              </div>
+
+              <div class="client-box">
+                <img src={man3} />
+
+                <div class="star">
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="far fa-star"></i>
                 </div>
-        </div>
 
-            <div className="row2">
-                    <div className="h-column"><img src={image10} alt="img10"></img>
-                            <h2>Secure</h2>
-                    </div>
-    
-                    <div className="h-column"><img src={image11} alt="img11"></img>
-                            <h2>Responsive Design</h2>
-                    </div>
-            
-            
-                    <div className="h-column"><img src={image12} alt="img12"></img>
-                            <h2>Trusted Platform</h2>
-                    </div>
-            
-            
-            
-            
-            
-            
-                    </div>
-    </div>
-</div>
+                <p>
+                  If you're looking for random paragraphs, you've come to the
+                  right place. When a random word or a random sentence isn't
+                  quite enough, the next logical step is to find a random
+                  paragraph.{" "}
+                </p>
 
-    
- 
-       
-  
+                <a href="#">Read More</a>
+              </div>
 
+              <div class="client-box">
+                <img src={woman1} />
 
-</>
-)
+                <div className="star">
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="far fa-star"></i>
+                </div>
+
+                <p>
+                  If you're looking for random paragraphs, you've come to the
+                  right place. When a random word or a random sentence isn't
+                  quite enough, the next logical step is to find a random
+                  paragraph.{" "}
+                </p>
+
+                <a href="#">Read More</a>
+              </div>
+            </div>
+          </section>
+        </section>{" "}
+        <section className="second-box">
+          <div className="second-box-left">
+            <img src={man} alt="derive" />
+          </div>
+          <div className="second-box-right">
+            <div className="text-right">
+              <h2>Pricing ?</h2>
+              <span>It's</span>
+              <span>FREE</span>
+              <p>We say no to fees</p>
+            </div>
+          </div>
+        </section>{" "}
+        <section className="fourth-box">
+          {/* <div className="site-register"> */}
+          <h2 className="text-center3">Projects statistics</h2>
+          <div class="project-counter-wrp">
+            <ul>
+              <li>
+                <i className="fa fa-trophy fa-4x"></i>
+                <p id="number1" className="number22">
+                  500
+                </p>
+                <span></span>
+                <p>Projects Done</p>
+              </li>
+              <li>
+                <i className="fa fa-smile fa-4x"></i>
+                <p id="number2" className="number22">
+                  289
+                </p>
+                <span></span>
+                <p>Happy Clients</p>
+              </li>
+              <li>
+                <i className="fa fa-check-circle fa-4x"></i>
+                <p id="number3" className="number22">
+                  359
+                </p>
+                <span></span>
+                <p>Service Quality</p>
+              </li>
+            </ul>
+          </div>
+          {/* </div> */}
+        </section>{" "}
+        <section className="fourth-box">
+          <div class="slider77">
+            <div class="slide-track">
+              {img_arr.map((img, index) => (
+                <div class="slide55" key={index}>
+                  <img src={img} height="70" width="250" alt="Derive Capital" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div></div>
+    </>
+  );
 };
 
 export default Home;

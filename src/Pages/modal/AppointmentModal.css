@@ -1,0 +1,173 @@
+.plus1 {
+  position: absolute;
+  width: 21px;
+  height: 42px;
+  left: 599px;
+  top: 21px;
+  cursor: pointer;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+
+  color: #202020;
+
+  transform: rotate(-45deg);
+}
+.form-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 60px;
+
+  position: absolute;
+
+  left: 0%;
+  top: 0px;
+
+  background: #ffffff;
+  border-radius: 10px;
+}
+.form-card h1 {
+  font-size: 36px;
+  margin-left: 20px;
+  color: #3ad4af;
+}
+.form-card input[type="text"] {
+  position: absolute;
+  width: 255px;
+  height: 50px;
+  left: 63px;
+  top: 107px;
+  padding: 3px 2px 1px 24px;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.form-card input[type="text"]:focus {
+  outline: none;
+}
+
+.form-card select {
+  padding: 0 14px;
+  font-size: 14px;
+  border: none;
+}
+.form-card select:focus {
+  outline: none;
+}
+
+.form-card input[type="email"] {
+  position: absolute;
+  width: 255px;
+  height: 50px;
+  left: 344px;
+  top: 107px;
+  padding: 3px 2px 1px 24px;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.form-card input[type="email"]:focus {
+  outline: none;
+}
+
+.form-card input[type="textarea"] {
+  border: none;
+  position: absolute;
+  width: 536px;
+  height: 180px;
+  left: 63px;
+  top: 309px;
+  background: #ffffff;
+  padding: 3px 2px 1px 24px;
+  border: 1px solid #dedede;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.form-card input[type="textarea"]:focus {
+  outline: none;
+}
+
+.form-card h6 {
+  position: absolute;
+  width: 537px;
+  height: 28px;
+  left: 82px;
+  top: 500px;
+
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: rgba(32, 32, 32, 0.5);
+}
+.form-card input[type="time"] {
+  position: absolute;
+  width: 255px;
+  height: 50px;
+  left: 344px;
+  top: 177px;
+  padding: 3px 2px 1px 24px;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.form-card input[type="time"]:focus {
+  outline: none;
+}
+
+.date-pick {
+  position: absolute;
+  width: 255px;
+  height: 50px;
+  left: 63px;
+  top: 177px;
+  padding: 3px 2px 1px 24px;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.date-pick :focus {
+  outline: none;
+}
+
+.location-drop {
+  position: absolute;
+  width: 255px;
+  height: 50px;
+  left: 201px;
+  top: 248px;
+  font-size: 14px;
+  font-weight: 500;
+  background: #ffffff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.btn23 {
+  position: absolute;
+  width: 218px;
+  height: 58px;
+  left: 220px;
+  top: 540px;
+  text-align: center;
+  padding-top: 14px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  background: linear-gradient(to right, #3ad4af, #426fd8);
+
+  text-decoration: none;
+  box-shadow: 5px 13px 27px -5px rgba(112, 112, 119, 0.25);
+  border-radius: 100px;
+}
+.btn23:hover {
+  color: white;
+}

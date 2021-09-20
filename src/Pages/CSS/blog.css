@@ -1,12 +1,74 @@
-.blog1 {
-
-	height:100vh;
-	width:100%;
-    
+.header121 {
+  padding: 30px;
+  font-family: jost, sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  background: white;
+  color: #2a2552;
 }
-.video{
-    margin-top: 100px;
-    width:220;
-     height:240;
-     margin-left: 90px;
+h2 {
+  /* justify-content: center;
+   align-items: center;
+      color: black; */
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+  padding-left: 50px;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-right: 50px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: rgb(21, 38, 56);
+  /* border: 2px dashed rgb(21, 38, 56); */
+  width: 100%;
+  padding: 5px;
+}
+
+/* Add a card effect for articles */
+.card121 {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  font-family: jost, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+
+  line-height: 1.5;
+}
+.card121 p {
+  color: #636060;
+}
+
+/* Clear floats after the columns */
+.row121:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1000px) {
+  .header121 {
+    /* padding-top: 2rem !important; */
+  }
+}
+@media screen and (max-width: 800px) {
+  .leftcolumn,
+  .rightcolumn {
+    width: 100%;
+    padding: 1%;
+  }
 }

@@ -1,50 +1,364 @@
-.top {
-  color: rgb(236, 232, 227);
-  font-size: 3em;
-  font-weight: bold;
+.pagecontainer {
+  width: 1200px;
+  margin: 0 auto;
+}
+.pagecontainer ul {
+  padding: 0;
+}
+.headerimagecontainer {
+  background-image: url(../../assests/job.png);
+  height: 540px;
+  background-repeat: no-repeat;
+  filter: brightness(70%);
+  position: relative;
+}
+.headercontent {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+.headercontent h1 {
+  font-size: 3.75em;
+  font-family: "Oswald", "Arial Narrow", "Trebuchet MS", sans-serif;
+  color: black;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+.headercontent img {
+  margin-top: -15px;
+}
+.benefitscontainer {
+  margin-top: 50px;
+}
+.headercontent p,
+.benefitscontainer p {
+  font-size: 15px;
+  font-family: "Montserrat", "Verdana", "Geneva", sans-serif;
+  color: black;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.headercontent p {
+  width: 60%;
+}
+.headercontent span {
+  color: #e57177;
+}
+.headercontent a {
+  font-size: 14px;
+  font-family: "Montserrat", "Verdana", "Geneva", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  line-height: 1;
+  cursor: pointer;
+  background-color: #a9c74b;
+  border: none;
+  border-radius: 0;
+  color: white;
+  text-align: center;
+  padding: 20px 40px;
+  text-decoration: none;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.headercontent a:hover {
+  background: #93ad41;
+}
+.benefitscontainer {
   text-align: center;
 }
-.wrap {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 30px;
-  max-width: 1000x;
-  padding: 60px;
-  box-shadow: 0 5px 50px rgb(245, 240, 240);
-  margin: 20px;
-  margin-bottom: 30px;
-  box-sizing: border-box;
+.benefitscontainer ul {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
-.box {
-  background-color: rgb(236, 220, 228);
-  border-radius: 18px;
+.benefitscontainer h2,
+.current-openings h2 {
+  font-size: 30px;
+  font-family: "Oswald", "Arial Narrow", "Trebuchet MS", sans-serif;
+  color: #333333;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  line-height: 1.25;
+  text-align: center;
 }
-.img-responsive {
-  width: 100%;
-  height: 300px;
+.benefitscontainer h3 {
+  font-size: 16px;
+  font-family: "Montserrat", "Verdana", "Geneva", sans-serif;
+  color: #6d6e71;
+  margin: 15px 0 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.25;
 }
-.Header {
-  color: black;
-}
-
-.color {
-  display: inline-block;
-  text-decoration: none;
-  color: rgb(241, 237, 237);
-  background: rgb(12, 11, 11);
-  border-radius: 2px;
-  padding: 10px 20px;
-  font-weight: 500;
+#bottom-adjustment {
   margin-top: 20px;
 }
-@media only screen and (max-width: 200px)
-{
-  top {
-    background-color: rgb(184, 15, 15);
-    width: 100px;
-    min-height: auto;
-    max-height: none;
-
+#location {
+  margin-top: 0;
+}
+.benefitscontainer p {
+  color: #6d6e71;
+}
+.benefitscontainer span {
+  font-size: 0.75rem;
+}
+.benefitscontainer li {
+  width: 20%;
+  margin-bottom: 50px;
+  list-style: none;
+}
+.benefitscontainer img {
+  width: 30%;
+}
+/* .variable-width button {
+  display: none !important;
+}
+.variable-width img {
+  margin: 0 15px;
+} */
+.overall-carousel {
+  overflow: hidden;
+}
+.ribbons-total {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -1.4em;
+}
+/* aside {
+  line-height: 40px;
+  position: relative;
+} */
+/* aside.ribbons {
+  background-color: #e57177;
+  width: 18em;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  /* z-index: 200; */
+/* margin-right: 2em; */
+/* } */
+/* .ribbons a,
+.grey-ribbon a {
+  cursor: pointer;
+}  */
+/* .ribbons:after {
+  border-width: 20px 10px 20px 0;
+  border-color: #e57177 transparent;
+  right: -10px;
+}
+.ribbons:before,
+.grey-ribbon:before {
+  border-width: 20px 0 20px 10px;
+  left: -10px;
+}
+.ribbons:before {
+  border-color: #e57177 transparent;
+}
+aside:before,
+aside:after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+}
+aside.grey-ribbon {
+  background-color: grey;
+  width: 18em;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  z-index: 200;
+  margin-left: 2em;
+}
+.grey-ribbon:after {
+  border-width: 20px 10px 20px 0;
+  border-color: grey transparent;
+  right: -10px;
+}
+.grey-ribbon:before {
+  border-color: grey transparent;
+} */
+.current-openings {
+  margin: 3.5em 0;
+}
+#whr_embed_hook {
+  width: 75%;
+  margin: auto;
+}
+.whr-info {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  flex-wrap: wrap;
+  margin-right: 2.5em;
+}
+.whr-info span {
+  display: none;
+}
+.whr-item {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+}
+.whr-title {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.whr-title a {
+  color: #e57177;
+}
+.whr-location,
+.whr-date {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.job-labels {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em auto;
+  width: 75%;
+}
+.whr-dept,
+.department {
+  display: none;
+}
+.location {
+  padding-left: 3em;
+}
+.img-slider {
+  position: relative;
+  width: 100vw;
+  height: 400px;
+}
+.img-slider .slider-container {
+  position: absolute;
+  width: 300%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  animation: slider 26s infinite;
+}
+.img-slider .slider-container .slide {
+  position: relative;
+  width: 33.33333333%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+}
+.img-slider .slider-container .slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+@keyframes slider {
+  0%,
+  25%,
+  100% {
+    left: 0;
   }
-  
+
+  30%,
+  55% {
+    left: -100%;
+  }
+
+  60%,
+  85% {
+    left: -200%;
+  }
+}
+
+@media (max-width: 1199px) {
+  .pagecontainer {
+    width: 100%;
+  }
+  #whr_embed_hook,
+  .job-labels {
+    width: 75%;
+    margin: 2em auto;
+  }
+}
+@media (max-width: 900px) {
+  .benefitscontainer li {
+    width: 45%;
+    margin-bottom: 0;
+  }
+  #ul2 {
+    margin-top: 0;
+  }
+  .location {
+    padding-left: 3em;
+  }
+}
+@media (max-width: 780px) {
+  .whr-info {
+    width: 55%;
+  }
+  .location {
+    padding-left: 5em;
+  }
+}
+@media (max-width: 767px) {
+  .overall-carousel {
+    display: none;
+  }
+  #whr_embed_hook,
+  .job-labels {
+    width: 95%;
+  }
+}
+@media (max-width: 568px) {
+  .whr-info {
+    margin: 1em auto;
+    width: 100%;
+  }
+  #whr_embed_hook,
+  .job-labels {
+    width: 75%;
+  }
+}
+@media (max-width: 480px) {
+  .headercontent h1 {
+    font-size: 2em;
+  }
+  .headercontent img {
+    width: 30%;
+  }
+  .benefitscontainer li {
+    width: 75%;
+    margin-bottom: 0;
+  }
+  #whr_embed_hook,
+  .job-labels {
+    width: 95%;
+    margin: 2em auto;
+  }
+  .location {
+    padding-left: 0;
+  }
 }
