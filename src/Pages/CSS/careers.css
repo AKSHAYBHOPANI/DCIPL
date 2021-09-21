@@ -126,81 +126,58 @@
 .benefitscontainer img {
   width: 30%;
 }
-/* .variable-width button {
-  display: none !important;
-}
-.variable-width img {
-  margin: 0 15px;
+/* .overall-carousel input[type="file"] {
+  display: block;
 } */
-.overall-carousel {
-  overflow: hidden;
+.btn-primary {
+  float: right;
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-left: 30%;
+
+  text-align: center;
+
+  border-radius: 4px;
 }
-.ribbons-total {
+.form-right {
+  float: right;
+}
+.form-right textarea {
+  /* margin-top: -100%; */
+  margin-left: 30%;
+  height: auto;
+  width: 200px;
+  overflow: auto;
+}
+.form-left {
+  /* display: block; */
+  width: 60%;
+  /* height: 34px; */
+  float: left;
+  margin-left: -10rem;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+}
+
+.overall-carousel {
+  /* overflow: hidden; */
   display: flex;
   justify-content: center;
-  margin-bottom: -1.4em;
+  align-items: center;
 }
-/* aside {
-  line-height: 40px;
-  position: relative;
+/* .form-group {
+  display: flex;
+  flex-direction: row;
 } */
-/* aside.ribbons {
-  background-color: #e57177;
-  width: 18em;
-  margin: 0 auto;
-  text-align: center;
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  /* z-index: 200; */
-/* margin-right: 2em; */
-/* } */
-/* .ribbons a,
-.grey-ribbon a {
-  cursor: pointer;
-}  */
-/* .ribbons:after {
-  border-width: 20px 10px 20px 0;
-  border-color: #e57177 transparent;
-  right: -10px;
-}
-.ribbons:before,
-.grey-ribbon:before {
-  border-width: 20px 0 20px 10px;
-  left: -10px;
-}
-.ribbons:before {
-  border-color: #e57177 transparent;
-}
-aside:before,
-aside:after {
-  content: "";
-  position: absolute;
-  border-style: solid;
-}
-aside.grey-ribbon {
-  background-color: grey;
-  width: 18em;
-  margin: 0 auto;
-  text-align: center;
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  z-index: 200;
-  margin-left: 2em;
-}
-.grey-ribbon:after {
-  border-width: 20px 10px 20px 0;
-  border-color: grey transparent;
-  right: -10px;
-}
-.grey-ribbon:before {
-  border-color: grey transparent;
-} */
+
 .current-openings {
   margin: 3.5em 0;
 }
@@ -325,7 +302,7 @@ aside.grey-ribbon {
 }
 @media (max-width: 767px) {
   .overall-carousel {
-    display: none;
+    flex-direction: column;
   }
   #whr_embed_hook,
   .job-labels {
