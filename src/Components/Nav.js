@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../assests/logo.png";
 import { Link } from "react-router-dom";
+import profile from "../assests/Profileblack.png";
 // import "./CSS/App.css";
 
 function LogoutNow() {
@@ -11,7 +12,7 @@ function LogoutNow() {
 
 function slideshow() {
   var x = document.getElementById("check-class");
-  if (x.style.display === "none") {
+  if (x.style.display == "none") {
     x.style.display = "block";
   } else {
     x.style.display = "none";
@@ -22,88 +23,105 @@ function Nav(Profile) {
     <>
       {Profile.Profile.IsSignIn ? (
         <>
-          <nav className="main-nav">
-            <div className="logo">
-              <a href="../">
-                <img src={logo} className="logo1" alt=""></img>
+          <nav className="main-nav1">
+            <div className="container32">
+              <a href="../" id="logo">
+                <img src={logo} alt="Derive"></img>
               </a>
-            </div>
-            <div className="menu-link" id="check-class">
-              <ul>
-                <li>
-                  <a href="../">HOME</a>
-                </li>
-                <li>
-                  <a href="../about">ABOUT</a>
-                </li>
-                <li>
-                  <a href="../service">SERVICES</a>{" "}
-                </li>
 
-                <li>
-                  <a href="./profile">PROFILE</a>
-                </li>
-                <li>
-                  <a href="" onClick={LogoutNow}>
-                    Logout
-                  </a>
-                </li>
-              </ul>
+              <div className="links">
+                <a href="#" id="menu-icon" className="image-menu">
+                  <i className="fas fa-bars"></i>
+                </a>
+
+                <ul>
+                  <li>
+                    <a href="../">
+                      <i className="fa fa-home"></i> HOME
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="../about">
+                      <i className="fa fa-user"></i>ABOUT
+                    </a>
+                  </li>
+                  <li>
+                    <a href="../service">
+                      <i className="fa fa-clone"></i>SERVICES
+                    </a>{" "}
+                  </li>
+
+                  <li>
+                    <a href="./profile">PROFILE</a>
+                  </li>
+                  <li>
+                    <a href="" onClick={LogoutNow}>
+                      LOGOUT
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <Link to="" className="mobile-icon" onClick={slideshow}>
+            {/* <Link to="" className="mobile-icon" onClick={slideshow}>
               <i className="fas fa-bars"></i>
-            </Link>
+            </Link> */}
           </nav>
         </>
       ) : (
         <>
-          <nav className="main-nav">
-            <div className="logo">
-              <a href="../">
-                <img src={logo} className="logo1" alt=""></img>
+          <nav className="main-nav1">
+            <div className="container32">
+              <a href="../" id="logo">
+                <img src={logo} alt="Derive"></img>
               </a>
-            </div>
-            <div className="menu-link" id="check-class">
-              <ul>
-                <li>
-                  <a href="../">
-                    <i className="fa fa-home"></i> HOME
-                  </a>
-                </li>
 
-                <li>
-                  <a href="../about">
-                    <i className="fa fa-user"></i>ABOUT
-                  </a>
-                </li>
-                <li>
-                  <a href="../service">
-                    <i className="fa fa-clone"></i>SERVICES
-                  </a>{" "}
-                </li>
-                <li>
-                  <a href="../blog">
-                    <i className="fa fa-clipboard"></i>BLOG
-                  </a>
-                </li>
-                <li>
-                  <a href="../careers">
-                    <i className="fa fa-users"></i>CAREERS
-                  </a>
-                </li>
-                <li>
-                  <a href="../contact">
-                    <i className="fa fa-calendar"></i>CONTACT
-                  </a>
-                </li>
-                <li>
-                  <a href="./register">Join</a>
-                </li>
-              </ul>
+              <div className="links">
+                <a href="#" id="menu-icon" className="image-menu">
+                  <i className="fas fa-bars"></i>
+                </a>
+
+                <ul>
+                  <li>
+                    <a href="../">
+                      <i className="fa fa-home"></i> HOME
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="../about">
+                      <i className="fa fa-user"></i>ABOUT
+                    </a>
+                  </li>
+                  <li>
+                    <a href="../service">
+                      <i className="fa fa-clone"></i>SERVICES
+                    </a>{" "}
+                  </li>
+                  <li>
+                    <a href="../blog">
+                      <i className="fa fa-clipboard"></i>BLOG
+                    </a>
+                  </li>
+                  <li>
+                    <a href="../careers">
+                      <i className="fa fa-users"></i>CAREERS
+                    </a>
+                  </li>
+                  <li>
+                    <a href="../contact">
+                      <i className="fa fa-calendar"></i>CONTACT
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./register">
+                      {" "}
+                      <img src={profile} alt="Derive"></img>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <Link to="" className="mobile-icon" onClick={slideshow}>
-              <i className="fas fa-bars"></i>
-            </Link>
           </nav>
         </>
       )}

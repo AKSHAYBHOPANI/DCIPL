@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./CSS/Home.css";
 import { useHistory } from "react-router-dom";
 import derivebox from "../assests/deriveup.svg";
+import Postmodal from "../Pages/modal/Postmodal";
 import image28 from "../assests/tax1.png";
 import image29 from "../assests/cash1.png";
 import image31 from "../assests/bank111.png";
@@ -36,6 +37,11 @@ import man3 from "../assests/man3.jpg";
 import woman1 from "../assests/woman1.jpg";
 import man from "../assests/man-p.png";
 import kotak from "../assests/a-kotak.svg";
+import grow from "../assests/idea3.png";
+import google from "../assests/idea1.png";
+import men from "../assests/taxreturn.svg";
+
+import save from "../assests/idea2.png";
 import idfc from "../assests/a-idfc.svg";
 import sriram from "../assests/sriram.png";
 import AppointmentModal from "../Pages/modal/AppointmentModal";
@@ -269,13 +275,13 @@ const Home = () => {
             </div>
           </div>
         </section>
-        {/* <Link to="" className="float56" onClick={() => setPostIsOpen(true)}>
-        <i className="fa fa-info"></i>
-      </Link>
-      <Postmodal
-        postIsOpen={postIsOpen}
-        setPostIsOpen={setPostIsOpen}
-      ></Postmodal> */}
+        <Link to="" className="float56" onClick={() => setPostIsOpen(true)}>
+          <i className="fa fa-info"></i>
+        </Link>
+        <Postmodal
+          postIsOpen={postIsOpen}
+          setPostIsOpen={setPostIsOpen}
+        ></Postmodal>
         <div className="social-icons">
           <a className="s-icons" href="#">
             <i className="fab fa-facebook-f"></i>
@@ -297,7 +303,7 @@ const Home = () => {
         <section className="second-box">
           <div className="second-box-left">
             <img className="grid-1" src={image4} alt="#"></img>
-            {/* <div className="box-13"></div> */}
+
             <h1>
               ALL FINANCIAL SOLUTIONS
               <span> UNDER ONE ROOF</span>
@@ -327,7 +333,7 @@ const Home = () => {
           {" "}
           <div className="second-box-left">
             <img className="grid-2" src={image6} alt="#"></img>
-            {/* <div className="box14"></div> */}
+
             <h1>
               UNDERSTAND YOUR
               <span id="text-3"> MONEY BETTER</span>
@@ -340,15 +346,9 @@ const Home = () => {
             </p>
           </div>{" "}
           <div className="second-box-right">
-            {/* <div className="img-third-box"> */}
             <div className="box-animate">
               {" "}
-              {/* <i class="fas fa-quote-left fa2"></i>{" "} */}
               <div className="text-animate">
-                {/* <i
-                class="fas
-          fa-quote-right fa1"
-              ></i>{" "} */}
                 <div>
                   <h3>
                     {" "}
@@ -375,7 +375,7 @@ const Home = () => {
         <section className="second-box">
           <div className="second-box-left">
             <img className="grid-3" src={image8} alt="#"></img>
-            {/* <div className="box-15"></div> */}
+
             <h1>
               BUILD YOUR
               <span> OWN CARD</span>
@@ -436,18 +436,6 @@ const Home = () => {
                   </div>
                   <a href="#">Follow</a>
                 </div>
-                {/* <div className="card-main">
-                  <div className="content-main">
-                    <div className="img-main">
-                      <img src="#" alt="" />
-                    </div>
-                    <div className="details-main">
-                      <span className="name-main">Adrina Calvo</span>
-                      <p>Teacher & Advertiser</p>
-                    </div>
-                  </div>
-                  <a href="#">Follow</a>
-                </div> */}
               </div>
             </div>
           </div>
@@ -466,16 +454,45 @@ const Home = () => {
               jars & save together with friends & family!
             </p>{" "}
           </div>
-          {/* <img className="grid-4" src={image10} alt="#"></img> */}
+
           <div className="second-box-right">
             <div id="slider12">
               <figure>
-                <img src={mobile} alt="derive" />
-                <img src="https://wallpapercave.com/wp/gjn73LT.jpg" />
-                <img src="https://wallpapercave.com/wp/qSmBitH.jpg" />
-                <img src="https://wallpapercave.com/wp/2pslYMY.jpg" />
-                <img src="https://wallpapercave.com/wp/oksvZpw.jpg" />
-                <img src="https://wallpapercave.com/wp/DzloWhZ.jpg" />
+                <img
+                  src={piggy}
+                  alt=""
+                  className="pic"
+                  height="350"
+                  width="250"
+                />
+                <img
+                  src={Machine}
+                  alt=""
+                  className="pic"
+                  height="350"
+                  width="250"
+                />
+                <img
+                  src={atm}
+                  alt=""
+                  className="pic"
+                  height="350"
+                  width="250"
+                />
+                <img
+                  src={card}
+                  alt=""
+                  className="pic"
+                  height="350"
+                  width="250"
+                />{" "}
+                <img
+                  src={Machine}
+                  alt=""
+                  className="pic"
+                  height="350"
+                  width="250"
+                />
               </figure>
             </div>
             {/* <video loop autoPlay className="big-img5" muted>

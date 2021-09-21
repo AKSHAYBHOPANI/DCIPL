@@ -130,62 +130,36 @@ function careers() {
             </li>
           </ul>
         </div>
-        <div class="overall-carousel">
-          {/* <div class="ribbons-total">
-            <aside class="ribbons">
-              <a>VIEW AUSTIN OFFICE</a>
-            </aside>
-            <aside class="grey-ribbon">
-              <a>VIEW LOS ANGELES OFFICE</a>
-            </aside>
-          </div> */}
-          {/* <div class="variable-width">
-            <img
-              src="//s3-us-west-2.amazonaws.com/ec-cdn-content/ec-image-resources/1824257655_careers-atx1.jpg"
-              alt="Austin picture 1"
-              class="img-responsive atx"
-            />
-            <img
-              src="//s3-us-west-2.amazonaws.com/ec-cdn-content/ec-image-resources/376557272_careers-la1.jpg"
-              alt="LA picture 1"
-              class="img-responsive la"
-            />
-            <img
-              src="//s3-us-west-2.amazonaws.com/ec-cdn-content/ec-image-resources/133890089_careers-atx2.jpg"
-              alt="Austin picture 2"
-              class="img-responsive atx"
-            />
-            <img
-              src="//s3-us-west-2.amazonaws.com/ec-cdn-content/ec-image-resources/1308808443_careers-la3.jpg"
-              alt="LA picture 3"
-              class="img-responsive la"
-            />
-            <img
-              src="//s3-us-west-2.amazonaws.com/ec-cdn-content/ec-image-resources/503432809_careers-atx3.jpg"
-              alt="Austin picture 3"
-              class="img-responsive atx"
-            />
-            <img
-              src="//s3-us-west-2.amazonaws.com/ec-cdn-content/ec-image-resources/1866255972_careers-la2.jpg"
-              alt="LA picture 2"
-              class="img-responsive la"
-            />
-          </div> */}
-          {/* <section class="img-slider">
-            <div class="slider-container">
-              <div class="slide">
-                <img src="http://res.cloudinary.com/hurricane10/image/upload/v1499778218/img-26_aw9alb.jpg" />
-              </div>
+        <div className="overall-carousel">
+          <form id="career-form">
+            <h3 className="heading-overview">Career Opportunities</h3>
 
-              <div class="slide">
-                <img src="http://res.cloudinary.com/hurricane10/image/upload/v1499778117/img-23_pumtse.jpg" />
-              </div>
+            <div className="form-left">
+              <label for="upload_resume">Update Resume:</label>
 
-              <div class="slide">
-                <img src="http://res.cloudinary.com/hurricane10/image/upload/v1499778109/img-20_ljchnk.jpg" />
-              </div>
+              <input type="file" name="upload_resume" id="upload_resume" />
             </div>
-          </section> */}
+            <div className="form-right">
+              <textarea
+                id="cover_letter"
+                name="cover_letter"
+                aria-required="true"
+                placeholder="Cover Letter"
+                cols="30"
+                rows="10"
+                value=""
+              ></textarea>
+
+              <button
+                className="btn-primary"
+                type="button"
+                name="btn-submit"
+                id="btn-submit"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
         </div>
         <div class="current-openings" id="joblistings">
           <h2>CURRENT OPENINGS</h2>
