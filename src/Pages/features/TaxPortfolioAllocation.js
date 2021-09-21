@@ -80,66 +80,34 @@ fetch(`https://server.yourtechshow.com/taxportfolioequity-data/${id}`)
         var i =""
         txt += "<table>"
         txt += "<tr>"
-      txt += "<th>Equity</th>"
+      txt += "<th>Mutual Funds</th>"
       txt += "<th>Allocated Weight</th>"
       txt += "<th>Return%</th>" 
-      txt += "<th>SD</th>"
-      txt += "<th>Fixed Income</th>"
+      txt += "<th>Section</th>"
+      txt += "<th>Bonds</th>"
       txt += "<th>AllocatedWeight</th>"
       txt += "<th>Return%</th>"
-      txt += "<th>SD</th>"
-      txt += "<th>RealEstate</th>"
-      txt += "<th>AllocatedWeight</th>"
-      txt += "<th>Return%</th>"
-      txt += "<th>SD</th>"
-      txt += "<th>Commodities</th>"
-      txt += "<th>AllocatedWeight</th>"
-      txt += "<th>Return%</th>"
-      txt += "<th>SD</th>"
-      txt += "<th>Crypto</th>"
-      txt += "<th>AllocatedWeight</th>"
-      txt += "<th>Return%</th>"
-      txt += "<th>SD</th>"
-      txt += "<th>Forex</th>"
-      txt += "<th>AllocatedWeight</th>"
-      txt += "<th>Return%</th>"
-      txt += "<th>SD</th>"
+      txt += "<th>Section</th>"
       txt += "<th>Other Investments</th>"
       txt += "<th>AllocatedWeight</th>"
       txt += "<th>Return%</th>"
-      txt += "<th>SD</th>"
+      txt += "<th>Section</th>"
       txt += "</tr>"
         for (i = 0; i < response.length; i++) {
         
       txt += "<tr>"
-      txt += "<td>" + response[i].equity + "</td>";
+      txt += "<td>" + response[i].mutualfunds + "</td>";
       txt += "<td>" + response[i].allocatedweight + "</td>";
       txt += "<td>" + response[i].return + "</td>";
-      txt += "<td>" + response[i].sd + "</td>";
-      txt += "<td>" + response[i].fixedincome + "</td>";
+      txt += "<td>" + response[i].section + "</td>";
+      txt += "<td>" + response[i].bonds + "</td>";
       txt += "<td>" + response[i].allocatedweight2 + "</td>";
       txt += "<td>" + response[i].return2 + "</td>";
-      txt += "<td>" + response[i].sd2 + "</td>";
-      txt += "<td>" + response[i].realestate + "</td>";
+      txt += "<td>" + response[i].section2 + "</td>";
+      txt += "<td>" + response[i].otherinvestments + "</td>";
       txt += "<td>" + response[i].allocatedweight3 + "</td>";
       txt += "<td>" + response[i].return3 + "</td>";
-      txt += "<td>" + response[i].sd3 + "</td>";
-      txt += "<td>" + response[i].commodities + "</td>";
-      txt += "<td>" + response[i].allocatedweight4 + "</td>";
-      txt += "<td>" + response[i].return4 + "</td>";
-      txt += "<td>" + response[i].sd4 + "</td>";
-      txt += "<td>" + response[i].crypto + "</td>";
-      txt += "<td>" + response[i].allocatedweight5 + "</td>";
-      txt += "<td>" + response[i].return5 + "</td>";
-      txt += "<td>" + response[i].sd5 + "</td>";
-      txt += "<td>" + response[i].forex + "</td>";
-      txt += "<td>" + response[i].allocatedweight6 + "</td>";
-      txt += "<td>" + response[i].return6 + "</td>";
-      txt += "<td>" + response[i].sd6 + "</td>";
-      txt += "<td>" + response[i].otherinvestment + "</td>";
-      txt += "<td>" + response[i].allocatedweight7 + "</td>";
-      txt += "<td>" + response[i].return7 + "</td>";
-      txt += "<td>" + response[i].sd7 + "</td>";
+      txt += "<td>" + response[i].section3 + "</td>";
       txt += "</tr>"
 }
        txt += "</table>"
@@ -174,7 +142,7 @@ const onSubmitSignIn = (e) => {
       Section2: Section2,
       OtherInvestments: OtherInvestments,
       allocatedWeight3: AllocatedWeight3,
-      return3: Return3,
+      Return3: Return3,
       Section3: Section3
       })
     })

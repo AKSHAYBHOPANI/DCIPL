@@ -15,10 +15,12 @@ import Execution from "./Pages/Service Components/Execution/execution";
 import Monitoring from "./Pages/Service Components/Monitoring/monitoring";
 import Investment from "./Pages/features/investment";
 import Wealth from "./Pages/features/wealth";
+import Tax from "./Pages/features/tax";
 import Retirement from "./Pages/features/retirement";
 import PortfolioAllocation from "./Pages/features/PortfolioAllocation.js";
 import WealthPortfolioAllocation from "./Pages/features/wealthPortfolioAllocation.js";
 import RetirementPortfolioAllocation from "./Pages/features/RetirementPortfolioAllocation.js";
+import TaxPortfolioAllocation from "./Pages/features/TaxPortfolioAllocation.js";
 import Admin from "./Pages/admin";
 import MyProfile from "./Pages/profile";
 import Policy from "./Pages/policy";
@@ -75,6 +77,9 @@ const Main = ({ Profile, setProfile }) => {
         <Route exact path="/features/retirement">
           <Retirement Profile={Profile} setProfile={setProfile} />
         </Route>
+         <Route exact path="/features/tax">
+          <Tax Profile={Profile} setProfile={setProfile} />
+        </Route>
         <Route exact path="/profile">
           <MyProfile Profile={Profile} setProfile={setProfile} />
         </Route>
@@ -89,6 +94,12 @@ const Main = ({ Profile, setProfile }) => {
         </Route>
         <Route exact path="/features/RetirementPortfolioAllocation">
           <RetirementPortfolioAllocation
+            Profile={Profile}
+            setProfile={setProfile}
+          />
+        </Route>
+         <Route exact path="/features/TaxPortfolioAllocation">
+          <TaxPortfolioAllocation
             Profile={Profile}
             setProfile={setProfile}
           />

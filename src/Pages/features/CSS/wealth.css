@@ -1,9 +1,9 @@
 h1 {
-	color: white;
+	color: black;
 }
 
 .Title1 {
-	color: white;
+	color: black;
 	padding: 10px;
 	text-align: center;
 }
@@ -19,6 +19,7 @@ input {
 	width: 100%;
 	padding: 1rem;
 	margin: 10px;
+	border: 2px solid black!important;
 }
 
 select {

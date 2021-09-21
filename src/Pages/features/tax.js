@@ -9,7 +9,7 @@ import AssetClassLow from "../../Components/Investment/AssestClassLow";
 import PortfolioHigh from "../../Components/Investment/PortfolioHigh";
 import PortfolioMedium from "../../Components/Investment/PortfolioMedium";
 import PortfolioLow from "../../Components/Investment/PortfolioLow";
-import RetirementPortfolio from "../../Components/Retirement/Portfolio";
+import TaxPortfolio from "../../Components/Tax/Portfolio";
 
 function Tax({Profile, setProfile}) {
 
@@ -74,7 +74,7 @@ if (Data.totalrisk==="High") {
 }
 
 if (Data.plan) {
-  Portfolio = <RetirementPortfolio targetreturn={Data.targetreturn} email={Data.email}/>
+  Portfolio = <TaxPortfolio targetreturn={Data.targetreturn} email={Data.email}/>
 } 
 
  const AssestsValue = (event) => {
@@ -107,7 +107,7 @@ CheckIsFormSubmitted();
 }
 
 const CheckIsFormSubmitted = () => {
-    fetch('https://server.yourtechshow.com/IsRetirementFormSubmitted', {
+    fetch('https://server.yourtechshow.com/IsTaxFormSubmitted', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -183,7 +183,7 @@ const onSubmitSignIn = (e) => {
     })
      .then(response => response.json())
       .then(response => {
-       if (response.time) {
+       if (response.plan) {
         console.log(response);
         setData(response);
         
@@ -200,7 +200,7 @@ const onSubmitSignIn = (e) => {
   }
 
 const onSubmitWealth = () => {
-    fetch(`https://server.yourtechshow.com/retirementPortfolio`, {
+    fetch(`https://server.yourtechshow.com/taxPortfolio`, {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -229,7 +229,7 @@ const onSubmitWealth = () => {
   <> 
 <br></br><br></br><br></br>
 {console.log(Profile)}
-<h1>Congratulations {Profile.name}, Your Retirement Planning Report Is Generated ✅</h1>
+<h1>Congratulations {Profile.name}, Your Tax Planning Report Is Generated ✅</h1>
 <h2>Suggested Assest Classes To Invest In (Tailored just for you) - </h2>
 
 {AssetClass}
