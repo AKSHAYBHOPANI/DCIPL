@@ -89,7 +89,20 @@ const Box_component = ({ Icon, Text }) => {
     </div>
   );
 };
-
+const breakPoints3 = [
+  { width: 900, itemsToShow: 2 },
+  { width: 1200, itemsToShow: 3 },
+  { width: 1500, itemsToShow: 3 },
+  { width: 1800, itemsToShow: 3 },
+];
+const breakPoints2 = [
+  { width: 400, itemsToShow: 1 },
+  { width: 600, itemsToShow: 1 },
+  { width: 800, itemsToShow: 2 },
+  { width: 1000, itemsToShow: 3 },
+  { width: 1200, itemsToShow: 3 },
+  { width: 1400, itemsToShow: 3 },
+];
 const Home = () => {
   const [postIsOpen, setPostIsOpen] = useState(false);
   const [toggle, setToggle] = React.useState(true);
@@ -113,11 +126,7 @@ const Home = () => {
     sbi,
   ];
   let history = useHistory();
-  const img_arr3 = [
-    estimate,
-    atm,
-    //  icici, sbi, kotak, hdfc, icici, sbi, kotak
-  ];
+  const img_arr3 = [estimate, atm, icici, sbi, kotak, hdfc, icici, sbi, kotak];
   const img_arr4 = [
     "EMI Calculator",
     "ICICI",
@@ -204,70 +213,72 @@ const Home = () => {
           </a>
         </div>{" "} */}
           <div className="first-box-right">
-            <div class="wrapper-main1">
-              <div class="carousel">
-                <div class="carousel__item">
-                  <div class="carousel__item-head">🚀</div>
-                  <div class="carousel__item-body">
-                    <p class="title-slide">Save money to buy the future.</p>
+            <div className="wrapper-main1">
+              <div className="carousel">
+                <div className="carousel__item">
+                  <div className="carousel__item-head">🚀</div>
+                  <div className="carousel__item-body">
+                    <p className="title-slide">Save money to buy the future.</p>
                     <p>Derive Capital</p>
                   </div>
                 </div>
-                <div class="carousel__item">
-                  <div class="carousel__item-head">🏠</div>
-                  <div class="carousel__item-body">
-                    <p class="title-slide">Start earning more today.</p>
+                <div className="carousel__item">
+                  <div className="carousel__item-head">🏠</div>
+                  <div className="carousel__item-body">
+                    <p className="title-slide">Start earning more today.</p>
                     <p>Derive Capital</p>
                   </div>
                 </div>
-                <div class="carousel__item">
-                  <div class="carousel__item-head">💴</div>
-                  <div class="carousel__item-body">
-                    <p class="title-slide">A better financial approach.</p>
+                <div className="carousel__item">
+                  <div className="carousel__item-head">💴</div>
+                  <div className="carousel__item-body">
+                    <p className="title-slide">A better financial approach.</p>
                     <p>Derive Capital</p>
                   </div>
                 </div>
-                <div class="carousel__item">
-                  <div class="carousel__item-head">💸</div>
-                  <div class="carousel__item-body">
-                    <p class="title-slide">
+                <div className="carousel__item">
+                  <div className="carousel__item-head">💸</div>
+                  <div className="carousel__item-body">
+                    <p className="title-slide">
                       Towards a better financial future.
                     </p>
                     <p>Derive Capital</p>
                   </div>
                 </div>
-                <div class="carousel__item">
-                  <div class="carousel__item-head">💹</div>
-                  <div class="carousel__item-body">
-                    <p class="title-slide">Where your money lives and grows.</p>
+                <div className="carousel__item">
+                  <div className="carousel__item-head">💹</div>
+                  <div className="carousel__item-body">
+                    <p className="title-slide">
+                      Where your money lives and grows.
+                    </p>
                     <p>Derive Capital</p>
                   </div>
                 </div>
-                <div class="carousel__item">
-                  <div class="carousel__item-head">💱</div>
-                  <div class="carousel__item-body">
-                    <p class="title-slide">Five-star service guaranteed.</p>
+                <div className="carousel__item">
+                  <div className="carousel__item-head">💱</div>
+                  <div className="carousel__item-body">
+                    <p className="title-slide">Five-star service guaranteed.</p>
                     <p>Derive Capital</p>
                   </div>
                 </div>
-                <div class="carousel__item">
-                  <div class="carousel__item-head">💶</div>
-                  <div class="carousel__item-body">
-                    <p class="title-slide">Quality in everything we do.</p>
+                <div className="carousel__item">
+                  <div className="carousel__item-head">💶</div>
+                  <div className="carousel__item-body">
+                    <p className="title-slide">Quality in everything we do.</p>
                     <p>Derive Capital</p>
                   </div>
                 </div>
-                <div class="carousel__item">
-                  <div class="carousel__item-head">💰</div>
-                  <div class="carousel__item-body">
-                    <p class="title-slide">We know money.</p>
+                <div className="carousel__item">
+                  <div className="carousel__item-head">💰</div>
+                  <div className="carousel__item-body">
+                    <p className="title-slide">We know money.</p>
                     <p>Derive Capital</p>
                   </div>
                 </div>
-                <div class="carousel__item">
-                  <div class="carousel__item-head">💷</div>
-                  <div class="carousel__item-body">
-                    <p class="title">Start earning more today.</p>
+                <div className="carousel__item">
+                  <div className="carousel__item-head">💷</div>
+                  <div className="carousel__item-body">
+                    <p className="title">Start earning more today.</p>
                     <p>Derive Capital</p>
                   </div>
                 </div>
@@ -389,7 +400,7 @@ const Home = () => {
             <div className="wrapper-main">
               <div className="outer-main">
                 <div className="card-main">
-                  <div class="content-main">
+                  <div className="content-main">
                     <div className="img-main">
                       <img src={logo} alt="" />
                     </div>
@@ -458,41 +469,11 @@ const Home = () => {
           <div className="second-box-right">
             <div id="slider12">
               <figure>
-                <img
-                  src={piggy}
-                  alt=""
-                  className="pic"
-                  height="350"
-                  width="250"
-                />
-                <img
-                  src={Machine}
-                  alt=""
-                  className="pic"
-                  height="350"
-                  width="250"
-                />
-                <img
-                  src={atm}
-                  alt=""
-                  className="pic"
-                  height="350"
-                  width="250"
-                />
-                <img
-                  src={card}
-                  alt=""
-                  className="pic"
-                  height="350"
-                  width="250"
-                />{" "}
-                <img
-                  src={Machine}
-                  alt=""
-                  className="pic"
-                  height="350"
-                  width="250"
-                />
+                <img src={piggy} alt="" height="350" width="250" />
+                <img src={Machine} alt="" height="350" width="250" />
+                <img src={atm} alt="" height="350" width="250" />
+                <img src={card} alt="" height="350" width="250" />{" "}
+                <img src={Machine} alt="" height="350" width="250" />
               </figure>
             </div>
             {/* <video loop autoPlay className="big-img5" muted>
@@ -519,34 +500,24 @@ const Home = () => {
             <div class="imgLoader"></div>
 
             <div class="container55">
-              {/* <h1 class="title55">
-                Turning pages
-                <br />
-                with css
-              </h1> */}
-
-              {/* <div class="credit55">
-                * Images loaded randomly from Picsum.photos
-              </div> */}
-
-              <div class="book55">
-                <div class="gap55"></div>
-                <div class="pages55">
-                  <div class="page55"></div>
-                  <div class="page55"></div>
-                  <div class="page55"></div>
-                  <div class="page55"></div>
-                  <div class="page55"></div>
-                  <div class="page55"></div>
+              <div className="book55">
+                <div className="gap55"></div>
+                <div className="pages55">
+                  <div className="page55"></div>
+                  <div className="page55"></div>
+                  <div className="page55"></div>
+                  <div className="page55"></div>
+                  <div className="page55"></div>
+                  <div className="page55"></div>
                 </div>
-                <div class="flips">
-                  <div class="flip flip1">
-                    <div class="flip flip2">
-                      <div class="flip flip3">
-                        <div class="flip flip4">
-                          <div class="flip flip5">
-                            <div class="flip flip6">
-                              <div class="flip flip7"></div>
+                <div className="flips">
+                  <div className="flip flip1">
+                    <div className="flip flip2">
+                      <div className="flip flip3">
+                        <div className="flip flip4">
+                          <div className="flip flip5">
+                            <div className="flip flip6">
+                              <div className="flip flip7"></div>
                             </div>
                           </div>
                         </div>
@@ -563,21 +534,16 @@ const Home = () => {
             <h2>Useful Links</h2>
 
             <Carousel
-              // breakPoints={
-              //   window.innerWidth > 1230
-              //     ? breakPoints3
-              //     : window.innerWidth > 990
-              //     ? breakPoints2
-              //     : window.innerWidth > 900
-              //     ? breakPoints2
-              //     : breakPoints1
-              // }
               showArrows={true}
-              autoPlay={true}
-              showThumbs={false}
-              infiniteLoop={true}
-              showStatus={false}
-              showIndicators={true}
+              breakPoints={
+                window.innerWidth > 1230
+                  ? breakPoints3
+                  : window.innerWidth > 990
+                  ? breakPoints2
+                  : window.innerWidth > 900
+                  ? breakPoints2
+                  : breakPoints2
+              }
             >
               {img_arr3.map((img1, index) => (
                 <div onClick={handleClick} className="sites-card">
@@ -602,7 +568,7 @@ const Home = () => {
         </section>
         <section className="third-box">
           <div className="second-box-left">
-            <img src={image17} alt="#" height="450" width="550"></img>
+            <img src={image17} alt="#" className="security-img"></img>
           </div>{" "}
           <div className="second-box-right">
             <h1>
@@ -643,10 +609,10 @@ const Home = () => {
                 <a href="#">Read More</a>
               </div>
 
-              <div class="client-box">
+              <div className="client-box">
                 <img src={man3} />
 
-                <div class="star">
+                <div className="star">
                   <i className="fas fa-star"></i>
                   <i className="fas fa-star"></i>
                   <i className="fas fa-star"></i>
@@ -689,14 +655,14 @@ const Home = () => {
         </section>{" "}
         <section className="second-box">
           <div className="second-box-left">
-            <img src={man} alt="derive" />
+            <img src={man} alt="derive" className="man-img" />
           </div>
           <div className="second-box-right">
             <div className="text-right">
               <h2>Pricing ?</h2>
               <span>It's</span>
               <span>FREE</span>
-              <p>We say no to fees</p>
+              <h6>We say no to fees</h6>
             </div>
           </div>
         </section>{" "}

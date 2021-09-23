@@ -26,7 +26,7 @@ function Nav(Profile) {
           <nav className="main-nav1">
             <div className="container32">
               <a href="../" id="logo">
-                <img src={logo} alt="Derive"></img>
+                <img src={logo} alt="Derive" width="70"></img>
               </a>
 
               <div className="links">
@@ -73,7 +73,7 @@ function Nav(Profile) {
           <nav className="main-nav1">
             <div className="container32">
               <a href="../" id="logo">
-                <img src={logo} alt="Derive"></img>
+                <img src={logo} alt="Derive" width="70"></img>
               </a>
 
               <div className="links">
