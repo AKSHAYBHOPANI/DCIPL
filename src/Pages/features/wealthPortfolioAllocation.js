@@ -206,8 +206,8 @@ const onSubmitSignIn = (e) => {
       SD6: SD6,
       OtherInvestments: OtherInvestments,
       allocatedWeight7: AllocatedWeight7,
-      return6: Return7,
-      SD6: SD7
+      return7: Return7,
+      SD7: SD7
       })
     })
       
