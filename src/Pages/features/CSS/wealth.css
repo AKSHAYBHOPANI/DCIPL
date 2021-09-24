@@ -1,45 +1,39 @@
 h1 {
-	color: black;
+  color: black;
 }
 
 .Title1 {
-	color: black;
-	padding: 10px;
-	text-align: center;
+  color: black;
+  padding: 10px;
+  text-align: center;
 }
-
 
 .Form7 {
-	padding-left: 20%;
-	padding-right: 20%;
-	text-align: center;
-
+  padding-left: 20%;
+  padding-right: 20%;
+  text-align: center;
 }
 input {
-	width: 100%;
-	padding: 1rem;
-	margin: 10px;
-	border: 2px solid black!important;
+  width: 100%;
+  padding: 1rem;
+  margin: 10px;
+  /* border: 2px solid black!important; */
 }
 
 select {
-	padding: 1rem;
-	text-align: center;
-	margin: 5px;
+  padding: 1rem;
+  text-align: center;
+  margin: 5px;
 }
 
 label {
-	color:white;
+  color: white;
 }
 
 input:invalid {
   border: 2px red;
 }
 
-
-
 input:valid {
   border: 2px solid black;
-} 
-  
-
+}
