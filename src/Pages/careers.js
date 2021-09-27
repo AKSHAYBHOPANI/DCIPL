@@ -131,15 +131,24 @@ function careers() {
           </ul>
         </div>
         <div className="overall-carousel">
-          <form id="career-form">
-            <h3 className="heading-overview">Career Opportunities</h3>
+          <form>
+            <h3>Career Opportunities</h3>
 
             <div className="form-left">
-              <label for="upload_resume">Update Resume:</label>
+              
 
-              <input type="file" name="upload_resume" id="upload_resume" />
-            </div>
-            <div className="form-right">
+              <label for ="enter_name">Enter Name: </label>
+              <input type="text" placeholder="Name" name="enter_name"  id="enter_name" />
+
+              <label for ="enter_email">Enter Email: </label>
+              <input type="text" placeholder="Email" name="enter_email"  id="enter_email" />
+
+              <label for ="enter_number">Enter Number: </label>
+              <input type="number" placeholder="Number" name="enter_number"  id="enter_number" />
+
+              <label for="upload_resume">Update Resume:</label>
+              <input type="file"  name="upload_resume" id="upload_resume" />
+
               <textarea
                 id="cover_letter"
                 name="cover_letter"
@@ -149,9 +158,7 @@ function careers() {
                 rows="10"
                 value=""
               ></textarea>
-
-              <button
-                className="btn-primary"
+        <button className="btn-primary"
                 type="button"
                 name="btn-submit"
                 id="btn-submit"
@@ -159,6 +166,12 @@ function careers() {
                 Submit
               </button>
             </div>
+
+            
+              
+
+              
+            
           </form>
         </div>
         <div class="current-openings" id="joblistings">
