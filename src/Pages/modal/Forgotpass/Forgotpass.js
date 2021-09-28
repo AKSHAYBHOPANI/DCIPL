@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import { Link } from "react-router-dom";
 import logimg from "../../../assests/login.svg";
-import CloseIcon from "@material-ui/icons/Close";
 
 import Createpass from "../Createpass/Createpass";
-import "./Forgotpass.scss";
+import "./Forgotpass.css";
 
 const Forgotpass = ({ forgotpassIsOpen, setForgotpassIsOpen }) => {
   const [createpassIsOpen, setCreatepassIsOpen] = useState(false);
@@ -54,8 +53,12 @@ const Forgotpass = ({ forgotpassIsOpen, setForgotpassIsOpen }) => {
       >
         <div className="main-forgot">
           <h1>Login with Derive Capital</h1>
-          <Link to="#" onClick={() => setForgotpassIsOpen(false)}>
-            <CloseIcon className="Close2_icon" />
+          <Link
+            to="#"
+            className="Close2_icon"
+            onClick={() => setForgotpassIsOpen(false)}
+          >
+            x
           </Link>
           <h2>Forgot Password</h2>
           <h3>

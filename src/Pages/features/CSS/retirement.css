@@ -1,23 +1,19 @@
-
-
 h1 {
-	color: white;
+  color: white;
 }
 
 .Title1 {
-	color: white;
-	padding: 10px;
-	text-align: center;
+  color: white;
+  padding: 10px;
+  text-align: center;
 }
-
 
 .Form7 {
-	padding-left: 20%;
-	padding-right: 20%;
-	text-align: center;
-	
+  padding-left: 20%;
+  padding-right: 20%;
+  text-align: center;
 }
-input {
+/* input {
 	width: 100%;
 	padding: 1rem;
 	margin: 10px;
@@ -35,10 +31,8 @@ label {
 
 input:invalid {
   border: 2px red;
-}
+} */
 
-
-
-input:valid {
+/* input:valid {
   border: 2px solid black;
-}
+} */

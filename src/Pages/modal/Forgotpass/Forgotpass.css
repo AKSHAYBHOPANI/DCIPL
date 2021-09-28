@@ -1,0 +1,149 @@
+.main-forgot {
+  position: absolute;
+  width: 1079px;
+  height: 628px;
+  left: 25px;
+  top: 10%;
+  font-family: Jost;
+  font-style: normal;
+}
+.main-forgot h1 {
+  position: absolute;
+  width: 464px;
+  height: 44px;
+  left: 37px;
+  top: 27.77px;
+  color: #2a2552;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 44px;
+
+  text-align: center;
+}
+.main-forgot h2 {
+  position: absolute;
+  width: 178px;
+  height: 24px;
+  left: 150px;
+  top: 128px;
+
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #202020;
+}
+.main-forgot h3 {
+  position: absolute;
+  width: 436px;
+  height: 52px;
+  left: 48px;
+  top: 192px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #202020;
+}
+.main-forgot h4 {
+  position: absolute;
+  width: 189px;
+  height: 16px;
+  left: 60px;
+  top: 355px;
+  font-weight: 500;
+  font-size: 14px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+
+  /* Inactive */
+
+  color: rgba(32, 32, 32, 0.4);
+}
+
+.main-forgot img {
+  position: absolute;
+  width: 50%;
+  height: 80%;
+  left: 45%;
+  top: 14%;
+
+  background: #ffffff;
+  /* User color */
+
+  box-sizing: border-box;
+
+  border-radius: 25px;
+}
+.main-forgot button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 16px;
+  color: white;
+  position: absolute;
+  width: 142px;
+  height: 48px;
+  left: 168px;
+  top: 409px;
+  border: none;
+
+  background: linear-gradient(to right, #3ad4af, #426fd8);
+
+  box-shadow: 2px 6px 25px rgba(255, 188, 46, 0.1),
+    0px 3px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+}
+.main-forgot h6 {
+  position: absolute;
+  width: 365px;
+  height: 16px;
+  left: 37px;
+  top: 550px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  /* or 24px */
+
+  /* Inactive */
+
+  color: rgba(32, 32, 32, 0.4);
+}
+
+.Close2_icon {
+  position: absolute;
+  width: 21px;
+  height: 44px;
+  left: 1050.45px;
+  top: 14.85px;
+  font-size: 36px;
+  line-height: 44px;
+
+  color: #2a2552;
+}
+.otp2 {
+  text-align: center;
+  margin-left: 50px;
+  display: flex;
+  margin-top: 300px;
+}
+.otp2 input {
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid black;
+  width: 30px;
+  text-align: center;
+  padding-left: 8px;
+
+  margin-left: 10px;
+}
+.otp2 input :focus {
+  outline: none;
+}

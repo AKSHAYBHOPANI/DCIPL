@@ -13,11 +13,15 @@ h1 {
   padding-right: 20%;
   text-align: center;
 }
-input {
+/* input {
   width: 100%;
   padding: 1rem;
   margin: 10px;
+<<<<<<< HEAD
+  
+=======
   border: 2px solid black!important;
+>>>>>>> 709e209787f38bbb2dbb37763dedfe149b46eba7
 }
 
 select {
@@ -36,4 +40,4 @@ input:invalid {
 
 input:valid {
   border: 2px solid black;
-}
+} */

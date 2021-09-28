@@ -114,7 +114,7 @@ function Nav(Profile) {
                     </a>
                   </li>
                   <li>
-                    <a href="./login">
+                    <a href="./register">
                       {" "}
                       <img src={profile} alt="Derive"></img>
                     </a>

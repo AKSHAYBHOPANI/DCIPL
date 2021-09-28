@@ -135,19 +135,35 @@ function careers() {
             <h3>Career Opportunities</h3>
 
             <div className="form-left">
-              
+              <label for="enter_name">Enter Name: </label>
+              <input
+                type="text"
+                placeholder="Name"
+                name="enter_name"
+                id="enter_name"
+              />
 
-              <label for ="enter_name">Enter Name: </label>
-              <input type="text" placeholder="Name" name="enter_name"  id="enter_name" />
+              <label for="enter_email">Enter Email: </label>
+              <input
+                type="text"
+                placeholder="Email"
+                name="enter_email"
+                id="enter_email"
+              />
 
-              <label for ="enter_email">Enter Email: </label>
-              <input type="text" placeholder="Email" name="enter_email"  id="enter_email" />
-
-              <label for ="enter_number">Enter Number: </label>
-              <input type="number" placeholder="Number" name="enter_number"  id="enter_number" />
+              <label for="phone">Mobile No.</label>
+              <input
+                id="phone"
+                name="phone"
+                placeholder="Mobile No."
+                type="text"
+                maxlength="10"
+                pattern="[0-9]{10}"
+                required
+              />
 
               <label for="upload_resume">Update Resume:</label>
-              <input type="file"  name="upload_resume" id="upload_resume" />
+              <input type="file" name="upload_resume" id="upload_resume" />
 
               <textarea
                 id="cover_letter"
@@ -158,7 +174,8 @@ function careers() {
                 rows="10"
                 value=""
               ></textarea>
-        <button className="btn-primary"
+              <button
+                className="btn-primary"
                 type="button"
                 name="btn-submit"
                 id="btn-submit"
@@ -166,12 +183,6 @@ function careers() {
                 Submit
               </button>
             </div>
-
-            
-              
-
-              
-            
           </form>
         </div>
         <div class="current-openings" id="joblistings">

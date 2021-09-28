@@ -126,7 +126,7 @@
 .theme-btn {
   border: none;
   border-radius: 5px;
-  background: linear-gradient(to right, #3ad4af, #426fd8);
+  background: linear-gradient(to right, #3ad4af, #426fd8) !important;
   font-size: 0.8rem;
   text-transform: capitalize;
   font-weight: 900;
@@ -430,10 +430,10 @@
   line-height: 100%;
 }
 .btnviewdoc {
-  width: 8rem !important;
+  width: fit-content;
   margin-left: 35% !important;
   /* margin-top: 3rem; */
-  background-color: #2a2552;
+  background-color: #2a2552 !important;
   border-radius: 20px;
   height: 48px;
   color: white;

@@ -14,17 +14,40 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-/* Register */
-/* Full-width input fields */
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
+input {
+  width: 70%;
+  height: 3rem;
+  /* left: 302px; */
+  padding: 0 10px;
+  margin: 10px 0;
+  background: #ffffff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
   border: none;
-  background: #f1f1f1;
+  align-items: center;
+}
+input:focus {
+  outline: none;
+}
+label {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+
+  color: black;
+}
+select {
+  padding: 0.7rem;
+  text-align: center;
+  margin: 5px;
+  background-color: #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+select:focus {
+  outline: none;
 }
 
 input[type="text"]:focus,
@@ -40,18 +63,17 @@ hr {
 
 /* Set a style for all buttons */
 button {
-  position: relative;
-  /* display: block; */
-  text-decoration: none;
-  font-family: "Lato";
-  font-size: 1.3rem;
-  color: #ecf0f1;
-  padding: 4px 0;
-  transition: 1s;
-  top: 11px;
-  background-color: seagreen;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 13px;
+  color: black;
+  background: linear-gradient(to right, #3ad4af, #082361);
+
+  color: white;
+  font-weight: 600;
+  width: 7rem;
+  border: none;
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
 }
 button::after {
   position: absolute;
@@ -95,10 +117,51 @@ button:hover {
   display: table;
 }
 
+table {
+  background: #fff;
+
+  border-radius: 10px;
+  border: 1px solid #dedede;
+  border-collapse: collapse;
+  width: 100%;
+
+  text-transform: capitalize;
+
+  color: #202020;
+}
+th {
+  text-align: left;
+  background: #9caed8;
+  padding: 8px;
+  border: 1px solid #dedede;
+}
+td {
+  text-align: left;
+  background: #fff;
+  padding: 8px;
+  border: 1px solid #dedede;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+option {
+  font-size: 1rem;
+  margin-bottom: 3%;
+}
+
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
   .cancelbtn,
   .signupbtn {
     width: 100%;
+  }
+  input {
+    width: 10rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  table {
+    overflow-x: scroll;
   }
 }

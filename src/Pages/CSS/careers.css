@@ -140,7 +140,7 @@
   border-radius: 10px;
 }
 .form-left textarea {
-   margin-top: 10%; 
+  margin-top: 10%;
   margin-left: 1%;
   height: auto;
   width: 400px;
@@ -151,7 +151,7 @@
   /* display: block; */
   width: 90%;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-   height: 650px; 
+  height: 650px;
   left: 10px;
   padding: 6px 12px;
   font-size: 14px;
@@ -161,7 +161,7 @@
   background-image: none;
   border: 1px solid #ccc;
 }
-input[type="text"] {
+.form-left input[type="text"] {
   height: 2.5rem;
   display: block;
   width: 60%;
@@ -173,7 +173,7 @@ input[type="text"] {
   border: none;
   transition: all 0.5s;
 }
-input[type="number"] {
+.form-left input[type="number"] {
   height: 2.5rem;
   display: block;
   margin-left: 0px;
@@ -185,7 +185,7 @@ input[type="number"] {
   border: none;
   transition: all 0.5s;
 }
-input[type="file"] {
+.form-left input[type="file"] {
   height: 2.5rem;
   display: block;
   margin-left: 0px;
@@ -197,7 +197,6 @@ input[type="file"] {
   border: none;
   transition: all 0.5s;
 }
-
 
 .overall-carousel {
   /* overflow: hidden; */
@@ -205,10 +204,6 @@ input[type="file"] {
   justify-content: center;
   align-items: center;
 }
-/* .form-group {
-  display: flex;
-  flex-direction: row;
-} */
 
 .current-openings {
   margin: 3.5em 0;
@@ -372,9 +367,8 @@ input[type="file"] {
   }
 }
 @media (max-width: 480px) {
-.form-left textarea { 
-  margin-left: 3%;
-  width: 40%;
-}
-
+  .form-left textarea {
+    margin-left: 3%;
+    width: 40%;
+  }
 }

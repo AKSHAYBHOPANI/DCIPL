@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { Link } from "react-router-dom";
-import CloseIcon from "@material-ui/icons/Close";
-import "./Createpass.scss";
+// import CloseIcon from "@material-ui/icons/Close";
+import "./Createpass.css";
 import logimg from "../../../assests/login.svg";
 
 const Createpass = ({ createpassIsOpen, setCreatepassIsOpen }) => {
@@ -37,8 +37,12 @@ const Createpass = ({ createpassIsOpen, setCreatepassIsOpen }) => {
       >
         <div className="create-pass">
           <h1>Login with Derive Capital</h1>
-          <Link to="#" onClick={() => setCreatepassIsOpen(false)}>
-            <CloseIcon className="Close2_icon" />
+          <Link
+            to="#"
+            className="Close2_icon"
+            onClick={() => setCreatepassIsOpen(false)}
+          >
+            x
           </Link>
           <h2>Create New Password</h2>
           <form>

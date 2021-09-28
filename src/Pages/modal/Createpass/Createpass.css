@@ -1,0 +1,122 @@
+.create-pass {
+  position: absolute;
+  width: 1079px;
+  height: 628px;
+  left: 25px;
+  top: 10%;
+
+  font-family: Montserrat;
+  font-style: normal;
+}
+.create-pass h1 {
+  position: absolute;
+  width: 404px;
+  height: 44px;
+  left: 37px;
+  top: 27.77px;
+  font-weight: bold;
+  font-size: 30px;
+  color: #2a2552;
+}
+.create-pass h2 {
+  position: absolute;
+  width: 229px;
+  height: 24px;
+  left: 125px;
+  top: 128px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #202020;
+}
+.create-pass form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  position: absolute;
+  width: 422px;
+  height: 152px;
+  left: 68px;
+  top: 201px;
+}
+.create-pass label {
+  color: #202020;
+}
+.create-pass input {
+  position: static;
+  width: 422px;
+  height: 48px;
+  padding: 2%;
+  flex: none;
+
+  background: #ffffff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+
+  border: none;
+}
+.create-pass input:focus {
+  outline: none;
+}
+
+.create-pass h3 {
+  position: absolute;
+  width: 261px;
+  height: 16px;
+  left: 64px;
+  top: 384px;
+
+  /* Small Text */
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+
+  /* Inactive */
+
+  color: rgba(32, 32, 32, 0.4);
+}
+.create-pass button {
+  padding: 0px 16px;
+  font-weight: 600;
+  font-size: 15px;
+  position: absolute;
+  width: 160px;
+  color: white;
+  border: none;
+  height: 48px;
+  left: 164px;
+  top: 433px;
+  background: linear-gradient(to right, #3ad4af, #426fd8);
+
+  box-shadow: 2px 6px 25px rgba(255, 188, 46, 0.1),
+    0px 3px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+}
+.create-pass img {
+  position: absolute;
+  width: 440px;
+  height: 540px;
+  left: 597px;
+  top: 88px;
+}
+
+.Close3_icon {
+  position: absolute;
+  width: 21px;
+  height: 44px;
+  left: 1050.45px;
+  top: 14.85px;
+  font-size: 36px;
+  line-height: 44px;
+
+  color: #2a2552;
+}
