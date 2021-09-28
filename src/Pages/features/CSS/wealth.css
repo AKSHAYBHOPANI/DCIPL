@@ -13,11 +13,11 @@ h1 {
   padding-right: 20%;
   text-align: center;
 }
-input {
+/* input {
   width: 100%;
   padding: 1rem;
   margin: 10px;
-  /* border: 2px solid black!important; */
+  
 }
 
 select {
@@ -36,4 +36,4 @@ input:invalid {
 
 input:valid {
   border: 2px solid black;
-}
+} */

@@ -38,114 +38,111 @@ function MyProfile({ Profile, setProfile }) {
         if (response.id) {
           console.log(response);
           setData(response);
-
-        
-          
         } else {
           alert("Error, Profile Not Found.");
           console.log(response);
         }
       });
   };
-let icon =  "https://avatars.dicebear.com/api/avataaars/${Profile.name}.svg";
+  let icon = "https://avatars.dicebear.com/api/avataaars/${Profile.name}.svg";
   return (
     <>
       {Profile.IsSignIn ? (
         <>
-          <div className="main-profile">
-            <br />
-            <br /> <br />
-            <br />
-            <h1>My Profile</h1>
-            <p>Hello, {Profile.name} </p>
-            <h2>
-              {" "}
-              Welcome to your profile at DCIPL{" "}
-              <span>
+          <div className="profile-info">
+            <div className="main-head-profile">
+              <h1>My Profile</h1>
+              <p>Hello, {Profile.name} </p>
+              <h2>
                 {" "}
-                Date <br />
-                {date.toLocaleString()}
-              </span>
-            </h2>
-           
-            <h3>Personal Detail</h3>
-            <div className="verified-img-part">
-              <div className="verified-img">
-                <Link to="">
+                Welcome to your profile at DCIPL{" "}
+                <span>
                   {" "}
-                  <img src={icon} alert="" />
-                </Link>
+                  Date <br />
+                  {date.toLocaleString()}
+                </span>
+              </h2>{" "}
+              <h3>Personal Detail</h3>
+            </div>{" "}
+            <div className="main-profile">
+              <div className="verified-img-part">
+                <div className="verified-img">
+                  <Link to="">
+                    {" "}
+                    <img src={icon} alert="" />
+                  </Link>
+                </div>
+                <p>Verified</p>
               </div>
-              <p>Verified</p>
+              <div className="personal-details-form">
+                <form action="">
+                  <label forhtml="fname">Name</label>
+                  <br />
+                  <input
+                    id="fname"
+                    type="text"
+                    placeholder={Data.name}
+                    required
+                  />
+                  <br />
+                  <br />
+                  <br />
+                  <label forhtml="gender">Gender</label> <br />
+                  <input
+                    id="gender"
+                    type="text"
+                    placeholder="Gender"
+                    required
+                  />{" "}
+                  <br />
+                  <br />
+                  <br />
+                  <label forhtml="age">Age</label> <br />
+                  <input
+                    id="age"
+                    type="text"
+                    placeholder="Enter Age"
+                    required
+                  />{" "}
+                  <br />
+                  <br />
+                  <br />
+                  <label forhtml="contact">Phone No.</label> <br />
+                  <input
+                    id="contact"
+                    type="text"
+                    placeholder="Mobile No"
+                    required
+                  />{" "}
+                  <br />
+                  <br />
+                  <br />
+                  <label forhtml="email">Email Id</label> <br />
+                  <input
+                    id="email"
+                    type="text"
+                    placeholder={Data.email}
+                    required
+                  />{" "}
+                  <br />
+                  <br />
+                  <br />
+                  <label forhtml="contact">Joined</label> <br />
+                  <input
+                    id="contact"
+                    type="text"
+                    placeholder={Data.joined}
+                    required
+                  />{" "}
+                  <br />
+                  <br />
+                  <br />
+                </form>
+              </div>
+              <br />
+              <br /> <br />
+              <br />
             </div>
-            <div className="personal-details-form">
-              <form action="">
-                <label forhtml="fname">Name</label>
-                <input
-                  id="fname"
-                  type="text"
-                  placeholder={Data.name}
-                  required
-                />
-                <br />
-                <br />
-                <br />
-                <label forhtml="gender">Gender</label>
-                <input
-                  id="gender"
-                  type="text"
-                  placeholder="Gender"
-                  required
-                />{" "}
-                <br />
-                <br />
-                <br />
-                <label forhtml="age">Age</label>
-                <input
-                  id="age"
-                  type="text"
-                  placeholder="Enter Age"
-                  required
-                />{" "}
-                <br />
-                <br />
-                <br />
-                <label forhtml="contact">Phone No.</label>
-                <input
-                  id="contact"
-                  type="text"
-                  placeholder="Mobile No"
-                  required
-                />{" "}
-                <br />
-                <br />
-                <br />
-                <label forhtml="email">Email Id</label>
-                <input
-                  id="email"
-                  type="text"
-                  placeholder={Data.email}
-                  required
-                />{" "}
-                <br />
-                <br />
-                <br />
-                <label forhtml="contact">Joined</label>
-                <input
-                  id="contact"
-                  type="text"
-                  placeholder={Data.joined}
-                  required
-                />{" "}
-                <br />
-                <br />
-                <br />
-            
-              </form>
-            </div>
-            <br />
-            <br /> <br />
-            <br />
           </div>
           {OnPageLoad()}
         </>

@@ -1,117 +1,188 @@
-import React, { useState } from 'react';
-import '../App.css';
-import './CSS/register.css';
-import Dashboard from './dashboard';
-import FacebookLogin from 'react-facebook-login';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import logimg from "../assests/login.svg";
 
-function Register(Profile) {
-  
-  const [User, setUser] = useState("");
+import Dashboard from "./dashboard";
+import "./CSS/register.css";
+
+import FacebookLogin from "react-facebook-login";
+
+const Register = (Profile) => {
+  const [Mobile, setMobile] = useState("");
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
+  const [ConfirmPassword, setConfirmPassword] = useState("");
 
-const responseFacebook = (response) => {
-  console.log(response);
-  setUser(response.name);
-  setEmail(response.email);
-  if (response.userID) {
-  Profile.setProfile(prevState => {
-    return Object.assign({}, prevState, { id: response.id, name: response.name,
-    email: response.email,
-    IsSignIn: true,
-    IsonBoarding: false });
-  });
-  } else {}
-}
-  const NameValue = (event) => {
-  event.preventDefault();
-  setUser(event.target.value);
+  const responseFacebook = (response) => {
+    console.log(response);
+    setMobile(response.mobile);
+    setEmail(response.email);
+    if (response.userID) {
+      Profile.setProfile((prevState) => {
+        return Object.assign({}, prevState, {
+          id: response.id,
+          mobile: response.mobile,
+          email: response.email,
+          IsSignIn: true,
+          IsonBoarding: false,
+        });
+      });
+    } else {
+    }
+  };
+  const MobileValue = (event) => {
+    event.preventDefault();
+    setMobile(event.target.value);
   };
 
   const EmailValue = (event) => {
-  setEmail(event.target.value);
+    setEmail(event.target.value);
   };
 
-const PasswordValue = (event) => {
-  event.preventDefault();
-  setPassword(event.target.value);
+  const PasswordValue = (event) => {
+    event.preventDefault();
+    setPassword(event.target.value);
   };
 
+  const ConfirmPasswordValue = (event) => {
+    event.preventDefault();
+    setConfirmPassword(event.target.value);
+  };
 
   const onSubmitSignIn = (e) => {
     e.preventDefault();
-    document.getElementById('logo').style.display="block";
-    fetch('https://server.yourtechshow.com/register', {
-      method: 'post',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        email: Email,
-        password: Password,
-        name: User
+    // document.getElementById("logo").style.display = "block";
+    if (Password === ConfirmPassword) {
+      fetch("https://server.yourtechshow.com/register", {
+        method: "post",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: Email,
+          password: Password,
+          mobile: Mobile,
+        }),
       })
-    })
-      .then(response => response.json())
-      .then(response => {
-        if (response.id) {
-          console.log("user")
-           Profile.setProfile(prevState => {
-    return Object.assign({}, prevState, { id: response.id, name: response.name,
-    email: response.email,
-    IsSignIn: true,
-    IsonBoarding: false });
-  });   
-        } else {
-          console.log(response)
-          alert("Email Already Exists")
-          document.getElementById('logo').style.display="none";
-        }
-      })
-  }
+        .then((response) => response.json())
+        .then((response) => {
+          if (response.id) {
+            console.log("user");
+            Profile.setProfile((prevState) => {
+              return Object.assign({}, prevState, {
+                id: response.id,
+                mobile: response.mobile,
+                email: response.email,
+                IsSignIn: true,
+                IsonBoarding: false,
+              });
+            });
+          } else {
+            console.log(response);
+            alert("Email Already Exists");
+            // document.getElementById("logo").style.display = "none";
+          }
+        });
+    } else {
+      alert("Password and Confirm Password do not Match.");
+    }
+  };
 
-
-	return (
-		<>
-{Profile.Profile.IsSignIn ? (
-  <>
-  <br/>
-        <Dashboard Profile={Profile}/>
-        {localStorage.setItem("Profile", JSON.stringify(Profile.Profile))}
-</>
+  return (
+    <>
+      {Profile.Profile.IsSignIn ? (
+        <>
+          <br />
+          <Dashboard Profile={Profile} />
+          {localStorage.setItem("Profile", JSON.stringify(Profile.Profile))}
+        </>
       ) : (
         <>
-        <main>
-              <div className="reg-container">
-                <h1 className="neon" data-text="Register">Register</h1>
-                    <div className="reg-signup">
-                    <form onSubmit={onSubmitSignIn}>
-                      <div className="reg-input-field"><input type="name" name="name" placeholder="Name" required onChange={NameValue} value={User}></input></div>
-                      <div className="reg-input-field"><input type="email" name="email" placeholder="E-Mail" required onChange={EmailValue} value={Email}></input></div>
-                      <div className="reg-input-field"><input type="password" name="password" placeholder="Password"  required onChange={PasswordValue} value={Password}></input></div>
-                      <div className= "reg-button-group">
-                        <button className="reg-button" type="submit">Register</button>
-                        <button className="reg-button" type="submit"><a href="./login">Login</a></button>
-                      </div>
-                      <FacebookLogin
-    appId="612293356405016"
-    
-    fields="name,email,picture"
-    callback={responseFacebook} 
-    cssClass="reg-button"/>
-                    </form>                  
+          <div className="register-form">
+            <h2>Sign Up</h2>
+            <form action="" onSubmit={onSubmitSignIn}>
+              <section className="left">
+                <div className="input-container">
+                  <label for="email" required>
+                    Email Id{" "}
+                  </label>
+                  <input
+                    onChange={EmailValue}
+                    value={Email}
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Type Here"
+                    required
+                  ></input>
                 </div>
-              </div>
-                
-            <div id="logo" className="loadingio-spinner-rolling-kswyn6f3gj7"><div className="ldio-c9p079igqka">
-<div></div>
-</div></div>
-          </main>
-</>
+                <div class="input-container">
+                  <label for="phone">Mobile No.</label>
+                  <input
+                    onChange={MobileValue}
+                    value={Mobile}
+                    id="phone"
+                    name="phone"
+                    placeholder="Mobile No."
+                    type="text"
+                    maxlength="10"
+                    pattern="[0-9]{10}"
+                    required
+                  />
+                </div>
+                <div class="input-container">
+                  <label for="password">Password </label>
+                  <input
+                    onChange={PasswordValue}
+                    value={Password}
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Password"
+                    required
+                  ></input>
+                </div>
+                <div class="input-container">
+                  <label for="password">Confirm Password </label>
+                  <input
+                    onChange={ConfirmPasswordValue}
+                    value={ConfirmPassword}
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Confirm Password"
+                    required
+                  ></input>
+
+                  <h1>
+                    {" "}
+                    &nbsp; &nbsp;
+                    <label for="agree">
+                      <input type="checkbox" id="agree" name="agree" value="" />{" "}
+                      By signing up, I agree to Derive Capital
+                      <Link to=""> Terms of Service </Link>
+                      and <Link to=""> Privacy Policy.</Link>
+                    </label>
+                  </h1>
+
+                  <h5>
+                    Already Signed up ? &nbsp;
+                    <Link to="/login">Log In</Link>
+                  </h5>
+
+                  <button type="submit" className="btn-3">
+                    Get Started
+                  </button>
+                </div>
+              </section>
+              <section className="right">
+                <div className="input-container">
+                  <img className="big-img" src={logimg} alt="google" />
+                </div>
+              </section>
+            </form>
+          </div>
+        </>
       )}
-
-
-		
-		</>
-		)
+    </>
+  );
 };
-
 export default Register;
