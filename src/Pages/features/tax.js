@@ -392,6 +392,30 @@ function Tax({ Profile, setProfile }) {
                       value={municipalValue}
                     ></input>
                     <br></br>
+
+                    <input
+                      type="number"
+                      name="fixed-income"
+                      placeholder="standardRent"
+                      required
+                      onChange={(event) => {
+                        setstandardRent(event.target.value);
+                      }}
+                      value={standardRent}
+                    ></input>
+                    <br></br>
+                    <input
+                      type="number"
+                      name="fixed-income"
+                      placeholder="municipalTaxes"
+                      required
+                      onChange={(event) => {
+                        setmunicipalTaxes(event.target.value);
+                      }}
+                      value={municipalTaxes}
+                    ></input>
+                    <br></br>
+
                     <input
                       type="number"
                       name="fixed-income"
@@ -459,7 +483,7 @@ function Tax({ Profile, setProfile }) {
                     ></input>
                     <br></br>
 
-                    <input
+                   {/* <input
                       type="number"
                       name="fixed-income"
                       placeholder="assetCategory"
@@ -468,7 +492,18 @@ function Tax({ Profile, setProfile }) {
                         setassetCategory(event.target.value);
                       }}
                       value={assetCategory}
-                    ></input>
+                    ></input>*/}
+                    <label>assetCategory - </label>
+                          <select onChange={(event) => {
+                        setassetCategory(event.target.value);
+                      }} value={assetCategory} required>
+                          <option value="" defaultValue disabled hidden>Choose Here</option>
+                          <option value="Stocks(Listed) and Securities(Listed and Unlisted)">Stocks(Listed) and Securities(Listed and Unlisted)</option>
+                            <option value="Immovable Property">Immovable Property</option>
+                            <option value="Unlisted Shares">Unlisted Shares</option>
+                            <option value="Movable Property" >Movable Property</option>
+                            <option value="Debt-Oriented Mutual Funds">Debt-Oriented Mutual Funds</option>
+                          </select>
                     <br></br>
                     <input
                       type="number"

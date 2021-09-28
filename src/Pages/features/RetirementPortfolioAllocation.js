@@ -108,18 +108,7 @@ fetch(`https://server.yourtechshow.com/retirementportfolioequity-data/${id}`)
       txt += "<th>AllocatedWeight</th>"
       txt += "<th>Return%</th>"
       txt += "<th>SD</th>"
-      txt += "<th>Commodities</th>"
-      txt += "<th>AllocatedWeight</th>"
-      txt += "<th>Return%</th>"
-      txt += "<th>SD</th>"
-      txt += "<th>Crypto</th>"
-      txt += "<th>AllocatedWeight</th>"
-      txt += "<th>Return%</th>"
-      txt += "<th>SD</th>"
-      txt += "<th>Forex</th>"
-      txt += "<th>AllocatedWeight</th>"
-      txt += "<th>Return%</th>"
-      txt += "<th>SD</th>"
+      
       txt += "<th>Other Investments</th>"
       txt += "<th>AllocatedWeight</th>"
       txt += "<th>Return%</th>"
@@ -140,22 +129,11 @@ fetch(`https://server.yourtechshow.com/retirementportfolioequity-data/${id}`)
       txt += "<td>" + response[i].allocatedweight3 + "</td>";
       txt += "<td>" + response[i].return3 + "</td>";
       txt += "<td>" + response[i].sd3 + "</td>";
-      txt += "<td>" + response[i].commodities + "</td>";
+      
+      txt += "<td>" + response[i].otherinvestment + "</td>";
       txt += "<td>" + response[i].allocatedweight4 + "</td>";
       txt += "<td>" + response[i].return4 + "</td>";
       txt += "<td>" + response[i].sd4 + "</td>";
-      txt += "<td>" + response[i].crypto + "</td>";
-      txt += "<td>" + response[i].allocatedweight5 + "</td>";
-      txt += "<td>" + response[i].return5 + "</td>";
-      txt += "<td>" + response[i].sd5 + "</td>";
-      txt += "<td>" + response[i].forex + "</td>";
-      txt += "<td>" + response[i].allocatedweight6 + "</td>";
-      txt += "<td>" + response[i].return6 + "</td>";
-      txt += "<td>" + response[i].sd6 + "</td>";
-      txt += "<td>" + response[i].otherinvestment + "</td>";
-      txt += "<td>" + response[i].allocatedweight7 + "</td>";
-      txt += "<td>" + response[i].return7 + "</td>";
-      txt += "<td>" + response[i].sd7 + "</td>";
       txt += "</tr>"
 }
        txt += "</table>"

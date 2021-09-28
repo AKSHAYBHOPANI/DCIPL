@@ -187,7 +187,7 @@ const onSubmitSignIn = (e) => {
       FixedIncome: FixedIncome,
       allocatedWeight2: AllocatedWeight2,
       Return2: Return2,
-      SD2: SD3,
+      SD2: SD2,
       realEstate: RealEstate,
       allocatedWeight3: AllocatedWeight3,
       return3: Return3,
@@ -206,8 +206,8 @@ const onSubmitSignIn = (e) => {
       SD6: SD6,
       OtherInvestments: OtherInvestments,
       allocatedWeight7: AllocatedWeight7,
-      return6: Return7,
-      SD6: SD7
+      return7: Return7,
+      SD7: SD7
       })
     })
       

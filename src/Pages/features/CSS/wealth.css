@@ -17,7 +17,11 @@ h1 {
   width: 100%;
   padding: 1rem;
   margin: 10px;
+<<<<<<< HEAD
   
+=======
+  border: 2px solid black!important;
+>>>>>>> 709e209787f38bbb2dbb37763dedfe149b46eba7
 }
 
 select {
@@ -27,7 +31,7 @@ select {
 }
 
 label {
-  color: white;
+  color: black;
 }
 
 input:invalid {
