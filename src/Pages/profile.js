@@ -49,100 +49,67 @@ function MyProfile({ Profile, setProfile }) {
     <>
       {Profile.IsSignIn ? (
         <>
-          <div className="profile-info">
-            <div className="main-head-profile">
-              <h1>My Profile</h1>
-              <p>Hello, {Profile.name} </p>
-              <h2>
+          <div className="profile-form">
+            <h2>My Profile</h2>
+            <p>Hello, {Profile.name} </p>
+            <h2>
+              {" "}
+              Welcome to your profile at DCIPL{" "}
+              <span>
                 {" "}
-                Welcome to your profile at DCIPL{" "}
-                <span>
-                  {" "}
-                  Date <br />
-                  {date.toLocaleString()}
-                </span>
-              </h2>{" "}
-              <h3>Personal Detail</h3>
-            </div>{" "}
-            <div className="main-profile">
-              <div className="verified-img-part">
-                <div className="verified-img">
-                  <Link to="">
-                    {" "}
-                    <img src={icon} alert="" />
-                  </Link>
+                Date <br />
+                {date.toLocaleString()}
+              </span>
+            </h2>{" "}
+            <h3>Personal Detail</h3>
+            <form action="">
+              <section className="profile-left">
+                <div className="verified-img-part">
+                  <div className="verified-img">
+                    <Link to="">
+                      {" "}
+                      <img src={icon} alert="" />
+                    </Link>
+                  </div>
+                  <p>Verified</p>
                 </div>
-                <p>Verified</p>
-              </div>
-              <div className="personal-details-form">
-                <form action="">
+              </section>
+              <section className="profile-right">
+                <div class="input-container">
                   <label forhtml="fname">Name</label>
                   <br />
-                  <input
-                    id="fname"
-                    type="text"
-                    placeholder={Data.name}
-                    required
-                  />
-                  <br />
-                  <br />
-                  <br />
+                  <input id="fname" type="text" placeholder={Data.name} />
+                </div>
+                <div class="input-container">
                   <label forhtml="gender">Gender</label> <br />
-                  <input
-                    id="gender"
-                    type="text"
-                    placeholder="Gender"
-                    required
-                  />{" "}
-                  <br />
-                  <br />
-                  <br />
+                  <input id="gender" type="text" placeholder="Gender" />{" "}
+                </div>
+                <div class="input-container">
                   <label forhtml="age">Age</label> <br />
-                  <input
-                    id="age"
-                    type="text"
-                    placeholder="Enter Age"
-                    required
-                  />{" "}
-                  <br />
-                  <br />
-                  <br />
+                  <input id="age" type="text" placeholder="Enter Age" />{" "}
+                </div>{" "}
+                <div class="input-container">
                   <label forhtml="contact">Phone No.</label> <br />
                   <input
                     id="contact"
                     type="text"
                     placeholder="Mobile No"
-                    required
                   />{" "}
-                  <br />
-                  <br />
-                  <br />
+                </div>{" "}
+                <div class="input-container">
                   <label forhtml="email">Email Id</label> <br />
-                  <input
-                    id="email"
-                    type="text"
-                    placeholder={Data.email}
-                    required
-                  />{" "}
-                  <br />
-                  <br />
-                  <br />
+                  <input id="email" type="text" placeholder={Data.email} />{" "}
+                </div>
+                <div className="input-container">
                   <label forhtml="contact">Joined</label> <br />
                   <input
                     id="contact"
                     type="text"
                     placeholder={Data.joined}
-                    required
                   />{" "}
-                  <br />
-                  <br />
-                  <br />
-                </form>
-              </div>
-              <br />
-              <br /> <br />
-              <br />
-            </div>
+                </div>
+              </section>
+            </form>
           </div>
           {OnPageLoad()}
         </>

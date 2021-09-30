@@ -18,11 +18,11 @@
 	margin: 10px;
 } */
 
-select {
+/* select {
   padding: 1rem;
   text-align: center;
   margin: 5px;
-}
+} */
 select:focus {
   outline: none;
 }
