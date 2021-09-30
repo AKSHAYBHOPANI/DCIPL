@@ -1,9 +1,27 @@
+import React, { useState } from "react";
 import first from "../assests/first.jpg";
 import second from "../assests/second.jpg";
 import third from "../assests/third.jpg";
 import "./CSS/careers.css";
+const axios = require('axios').default;
 
-function careers() {
+function Careers() {
+
+const [Upload_resume, setUpload_resume] = useState("");
+
+ function onFileChange(e) {
+        setUpload_resume(e.target.files[0]);
+    }
+
+ function onSubmit(e) {
+        e.preventDefault()
+        const formData = new FormData()
+        formData.append('upload_resume', Upload_resume)
+        axios.post("http://127.0.0.1:8000/careers", formData, {
+        }).then(res => {
+            console.log(res);
+        })
+    }
   return (
     <>
       <div class="pagecontainer">
@@ -131,7 +149,7 @@ function careers() {
           </ul>
         </div>
         <div className="overall-carousel">
-          <form>
+          <form onSubmit={onSubmit}>
             <h3>Career Opportunities</h3>
 
             <div className="form-left">
@@ -163,7 +181,7 @@ function careers() {
               />
 
               <label for="upload_resume">Update Resume:</label>
-              <input type="file" name="upload_resume" id="upload_resume" />
+              <input type="file" name="upload_resume" id="upload_resume" onChange={onFileChange} />
 
               <textarea
                 id="cover_letter"
@@ -176,7 +194,7 @@ function careers() {
               ></textarea>
               <button
                 className="btn-primary"
-                type="button"
+                type="submit"
                 name="btn-submit"
                 id="btn-submit"
               >
@@ -199,4 +217,4 @@ function careers() {
   );
 }
 
-export default careers;
+export default Careers;
