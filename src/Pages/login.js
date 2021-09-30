@@ -3,16 +3,19 @@ import React, { useState } from "react";
 import Dashboard from "./dashboard";
 import FacebookLogin from "react-facebook-login";
 import logimg from "../assests/login.svg";
+// import OtpInput from "react-otp-input";
 import Forgotpass from "../Pages/modal/Forgotpass/Forgotpass";
 import "./CSS/login.css";
 
 function Login(Profile) {
   const [forgotpassIsOpen, setForgotpassIsOpen] = useState(false);
-  const [otp, setOtp] = useState(new Array(4).fill(""));
-  const [toggle, setToggle] = React.useState(true);
+  const [otp, setOtp] = useState(new Array(6).fill(""));
+
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
+  const [isEmail, setIsEmail] = useState(true);
   const [Password, setPassword] = useState("");
+  const [showpassword, setshow] = useState(false);
 
   const responseFacebook = (response) => {
     console.log(response);
@@ -100,141 +103,135 @@ function Login(Profile) {
           {localStorage.setItem("Profile", JSON.stringify(Profile.Profile))}
         </>
       ) : (
-        <div className="log_main88">
-          {/* <h3>Login with</h3>
-            <FacebookLogin
-              appId="612293356405016"
-              fields="name,email,picture"
-              callback={responseFacebook}
-              cssClass="my-facebook-button-class"
-              icon="fa-facebook"
-            /> */}
-
-          {toggle ? (
-            <section className="login-right">
-              <form className="form-email9" onSubmit={onSubmitSignIn}>
-                <label for="email">Email Id </label>
-                <input
-                  onChange={EmailValue}
-                  value={Email}
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Type Here"
-                  required
-                ></input>
-                <br />
-                <br />
-                <label for="password">Password </label>
-                <input
-                  onChange={PasswordValue}
-                  value={Password}
-                  type="password"
-                  id="password"
-                  name="password"
-                  placeholder="Password"
-                  required
-                ></input>
-                <br></br>
-                <button>Log In</button>{" "}
-              </form>
-              <div className="agree03">
-                <h3>
-                  {" "}
-                  <br />
-                  <Link to="#" onClick={() => setForgotpassIsOpen(true)}>
-                    <h4>Forgot Password ?</h4>
-                  </Link>
+        <div className="main-div">
+          <div className="info-div">
+            <img src={logimg} alt="Info" className="info-img" />
+          </div>
+          <div className="signin-div">
+            <div className="sign-in">
+              <h2 className="sign-in-title">Sign In</h2>
+              <div className="toggle-inputs">
+                <h3
+                  className="toggle-inputs-text"
+                  style={{ color: isEmail ? "#ffb600" : "#2d2d2d" }}
+                  onClick={() => setIsEmail(true)}
+                >
+                  Email ID
                 </h3>
-                <Forgotpass
-                  forgotpassIsOpen={forgotpassIsOpen}
-                  setForgotpassIsOpen={setForgotpassIsOpen}
-                ></Forgotpass>
+                <h3 className="toggle-inputs-text-bar">|</h3>
+                <h3
+                  className="toggle-inputs-text"
+                  style={{ color: !isEmail ? "#ffb600" : "#2d2d2d" }}
+                  onClick={() => setIsEmail(false)}
+                >
+                  Mobile No
+                </h3>
               </div>
-            </section>
-          ) : (
-            <section className="login-right">
-              <form className="form-phone1">
-                <label for="phone">Mobile No.</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder="Mobile No."
-                  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-                  required
-                />
-                <div className="otpw">Enter OTP</div>
-                <div className="otp">
-                  <br />{" "}
-                  {otp.map((data, index) => {
-                    return (
-                      <input
-                        className="form-control"
-                        maxlength="1"
-                        key={index}
-                        value={data}
-                        onChange={(e) => handleChange(e.target, index)}
-                        onFocus={(e) => e.target.select()}
-                      />
-                    );
-                  })}
-                  <p id="optRes"></p>
-                  <Link to="">
-                    <h4>Resend OTP</h4>
-                  </Link>
-                  <button>Send OTP</button>
-                </div>
-              </form>
-              <div className="agree707">
-                <h1>
-                  {" "}
-                  <br />
-                </h1>
-              </div>
+              {isEmail ? (
+                <form className="input-form" onSubmit={onSubmitSignIn}>
+                  <input
+                    onChange={EmailValue}
+                    name="email"
+                    placeholder="E-mail Id"
+                    type="email"
+                    id="email"
+                    style={{
+                      width: "100%",
+                      color: "#2D2D2D",
 
-              <div className="log-d12">
-                <Link to="">Log In </Link>
+                      marginBottom: "2rem",
+                    }}
+                    value={Email}
+                  ></input>
+                  <input
+                    onChange={PasswordValue}
+                    value={Password}
+                    name="password"
+                    placeholder="Password"
+                    type={showpassword ? "text" : "password"}
+                    style={{
+                      width: "100%",
+                      color: "#2D2D2D",
+                    }}
+                  ></input>
+                  <h4
+                    className="forgot"
+                    // onClick={() => setforgotPassword(true)}
+                  >
+                    Forgot Password?
+                  </h4>
+                  <button className="submit-btn">Sign In</button>
+                </form>
+              ) : (
+                <>
+                  <form className="input-form">
+                    <input
+                      placeholder="Mobile No"
+                      type="mobileno"
+                      style={{
+                        width: "100%",
+                        color: "#2D2D2D",
+
+                        margin: "2rem 0rem",
+                      }}
+                    ></input>
+                    <button className="submit-btn" id="sign-in-button">
+                      Send OTP
+                    </button>
+                  </form>
+                  <div className="box_otp">
+                    {otp.map((data, index) => {
+                      return (
+                        <input
+                          className="form-control"
+                          maxlength="1"
+                          key={index}
+                          value={data}
+                          onChange={(e) => handleChange(e.target, index)}
+                          onFocus={(e) => e.target.select()}
+                        />
+                      );
+                    })}
+                    <p id="optRes"></p>
+                  </div>
+                  <Link
+                    to=""
+                    style={{
+                      color: "#2D2D2D",
+                      textTransform: "capitalize",
+                      marginRight: "30%",
+                      marginTop: "0.5rem",
+                    }}
+                  >
+                    Resend OTP
+                  </Link>
+                  <button className="submit-btn">Sign In</button>
+                </>
+              )}
+
+              <div
+                style={{
+                  color: "black",
+                  fontSize: "15px",
+                  marginTop: "1rem",
+                }}
+              >
+                New User ?{" "}
+                <Link
+                  to="/register"
+                  style={{
+                    textAlign: "center",
+                    color: "#FFB600",
+                    textTransform: "capitalize",
+                    fontSize: "15px",
+                    marginTop: "1rem",
+                  }}
+                >
+                  Sign Up
+                </Link>
               </div>
-            </section>
-          )}
-          <h1>
-            Login with &nbsp;
-            <h5
-              className="toggle-text"
-              style={{ color: toggle ? "goldenrod" : "#666666" }}
-              onClick={() => setToggle(true)}
-            >
-              {" "}
-              Email Id{" "}
-            </h5>
-            &nbsp;|&nbsp;{" "}
-            <h5
-              className="toggle-text"
-              style={{ color: !toggle ? "goldenrod" : "#666666" }}
-              onClick={() => setToggle(false)}
-            >
-              Phone
-            </h5>
-          </h1>
-          <section className="login-left">
-            <img src={logimg} alt="Derive Capital"></img>
-          </section>
-          {/* <div className="social-icon-log">
-            <h6>Login with</h6>
-            <a className="s-icons-1" href="#">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a className="s-icons-1" href="#">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a className="s-icons-1" href="#">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a className="s-icons-1" href="#">
-              <i class="fab fa-google"></i>
-            </a>
-          </div> */}
+            </div>
+          </div>
           {OnPageLoad()}
         </div>
       )}

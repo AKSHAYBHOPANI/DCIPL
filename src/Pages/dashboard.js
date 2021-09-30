@@ -132,12 +132,12 @@ function Dashboard(Profile) {
                 <li>
                   <a href="./features/tax">Tax Planning</a>
                 </li>
-                <li>
+                {/* <li>
                   <a href="">Mutual fund</a>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <a href="">Insurance</a>
-                </li>
+                </li> */}
               </ul>
             </div>
 
@@ -194,62 +194,6 @@ function Dashboard(Profile) {
               </div>
             </div>
           </div>
-
-          {/* <div className="text">
-<div className="sub">
-<p>Personal Finance Portfolio</p>
-</div>
-<div className="h1">
-<p>Holdings</p>
-</div>
-<div className="h2">
-<p>Value</p>
-</div>
-<div className="sub1">
-<p>Stocks</p>
-</div>
-<div className="sub2">
-<p>Mutual Funds</p>
-</div>
-<div className="sub3">
-<p>Health Insurance</p>
-</div>
-<div className="h2sub1">
-<p>Rs XXXX</p>
-</div>
-<div className="h2sub2">
-<p>Rs XXXX</p>
-</div>
-<div className="h2sub3">
-<p>Rs XXXX</p>
-</div>
-</div>
-<div className="pie">
-<img src={Ellipse} alt="ellipse"/>
-</div>
-<div className="line1">
-<img src={line1} alt="line1"/>
-<p>10%</p>
-</div>
-<div className="line2">
-<img src={line2} alt="line2"/>
-<p>73%</p>
-</div>
-<div className="line3">
-<img src={line3} alt="line3"/>
-<p>23%</p>
-</div>
-
-<div className="images">
-<div className="features">
-<a href="./features/investment"><img alt="" src={rect1}/><p>Investment Planning</p></a></div>
-</div>
-<div className="images">
-<div className="features">
-<a href="./"><img alt="" src={rect2}/><p>Tax Planning</p></a>
-</div>
-<div className="images"><a href="./features/retirement"><img alt="" src={rect2}/><p>Retirement Planning</p></a></div>
-</div> */}
 
           {OnPageLoad()}
         </>
