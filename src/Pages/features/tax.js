@@ -226,8 +226,7 @@ function Tax({ Profile, setProfile }) {
           {IsFormSubmitted ? (
             <>
               <br></br>
-              <br></br>
-              <br></br>
+
               {console.log(Profile)}
               <h1>
                 Congratulations {Profile.name}, Your Tax Planning Report Is
@@ -249,12 +248,6 @@ function Tax({ Profile, setProfile }) {
           ) : (
             <>
               <div className="wealth-plan">
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
                 <h1 className="Title1">Tax Planning</h1>
                 <div className="Form7">
                   <form onSubmit={onSubmitSignIn}>
@@ -483,7 +476,7 @@ function Tax({ Profile, setProfile }) {
                     ></input>
                     <br></br>
 
-                   {/* <input
+                    {/* <input
                       type="number"
                       name="fixed-income"
                       placeholder="assetCategory"
@@ -494,16 +487,28 @@ function Tax({ Profile, setProfile }) {
                       value={assetCategory}
                     ></input>*/}
                     <label>assetCategory - </label>
-                          <select onChange={(event) => {
+                    <select
+                      onChange={(event) => {
                         setassetCategory(event.target.value);
-                      }} value={assetCategory} required>
-                          <option value="" defaultValue disabled hidden>Choose Here</option>
-                          <option value="Stocks(Listed) and Securities(Listed and Unlisted)">Stocks(Listed) and Securities(Listed and Unlisted)</option>
-                            <option value="Immovable Property">Immovable Property</option>
-                            <option value="Unlisted Shares">Unlisted Shares</option>
-                            <option value="Movable Property" >Movable Property</option>
-                            <option value="Debt-Oriented Mutual Funds">Debt-Oriented Mutual Funds</option>
-                          </select>
+                      }}
+                      value={assetCategory}
+                      required
+                    >
+                      <option value="" defaultValue disabled hidden>
+                        Choose Here
+                      </option>
+                      <option value="Stocks(Listed) and Securities(Listed and Unlisted)">
+                        Stocks(Listed) and Securities(Listed and Unlisted)
+                      </option>
+                      <option value="Immovable Property">
+                        Immovable Property
+                      </option>
+                      <option value="Unlisted Shares">Unlisted Shares</option>
+                      <option value="Movable Property">Movable Property</option>
+                      <option value="Debt-Oriented Mutual Funds">
+                        Debt-Oriented Mutual Funds
+                      </option>
+                    </select>
                     <br></br>
                     <input
                       type="number"

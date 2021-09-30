@@ -259,7 +259,7 @@ function Admin(Profile) {
 
             <h2 className="register">Total Registered Users = {UsersCount}</h2>
 
-            <div className="sidebar_admin">
+            {/* <div className="sidebar_admin">
               <div className="logo-details">
                 <span className="logo_name">DC Ikigai</span>
               </div>
@@ -325,7 +325,7 @@ function Admin(Profile) {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> */}
             <section className="home-section">
               <div class="home-content">
                 <div class="overview-boxes">
