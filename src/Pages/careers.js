@@ -7,19 +7,29 @@ const axios = require('axios').default;
 
 function Careers() {
 
-const [Upload_resume, setUpload_resume] = useState("");
+const [UploadResume, setUploadResume] = useState("");
+const [Email,setEmail] = useState("");
+const [Mobile,setMobile] = useState("");
 
  function onFileChange(e) {
-        setUpload_resume(e.target.files[0]);
+        let file = e.target.files[0];
+        const name = Email + '--' + Mobile + file.name.substring(file.name.lastIndexOf('.'));// Concat with file extension.
+        console.log(name);
+        file.name.substring(file.name.lastIndexOf('.'));
+    // Instantiate copy of file, giving it new name.
+    file = new File([file], name, { type: file.type });
+    setUploadResume(file)
+        
     }
 
  function onSubmit(e) {
         e.preventDefault()
         const formData = new FormData()
-        formData.append('upload_resume', Upload_resume)
+        formData.append('upload_resume', UploadResume)
         axios.post("http://127.0.0.1:8000/careers", formData, {
         }).then(res => {
             console.log(res);
+            alert("Application Submitted Succesfully. You will be contacted if your Resume is shortlisted.");
         })
     }
   return (
@@ -149,17 +159,11 @@ const [Upload_resume, setUpload_resume] = useState("");
           </ul>
         </div>
         <div className="overall-carousel">
-          <form onSubmit={onSubmit}>
+          <form onSubmit={onSubmit} enctype="multipart/form-data">
             <h3>Career Opportunities</h3>
 
             <div className="form-left">
-              <label for="enter_name">Enter Name: </label>
-              <input
-                type="text"
-                placeholder="Name"
-                name="enter_name"
-                id="enter_name"
-              />
+              
 
               <label for="enter_email">Enter Email: </label>
               <input
@@ -167,6 +171,7 @@ const [Upload_resume, setUpload_resume] = useState("");
                 placeholder="Email"
                 name="enter_email"
                 id="enter_email"
+                onChange={(e)=>{setEmail(e.target.value)}}
               />
 
               <label for="phone">Mobile No.</label>
@@ -178,20 +183,12 @@ const [Upload_resume, setUpload_resume] = useState("");
                 maxlength="10"
                 pattern="[0-9]{10}"
                 required
+                onChange={(e)=>{setMobile(e.target.value)}}
               />
 
               <label for="upload_resume">Update Resume:</label>
               <input type="file" name="upload_resume" id="upload_resume" onChange={onFileChange} />
 
-              <textarea
-                id="cover_letter"
-                name="cover_letter"
-                aria-required="true"
-                placeholder="Cover Letter"
-                cols="30"
-                rows="10"
-                value=""
-              ></textarea>
               <button
                 className="btn-primary"
                 type="submit"
