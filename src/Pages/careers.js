@@ -26,7 +26,7 @@ const [Mobile,setMobile] = useState("");
         e.preventDefault()
         const formData = new FormData()
         formData.append('upload_resume', UploadResume)
-        axios.post("http://127.0.0.1:8000/careers", formData, {
+        axios.post("https://server.yourtechshow.com/careers", formData, {
         }).then(res => {
             console.log(res);
             alert("Application Submitted Succesfully. You will be contacted if your Resume is shortlisted.");

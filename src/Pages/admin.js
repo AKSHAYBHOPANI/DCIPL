@@ -35,6 +35,32 @@ function Admin(Profile) {
       });
   };
 
+  const GetResume = () => {
+    document.getElementById("logo").style.display = "block";
+    fetch("https://server.yourtechshow.com/resumes")
+      .then((response) => response.json())
+      .then((response) => {
+        console.log(response);
+        var txt = "";
+        var i = "";
+        txt += "<table>";
+        txt += "<tr>";
+        txt += "<th>Name</th>";
+
+        txt += "</tr>";
+        for (i = 0; i < response.length; i++) {
+          txt += "<tr>";
+          txt += "<td>" + `<a href=https://server.yourtechshow.com/Resumes/${response[i]}>`  + response[i] + "</td>" + "</a>" + "</a>";
+          
+          txt += "</tr>";
+        }
+        txt += "</table>";
+        document.getElementById("users").innerHTML = txt;
+        document.getElementById("logo").style.display = "none";
+      });
+  };
+
+
   const GetOnboarding = () => {
     document.getElementById("logo").style.display = "block";
     fetch("https://server.yourtechshow.com/onboarding-data")
@@ -295,9 +321,9 @@ function Admin(Profile) {
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a onClick={GetResume}>
                     <i className="bx bx-book-alt"></i>
-                    <span className="links_name">Accounts Receivable</span>
+                    <span className="links_name">Resumes</span>
                   </a>
                 </li>
                 <li>
