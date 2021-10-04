@@ -3,7 +3,7 @@ import second from "../assests/second.jpg";
 import third from "../assests/third.jpg";
 import "./CSS/careers.css";
 
-function careers() {
+function Careers() {
   return (
     <>
       <div class="pagecontainer">
@@ -11,11 +11,11 @@ function careers() {
           <div class="headercontent">
             <h1>
               do what you{" "}
-              {/* <img
+              <img
                 src="//s3-us-west-2.amazonaws.com/ec-cdn-content/ec-image-resources/1345984533_love_360.png"
                 alt="Love"
                 class="img-responsive"
-              />{" "} */}
+              />{" "}
               everyday
             </h1>
             <p>
@@ -24,7 +24,7 @@ function careers() {
               out the listings below or send your resume to{" "}
               <span>careers@dcikigai.com</span>.
             </p>
-            <a href="#joblistings">view job openings</a>
+            <a href="/applynow">Apply Now</a>
           </div>
         </div>
         <div class="benefitscontainer">
@@ -131,24 +131,19 @@ function careers() {
           </ul>
         </div>
         <div className="overall-carousel">
-          <form>
+          {/* <form onSubmit={onSubmit} enctype="multipart/form-data">
             <h3>Career Opportunities</h3>
 
             <div className="form-left">
-              <label for="enter_name">Enter Name: </label>
-              <input
-                type="text"
-                placeholder="Name"
-                name="enter_name"
-                id="enter_name"
-              />
-
               <label for="enter_email">Enter Email: </label>
               <input
                 type="text"
                 placeholder="Email"
                 name="enter_email"
                 id="enter_email"
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
               />
 
               <label for="phone">Mobile No.</label>
@@ -160,30 +155,29 @@ function careers() {
                 maxlength="10"
                 pattern="[0-9]{10}"
                 required
+                onChange={(e) => {
+                  setMobile(e.target.value);
+                }}
               />
 
               <label for="upload_resume">Update Resume:</label>
-              <input type="file" name="upload_resume" id="upload_resume" />
+              <input
+                type="file"
+                name="upload_resume"
+                id="upload_resume"
+                onChange={onFileChange}
+              />
 
-              <textarea
-                id="cover_letter"
-                name="cover_letter"
-                aria-required="true"
-                placeholder="Cover Letter"
-                cols="30"
-                rows="10"
-                value=""
-              ></textarea>
               <button
                 className="btn-primary"
-                type="button"
+                type="submit"
                 name="btn-submit"
                 id="btn-submit"
               >
                 Submit
               </button>
             </div>
-          </form>
+          </form> */}
         </div>
         <div class="current-openings" id="joblistings">
           <h2>CURRENT OPENINGS</h2>
@@ -199,4 +193,4 @@ function careers() {
   );
 }
 
-export default careers;
+export default Careers;

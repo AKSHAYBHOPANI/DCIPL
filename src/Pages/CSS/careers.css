@@ -9,7 +9,7 @@
   background-image: url(../../assests/job.png);
   height: 540px;
   background-repeat: no-repeat;
-  filter: brightness(70%);
+  /* filter: brightness(70%); */
   position: relative;
 }
 .headercontent {

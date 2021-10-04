@@ -35,6 +35,37 @@ function Admin(Profile) {
       });
   };
 
+  const GetResume = () => {
+    document.getElementById("logo").style.display = "block";
+    fetch("https://server.yourtechshow.com/resumes")
+      .then((response) => response.json())
+      .then((response) => {
+        console.log(response);
+        var txt = "";
+        var i = "";
+        txt += "<table>";
+        txt += "<tr>";
+        txt += "<th>Name</th>";
+
+        txt += "</tr>";
+        for (i = 0; i < response.length; i++) {
+          txt += "<tr>";
+          txt +=
+            "<td>" +
+            `<a href=https://server.yourtechshow.com/Resumes/${response[i]}>` +
+            response[i] +
+            "</td>" +
+            "</a>" +
+            "</a>";
+
+          txt += "</tr>";
+        }
+        txt += "</table>";
+        document.getElementById("users").innerHTML = txt;
+        document.getElementById("logo").style.display = "none";
+      });
+  };
+
   const GetOnboarding = () => {
     document.getElementById("logo").style.display = "block";
     fetch("https://server.yourtechshow.com/onboarding-data")
@@ -259,7 +290,7 @@ function Admin(Profile) {
 
             <h2 className="register">Total Registered Users = {UsersCount}</h2>
 
-            {/* <div className="sidebar_admin">
+            <div className="sidebar_admin">
               <div className="logo-details">
                 <span className="logo_name">DC Ikigai</span>
               </div>
@@ -295,9 +326,9 @@ function Admin(Profile) {
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a onClick={GetResume}>
                     <i className="bx bx-book-alt"></i>
-                    <span className="links_name">Accounts Receivable</span>
+                    <span className="links_name">Resumes</span>
                   </a>
                 </li>
                 <li>
@@ -325,7 +356,7 @@ function Admin(Profile) {
                   </a>
                 </li>
               </ul>
-            </div> */}
+            </div>
             <section className="home-section">
               <div class="home-content">
                 <div class="overview-boxes">
@@ -450,7 +481,6 @@ function Admin(Profile) {
                         <li>
                           <a href="#">$204.98</a>
                         </li>
-
                         <li>
                           <a href="#">$170.66</a>
                         </li>

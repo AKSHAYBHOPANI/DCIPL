@@ -189,7 +189,6 @@ const Home = () => {
               </h4>
             </div>{" "}
             <img src={gplay} alt="#"></img>
-            {/* <h5>to begin saving 3X more than others!</h5> */}
             <div class="mobile-input p-1">
               <label for="userMobile" class="sr-only">
                 Enter your mobile number
@@ -206,12 +205,7 @@ const Home = () => {
               </button>
             </div>
           </div>
-          {/* <div className="g-play">
-          <a href="">
-            {" "}
-            <img src={gplay} alt="#"></img>
-          </a>
-        </div>{" "} */}
+
           <div className="first-box-right">
             <div className="wrapper-main1">
               <div className="carousel">
@@ -340,9 +334,9 @@ const Home = () => {
             </div>
           </div>
         </section>{" "}
-        <section className="second-box">
+        <section className="thirteen-box">
           {" "}
-          <div className="second-box-left">
+          <div className="thirteen-box-left">
             <img className="grid-2" src={image6} alt="#"></img>
 
             <h1>
@@ -356,7 +350,7 @@ const Home = () => {
               surprises.
             </p>
           </div>{" "}
-          <div className="second-box-right">
+          <div className="thirteen-box-right">
             <div className="box-animate">
               {" "}
               <div className="text-animate">
@@ -383,8 +377,8 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="second-box">
-          <div className="second-box-left">
+        <section className="third-box">
+          <div className="third-box-left">
             <img className="grid-3" src={image8} alt="#"></img>
 
             <h1>
@@ -396,7 +390,7 @@ const Home = () => {
               the best and withdraw free credit limit on the same.
             </p>
           </div>
-          <div className="second-box-right">
+          <div className="third-box-right">
             <div className="wrapper-main">
               <div className="outer-main">
                 <div className="card-main">
@@ -409,7 +403,7 @@ const Home = () => {
                       <p>Own Card</p>
                     </div>
                   </div>
-                  <a href="#">Follow</a>
+                  {/* <a href="#">Follow</a> */}
                 </div>
                 <div className="card-main">
                   <div className="content-main">
@@ -421,7 +415,7 @@ const Home = () => {
                       <p>Own Card</p>
                     </div>
                   </div>
-                  <a href="#">Follow</a>
+                  {/* <a href="#">Follow</a> */}
                 </div>
                 <div className="card-main">
                   <div className="content-main">
@@ -433,7 +427,7 @@ const Home = () => {
                       <p>Own Card</p>
                     </div>
                   </div>
-                  <a href="#">Follow</a>
+                  {/* <a href="#">Follow</a> */}
                 </div>
                 <div className="card-main">
                   <div className="content-main">
@@ -445,14 +439,14 @@ const Home = () => {
                       <p>Own Card</p>
                     </div>
                   </div>
-                  <a href="#">Follow</a>
+                  {/* <a href="#">Follow</a> */}
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section className="second-box">
-          <div className="second-box-left">
+        <section className="fourth-box">
+          <div className="fourth-box-left">
             <img className="grid-4" src={image10} alt="#"></img>
             <div className="box-16"></div>
             <h1>
@@ -466,7 +460,7 @@ const Home = () => {
             </p>{" "}
           </div>
 
-          <div className="second-box-right">
+          <div className="fourth-box-right">
             <div id="slider12">
               <figure>
                 <img src={piggy} alt="" height="350" width="250" />
@@ -481,9 +475,9 @@ const Home = () => {
             </video> */}
           </div>
         </section>
-        <section className="second-box">
+        <section className="fifth-box">
           {" "}
-          <div className="second-box-left">
+          <div className="fifth-box-left">
             <img className="grid-5" src={image12} alt="#"></img>
             <div className="box-17"></div>
             <h1>
@@ -496,7 +490,7 @@ const Home = () => {
               sitting in your pocket. And it’s available 24x7.
             </p>
           </div>{" "}
-          <div className="second-box-right">
+          <div className="fifth-box-right">
             <div class="imgLoader"></div>
 
             <div class="container55">
@@ -529,7 +523,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="second-box">
+        <section className="sixth-box">
           <div className="container-padding popular-sites">
             <h2>Useful Links</h2>
 
@@ -554,7 +548,7 @@ const Home = () => {
             </Carousel>
           </div>
         </section>
-        <section className="second-box">
+        <section className="seventh-box">
           <div className="control-container">
             <div className="scroller">
               <h1 className="others">Others</h1>{" "}
@@ -566,11 +560,11 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="third-box">
-          <div className="second-box-left">
+        <section className="eighth-box">
+          <div className="eighth-box-left">
             <img src={image17} alt="#" className="security-img"></img>
           </div>{" "}
-          <div className="second-box-right">
+          <div className="eighth-box-right">
             <h1>
               DERIVE GIVES SECURITY & <span>CONTROL ON THE GO!</span>
             </h1>
@@ -581,7 +575,7 @@ const Home = () => {
             </p>
           </div>
         </section>
-        <section className="second-box">
+        <section className="ninth-box">
           <section id="client">
             <div className="client-heading">
               <span>Testimonials</span>
@@ -653,11 +647,11 @@ const Home = () => {
             </div>
           </section>
         </section>{" "}
-        <section className="second-box">
-          <div className="second-box-left">
+        <section className="tenth-box">
+          <div className="tenth-box-left">
             <img src={man} alt="derive" className="man-img" />
           </div>
-          <div className="second-box-right">
+          <div className="tenth-box-right">
             <div className="text-right">
               <h2>Pricing ?</h2>
               <span>It's</span>
@@ -666,7 +660,7 @@ const Home = () => {
             </div>
           </div>
         </section>{" "}
-        <section className="fourth-box">
+        <section className="eleventh-box">
           {/* <div className="site-register"> */}
           <h2 className="text-center3">Projects statistics</h2>
           <div class="project-counter-wrp">
@@ -699,7 +693,7 @@ const Home = () => {
           </div>
           {/* </div> */}
         </section>{" "}
-        <section className="fourth-box">
+        <section className="twelve-box">
           <div class="slider77">
             <div class="slide-track">
               {img_arr.map((img, index) => (
