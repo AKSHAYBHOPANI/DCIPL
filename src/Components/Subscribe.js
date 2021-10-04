@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 
 
-function Paytm() {
+function Subscribe() {
 
 function InitiatePay() {
 
@@ -83,10 +83,28 @@ PaytmChecksum.generateSignature(JSON.stringify(paytmParams.body), "YOUR_MERCHANT
         <br/> <br/> <br/>
    <h1>Subscribe To DCIPL Premiuim. Get all areas of Planning in one place.</h1>
  <br/>
-   <button onClick={InitiatePay}>Pay</button>
+
+
+    <section>
+      <div class="product">
+        <img
+          src="https://i.imgur.com/EHyR2nP.png"
+          alt="The cover of Stubborn Attachments"
+        />
+        <div class="description">
+          <h3>PRO</h3>
+          <h5>₹500.00</h5>
+        </div>
+      </div>
+      <form action="http://localhost:8000/create-checkout-session" method="POST">
+        <button type="submit" id="checkout-button">Stripe</button>
+      </form>
+    </section>
+ <button onClick={InitiatePay}>PayTm</button>
      <br/> <br/> <br/>
+
         </>
         )
 };
 
-export default Paytm;
+export default Subscribe;

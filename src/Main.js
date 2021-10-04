@@ -25,7 +25,10 @@ import TaxPortfolioAllocation from "./Pages/features/TaxPortfolioAllocation.js";
 import Admin from "./Pages/admin";
 import MyProfile from "./Pages/profile";
 import Policy from "./Pages/policy";
-import Paytm from "./Components/Paytm";
+import Subscribe from "./Components/Subscribe";
+import Success from "./Pages/Payment/Success";
+import Cancel from "./Pages/Payment/Cancel";
+
 const Main = ({ Profile, setProfile }) => {
   return (
     <Router>
@@ -108,8 +111,14 @@ const Main = ({ Profile, setProfile }) => {
         <Route exact path="/policy">
           <Policy />
         </Route>
-        <Route exact path="/paytm">
-          <Paytm />
+        <Route exact path="/subscribe">
+          <Subscribe />
+        </Route>
+        <Route exact path="/success">
+          <Success />
+        </Route>
+        <Route exact path="/cancel">
+          <Cancel />
         </Route>
       </div>
     </Router>

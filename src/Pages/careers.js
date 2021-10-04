@@ -4,6 +4,34 @@ import third from "../assests/third.jpg";
 import "./CSS/careers.css";
 
 function Careers() {
+
+
+const [UploadResume, setUploadResume] = useState("");
+const [Email,setEmail] = useState("");
+const [Mobile,setMobile] = useState("");
+
+ function onFileChange(e) {
+        let file = e.target.files[0];
+        const name = Email + '--' + Mobile + file.name.substring(file.name.lastIndexOf('.'));// Concat with file extension.
+        console.log(name);
+        file.name.substring(file.name.lastIndexOf('.'));
+    // Instantiate copy of file, giving it new name.
+    file = new File([file], name, { type: file.type });
+    setUploadResume(file)
+        
+    }
+
+ function onSubmit(e) {
+        e.preventDefault()
+        const formData = new FormData()
+        formData.append('upload_resume', UploadResume)
+        axios.post("https://server.yourtechshow.com/careers", formData, {
+        }).then(res => {
+            console.log(res);
+            alert("Application Submitted Succesfully. You will be contacted if your Resume is shortlisted.");
+        })
+    }
+
   return (
     <>
       <div class="pagecontainer">
@@ -131,19 +159,26 @@ function Careers() {
           </ul>
         </div>
         <div className="overall-carousel">
-          {/* <form onSubmit={onSubmit} enctype="multipart/form-data">
+
+
+          <form onSubmit={onSubmit} enctype="multipart/form-data">
             <h3>Career Opportunities</h3>
 
             <div className="form-left">
+              
+
+
               <label for="enter_email">Enter Email: </label>
               <input
                 type="text"
                 placeholder="Email"
                 name="enter_email"
                 id="enter_email"
+
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
+
               />
 
               <label for="phone">Mobile No.</label>
@@ -155,9 +190,11 @@ function Careers() {
                 maxlength="10"
                 pattern="[0-9]{10}"
                 required
+
                 onChange={(e) => {
                   setMobile(e.target.value);
                 }}
+
               />
 
               <label for="upload_resume">Update Resume:</label>

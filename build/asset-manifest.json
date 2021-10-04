@@ -1,5 +1,6 @@
 {
   "files": {
+
     "main.css": "/static/css/main.f72ff471.chunk.css",
     "main.js": "/static/js/main.b075d134.chunk.js",
     "main.js.map": "/static/js/main.b075d134.chunk.js.map",
@@ -12,6 +13,7 @@
     "index.html": "/index.html",
     "static/css/main.f72ff471.chunk.css.map": "/static/css/main.f72ff471.chunk.css.map",
     "static/js/2.e46d2616.chunk.js.LICENSE.txt": "/static/js/2.e46d2616.chunk.js.LICENSE.txt",
+
     "static/media/2nd.d8880b75.png": "/static/media/2nd.d8880b75.png",
     "static/media/5146766.24d96837.jpg": "/static/media/5146766.24d96837.jpg",
     "static/media/Contact us-amico.cb48558c.svg": "/static/media/Contact us-amico.cb48558c.svg",
@@ -29,8 +31,10 @@
     "static/media/atm.4179ab80.png": "/static/media/atm.4179ab80.png",
     "static/media/bajaj.0b855839.jpeg": "/static/media/bajaj.0b855839.jpeg",
     "static/media/bannersky.f460fb45.png": "/static/media/bannersky.f460fb45.png",
-    "static/media/big-img.15e7d997.svg": "/static/media/big-img.15e7d997.svg",
-    "static/media/big-img9.c908ac06.svg": "/static/media/big-img9.c908ac06.svg",
+
+    "static/media/big-img.9c647edf.svg": "/static/media/big-img.9c647edf.svg",
+    "static/media/big-img9.186bfe22.svg": "/static/media/big-img9.186bfe22.svg",
+
     "static/media/blogimage1.86962ad2.gif": "/static/media/blogimage1.86962ad2.gif",
     "static/media/blogway1.26ec2577.gif": "/static/media/blogway1.26ec2577.gif",
     "static/media/blogway2.9ca15b92.gif": "/static/media/blogway2.9ca15b92.gif",
@@ -57,7 +61,9 @@
     "static/media/careers.css": "/static/media/job.a5a21c4f.png",
     "static/media/leadboard.ea8fbc9d.png": "/static/media/leadboard.ea8fbc9d.png",
     "static/media/lock 3 1.500fedee.png": "/static/media/lock 3 1.500fedee.png",
+
     "static/media/login.9ba85c21.svg": "/static/media/login.9ba85c21.svg",
+
     "static/media/logo.5dd7fb26.png": "/static/media/logo.5dd7fb26.png",
     "static/media/logodc1.30a3d927.png": "/static/media/logodc1.30a3d927.png",
     "static/media/man-p.31b5c1aa.png": "/static/media/man-p.31b5c1aa.png",
@@ -101,9 +107,11 @@
     "static/media/ytvideo.58fa3fce.png": "/static/media/ytvideo.58fa3fce.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.6ec3b7af.js",
-    "static/js/2.e46d2616.chunk.js",
-    "static/css/main.f72ff471.chunk.css",
-    "static/js/main.b075d134.chunk.js"
+
+    "static/js/runtime-main.801aab70.js",
+    "static/js/2.9eed7957.chunk.js",
+    "static/css/main.90a9207a.chunk.css",
+    "static/js/main.3d964b04.chunk.js"
+
   ]
 }

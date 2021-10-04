@@ -50,6 +50,7 @@ function Admin(Profile) {
         txt += "</tr>";
         for (i = 0; i < response.length; i++) {
           txt += "<tr>";
+
           txt +=
             "<td>" +
             `<a href=https://server.yourtechshow.com/Resumes/${response[i]}>` +
@@ -58,6 +59,7 @@ function Admin(Profile) {
             "</a>" +
             "</a>";
 
+
           txt += "</tr>";
         }
         txt += "</table>";
@@ -65,6 +67,7 @@ function Admin(Profile) {
         document.getElementById("logo").style.display = "none";
       });
   };
+
 
   const GetOnboarding = () => {
     document.getElementById("logo").style.display = "block";
