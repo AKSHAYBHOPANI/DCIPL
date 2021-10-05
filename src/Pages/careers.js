@@ -1,11 +1,10 @@
-import React, { useState } from "react";
 import first from "../assests/first.jpg";
 import second from "../assests/second.jpg";
 import third from "../assests/third.jpg";
 import "./CSS/careers.css";
-const axios = require('axios').default;
 
 function Careers() {
+
 
 const [UploadResume, setUploadResume] = useState("");
 const [Email,setEmail] = useState("");
@@ -32,6 +31,7 @@ const [Mobile,setMobile] = useState("");
             alert("Application Submitted Succesfully. You will be contacted if your Resume is shortlisted.");
         })
     }
+
   return (
     <>
       <div class="pagecontainer">
@@ -39,11 +39,11 @@ const [Mobile,setMobile] = useState("");
           <div class="headercontent">
             <h1>
               do what you{" "}
-              {/* <img
+              <img
                 src="//s3-us-west-2.amazonaws.com/ec-cdn-content/ec-image-resources/1345984533_love_360.png"
                 alt="Love"
                 class="img-responsive"
-              />{" "} */}
+              />{" "}
               everyday
             </h1>
             <p>
@@ -52,7 +52,7 @@ const [Mobile,setMobile] = useState("");
               out the listings below or send your resume to{" "}
               <span>careers@dcikigai.com</span>.
             </p>
-            <a href="#joblistings">view job openings</a>
+            <a href="/applynow">Apply Now</a>
           </div>
         </div>
         <div class="benefitscontainer">
@@ -159,11 +159,14 @@ const [Mobile,setMobile] = useState("");
           </ul>
         </div>
         <div className="overall-carousel">
+
+
           <form onSubmit={onSubmit} enctype="multipart/form-data">
             <h3>Career Opportunities</h3>
 
             <div className="form-left">
               
+
 
               <label for="enter_email">Enter Email: </label>
               <input
@@ -171,7 +174,11 @@ const [Mobile,setMobile] = useState("");
                 placeholder="Email"
                 name="enter_email"
                 id="enter_email"
-                onChange={(e)=>{setEmail(e.target.value)}}
+
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+
               />
 
               <label for="phone">Mobile No.</label>
@@ -183,11 +190,20 @@ const [Mobile,setMobile] = useState("");
                 maxlength="10"
                 pattern="[0-9]{10}"
                 required
-                onChange={(e)=>{setMobile(e.target.value)}}
+
+                onChange={(e) => {
+                  setMobile(e.target.value);
+                }}
+
               />
 
               <label for="upload_resume">Update Resume:</label>
-              <input type="file" name="upload_resume" id="upload_resume" onChange={onFileChange} />
+              <input
+                type="file"
+                name="upload_resume"
+                id="upload_resume"
+                onChange={onFileChange}
+              />
 
               <button
                 className="btn-primary"
@@ -198,7 +214,7 @@ const [Mobile,setMobile] = useState("");
                 Submit
               </button>
             </div>
-          </form>
+          </form> */}
         </div>
         <div class="current-openings" id="joblistings">
           <h2>CURRENT OPENINGS</h2>
