@@ -183,8 +183,7 @@ function Investment({ Profile, setProfile }) {
           {IsFormSubmitted ? (
             <>
               <br></br>
-              <br></br>
-              <br></br>
+
               {console.log(Profile)}
               <h1>
                 Congratulations {Profile.name}, Your Investment Portfolio Is
@@ -211,12 +210,6 @@ function Investment({ Profile, setProfile }) {
             </>
           ) : (
             <>
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
               <h1 className="Title">Investment Planning</h1>
               <h2 className="Title">On The Basis Of Income</h2>
               <div className="Form">

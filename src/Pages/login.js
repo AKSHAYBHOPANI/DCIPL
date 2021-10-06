@@ -5,6 +5,7 @@ import FacebookLogin from "react-facebook-login";
 import logimg from "../assests/login.svg";
 // import OtpInput from "react-otp-input";
 import Forgotpass from "../Pages/modal/Forgotpass/Forgotpass";
+
 import "./CSS/login.css";
 
 function Login(Profile) {
@@ -172,7 +173,7 @@ function Login(Profile) {
                         width: "100%",
                         color: "#2D2D2D",
 
-                        margin: "2rem 0rem",
+                        margin: "1rem 0rem",
                       }}
                     ></input>
                     <button className="submit-btn" id="sign-in-button">
@@ -229,6 +230,14 @@ function Login(Profile) {
                 >
                   Sign Up
                 </Link>
+                <h3>Login with</h3>
+                <FacebookLogin
+                  appId="612293356405016"
+                  fields="name,email,picture"
+                  callback={responseFacebook}
+                  cssClass="my-facebook-button-class"
+                  icon="fab fa-facebook-f"
+                />
               </div>
             </div>
           </div>

@@ -53,7 +53,7 @@ function Nav(Profile) {
                   </li>
 
                   <li>
-                    <a href="./profile">PROFILE</a>
+                    <a href="../profile">PROFILE</a>
                   </li>
                   <li>
                     <a href="" onClick={LogoutNow}>

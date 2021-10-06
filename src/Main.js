@@ -8,6 +8,7 @@ import Register from "./Pages/register";
 import About from "./Pages/about";
 import Blog from "./Pages/blog";
 import Careers from "./Pages/careers";
+import Applynow from "./Pages/applynow";
 import Service from "./Pages/service";
 import Contact from "./Pages/contact";
 import Planning from "./Pages/Service Components/Planning/planning";
@@ -50,6 +51,9 @@ const Main = ({ Profile, setProfile }) => {
         <Route exact path="/careers">
           <Careers />
         </Route>
+        <Route exact path="/applynow">
+          <Applynow />
+        </Route>
         <Route exact path="/blog">
           <Blog />
         </Route>
@@ -80,7 +84,7 @@ const Main = ({ Profile, setProfile }) => {
         <Route exact path="/features/retirement">
           <Retirement Profile={Profile} setProfile={setProfile} />
         </Route>
-         <Route exact path="/features/tax">
+        <Route exact path="/features/tax">
           <Tax Profile={Profile} setProfile={setProfile} />
         </Route>
         <Route exact path="/profile">
@@ -101,11 +105,8 @@ const Main = ({ Profile, setProfile }) => {
             setProfile={setProfile}
           />
         </Route>
-         <Route exact path="/features/TaxPortfolioAllocation">
-          <TaxPortfolioAllocation
-            Profile={Profile}
-            setProfile={setProfile}
-          />
+        <Route exact path="/features/TaxPortfolioAllocation">
+          <TaxPortfolioAllocation Profile={Profile} setProfile={setProfile} />
         </Route>
         <Route exact path="/policy">
           <Policy />

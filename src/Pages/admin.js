@@ -50,8 +50,16 @@ function Admin(Profile) {
         txt += "</tr>";
         for (i = 0; i < response.length; i++) {
           txt += "<tr>";
-          txt += "<td>" + `<a href=https://server.yourtechshow.com/Resumes/${response[i]}>`  + response[i] + "</td>" + "</a>" + "</a>";
-          
+
+          txt +=
+            "<td>" +
+            `<a href=https://server.yourtechshow.com/Resumes/${response[i]}>` +
+            response[i] +
+            "</td>" +
+            "</a>" +
+            "</a>";
+
+
           txt += "</tr>";
         }
         txt += "</table>";
@@ -476,7 +484,6 @@ function Admin(Profile) {
                         <li>
                           <a href="#">$204.98</a>
                         </li>
-
                         <li>
                           <a href="#">$170.66</a>
                         </li>

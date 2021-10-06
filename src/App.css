@@ -242,6 +242,11 @@
   color: #2a2552;
   cursor: pointer;
 }
+@media (max-width: 1050px) {
+  .links {
+    padding: -10px 10px;
+  }
+}
 
 @media (max-width: 950px) {
   #menu-icon {

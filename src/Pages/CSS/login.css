@@ -1,19 +1,19 @@
 .main-div {
-  min-height: 98vh;
-  padding: 1%;
+  /* padding: 1%; */
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: center;
   overflow-x: hidden;
 }
 .info-div {
   background-color: white;
   width: 50%;
-  padding-left: 1%;
+  /* padding-left: 1%; */
   padding-bottom: 1%;
 }
 .signin-div {
   width: 50%;
-  padding-left: 1%;
+  /* padding-left: 1%; */
 }
 .logo-img {
   width: 40%;
@@ -27,7 +27,7 @@
   color: black;
 }
 .info-img {
-  width: 75%;
+  width: 100%;
 }
 
 .sign-in {
@@ -43,19 +43,14 @@
 .toggle-inputs {
   display: flex;
   justify-content: space-evenly;
-  width: 50%;
+  width: 70%;
 }
 .toggle-inputs-text {
   font-size: 150%;
   font-weight: 500;
   cursor: pointer;
 }
-.toggle-inputs-text-bar {
-  font-size: 150%;
-  font-weight: 500;
-  cursor: pointer;
-  color: white;
-}
+
 .forgot {
   color: #ffb600;
   cursor: pointer;
@@ -79,7 +74,7 @@
 }
 
 .box_otp {
-  width: 45%;
+  width: 20rem;
   display: flex;
   justify-content: center;
   margin-top: 2rem;
@@ -93,7 +88,7 @@
     height: 100%;
   }
   .info-div {
-    width: 98%;
+    width: 100%;
     padding-top: 1%;
     padding-bottom: 3%;
   }
@@ -102,11 +97,11 @@
     margin-bottom: 2%;
   }
   .why-choose {
-    margin-left: 10%;
+    /* margin-left: 10%; */
   }
 
   .toggle-inputs-text {
-    font-size: 100%;
+    font-size: 120%;
   }
   .toggle-inputs-text-bar {
     font-size: 100%;

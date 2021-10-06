@@ -116,6 +116,7 @@ const Register = (Profile) => {
                 </div>
                 <div class="input-container">
                   <label for="phone">Mobile No.</label>
+
                   <input
                     onChange={MobileValue}
                     value={Mobile}
