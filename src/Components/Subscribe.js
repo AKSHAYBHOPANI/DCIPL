@@ -96,7 +96,7 @@ PaytmChecksum.generateSignature(JSON.stringify(paytmParams.body), "YOUR_MERCHANT
           <h5>₹500.00</h5>
         </div>
       </div>
-      <form action="http://localhost:8000/create-checkout-session" method="POST">
+      <form action="https://server.yourtechshow.com/create-checkout-session" method="POST">
         <button type="submit" id="checkout-button">Stripe</button>
       </form>
     </section>

@@ -28,6 +28,7 @@ import Policy from "./Pages/policy";
 import Subscribe from "./Components/Subscribe";
 import Success from "./Pages/Payment/Success";
 import Cancel from "./Pages/Payment/Cancel";
+import Chat from "./Components/Chat";
 
 const Main = ({ Profile, setProfile }) => {
   return (
@@ -119,6 +120,9 @@ const Main = ({ Profile, setProfile }) => {
         </Route>
         <Route exact path="/cancel">
           <Cancel />
+        </Route>
+         <Route exact path="/Chat">
+          <Chat />
         </Route>
       </div>
     </Router>
