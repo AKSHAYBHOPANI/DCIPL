@@ -12,8 +12,10 @@ function App() {
     id: '',
     name: '',
     email: '',
-    IsSignIn: '' ,
-    IsonBoarding:''
+    mobile: '',
+    IsSignIn: '',
+    IsonBoarding:'',
+    IsSubscribed: false
     })
 	
   return (
