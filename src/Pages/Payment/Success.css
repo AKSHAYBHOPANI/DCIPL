@@ -1,0 +1,96 @@
+.s-ar{
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  height: 90vh;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), rgba(9, 92, 138, 0.81);
+border-radius: 50px;
+}
+.s1-ar{
+  width: 40%;
+margin-left: 30%;
+margin-top: -41%;
+height: 75vh;
+background: white;
+border-radius: 40px;
+margin-bottom: 5%;
+}
+.s11{
+  width: 25%;
+  height: 5vh;
+  margin-top: 2%;
+  margin-left: 35%;
+}
+.s11 img{
+  position: relative;
+  width: 100%;
+  background-size: cover;
+}
+
+.s1-ar h1{
+
+  margin-left: 10%;
+  position: relative;
+  width: 412px;
+height: 59px;
+left: 35px;
+top: 35px;
+  font-family: Jost;
+font-style: normal;
+font-weight: normal;
+font-size: 48px;
+line-height: 69px;
+
+color: rgba(9, 138, 99, 0.89);
+}
+.s1-ar h2{
+  font-family: Jost;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 29px;
+margin-top: 10%;
+margin-left: 20%;
+color: rgba(9, 92, 138, 0.81);
+}
+.s1-ar h3{
+  font-family: Jost;
+font-style: normal;
+font-weight: normal;
+font-size: 22px;
+line-height: 42px;
+margin-left: 15%;
+color: #000000;
+
+} .s1-ar p{
+  font-family: Jost;
+font-style: normal;
+font-weight: normal;
+font-size: 22px;
+line-height: 42px;
+margin-left: 65%;
+margin-top: -43%;
+color: #000000;
+}
+.sio-btn{
+    position: relative;
+    margin-left: 10%;
+    top: -8%;
+    width: 100%;
+}
+.sii-btn{
+    text-align: center;
+    color: black;
+    display: inline-block;
+    font-weight: bold;
+    width: 20%;
+    height: 5vh;
+    padding: 5px;
+    font-size: 18px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), rgba(9, 92, 138, 0.81);
+    border-radius: 50px;
+    margin: 60px 60px;
+    letter-spacing: 0.5px;
+}
+

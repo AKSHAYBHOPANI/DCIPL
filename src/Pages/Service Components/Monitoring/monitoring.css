@@ -1,7 +1,7 @@
-.page-1 {
-  width: 100%;
-  height: 550px;
-  background-color: #dee8ff;
+.page-1{
+width: 100%;
+height: 550px;
+background-color: #DEE8FF;
 }
 .bgimage {
   width: 550px;
@@ -51,6 +51,8 @@
   font-size: 30px;
   margin-top: 100px;
   margin-left: 35%;
+
+
 }
 .w1-matter {
   padding: 5px;
@@ -58,6 +60,7 @@
   margin-left: 120px;
 }
 .Adv3 {
+  
   font-size: 30px;
   margin-left: 40%;
 }
@@ -67,7 +70,7 @@
   background-color: white;
 }
 
-.Advfor {
+.Advfor{
   font-size: 30px;
   margin-left: 35%;
 }
@@ -89,7 +92,7 @@
   margin-top: -145px;
   margin-left: 860px;
 }
-.two1 {
+.two {
   color: black;
   margin-left: 866px;
   margin-top: 13px;
@@ -98,16 +101,19 @@
   display: flex;
   flex-direction: row;
   background-color: white;
+
 }
 .flex-containerfor-pms2 {
   display: flex;
   flex-direction: row;
   background-color: white;
+  
 }
 .flex-containerfor-pms {
   display: flex;
   flex-direction: row;
   background-color: white;
+  
 }
 .threehead {
   font-size: 25px;
@@ -118,14 +124,15 @@
   margin-top: 9px;
   margin-left: 200px;
 }
-.bg10 {
+.bg10{
   margin-left: 70px;
 }
-.bg2 {
+.bg2{
+  
   margin-left: 720px;
   margin-top: -145px;
 }
-.bg3 {
+.bg3{
   margin-left: 80px;
 }
 .bg4 {
@@ -182,7 +189,7 @@
   margin-right: 40px;
   border-radius: 50%;
   height: 233px;
-  width: 224px;
+  width: 194px;
   position: relative;
   cursor: pointer;
   z-index: 1.5s;
@@ -209,10 +216,11 @@
   color: black;
 }
 .circlematter-for-circle {
-  font-size: 20px;
+  font-size: 16px;
   margin-left: 13px;
   margin-top: 62px;
   color: black;
+  width:70%;
 }
 .w2-container-for-circle {
   margin-left: 30px;
@@ -221,289 +229,754 @@
   background-color: white;
   padding: 2px;
 }
-.circlematter-for-circle-change {
-  font-size: 20px;
-  margin-left: 13px;
-  margin-top: 42px;
+@media screen and (max-width: 968px) {
+  .full{
+  height:3000px;
+  }
+ .bgimage {
+  width: 330px;
+  height: 430px;
+  margin-top: 100px;
+  margin-left: 20px;
+}
+.headingofpage {
+  color: black;
+  margin-top: -407px;
+  margin-left: 63%;
+  font-size: 28px;
   color: black;
 }
-@media screen and (max-width: 768px) {
-  .bgimage {
-    width: 430px;
-    height: 430px;
-    margin-top: 100px;
-    margin-left: 20px;
-  }
-  .headingofpage {
-    color: black;
-    margin-top: -387px;
-    margin-left: 63%;
-    font-size: 28px;
-    color: black;
-  }
-  .matter {
-    color: black;
-    margin-left: 60%;
-    margin-top: 47px;
-    font-size: 20px;
-  }
-  .bg2 {
-    float: left;
-    margin-left: 80px;
-    margin-top: 15px;
-  }
-  .twohead {
-    color: black;
-    font-size: 25px;
-    margin-top: 45px;
-    margin-left: 27%;
-  }
-  .two1 {
-    color: black;
-    margin-left: 27%;
-    margin-top: 23px;
-  }
-  .bg4 {
-    margin-left: 80px;
-    float: left;
-    margin-top: 50px;
-  }
-  .fourhead {
-    font-size: 25px;
-    margin-top: 40px;
-    margin-left: 200px;
-  }
-  .four {
-    margin-top: 9px;
-    margin-left: 200px;
-  }
-  .threehead {
-    font-size: 25px;
-    margin-top: -112px;
-    margin-left: 200px;
-  }
-  .three {
-    margin-top: 9px;
-    margin-left: 200px;
-  }
-
-  .bg3 {
-    margin-left: 80px;
-  }
-  .flex-containerfor-34 {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-  }
-  .flex-containerfor-pms {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-  }
-  .flex-containerfor-pms2 {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-  }
-  .bg5 {
-    margin-left: 13%;
-    margin-top: 20px;
-  }
-  .bg6 {
-    margin-left: 100px;
-    margin-top: 40px;
-  }
-  .bg7 {
-    margin-left: 120px;
-    margin-top: 100px;
-  }
-  .bg8 {
-    margin-left: 120px;
-    margin-top: 100px;
-  }
-  .fivehead {
-    font-size: 25px;
-    margin-top: -84px;
-    margin-left: 250px;
-  }
-  .sixhead {
-    font-size: 25px;
-    margin-top: -62px;
-    margin-left: 250px;
-  }
-
-  .sevenhead {
-    font-size: 25px;
-    margin-top: -112px;
-    margin-left: 250px;
-  }
-  .eighthead {
-    font-size: 25px;
-    margin-top: -75px;
-    margin-left: 280px;
-  }
-  .outer-circle-last-one {
-    background: black;
-    margin-right: 40px;
-    border-radius: 50%;
-    height: 133px;
-    width: 224px;
-    position: relative;
-    cursor: pointer;
-    z-index: 1.5s;
-  }
-  .inner-circle-last-two {
-    position: absolute;
-    background: white;
-    border-radius: 50%;
-    height: 205px;
-    width: 197px;
-
-    top: 71%;
-    left: 73%;
-    margin: -150px 0px 0px -150px;
-    animation-duration: 2s;
-  }
-  .outer-circle-last-one {
-    display: none;
-  }
+.matter {
+  color: black;
+  margin-left: 60%;
+  margin-top: 47px;
+  font-size: 20px;
+}
+.bg2{
+  float: left;
+  margin-left: 70px;
+  margin-top: 15px;
+  width:15%;
+}
+.twohead {
+  color: black;
+  font-size: 20px;
+  margin-top: 45px;
+  margin-left: 27%;
+}
+.two {
+  color: black;
+  margin-left:27%;
+  margin-top: 26px;
+  font-size: 16px;
+}
+.bg4 {
+  margin-left:70px;
+  float: left;
+  margin-top: 50px;
+}
+.fourhead {
+  font-size: 25px;
+  margin-top: 40px;
+  margin-left: 200px;
+}
+.four {
+  margin-top: 9px;
+  margin-left: 200px;
+}
+.bg3{
+  margin-left: 70px;
+  margin-top: 50px;
+}
+.threehead {
+ 
+  font-size: 25px;
+  margin-top: -112px;
+  margin-left: 190px;
+}
+.three {
+ 
+  margin-top: 9px;
+  margin-left: 190px;
 }
 
-@media screen and (max-width: 468px) {
-  .page-1 {
-    width: 100%;
-    height: 850px;
-    background-color: #dee8ff;
-  }
-  .headingofpage {
-    color: black;
-    margin-top: -27px;
-    margin-left: 20%;
-    font-size: 28px;
-    color: black;
-  }
-  .matter {
-    color: black;
-    margin-left: 20%;
-    margin-top: 47px;
-    font-size: 20px;
-  }
-  .findnow {
-    margin-top: 93px;
-    margin-left: 30%;
-    font-size: 20px;
-    color: black;
-  }
-  .button11 {
-    background-color: #4caf50; /* Green */
-    border: none;
-    color: white;
-    padding: 8px 12px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    transition-duration: 0.4s;
-    margin-left: 34%;
-    margin-top: 27px;
-  }
-  .w1-container {
-    font-size: 25px;
-    margin-top: 100px;
-    margin-left: 10%;
-  }
-  .w1-matter {
-    padding: 5px;
-    margin-top: 10px;
-    margin-left: 25px;
-  }
-  .Adv3 {
-    font-size: 30px;
-    margin-left: 30%;
-  }
-  .bg10 {
-    margin-top: 10px;
-    margin-left: 40px;
-  }
-  .oneheading {
-    color: black;
-    font-size: 20px;
-    margin-top: -10px;
-    margin-left: 10%;
-  }
-  .one {
-    font-size: 14px;
-    color: black;
-    margin-left: -250px;
-    margin-top: 75px;
-  }
-  .bg2 {
-    float: left;
-    margin-left: 40px;
-    margin-top: 45px;
-  }
-  .twohead {
-    color: black;
-    font-size: 20px;
-    margin-top: 45px;
-    margin-left: 40%;
-  }
-  .two1 {
-    color: black;
-    margin-left: 40%;
-    margin-top: 23px;
-  }
-  .bg3 {
-    margin-left: 50px;
-    margin-top: 20px;
-  }
-  .bg4 {
-    margin-left: 50px;
-    margin-top: 70px;
-  }
-  .Advfor {
-    margin-left: 10px;
-  }
-  .bg5 {
-    margin-left: 18%;
-    margin-top: 20px;
-  }
-  .bg6 {
-    margin-left: 70px;
-    margin-top: 80px;
-  }
-  .bg7 {
-    margin-left: 90px;
-    margin-top: 100px;
-  }
-  .bg8 {
-    margin-left: 90px;
-    margin-top: 100px;
-  }
-  .fivehead {
-    font-size: 20px;
-    margin-top: -84px;
-    margin-left: 230px;
-  }
-  .sixhead {
-    font-size: 20px;
-    margin-top: -72px;
-    margin-left: 230px;
-  }
 
-  .sevenhead {
-    font-size: 20px;
-    margin-top: -92px;
-    margin-left: 230px;
+.flex-containerfor-34 {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.flex-containerfor-pms{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.flex-containerfor-pms2{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.bg5 {
+  margin-left: 13%;
+  margin-top: 20px;
+}
+.bg6 {
+  margin-left: 100px;
+  margin-top: 40px;
+}
+.bg7 {
+  margin-left: 120px;
+  margin-top: 100px;
+}
+.bg8 {
+  margin-left:120px;
+  margin-top: 100px;
+}
+.fivehead {
+  font-size: 25px;
+  margin-top: -84px;
+  margin-left: 250px;
+}
+.sixhead {
+  font-size: 25px;
+  margin-top: -62px;
+  margin-left: 250px;
+}
+
+.sevenhead {
+  font-size: 25px;
+  margin-top: -112px;
+  margin-left: 250px;
+}
+.eighthead {
+  font-size: 25px;
+  margin-top: -75px;
+  margin-left: 280px;
+}
+.outer-circle-last-one {
+  background: #385a94;
+  margin-right: 40px;
+  border-radius: 50%;
+  height: 233px;
+  width: 194px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1.5s;
+}
+.inner-circle-last-two {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  height: 205px;
+  width: 102px;
+
+  top: 71%;
+  left: 146%;
+  margin: -150px 0px 0px -150px;
+  animation-duration: 2s;
+}
+.outer-circle-lat-one:hover {
+  background-color: black;
+  transition-duration: 3s;
+}
+.inner-circle-last-two:hover {
+  background-color: white;
+  transition-duration: 3s;
+  color: black;
+}
+.circlematter-for-circle {
+  font-size: 10px;
+  margin-left: 18px;
+  margin-top: 50px;
+  color: black;
+  width:30%;
+}
+.w2-container-for-circle {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding: 2px;
+}
+  
+}
+
+@media screen and (max-width: 698px) {
+  .full{
+    height:5000px;
   }
-  .eighthead {
-    font-size: 20px;
-    margin-top: -75px;
-    margin-left: 230px;
+  .page-1{
+width: 100%;
+height: 850px;
+background-color: #DEE8FF;
+}
+.bgimage{
+  width:50%;
+  margin-left:20%;
+}
+.headingofpage {
+  color: black;
+  margin-top: -20px;
+  margin-left: 20%;
+  font-size: 28px;
+  color: black;
+}
+.matter {
+  color: black;
+  margin-left: 10%;
+  margin-top: 47px;
+  font-size: 20px;
+}
+.findnow {
+  margin-top: 33px;
+  margin-left: 30%;
+  font-size: 20px;
+  color: black;
+}
+.button11 {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  margin-left: 34%;
+  margin-top: 27px;
+}
+.w1-container {
+  font-size: 25px;
+  margin-top: 100px;
+  margin-left: 10%;
+
+
+}
+.w1-matter {
+  padding: 5px;
+  margin-top: 10px;
+  margin-left: 25px;
+}
+.Adv3 {
+  
+  font-size: 30px;
+  margin-left: 30%;
+}
+.bg10{
+  margin-top: 10px;
+  margin-left: 40px;
+  width:60%;
+}
+.oneheading {
+  color: black;
+  font-size: 20px;
+  margin-top: -10px;
+  margin-left: 10%;
+}
+.one {
+  font-size: 14px;
+  color: black;
+  margin-left: -250px;
+  margin-top: 75px;
+ 
+}
+.bg2{
+  float: left;
+  margin-left: 40px;
+  margin-top: 45px;
+  width:20%;
+}
+.twohead {
+  color: black;
+  font-size: 20px;
+  margin-top: 45px;
+  margin-left: 40%;
+}
+.two {
+  color: black;
+  margin-left:40%;
+  margin-top: 23px;
+}
+.bg3{
+  margin-left: 50px;
+  margin-top: 20px;
+}
+.bg4 {
+  margin-left: 50px;
+  margin-top: 70px;
+}
+.Advfor{
+  margin-left: 10px;
+}
+.bg5 {
+  margin-left: 18%;
+  margin-top: 20px;
+}
+.bg6 {
+  margin-left: 70px;
+  margin-top: 80px;
+}
+.bg7 {
+  margin-left: 90px;
+  margin-top: 100px;
+}
+.bg8 {
+  margin-left:90px;
+  margin-top: 100px;
+}
+.fivehead {
+  font-size: 20px;
+  margin-top: -84px;
+  margin-left: 230px;
+}
+.sixhead {
+  font-size: 20px;
+  margin-top: -72px;
+  margin-left: 230px;
+}
+
+.sevenhead {
+  font-size: 20px;
+  margin-top: -92px;
+  margin-left: 230px;
+}
+.eighthead {
+  font-size: 20px;
+  margin-top: -75px;
+  margin-left: 230px;
+}
+.outer-circle-last-one {
+  background: #385a94;
+  margin-right: 50px;
+  border-radius: 50%;
+  height: 303px;
+  width: 94px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1.5s;
+}
+.inner-circle-last-two {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  height: 285px;
+  width: 67px;
+
+  top: 51%;
+  left: 227%;
+  margin: -150px 0px 0px -150px;
+  animation-duration: 2s;
+}
+.outer-circle-lat-one:hover {
+  background-color: black;
+  transition-duration: 3s;
+}
+.inner-circle-last-two:hover {
+  background-color: white;
+  transition-duration: 3s;
+  color: black;
+}
+.circlematter-for-circle {
+  font-size: 10px;
+  margin-left: 13px;
+  margin-top: 62px;
+  color: black;
+  width:20%;
+}
+.w2-container-for-circle {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding: 2px;
+}
+}
+@media screen and (max-width: 408px) {
+  .full{
+    height:4800px;
   }
-  .outer-circle-last-one {
-    display: none;
+  .page-1{
+width: 100%;
+height: 850px;
+background-color: #DEE8FF;
+}
+.bgimage{
+  width:50%;
+  margin-left:20%;
+}
+.headingofpage {
+  color: black;
+  margin-top: -20px;
+  margin-left: 20%;
+  font-size: 28px;
+  color: black;
+}
+.matter {
+  color: black;
+  margin-left: 10%;
+  margin-top: 47px;
+  font-size: 20px;
+}
+.findnow {
+  margin-top: 33px;
+  margin-left: 30%;
+  font-size: 20px;
+  color: black;
+}
+.button11 {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  margin-left: 34%;
+  margin-top: 27px;
+}
+.w1-container {
+  font-size: 25px;
+  margin-top: 100px;
+  margin-left: 10%;
+
+
+}
+.w1-matter {
+  padding: 5px;
+  margin-top: 10px;
+  margin-left: 25px;
+}
+.Adv3 {
+  
+  font-size: 30px;
+  margin-left: 30%;
+}
+.bg10{
+  margin-top: 10px;
+  margin-left: 40px;
+  width:60%;
+}
+.oneheading {
+  color: black;
+  font-size: 20px;
+  margin-top: -10px;
+  margin-left: 10%;
+}
+.one {
+  font-size: 14px;
+  color: black;
+  margin-left: -250px;
+  margin-top: 75px;
+ 
+}
+.bg2{
+  float: left;
+  margin-left: 40px;
+  margin-top: 45px;
+  width:20%;
+}
+.twohead {
+  color: black;
+  font-size: 20px;
+  margin-top: 45px;
+  margin-left: 40%;
+}
+.two {
+  color: black;
+  margin-left:40%;
+  margin-top: 23px;
+}
+.bg3{
+  margin-left: 50px;
+  margin-top: 20px;
+}
+.bg4 {
+  margin-left: 50px;
+  margin-top: 70px;
+}
+.Advfor{
+  margin-left: 10px;
+}
+.bg5 {
+  margin-left: 18%;
+  margin-top: 20px;
+}
+.bg6 {
+  margin-left: 70px;
+  margin-top: 80px;
+}
+.bg7 {
+  margin-left: 90px;
+  margin-top: 100px;
+}
+.bg8 {
+  margin-left:90px;
+  margin-top: 100px;
+}
+.fivehead {
+  font-size: 20px;
+  margin-top: -84px;
+  margin-left: 230px;
+}
+.sixhead {
+  font-size: 20px;
+  margin-top: -72px;
+  margin-left: 230px;
+}
+
+.sevenhead {
+  font-size: 20px;
+  margin-top: -92px;
+  margin-left: 230px;
+}
+.eighthead {
+  font-size: 20px;
+  margin-top: -75px;
+  margin-left: 230px;
+}
+.outer-circle-last-one {
+  background: #385a94;
+  margin-right: 40px;
+  border-radius: 50%;
+  height: 213px;
+  width: 144px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1.5s;
+}
+.inner-circle-last-two {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  height: 205px;
+  width: 55px;
+
+  top: 75%;
+  left: 586%;
+  margin: -140px 0px 0px -140px;
+  animation-duration: 2s;
+}
+.outer-circle-lat-one:hover {
+  background-color: black;
+  transition-duration: 3s;
+}
+.inner-circle-last-two:hover {
+  background-color: white;
+  transition-duration: 3s;
+  color: black;
+}
+.circlematter-for-circle {
+  font-size: 8px;
+  margin-left: 8px;
+  margin-top: 30px;
+  color: black;
+  width:15%;
+}
+.w2-container-for-circle {
+  margin-left: 35px;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding: 2px;
+}
+}
+@media screen and (min-width:410px) and (max-width: 570px) {
+  .full{
+    height:3900px;
   }
+  .page-1{
+width: 100%;
+height: 850px;
+background-color: #DEE8FF;
+}
+.bgimage{
+  width:50%;
+  margin-left:20%;
+}
+.headingofpage {
+  color: black;
+  margin-top: -20px;
+  margin-left: 20%;
+  font-size: 28px;
+  color: black;
+}
+.matter {
+  color: black;
+  margin-left: 10%;
+  margin-top: 47px;
+  font-size: 20px;
+}
+.findnow {
+  margin-top: 33px;
+  margin-left: 30%;
+  font-size: 20px;
+  color: black;
+}
+.button11 {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  margin-left: 34%;
+  margin-top: 27px;
+}
+.w1-container {
+  font-size: 25px;
+  margin-top: 100px;
+  margin-left: 10%;
+
+
+}
+.w1-matter {
+  padding: 5px;
+  margin-top: 10px;
+  margin-left: 25px;
+}
+.Adv3 {
+  
+  font-size: 30px;
+  margin-left: 30%;
+}
+.bg10{
+  margin-top: 10px;
+  margin-left: 40px;
+  width:60%;
+}
+.oneheading {
+  color: black;
+  font-size: 20px;
+  margin-top: -10px;
+  margin-left: 10%;
+}
+.one {
+  font-size: 14px;
+  color: black;
+  margin-left: -250px;
+  margin-top: 75px;
+ 
+}
+.bg2{
+  float: left;
+  margin-left: 40px;
+  margin-top: 45px;
+  width:20%;
+}
+.twohead {
+  color: black;
+  font-size: 20px;
+  margin-top: 45px;
+  margin-left: 40%;
+}
+.two {
+  color: black;
+  margin-left:40%;
+  margin-top: 23px;
+}
+.bg3{
+  margin-left: 50px;
+  margin-top: 20px;
+}
+.bg4 {
+  margin-left: 50px;
+  margin-top: 70px;
+}
+.Advfor{
+  margin-left: 10px;
+}
+.bg5 {
+  margin-left: 18%;
+  margin-top: 20px;
+}
+.bg6 {
+  margin-left: 70px;
+  margin-top: 80px;
+}
+.bg7 {
+  margin-left: 90px;
+  margin-top: 100px;
+}
+.bg8 {
+  margin-left:90px;
+  margin-top: 100px;
+}
+.fivehead {
+  font-size: 20px;
+  margin-top: -84px;
+  margin-left: 230px;
+}
+.sixhead {
+  font-size: 20px;
+  margin-top: -72px;
+  margin-left: 230px;
+}
+
+.sevenhead {
+  font-size: 20px;
+  margin-top: -92px;
+  margin-left: 230px;
+}
+.eighthead {
+  font-size: 20px;
+  margin-top: -75px;
+  margin-left: 230px;
+}
+.outer-circle-last-one {
+  background: #385a94;
+  margin-right: 40px;
+  border-radius: 50%;
+  height: 233px;
+  width: 94px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1.5s;
+}
+.inner-circle-last-two {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  height: 225px;
+  width: 70px;
+
+  top: 65%;
+  left: 322%;
+  margin: -150px 0px 0px -150px;
+  animation-duration: 2s;
+}
+.outer-circle-lat-one:hover {
+  background-color: black;
+  transition-duration: 3s;
+}
+.inner-circle-last-two:hover {
+  background-color: white;
+  transition-duration: 3s;
+  color: black;
+}
+.circlematter-for-circle {
+  font-size: 11px;
+  margin-left: 6px;
+  margin-top: 56px;
+  color: black;
+  width:18%;
+}
+.w2-container-for-circle {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding: 2px;
+}
 }

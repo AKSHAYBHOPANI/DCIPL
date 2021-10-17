@@ -108,87 +108,187 @@ function Dashboard(Profile) {
     <>
       {Profile.Profile.Profile.IsonBoarding ? (
         <>
-          <div className="area">
+          <div className="area12">
             <div className="content">
               <p>
                 Welcome, {Profile.Profile.Profile.name} Today is{" "}
                 {date.toLocaleString()}
               </p>
             </div>
-            <div className="side-menu">
-              <div className="brand-name">
-                <h1>DASHBOARD</h1>
-              </div>
-              <ul>
-                <li>
-                  <a href="./features/investment">Investment Planning</a>
-                </li>
-                <li>
-                  <a href="./features/wealth">Wealth Planning</a>
-                </li>
-                <li>
-                  <a href="./features/retirement">Retirement Planning</a>
-                </li>
-                <li>
-                  <a href="./features/tax">Tax Planning</a>
-                </li>
-                {/* <li>
-                  <a href="">Mutual fund</a>
-                </li> */}
-                {/* <li>
-                  <a href="">Insurance</a>
-                </li> */}
-              </ul>
-            </div>
 
-            <div className="content1">
-              <div className="cards77">
-                <div className="card00">
-                  <div className="box00">
-                    <h1>30,000</h1>
-                    <h3>Investment Planning</h3>
-                  </div>
+            <div id="main">
+              <div class="head-1">
+                <div class="col-div-6">
+                  <p class="nav"> Dashboard</p>
                 </div>
+
+                <div class="clearfix"></div>
               </div>
 
-              <div className="cards77">
-                <div className="card00">
-                  <div className="box00">
-                    <h1>100,000</h1>
-                    <h3>Wealth Planning</h3>
+              <div class="clearfix"></div>
+              <br />
+
+              <div class="col-div-4-1">
+                <div class="box-dash">
+                  <p class="head-1">Invested</p>
+                  <p class="number-dash">67343</p>
+                  <p class="percent">
+                    <i class="fa fa-long-arrow-up" aria-hidden="true"></i>{" "}
+                    5.674% <span>Since Last Months</span>
+                  </p>
+                  <i class="fa fa-shopping-bag box-icon12"></i>
+                </div>
+              </div>
+              <div class="col-div-4-1">
+                <div class="box-dash">
+                  <p class="head-1">Market</p>
+                  <p class="number-dash">2343</p>
+                  <p class="percent">
+                    <i class="fa fa-long-arrow-down" aria-hidden="true"></i>{" "}
+                    5.64% <span>Since Last Months</span>
+                  </p>
+                  <i class="fa fa-shopping-bag box-icon12"></i>
+                </div>
+              </div>
+              <div class="col-div-4-1">
+                <div class="box-dash">
+                  <p class="head-1">Growth</p>
+                  <p class="number-dash">35343</p>
+                  <p class="percent">
+                    <i class="fa fa-long-arrow-up" aria-hidden="true"></i>{" "}
+                    5.674% <span>Since Last Months</span>
+                  </p>
+                  <i class="fa fa-shopping-bag box-icon12"></i>
+                </div>
+              </div>
+
+              <div class="clearfix"></div>
+              <br />
+
+              <div class="col-div-4-1">
+                <div class="box-1">
+                  <div class="content-box-1">
+                    <p class="head-1">Overview</p>
+                    <br />
+                    <div class="m-box active">
+                      <p>
+                        Member Profit
+                        <br />
+                        <span class="no-1">Last Months</span>
+                      </p>
+                      <span class="no">+2343</span>
+                    </div>
+
+                    <div class="m-box">
+                      <p>
+                        Member Profit
+                        <br />
+                        <span class="no-1">Last Months</span>
+                      </p>
+                      <span class="no">+2343</span>
+                    </div>
+
+                    <div class="m-box">
+                      <p>
+                        Member Profit
+                        <br />
+                        <span class="no-1">Last Months</span>
+                      </p>
+                      <span class="no">+2343</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-div-4-1">
+                <div class="box-1">
+                  <div class="content-box-1">
+                    <p class="head-1">
+                      Total Investment <span>View All</span>
+                    </p>
+
+                    <div class="circle-wrap">
+                      <div class="circle-dash">
+                        <div class="mask full">
+                          <div class="fill-dash"></div>
+                        </div>
+                        <div class="mask half">
+                          <div class="fill-dash"></div>
+                        </div>
+                        <div class="inside-circle"> 70% </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-div-4-1">
+                <div class="box-1">
+                  <div class="content-box-1">
+                    <p class="head-1">Direct Link</p>
+                    <br />
+                    <ul class="top-sales-details">
+                      <li>
+                        <a href="./features/investment">Investment Planning</a>
+                      </li>
+                      <li>
+                        <a href="./features/wealth">Wealth Planning</a>
+                      </li>
+                      <li>
+                        <a href="./features/retirement">Retirement Planning</a>
+                      </li>
+                      <li>
+                        <a href="./features/tax">Tax Planning</a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
 
-              <div className="cards77">
-                <div className="card00">
-                  <div className="box00">
-                    <h1>80,000</h1>
-                    <h3>Retirement Planning</h3>
-                  </div>
-                </div>
-              </div>
-              <div className="cards77">
-                <div className="card00">
-                  <div className="box00">
-                    <h1>50,000</h1>
-                    <h3>Tax Planning</h3>
-                  </div>
-                </div>
-              </div>
-              <div className="cards77">
-                <div className="card00">
-                  <div className="box00">
-                    <h1>90,000</h1>
-                    <h3>Mutual Fund</h3>
-                  </div>
-                </div>
-              </div>
-              <div className="cards77">
-                <div className="card00">
-                  <div className="box00">
-                    <h1>60,000</h1>
-                    <h3>Insurance</h3>
+              <div class="clearfix"></div>
+              <br />
+              <div class="col-div-12">
+                <div class="box-8">
+                  <div class="content-box">
+                    <p>
+                      Top Invested Projects <span>Sell All</span>
+                    </p>
+                    <br />
+                    <table>
+                      <tr>
+                        <th>Company</th>
+                        <th>Contact</th>
+                        <th>Country</th>
+                      </tr>
+                      <tr>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                      </tr>
+                      <tr>
+                        <td>Centro comercial Moctezuma</td>
+                        <td>Francisco Chang</td>
+                        <td>Mexico</td>
+                      </tr>
+                      <tr>
+                        <td>Ernst Handel</td>
+                        <td>Roland Mendel</td>
+                        <td>Austria</td>
+                      </tr>
+                      <tr>
+                        <td>Island Trading</td>
+                        <td>Helen Bennett</td>
+                        <td>UK</td>
+                      </tr>
+                      <tr>
+                        <td>Ernst Handel</td>
+                        <td>Roland Mendel</td>
+                        <td>Austria</td>
+                      </tr>
+                      <tr>
+                        <td>Island Trading</td>
+                        <td>Helen Bennett</td>
+                        <td>UK</td>
+                      </tr>
+                    </table>
                   </div>
                 </div>
               </div>

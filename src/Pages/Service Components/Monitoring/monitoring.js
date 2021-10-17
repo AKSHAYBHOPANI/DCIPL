@@ -13,8 +13,10 @@ import fullpic from "../../../assests/5146766.jpg";
 const Monitoring = () => {
   return (
     <>
+    <div className="full">
       <div className="fullpage">
         <div className="page-1">
+         
           <img className="bgimage" src={fullpic} />
           <div className="headingofpage">SERVICES AND SUPPORT</div>
           <div className="matter">
@@ -25,33 +27,39 @@ const Monitoring = () => {
           <button className="button11">Chat with us</button>
         </div>
 
-        <div className="w1-container">Portfolio Management Services</div>
+        <div className="w1-container">
+          Portfolio Management Services
+        </div>
         <div className="w1-matter">
-          DC & CO direct's Portfolio Management Services offer you professional
-          investment management aimed to work around your customized investment
-          strategy.
-          <br /> Whether you're planning for your retirement or looking to grow
-          and secure your wealth, allow DC & COto keep your investments in line
-          with your financial plan.
+          DC & CO direct's Portfolio Management Services offer you professional investment management aimed to work around your customized investment
+          strategy.<br /> Whether you're planning for your retirement or looking to grow and secure your wealth, allow DC & COto keep your investments in line with your
+          financial plan.
         </div>
         <br />
         <br />
-        <div className="Adv3">ADVANTAGES</div>
+        <div className="Adv3">
+          ADVANTAGES
+        </div>
         <br />
         <br />
 
         <div className="flex-containerfor">
           <div>
-            <img className="bg10" src={first} alt="second" />
+            <img className="bg10"
+              src={first}
+              alt="second"
+           
+            />
           </div>
           <div className="oneheading">
             Premium investment vehicle for consistent returns
           </div>
           <div className="one">
-            Portfolio Management Service offers professional management of
-            investments <br />
-            with an aim to deliver superior risk adjusted return.
+            
+            Portfolio Management Service offers professional management
+           <br/>with an aim to deliver superior risk adjusted return.
             <br />
+            
           </div>
         </div>
         <div>
@@ -59,7 +67,8 @@ const Monitoring = () => {
           <div className="twohead">
             Professionally managed quality portfolio
           </div>
-          <div className="two1">
+          <div className="two">
+            
             The portfolio is managed by seasoned professionals who have <br />
             considerable experience in equity markets. They manage the <br />
             portfolio adhering to the strategy communicated to the clients.
@@ -69,10 +78,9 @@ const Monitoring = () => {
       <br />
       <div className="flex-containerfor-34">
         <div>
-          <img className="bg3" src={third} alt="second" alt="" />
+          <img className="bg3" src={third} alt="second"/>
           <div className="threehead">Diversification of risk</div>
           <div className="three">
-            {" "}
             Since the stock market is uncertain and volatile at times,
             investment in <br /> PMS will look to diversify the risk and thereby
             reduce <br />
@@ -80,7 +88,13 @@ const Monitoring = () => {
           </div>
         </div>
         <div>
-          <img className="bg4" src={fourth} alt="second" alt="" />
+          <img
+            className="bg4"
+            src={fourth}
+            alt="second"
+            
+            alt=""
+          />
           <div className="fourhead">Scope for higher risk adjusted returns</div>
           <div className="four">
             {" "}
@@ -94,20 +108,34 @@ const Monitoring = () => {
       </div>
 
       <div className="w1-container"></div>
-      <div className="Advfor">EXPLORE OUR PMS STRATAGIES</div>
+      <div className="Advfor">
+        EXPLORE OUR PMS STRATAGIES
+      </div>
       <br />
       <br />
 
       <div className="flex-containerfor-pms">
         <div>
-          <img className="bg5" src={sixth} alt="second" />
+          <img
+            className="bg5"
+            src={sixth}
+            alt="second"
+            
+         
+          />
           <div className="fivehead">
             Across Market Cap-Large, Multi, Mid
             <br /> & Small Cap Oriented
           </div>
         </div>
         <div>
-          <img className="bg6" src={seventh} alt="second" alt="" />
+          <img
+            className="bg6"
+            src={seventh}
+            alt="second"
+            
+            alt=""
+          />
           <div className="sixhead">Concentrated & Diversified Option</div>
         </div>
       </div>
@@ -115,11 +143,23 @@ const Monitoring = () => {
       <br />
       <div className="flex-containerfor-pms2">
         <div>
-          <img className="bg7" src={eighth} alt="second" alt="" />
+          <img
+            className="bg7"
+            src={eighth}
+            alt="second"
+           
+            alt=""
+          />
           <div className="sevenhead">Discretionary & Non-Discretionary</div>
         </div>
         <div>
-          <img className="bg8" src={nineth} alt="second" alt="" />
+          <img
+            className="bg8"
+            src={nineth}
+            alt="second"
+           
+            alt=""
+          />
           <div className="eighthead">Active & Passive Strategies</div>
         </div>
       </div>
@@ -130,7 +170,8 @@ const Monitoring = () => {
       <br />
 
       <div className="w2-container-for-circle">
-        <div className="outer-circle-last-one">
+        
+         <div className="outer-circle-last-one">
           <div className="inner-circle-last-two">
             <div className="circlematter-for-circle">
               <center>
@@ -139,39 +180,53 @@ const Monitoring = () => {
             </div>
           </div>
         </div>
-        <div className="outer-circle-last-one">
+         <div className="outer-circle-last-one">
           <div className="inner-circle-last-two">
             <div className="circlematter-for-circle">
-              <center>Attractive and Alligned Fee structures</center>
-            </div>
-          </div>
-        </div>
-        <div className="outer-circle-last-one">
-          <div className="inner-circle-last-two">
-            <div className="circlematter-for-circle">
-              <center>Customized investment strategies</center>
-            </div>
-          </div>
-        </div>
-        <div className="outer-circle-last-one">
-          <div className="inner-circle-last-two">
-            <div className="circlematter-for-circle-change">
               <center>
-                Complete Transparency stacks are held in Demat of investors
+               Attractive and Alligned Fee structures
               </center>
             </div>
           </div>
         </div>
+        <div className="outer-circle-last-one">
+          <div className="inner-circle-last-two">
+            <div className="circlematter-for-circle">
+              <center>
+               Customized
+investment
+strategies
+              </center>
+            </div>
+          </div>
+        </div>
+         <div className="outer-circle-last-one">
+          <div className="inner-circle-last-two">
+            <div className="circlematter-for-circle">
+              <center>
+                Complete Transparency
+stacks are held in
+Demat of
+investors
+              </center>
+            </div>
+          </div>
+        </div>
+        
 
         <div className="outer-circle-last-one">
           <div className="inner-circle-last-two">
             <div className="circlematter-for-circle">
-              <center>Disciplined approach and active monitoring</center>
+              <center>Disciplined
+approach and 
+active monitoring</center>
             </div>
           </div>
         </div>
+
       </div>
-      <br />
+      <br/>
+      </div>
     </>
   );
 };

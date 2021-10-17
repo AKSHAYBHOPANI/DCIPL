@@ -42,6 +42,7 @@
 }
 .serhright img {
   width: 100%;
+height:80%;
 }
 }
 .serhright {
@@ -50,7 +51,7 @@
 }
 .serhright img {
   margin-top: 5%;
-  height: 400px;
+  height: 370px;
 }
 .serhrow:after {
   content: "";
@@ -174,6 +175,7 @@
 }
 .serpright img {
   width: 600px;
+height:300px;
 }
 .serprow:after {
   content: "";
@@ -271,12 +273,7 @@
   width: 80%;
   margin-right: 25%;
 }
-.serytright h2 {
-  font-size: 110%;
-}
-.serytright p {
-  font-size: 80%;
-}
+
 .sertright {
     width: 90%;
     flex-direction: column;
@@ -349,5 +346,42 @@
   padding: 10px 25px;
   font-size: 12px;
   margin: 4px 2px;
+}
+}
+@media screen and (max-width:570px){
+.ser234whol{
+height:5500px;
+}
+.serhleft{
+font-size:20px;
+margin-top:30%;
+
+}
+.sertcolumn{
+height:100%;
+width:100%;
+}
+.serpleft{
+width:90%;
+font-size:16px;
+}
+.serytleft>img{
+margin-top:-10%;
+margin-left:10%;
+height:40%;
+width:90%;
+}
+.serytright{
+margin-top:-60%;
+}
+.sercon{
+margin-top:-57%;
+}
+.serconleft{
+width:100%;
+margin-top:-40%;
+}
+.serconright{
+margin-top:-59%;
 }
 }
