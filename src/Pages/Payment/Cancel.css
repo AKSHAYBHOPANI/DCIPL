@@ -35,7 +35,7 @@ margin-bottom: 5%;
   position: relative;
   width: 412px;
 height: 59px;
-left: 55px;
+left: 105px;
 top: 35px;
   font-family: Jost;
 font-style: normal;
@@ -43,7 +43,7 @@ font-weight: normal;
 font-size: 40px;
 line-height: 69px;
 
-color: rgba(9, 138, 99, 0.89);
+color: red;
 }
 .cn1-ar h2{
   font-family: Jost;
