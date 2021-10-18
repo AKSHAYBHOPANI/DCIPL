@@ -1,7 +1,7 @@
 import React from 'react';
 import './Cancel.css';
 import { Link } from "react-router-dom";
-import paysc from "../../assests/paymentc.gif";
+import paysc from "../../assests/error.gif";
 
 function Cancel() {
 
@@ -12,7 +12,7 @@ function Cancel() {
 		
 		<div className="c11">
 		<img src={paysc} alt="#"></img></div>
-		<h1>Payment Cancelled</h1>
+		<h1>Payment Failed</h1>
 		<h2>Something Went Wrong</h2>
 		<h3>Payment type <br/>        
 			Bank<br/>				 
