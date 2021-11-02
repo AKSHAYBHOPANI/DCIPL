@@ -9,7 +9,7 @@
   background-image: url(../../assests/job.png);
   height: 540px;
   background-repeat: no-repeat;
-  /* filter: brightness(70%); */
+  filter: brightness(70%);
   position: relative;
 }
 .headercontent {
@@ -52,7 +52,7 @@
   width: 60%;
 }
 .headercontent span {
-  color: #e57177;
+  color: #2a2552;;
 }
 .headercontent a {
   font-size: 14px;
@@ -62,7 +62,7 @@
   letter-spacing: 0.07em;
   line-height: 1;
   cursor: pointer;
-  background-color: #a9c74b;
+  background-color: #2a2552;
   border: none;
   border-radius: 0;
   color: white;
@@ -75,7 +75,7 @@
   transition: all 0.2s ease-in;
 }
 .headercontent a:hover {
-  background: #93ad41;
+  background: #3d3c49;
 }
 .benefitscontainer {
   text-align: center;
@@ -120,7 +120,7 @@
 }
 .benefitscontainer li {
   width: 20%;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   list-style: none;
 }
 .benefitscontainer img {
@@ -234,7 +234,7 @@
   margin-bottom: 5px;
 }
 .whr-title a {
-  color: #e57177;
+  color: #2a2552;
 }
 .whr-location,
 .whr-date {
@@ -250,7 +250,11 @@
 .whr-dept,
 .department {
   display: none;
+}.tbl-header a{ font-size: 1.2rem;font-weight: 600;
+  color: #2a2552;
+
 }
+.tbl-header table {margin-bottom: 3%;}
 .location {
   padding-left: 3em;
 }

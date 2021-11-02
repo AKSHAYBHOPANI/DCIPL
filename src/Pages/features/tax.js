@@ -10,8 +10,7 @@ import PortfolioHigh from "../../Components/Investment/PortfolioHigh";
 import PortfolioMedium from "../../Components/Investment/PortfolioMedium";
 import PortfolioLow from "../../Components/Investment/PortfolioLow";
 import TaxPortfolio from "../../Components/Tax/Portfolio";
-import Subscribe from "../../Components/Subscribe";
-
+import Subscribe from "../../Components/Subscribe"
 function Tax({ Profile, setProfile }) {
   const [Assests, setAssests] = useState("");
   const [Liabilities, setLiabilities] = useState("");
@@ -222,7 +221,7 @@ function Tax({ Profile, setProfile }) {
 
   return (
     <>
-      {Profile.IsSubscribed ? ( 
+      {Profile.IsSubscribed ? (
         <>
           {IsFormSubmitted ? (
             <>

@@ -1,5 +1,10 @@
+/* * {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}*/
 .start {
-  height: 10300px;
+  height: 10270px;
 }
 /* html,body{
   overflow-x:hidden;
@@ -11,7 +16,7 @@
   top: 100px;
   font-family: Jost;
   font-weight: SemiBold;
-  font-size: 36px;
+  font-size: 40px;
   line-height: 92px;
   color: #555555;
   opacity: 1;
@@ -24,9 +29,9 @@
   top: 170px;
   font-family: Jost;
   font-weight: SemiBold;
-  font-size: 36px;
+  font-size: 40px;
   line-height: 92px;
-  color: #b6c2bf;
+  color: #3ad4af;
   opacity: 1;
   text-align: left;
 }
@@ -225,8 +230,8 @@
   border-radius: 15px;
 }
 .container {
-  width: 2000x;
-  height: 868px;
+  width: 1500px;
+  height: 668px;
   background: rgba(248, 218, 174, 1);
   opacity: 1;
   position: absolute;
@@ -251,7 +256,7 @@
   color: rgba(85, 85, 85, 1);
   position: absolute;
   top: 1055px;
-  left: 130px;
+  left: 230px;
   font-family: Jost;
   font-weight: Medium;
   font-size: 40px;
@@ -260,17 +265,17 @@
 }
 .pic2 > img {
   position: absolute;
-  width: 600px;
-  height: 600px;
-  left: 650px;
+  width: 480px;
+  height: 500px;
+  left: 770px;
   top: 1070px;
   background-blend-mode: multiply;
 }
 .ar1 {
   position: absolute;
-  width: 351px;
+  width: 251px;
   height: 347px;
-  left: 150px;
+  left: 250px;
   top: 1342px;
 }
 .ar2 {
@@ -297,7 +302,7 @@
   color: rgba(85, 85, 85, 1);
   position: absolute;
   top: 1162px;
-  left: 110px;
+  left: 210px;
   font-family: Jost;
   font-weight: Light;
   font-size: 26px;
@@ -308,7 +313,7 @@
   position: absolute;
   width: 255px;
   height: 40px;
-  left: 110px;
+  left: 210px;
   top: 1205px;
   font-family: Jost;
   font-size: 26px;
@@ -321,7 +326,7 @@
   position: absolute;
 
   height: 28px;
-  left: 295px;
+  left: 395px;
   top: 1211px;
 
   font-family: Jost;
@@ -342,15 +347,15 @@
   left: 692px;
   font-family: Jost;
   font-weight: SemiBold;
-  font-size: 64px;
+  font-size: 44px;
   opacity: 1;
   text-align: left;
 }
 .pic3 > img {
   position: absolute;
-  width: 438px;
-  height: 378px;
-  left: 90px;
+  width: 378px;
+  height: 338px;
+  left: 150px;
   top: 1741px;
 }
 .text7 {
@@ -432,10 +437,10 @@
   color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 3000px;
-  left: 306px;
+  left: 396px;
   font-family: Jost;
   font-weight: Bold;
-  font-size: 64px;
+  font-size: 45px;
   opacity: 1;
   text-align: left;
 }
@@ -447,21 +452,21 @@
   left: 397px;
   font-family: Jost;
   font-weight: Medium;
-  font-size: 36px;
+  font-size: 26px;
   opacity: 1;
   text-align: center;
 }
 .pic6 {
   position: absolute;
-  width: 220px;
-  height: 250px;
+  width: 200px;
+  height: 230px;
   left: 98px;
   top: 3250px;
 }
 .pic7 {
   position: absolute;
-  width: 220px;
-  height: 250px;
+  width: 200px;
+  height: 230px;
   left: 600px;
   top: 3250px;
 }
@@ -686,11 +691,11 @@
   width: 600px;
   color: rgba(255, 255, 255, 1);
   position: absolute;
-  top: 0px;
+  top: 20px;
   left: 100px;
   font-family: Jost;
   font-weight: Medium;
-  font-size: 70px;
+  font-size: 50px;
   opacity: 1;
   text-align: left;
   margin: 0px;
@@ -700,11 +705,11 @@
   width: 436px;
   color: rgba(255, 255, 255, 1);
   position: absolute;
-  top: 4590px;
-  left: 930px;
+  top: 4610px;
+  left: 800px;
   font-family: Jost;
   font-weight: Regular;
-  font-size: 40px;
+  font-size: 30px;
   opacity: 1;
   text-align: left;
 }
@@ -720,10 +725,10 @@
 }
 .pic13 > img {
   position: absolute;
-  width: 490px;
-  height: 519px;
-  left: 750px;
-  top: 4700px;
+  width: 400px;
+  height: 380px;
+  left: 850px;
+  top: 4730px;
 }
 .text17 {
   width: 650px;
@@ -763,10 +768,10 @@
 }
 .pic14 > img {
   position: absolute;
-  width: 420px;
-  height: 400px;
-  left: 600px;
-  top: 5409px;
+  width: 370px;
+  height: 300px;
+  left: 810px;
+  top: 5459px;
 }
 .subhead4 {
   width: 858px;
@@ -842,11 +847,11 @@
   width: 397px;
   color: rgba(255, 255, 255, 1);
   position: absolute;
-  top: 0px;
+  top: 15px;
   left: 100px;
   font-family: Jost;
   font-weight: Medium;
-  font-size: 70px;
+  font-size: 50px;
   opacity: 1;
   text-align: left;
 }
@@ -861,16 +866,16 @@
 }
 .pic15 > img {
   position: absolute;
-  width: 455px;
-  height: 507px;
-  left: 750px;
-  top: 6150px;
+  width: 365px;
+  height: 380px;
+  left: 850px;
+  top: 6200px;
 }
 .text21 {
   width: 651px;
   color: rgba(0, 0, 0, 1);
   position: absolute;
-  top: 6330px;
+  top: 6370px;
   left: 100px;
   font-family: Jost;
   font-size: 20px;
@@ -879,10 +884,10 @@
 }
 .pic16 > img {
   position: absolute;
-  width: 640px;
-  height: 656px;
-  left: 60px;
-  top: 6500px;
+  width: 380px;
+  height: 396px;
+  left: 260px;
+  top: 6630px;
 }
 .text22 {
   width: 459px;
@@ -943,19 +948,19 @@
   width: 469px;
   color: rgba(255, 255, 255, 1);
   position: absolute;
-  top: 14px;
+  top: 30px;
   left: 121px;
   font-family: Jost;
   font-weight: Medium;
-  font-size: 70px;
+  font-size: 50px;
   opacity: 1;
   text-align: left;
 }
 .pic17 > img {
   position: absolute;
   width: 472px;
-  height: 458px;
-  left: 580px;
+  height: 400px;
+  left: 690px;
   top: 7700px;
 }
 .subhead7 {
@@ -995,9 +1000,9 @@
 }
 .pic18 > img {
   position: absolute;
-  width: 454px;
-  height: 424px;
-  left: 768px;
+  width: 364px;
+  height: 344px;
+  left: 858px;
   top: 8300px;
 }
 .text24 {
@@ -1014,11 +1019,11 @@
 }
 .container2 {
   width: 100%;
-  height: 550px;
+  height: 540px;
   background: rgba(58, 212, 175, 1);
   opacity: 1;
   position: absolute;
-  top: 9000px;
+  top: 8800px;
   left: 0px;
 
   overflow: hidden;
@@ -1027,7 +1032,7 @@
   width: 589px;
   color: rgba(255, 255, 255, 1);
   position: absolute;
-  top: 9000px;
+  top: 8900px;
   left: 450px;
   font-family: Jost;
   font-weight: SemiBold;
@@ -1037,16 +1042,16 @@
 }
 .pic19 > img {
   position: absolute;
-  width: 420px;
-  height: 426px;
-  left: 803px;
-  top: 9100px;
+  width: 320px;
+  height: 326px;
+  left: 853px;
+  top: 9000px;
 }
 .text25 {
   width: 666px;
   color: rgba(255, 255, 255, 1);
   position: absolute;
-  top: 9200px;
+  top: 9000px;
   left: 108px;
   font-family: Jost;
   font-weight: Regular;
@@ -1057,11 +1062,11 @@
 .h21 {
   width: 1050px;
   position: absolute;
-  top: 9800px;
+  top: 9500px;
   left: 100px;
   font-family: Jost;
 
-  font-size: 46px;
+  font-size: 45px;
   opacity: 1;
   text-align: left;
 }
@@ -1069,7 +1074,7 @@
   width: 543px;
   color: rgba(85, 85, 85, 1);
   position: absolute;
-  top: 9980px;
+  top: 9600px;
   left: 100px;
   font-family: Jost;
   font-weight: Regular;
@@ -1079,32 +1084,34 @@
 }
 .pic20 > img {
   position: absolute;
-  width: 430px;
+  width: 330px;
   height: 321px;
-  left: 693px;
-  top: 9900px;
+  left: 823px;
+  top: 9500px;
 }
 @media screen and (max-width: 550px) {
-  html,
-  body {
+  /* html,body{
+overflow-x:hidden;} */
+  .start {
     overflow-x: hidden;
   }
+
   .h1,
   .h2 {
-    font-size: 25px;
-    left: 10px;
+    font-size: 20px;
+    left: 40px;
     width: 90%;
   }
   .text1 {
     font-size: 20px;
     width: 70%;
-    left: 30px;
+    left: 40px;
   }
   .pic1 > img {
     width: 50%;
-    height: 40%;
+    height: 25%;
     left: 30px;
-    top: 330px;
+    top: 410px;
   }
   .button0 {
     left: 50px;
@@ -1125,14 +1132,14 @@
   }
   .text2 {
     left: 30px;
-    width: 100%;
+    width: 80%;
     top: 940px;
   }
   .container {
     left: 10px;
     top: 1200px;
     width: 90%;
-    height: 80%;
+    height: 70%;
   }
   .h6 {
     left: 30px;
@@ -1155,15 +1162,15 @@
   .pic2 > img {
     width: 40%;
     left: 88px;
-    height: 40%;
+    height: 25%;
     top: 1320px;
   }
   .ar1 {
     left: 50px;
-    top: 1670px;
+    top: 1680px;
   }
   .ar1 > img {
-    height: 40%;
+    height: 30%;
     width: 50%;
   }
   .text4 {
@@ -1184,8 +1191,8 @@
   .pic3 > img {
     width: 50%;
     left: 40px;
-    height: 40%;
-    top: 1830px;
+    height: 20%;
+    top: 1790px;
   }
   .h8 {
     left: 20px;
@@ -1210,7 +1217,7 @@
     width: 30%;
     left: 30px;
     height: 40%;
-    top: 2290px;
+    top: 2250px;
   }
   .h9 {
     left: 20px;
@@ -1224,9 +1231,9 @@
   }
 
   .pic5 > img {
-    width: 30%;
+    width: 40%;
     left: 50px;
-    height: 40%;
+    height: 25%;
     top: 2730px;
   }
   .h10 {
@@ -1397,9 +1404,9 @@
     font-size: 20px;
   }
   .h17 {
-    left: 30px;
+    left: 10px;
     font-size: 23px;
-    width: 100%;
+    width: 90%;
     top: 4660px;
   }
   .text17 {
@@ -1411,7 +1418,7 @@
   .pic13 > img {
     width: 30%;
     left: 80px;
-    height: 30%;
+    height: 25%;
     top: 4850px;
   }
   .subhead3 {
@@ -1439,20 +1446,20 @@
   }
   .subhead5 {
     left: 20px;
-    top: 5917px;
+    top: 5895px;
     font-size: 20px;
     width: 90%;
   }
   .text20 {
     left: 20px;
-    top: 5950px;
+    top: 5935px;
     font-size: 18px;
     width: 90%;
   }
   .pic14 > img {
-    width: 350px;
+    width: 300px;
     left: 20px;
-    height: 30%;
+    height: 25%;
     top: 5700px;
   }
   .box4 {
@@ -1490,19 +1497,19 @@
   .pic16 > img {
     width: 30%;
     left: 20px;
-    height: 30%;
-    top: 6950px;
+    height: 29%;
+    top: 6920px;
   }
   .h18 {
     left: 40px;
-    top: 7130px;
+    top: 7120px;
     font-size: 25px;
   }
   .text23 {
     left: 20px;
-    top: 7170px;
+    top: 7160px;
     width: 90%;
-    font-size: 17px;
+    font-size: 16px;
   }
   .box5 {
     width: 100%;
@@ -1537,13 +1544,13 @@
   .pic18 > img {
     width: 30%;
     left: 30px;
-    height: 30%;
-    top: 8560px;
+    height: 27%;
+    top: 8500px;
   }
   .container2 {
     top: 8870px;
     width: 100%;
-    height: 120%;
+    height: 100%;
   }
   .h20 {
     left: 20px;
@@ -1579,12 +1586,14 @@
     width: 30%;
     left: 30px;
     height: 30%;
-    top: 10109px;
+    top: 10060px;
   }
 }
 @media only screen and (min-width: 551px) and (max-width: 800px) {
-  html,
-  body {
+  /* html,body{
+    overflow-x:hidden;
+  } */
+  .start {
     overflow-x: hidden;
   }
   .h1,
@@ -1602,18 +1611,18 @@
     width: 50%;
     left: 130px;
     top: 320px;
-    height: 50%;
+    height: 40%;
   }
   .button0 {
-    left: 10px;
+    left: 30px;
     top: 780px;
   }
   .button2 {
-    left: 240px;
+    left: 260px;
     top: 780px;
   }
   .button3 {
-    left: 470px;
+    left: 490px;
     top: 780px;
   }
   .hr {
@@ -1680,10 +1689,10 @@
     font-size: 20px;
   }
   .pic3 > img {
-    width: 60%;
+    width: 50%;
     left: 190px;
     top: 1700px;
-    height: 50%;
+    height: 30%;
   }
   .h8 {
     left: 60px;
@@ -1708,7 +1717,7 @@
     width: 60%;
     left: 130px;
     top: 2220px;
-    height: 50%;
+    height: 30%;
   }
   .h9 {
     left: 50px;
@@ -1724,7 +1733,7 @@
     width: 70%;
     left: 150px;
     top: 2598px;
-    height: 50%;
+    height: 30%;
   }
   .h10 {
     left: 40px;
@@ -1901,7 +1910,7 @@
     width: 50%;
     left: 100px;
     top: 4760px;
-    height: 50%;
+    height: 30%;
   }
   .subhead3 {
     left: 50px;
@@ -1942,7 +1951,7 @@
     width: 400px;
     left: 100px;
     top: 5640px;
-    height: 50%;
+    height: 30%;
   }
   .box4 {
     width: 100%;
@@ -1965,10 +1974,10 @@
     top: 6230px;
   }
   .pic15 > img {
-    width: 60%;
+    width: 50%;
     left: 100px;
     top: 6380px;
-    height: 50%;
+    height: 30%;
   }
   .text22 {
     left: 20px;
@@ -1977,10 +1986,10 @@
     font-size: 22px;
   }
   .pic16 > img {
-    width: 60%;
+    width: 50%;
     left: 50px;
     top: 6900px;
-    height: 50%;
+    height: 30%;
   }
   .h18 {
     left: 40px;
@@ -2009,8 +2018,8 @@
   .pic17 > img {
     width: 390px;
     left: 90px;
-    top: 7900px;
-    height: 50%;
+    top: 7890px;
+    height: 30%;
   }
   .h19 {
     left: 30px;
@@ -2026,7 +2035,7 @@
     width: 60%;
     left: 120px;
     top: 8460px;
-    height: 50%;
+    height: 30%;
   }
   .container2 {
     top: 8870px;
@@ -2049,7 +2058,7 @@
     width: 50%;
     left: 140px;
     top: 9200px;
-    height: 40%;
+    height: 30%;
   }
   .h21 {
     left: 20px;
@@ -2067,19 +2076,19 @@
     width: 50%;
     left: 130px;
     top: 9895px;
-    height: 50%;
+    height: 30%;
   }
 }
 
 @media only screen and (min-width: 802px) and (max-width: 1200px) {
-  html,
-  body {
-    overflow-x: hidden;
-  }
+  /* html,body{
+    overflow-x:hidden;
+  } */
   .personal11 {
     padding-top: 10%;
     margin-top: 10%;
   }
+
   .h1,
   .h2 {
     font-size: 60px;
@@ -2092,10 +2101,10 @@
     left: 70px;
   }
   .pic1 > img {
-    width: 60%;
+    width: 40%;
     left: 190px;
     top: 320px;
-    height: 60%;
+    height: 30%;
   }
   .button0 {
     left: 80px;
@@ -2123,7 +2132,7 @@
     left: 60px;
     top: 1130px;
     width: 70%;
-    height: 40%;
+    height: 30%;
   }
   .h6 {
     left: 50px;
@@ -2147,7 +2156,7 @@
     width: 40%;
     left: 470px;
     top: 1370px;
-    height: 60%;
+    height: 20%;
   }
   .ar1 {
     left: 150px;
@@ -2174,9 +2183,9 @@
   }
   .pic3 > img {
     width: 50%;
-    left: 230px;
-    top: 1750px;
-    height: 50%;
+    left: 200px;
+    top: 1710px;
+    height: 25%;
   }
   .h8 {
     left: 60px;
@@ -2198,10 +2207,10 @@
     height: 40%;
   }
   .pic4 > img {
-    width: 60%;
+    width: 50%;
     left: 130px;
-    top: 2220px;
-    height: 60%;
+    top: 2180px;
+    height: 30%;
   }
   .h9 {
     left: 50px;
@@ -2214,10 +2223,10 @@
     width: 95%;
   }
   .pic5 > img {
-    width: 70%;
+    width: 50%;
     left: 150px;
     top: 2580px;
-    height: 60%;
+    height: 30%;
   }
   .h10 {
     left: 40px;
@@ -2395,10 +2404,10 @@
     top: 4695px;
   }
   .pic13 > img {
-    width: 50%;
+    width: 40%;
     left: 200px;
     top: 4780px;
-    height: 50%;
+    height: 20%;
   }
   .subhead3 {
     left: 50px;
@@ -2436,10 +2445,10 @@
     width: 90%;
   }
   .pic14 > img {
-    width: 400px;
+    width: 370px;
     left: 170px;
-    top: 5600px;
-    height: 60%;
+    top: 5580px;
+    height: 25%;
   }
   .box4 {
     width: 100%;
@@ -2462,10 +2471,10 @@
     top: 6230px;
   }
   .pic15 > img {
-    width: 60%;
+    width: 40%;
     left: 230px;
-    top: 6300px;
-    height: 60%;
+    top: 6320px;
+    height: 25%;
   }
   .text22 {
     left: 20px;
@@ -2476,8 +2485,8 @@
   .pic16 > img {
     width: 50%;
     left: 230px;
-    top: 6800px;
-    height: 60%;
+    top: 6820px;
+    height: 25%;
   }
   .h18 {
     left: 40px;
@@ -2507,8 +2516,8 @@
   .pic17 > img {
     width: 350px;
     left: 170px;
-    top: 7900px;
-    height: 60%;
+    top: 7850px;
+    height: 25%;
   }
   .h19 {
     left: 50px;
@@ -2521,15 +2530,15 @@
     width: 90%;
   }
   .pic18 > img {
-    width: 60%;
-    left: 250px;
+    width: 50%;
+    left: 200px;
     top: 8480px;
-    height: 60%;
+    height: 25%;
   }
   .container2 {
     top: 8870px;
     width: 100%;
-    height: 100%;
+    height: 45%;
   }
   .h20 {
     left: 20px;
@@ -2547,11 +2556,11 @@
     width: 50%;
     left: 250px;
     top: 9150px;
-    height: 50%;
+    height: 20%;
   }
   .h21 {
     left: 20px;
-    top: 9470px;
+    top: 9490px;
     width: 90%;
     font-size: 25px;
   }
@@ -2565,7 +2574,7 @@
   .pic20 > img {
     width: 50%;
     left: 250px;
-    top: 9850px;
-    height: 60%;
+    top: 9700px;
+    height: 20%;
   }
 }

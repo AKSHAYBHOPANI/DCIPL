@@ -153,7 +153,7 @@ const Register = (Profile) => {
                     required
                   ></input>
 
-                  <h1>
+                  {/* <h1>
                     {" "}
                     &nbsp; &nbsp;
                     <label for="agree">
@@ -162,7 +162,7 @@ const Register = (Profile) => {
                       <Link to=""> Terms of Service </Link>
                       and <Link to=""> Privacy Policy.</Link>
                     </label>
-                  </h1>
+                  </h1> */}
 
                   <h5>
                     Already Signed up ? &nbsp;

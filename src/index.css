@@ -38,7 +38,7 @@ label {
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
-
+  margin-top: 2%;
   color: black;
 }
 select {
@@ -68,8 +68,8 @@ hr {
 /* Set a style for all buttons */
 button {
   padding: 13px;
-  color: black;
-  background: linear-gradient(to right, #3ad4af, #082361);
+  color: white;
+  background-color: cornflowerblue;
 
   color: white;
   font-weight: 600;
@@ -132,6 +132,9 @@ table {
   text-transform: capitalize;
 
   color: #202020;
+}
+form {
+  padding: 2%;
 }
 th {
   text-align: left;

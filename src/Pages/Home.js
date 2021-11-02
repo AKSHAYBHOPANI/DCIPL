@@ -1,3 +1,5 @@
+
+   
 import React, { useState } from "react";
 import "./CSS/Home.css";
 import { useHistory } from "react-router-dom";
@@ -44,7 +46,7 @@ import men from "../assests/taxreturn.svg";
 import save from "../assests/idea2.png";
 import idfc from "../assests/a-idfc.svg";
 import sriram from "../assests/sriram.png";
-import AppointmentModal from "../Pages/modal/AppointmentModal";
+
 // import Postmodal from "../Pages/modal/Postmodal";s
 
 // Progress Bar
@@ -98,7 +100,7 @@ const breakPoints3 = [
 const breakPoints2 = [
   { width: 400, itemsToShow: 1 },
   { width: 600, itemsToShow: 1 },
-  { width: 800, itemsToShow: 2 },
+  { width: 800, itemsToShow: 1},
   { width: 1000, itemsToShow: 3 },
   { width: 1200, itemsToShow: 3 },
   { width: 1400, itemsToShow: 3 },
@@ -139,37 +141,37 @@ const Home = () => {
   ];
 
   // Statistics
-  var project = setInterval(projectDone, 10);
-  var clients = setInterval(happyClients, 10);
-  var service = setInterval(service, 10);
+  // var project = setInterval(projectDone, 10);
+  // var clients = setInterval(happyClients, 10);
+  // var service = setInterval(service, 10);
 
-  let count1 = 1;
-  let count2 = 1;
-  let count3 = 1;
+  // let count1 = 1;
+  // let count2 = 1;
+  // let count3 = 1;
 
-  function projectDone() {
-    count1++;
-    document.querySelector("#number1").innerHTML = count1;
-    if (count1 == 500) {
-      clearInterval(project);
-    }
-  }
+  // function projectDone() {
+  //   count1++;
+  //   document.querySelector("#number1").innerHTML = count1;
+  //   if (count1 == 500) {
+  //     clearInterval(project);
+  //   }
+  // }
 
-  function happyClients() {
-    count2++;
-    document.querySelector("#number2").innerHTML = count2;
-    if (count2 == 89) {
-      clearInterval(clients);
-    }
-  }
+  // function happyClients() {
+  //   count2++;
+  //   document.querySelector("#number2").innerHTML = count2;
+  //   if (count2 == 89) {
+  //     clearInterval(clients);
+  //   }
+  // }
 
-  function service() {
-    count3++;
-    document.querySelector("#number3").innerHTML = count3;
-    if (count3 == 359) {
-      clearInterval(service);
-    }
-  }
+  // function service() {
+  //   count3++;
+  //   document.querySelector("#number3").innerHTML = count3;
+  //   if (count3 == 359) {
+  //     clearInterval(service);
+  //   }
+  // }
 
   return (
     <>
@@ -182,15 +184,15 @@ const Home = () => {
               The <span>smart </span>
               next gen <span> money app</span>
             </h3>
-            <img src={derivebox} alt="#"></img>
+            {/* <img src={derivebox} alt="#"></img> */}
             <div className="s-box">
               <h4>
-                <h1>#DERIVEUP </h1> to begin saving 3X more than others!
+                <h1>#DERIVEUP  to begin saving 3X more than others!</h1>
               </h4>
             </div>{" "}
-            <img src={gplay} alt="#"></img>
+            {/* <img src={gplay} alt="#"></img> */}
             <div class="mobile-input p-1">
-              <label for="userMobile" class="sr-only">
+              {/* <label for="userMobile" class="sr-only">
                 Enter your mobile number
               </label>{" "}
               <input
@@ -199,16 +201,19 @@ const Home = () => {
                 type="tel"
                 name="user-mobile"
                 placeholder="Enter your mobile number"
-              />{" "}
-              <button id="join-btn-top" class="btn theme-btn fo-sm-16">
-                Get App Link
-              </button>
+              />{" "} */}
+              <Link to="/Subscribe">
+                {" "}
+                <button id="join-btn-top" class="btn theme-btn fo-sm-16">
+                  Subscribe
+                </button>
+              </Link>
             </div>
           </div>
 
           <div className="first-box-right">
             <div className="wrapper-main1">
-              <div className="carousel">
+              <div className="carousel-home">
                 <div className="carousel__item">
                   <div className="carousel__item-head">🚀</div>
                   <div className="carousel__item-body">
@@ -272,7 +277,7 @@ const Home = () => {
                 <div className="carousel__item">
                   <div className="carousel__item-head">💷</div>
                   <div className="carousel__item-body">
-                    <p className="title">Start earning more today.</p>
+                    <p className="title-slide">Start earning more today.</p>
                     <p>Derive Capital</p>
                   </div>
                 </div>
@@ -321,12 +326,12 @@ const Home = () => {
           </div>{" "}
           <div className="second-box-right">
             <div className="categories">
-              <div className="row1">
+              <div className="row-home">
                 <Box_component Icon={image28} Text={"Tax Planning"} />
                 <Box_component Icon={image26} Text={"Investment Planning"} />
                 <Box_component Icon={image29} Text={"Wealth Planning"} />
               </div>
-              <div className="row1">
+              <div className="row-home">
                 <Box_component Icon={image33} Text={"Retirement Planning"} />
                 <Box_component Icon={image31} Text={"Estate Planning"} />
                 <Box_component Icon={image27} Text={"Mutual Fund"} />
@@ -360,18 +365,15 @@ const Home = () => {
                     Top-ranking financial services guaranteed. Financial advice
                     to get you back where you belong. We handle your money with
                     high standards. Our business is to understand your business.
-                    It’s time to seek financial advice from experts. We
+                    {/* It’s time to seek financial advice from experts. We
                     guarantee the worthiness of every money transaction.
                     Creative financial solutions. Giving your savings the
-                    opportunity to grow.
+                    opportunity to grow. */}
                   </h3>{" "}
-                  <Link to="" onClick={() => setAppointmentIsOpen(true)}>
+                  <Link to="/AppointmentModal" >
                     Book Appointment
                   </Link>
-                  <AppointmentModal
-                    appointmentIsOpen={appointmentIsOpen}
-                    setAppointmentIsOpen={setAppointmentIsOpen}
-                  ></AppointmentModal>
+                
                 </div>{" "}
               </div>
             </div>
@@ -548,18 +550,18 @@ const Home = () => {
             </Carousel>
           </div>
         </section>
-        <section className="seventh-box">
+        {/* <section className="seventh-box">
           <div className="control-container">
             <div className="scroller">
               <h1 className="others">Others</h1>{" "}
               <h1 className="derivers">DERIVERS</h1>{" "}
-              <button className="dragger" onClick={() => setToggle(true)}>
-                <img alt="mover" className="lazyLoad isLoaded" src={arrow} />
+              <button className="dragger" toggle={toggle}>
+                <img alt="mover" src={arrow} onClick={() => setToggle(true)}  />  
               </button>{" "}
-              <img alt="Derive Capital" className="" src={happy} />
+              <img alt="Derive Capital" onClick={() => setToggle(false)} className="" src={happy} />
             </div>
           </div>
-        </section>
+        </section> */}
         <section className="eighth-box">
           <div className="eighth-box-left">
             <img src={image17} alt="#" className="security-img"></img>

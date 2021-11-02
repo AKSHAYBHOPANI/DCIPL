@@ -1,0 +1,214 @@
+.subscribe-pg {
+  width: 90vw;
+  height: 40rem;
+}
+.subscribe-pg h1 {
+  padding: 2%;
+  color: #333745;
+  font-size: 1.2rem;
+}
+.pricing-table {
+  position: absolute;
+  margin-top: 10rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.pricing-table .card_subs {
+  width: 320px;
+  height: 370px;
+  padding: 30px;
+  margin-left: 10%;
+  margin-top: 30%;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 2px 2px 46px -4px rgba(0, 0, 0, 0.6);
+  transition: all 0.2s ease-in-out;
+}
+.pricing-table .card_subs:nth-child(1) {
+  background: #7f7fd5;
+  background: linear-gradient(to left, #91eae4, #86a8e7, #7f7fd5);
+}
+/* .pricing-table .card_subs:nth-child(1) .price-dash::before {
+  content: "$20";
+} */
+/* .pricing-table .card_subs:nth-child(2) {
+  margin: 0 30px;
+  z-index: 2;
+  width: 250px;
+  height: 400px;
+  background: #ff416c;
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+} */
+/* .pricing-table .card_subs:nth-child(2) .price-dash::before {
+  content: "$50";
+} */
+.pricing-table .card_subs:nth-child(2) {
+  background: #00b09b;
+  background: linear-gradient(to right, #96c93d, #00b09b);
+}
+/* .pricing-table .card_subs:nth-child(2) .price-dash::before {
+  content: "$100";
+} */
+.pricing-table .card_subs:nth-child(1) .price-dash,
+.pricing-table .card_subs:nth-child(2) .price-dash {
+  font-size: 6rem;
+}
+.pricing-table .card_subs:nth-child(1) .buy-button,
+.pricing-table .card_subs:nth-child(2) .buy-button {
+  width: 230px;
+  height: 170px;
+}
+.pricing-table .card_subs:nth-child(1) .buy-button h3,
+.pricing-table .card_subs:nth-child(2) .buy-button h3 {
+  top: 12%;
+  left: 10%;
+  font-size: 1rem;
+}
+.pricing-table .card_subs .type-dash {
+  margin-top: 30px;
+  letter-spacing: 0.1rem;
+}
+.pricing-table .card_subs .price-dash {
+  font-size: 7.5rem;
+  position: relative;
+  margin: 10px 0px 20px;
+  z-index: 2;
+}
+.pricing-table .card_subs .price-dash span {
+  font-size: 1.8rem;
+  position: absolute;
+  left: -15%;
+  top: 65%;
+}
+.pricing-table .card_subs .price-dash::before {
+  position: absolute;
+  content: "";
+  color: rgba(255, 255, 255, 0.06);
+  font-size: 9.5rem;
+  z-index: -1;
+  right: -30%;
+  bottom: 15%;
+  text-shadow: 0 0 0px rgba(51, 55, 69, 0);
+  transition: all 1s ease-in-out;
+}
+.pricing-table .card_subs .plan-dash {
+  font-size: 1.3rem;
+  position: relative;
+  margin-bottom: 10px;
+}
+.pricing-table .card_subs .plan-dash::before,
+.pricing-table .card_subs .plan-dash::after {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 2px;
+  background: #fff;
+  bottom: 40%;
+  transition: all 0.2s ease-out;
+}
+.pricing-table .card_subs .plan-dash::before {
+  right: 100%;
+  transform: translate(-50%, -50%);
+}
+.pricing-table .card_subs .plan-dash::after {
+  right: -100%;
+  transform: translate(0%, -50%);
+}
+.pricing-table .card_subs .details-dash {
+  text-transform: capitalize;
+  color: black;
+}
+.pricing-table .card_subs .details-dash li {
+  margin-top: -2.5rem;
+}
+.pricing-table .card_subs .buy-button {
+  cursor: pointer;
+  position: absolute;
+  width: 250px;
+  height: 180px;
+  background: #fff;
+  border-radius: 15%;
+  right: -34%;
+  bottom: -27%;
+  transition: all 0.4s ease-in-out;
+}
+.pricing-table .card_subs .buy-button h3 {
+  text-shadow: 0 0 0;
+  text-decoration: none;
+  color: #fff;
+  position: absolute;
+  left: 8%;
+  top: 10%;
+  color: #333745;
+  font-size: 1.2rem;
+  transition: all 0.4s ease-in-out;
+}
+.pricing-table .card_subs:hover {
+  transform: scale(1.02);
+}
+.pricing-table .card_subs:hover .price-dash::before {
+  -webkit-animation: text-hover 1s ease-in-out infinite normal;
+  animation: text-hover 1s ease-in-out infinite normal;
+}
+.pricing-table .card_subs:hover .plan-dash::before {
+  right: 90%;
+}
+.pricing-table .card_subs:hover .plan-dash::after {
+  right: -90%;
+}
+.pricing-table .card_subs:hover .buy-button {
+  width: 100%;
+  right: 0%;
+  border-radius: 0%;
+}
+.pricing-table .card_subs:hover .buy-button h3 {
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.subs-dash {
+  top: 70%;
+  margin-left: 30%;
+}
+
+@-webkit-keyframes text-hover {
+  0% {
+    right: -30%;
+  }
+  50% {
+    right: -37%;
+  }
+  100% {
+    right: -30%;
+  }
+}
+
+@keyframes text-hover {
+  0% {
+    right: -30%;
+  }
+  50% {
+    right: -37%;
+  }
+  100% {
+    right: -30%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .pricing-table {
+    flex-direction: column;
+    padding-top: 30%;
+    margin-top: 20rem;
+  }
+  .pricing-table .card_subs {
+    width: 100%;
+    /* height: 80%; */
+  }
+  .subscribe-pg {
+    height: 70rem;
+  }
+}

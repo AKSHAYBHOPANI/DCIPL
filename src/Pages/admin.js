@@ -59,7 +59,6 @@ function Admin(Profile) {
             "</a>" +
             "</a>";
 
-
           txt += "</tr>";
         }
         txt += "</table>";
@@ -67,7 +66,6 @@ function Admin(Profile) {
         document.getElementById("logo").style.display = "none";
       });
   };
-
 
   const GetOnboarding = () => {
     document.getElementById("logo").style.display = "block";
@@ -323,9 +321,9 @@ function Admin(Profile) {
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="/scheduler">
                     <i class="bx bx-coin-stack"></i>
-                    <span class="links_name">Accounts Payable</span>
+                    <span class="links_name">Scheduler</span>
                   </a>
                 </li>
                 <li>

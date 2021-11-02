@@ -25,25 +25,19 @@ function Footer() {
               <div className="middle6 boxpro1">
                 <div className="topicpro1">Our Services</div>
                 <div>
-                  <a href="./Home">Home</a>
+                  <a href="./">Home</a>
                 </div>
                 <div>
-                  <a href="./about">About Us</a>
+                  <a href="./about">Why Choose DC Ikigai</a>
                 </div>
                 <div>
-                  <a href="#">Services</a>
+                  <a href="/Subscribe">Pricing</a>
                 </div>
                 <div>
-                  <a href="./Blog">Blog</a>
+                  <a href="./policy">Privacy Policy</a>
                 </div>
                 <div>
                   <a href="./careers">Careers</a>
-                </div>
-                <div>
-                  <a href="./login">Login</a>
-                </div>
-                <div>
-                  <a href="#">Contact</a>
                 </div>
               </div>
               <div className="right6 boxpro1">
