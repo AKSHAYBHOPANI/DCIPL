@@ -6,7 +6,8 @@ import Dashboard from "./dashboard";
 import "./CSS/register.css";
 
 import FacebookLogin from "react-facebook-login";
-
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
 const Register = (Profile) => {
   const [Mobile, setMobile] = useState("");
   const [Email, setEmail] = useState("");
@@ -51,6 +52,7 @@ const Register = (Profile) => {
 
   const onSubmitSignIn = (e) => {
     e.preventDefault();
+    NProgress.start();
     // document.getElementById("logo").style.display = "block";
     if (Password === ConfirmPassword) {
       fetch("https://server.yourtechshow.com/register", {
@@ -75,8 +77,10 @@ const Register = (Profile) => {
                 IsonBoarding: false,
               });
             });
+            NProgress.done();
           } else {
             console.log(response);
+            NProgress.done();
             alert("Email Already Exists");
             // document.getElementById("logo").style.display = "none";
           }

@@ -6,7 +6,7 @@ import "./App.css";
 import Nav from "./Components/Nav";
 import Main from "./Main";
 import Footer from "./Components/Footer";
-
+import Loading from './Loading';
 function App() {
   const [Profile, setProfile] = useState({
     id: "",
@@ -22,6 +22,7 @@ function App() {
     <>
       <Nav Profile={Profile} setProfile={setProfile} />
       <Main Profile={Profile} setProfile={setProfile} />
+        <Loading/>
       <Footer />
     </>
   );

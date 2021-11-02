@@ -5,7 +5,8 @@ import FacebookLogin from "react-facebook-login";
 import logimg from "../assests/login.svg";
 // import OtpInput from "react-otp-input";
 import Forgotpass from "../Pages/modal/Forgotpass/Forgotpass";
-
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
 import "./CSS/login.css";
 
 function Login(Profile) {
@@ -19,6 +20,7 @@ function Login(Profile) {
   const [showpassword, setshow] = useState(false);
 
   const responseFacebook = (response) => {
+    NProgress.start();
     console.log(response);
     setName(response.name);
     setEmail(response.email);
@@ -33,6 +35,7 @@ function Login(Profile) {
         });
       });
     } else {
+      NProgress.done();
     }
   };
 
@@ -47,7 +50,7 @@ function Login(Profile) {
 
   const onSubmitSignIn = (e) => {
     e.preventDefault();
-
+    NProgress.start();
     fetch("https://server.yourtechshow.com/signin", {
       method: "post",
       headers: { "Content-Type": "application/json" },
@@ -59,6 +62,7 @@ function Login(Profile) {
       .then((response) => response.json())
       .then((user) => {
         if (user.id) {
+          NProgress.done();
           Profile.setProfile((prevState) => {
             return Object.assign({}, prevState, {
               id: user.id,
