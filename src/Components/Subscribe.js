@@ -1,74 +1,79 @@
-import React from "react";
+import { React, useState } from "react";
 import "./subscribe.css";
+import { Link } from "react-router-dom";
+
+import Subspay from "../Pages/modal/subspay/subspay";
 
 function Subscribe() {
-  function InitiatePay() {
-    const https = require("https");
-    /*
-     * import checksum generation utility
-     * You can get this utility from https://developer.paytm.com/docs/checksum/
-     */
-    const PaytmChecksum = require("paytmchecksum");
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
-    var paytmParams = {};
+  // function InitiatePay() {
+  //   const https = require("https");
+  //   /*
+  //    * import checksum generation utility
+  //    * You can get this utility from https://developer.paytm.com/docs/checksum/
+  //    */
+  //   const PaytmChecksum = require("paytmchecksum");
 
-    paytmParams.body = {
-      requestType: "Payment",
-      mid: "YOUR_MID_HERE",
-      websiteName: "WEBSTAGING",
-      orderId: "ORDERID_98765",
-      callbackUrl: "dcipl.yourtechshow.com/success",
-      txnAmount: {
-        value: "1.00",
-        currency: "INR",
-      },
-      userInfo: {
-        custId: "CUST_001",
-      },
-    };
+  //   var paytmParams = {};
 
-    /*
-     * Generate checksum by parameters we have in body
-     * Find your Merchant Key in your Paytm Dashboard at https://dashboard.paytm.com/next/apikeys
-     */
-    PaytmChecksum.generateSignature(
-      JSON.stringify(paytmParams.body),
-      "YOUR_MERCHANT_KEY"
-    ).then(function (checksum) {
-      paytmParams.head = {
-        signature: checksum,
-      };
+  //   paytmParams.body = {
+  //     requestType: "Payment",
+  //     mid: "YOUR_MID_HERE",
+  //     websiteName: "WEBSTAGING",
+  //     orderId: "ORDERID_98765",
+  //     callbackUrl: "dcipl.yourtechshow.com/success",
+  //     txnAmount: {
+  //       value: "1.00",
+  //       currency: "INR",
+  //     },
+  //     userInfo: {
+  //       custId: "CUST_001",
+  //     },
+  //   };
 
-      var post_data = JSON.stringify(paytmParams);
+  //   /*
+  //    * Generate checksum by parameters we have in body
+  //    * Find your Merchant Key in your Paytm Dashboard at https://dashboard.paytm.com/next/apikeys
+  //    */
+  //   PaytmChecksum.generateSignature(
+  //     JSON.stringify(paytmParams.body),
+  //     "YOUR_MERCHANT_KEY"
+  //   ).then(function (checksum) {
+  //     paytmParams.head = {
+  //       signature: checksum,
+  //     };
 
-      var options = {
-        /* for Staging */
-        hostname: "securegw-stage.paytm.in" /* for Production */, // hostname: 'securegw.paytm.in',
+  //     var post_data = JSON.stringify(paytmParams);
 
-        port: 443,
-        path: "/theia/api/v1/initiateTransaction?mid=YOUR_MID_HERE&orderId=ORDERID_98765",
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Content-Length": post_data.length,
-        },
-      };
+  //     var options = {
+  //       /* for Staging */
+  //       hostname: "securegw-stage.paytm.in" /* for Production */, // hostname: 'securegw.paytm.in',
 
-      var response = "";
-      var post_req = https.request(options, function (post_res) {
-        post_res.on("data", function (chunk) {
-          response += chunk;
-        });
+  //       port: 443,
+  //       path: "/theia/api/v1/initiateTransaction?mid=YOUR_MID_HERE&orderId=ORDERID_98765",
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //         "Content-Length": post_data.length,
+  //       },
+  //     };
 
-        post_res.on("end", function () {
-          console.log("Response: ", response);
-        });
-      });
+  //     var response = "";
+  //     var post_req = https.request(options, function (post_res) {
+  //       post_res.on("data", function (chunk) {
+  //         response += chunk;
+  //       });
 
-      post_req.write(post_data);
-      post_req.end();
-    });
-  }
+  //       post_res.on("end", function () {
+  //         console.log("Response: ", response);
+  //       });
+  //     });
+
+  //     post_req.write(post_data);
+  //     post_req.end();
+  //   });
+  
 
   return (
     <>
@@ -88,9 +93,9 @@ function Subscribe() {
             <ul className="details-dash">
               <li>24/7 support</li>
             </ul>
-            <div className="buy-button">
-              <h3 className="btn">subscribe</h3>
-            </div>
+            <Link to="/register"> <div className="buy-button">
+            <h3 className="btn">subscribe</h3>
+            </div></Link>
           </div>
 
           <div className="card_subs">
@@ -104,11 +109,18 @@ function Subscribe() {
               {/* <li>Get Solution</li> */}
               <li>24/7 support</li>
             </ul>
-            <div className="buy-button">
-              <h3 className="btn">subscribe</h3>
-            </div>
-          </div>
+            <Link to="#" onClick={() => setModalIsOpen(true)}>      <div className="buy-button">
+          <h3 className="btn">subscribe</h3>  </div>  </Link> 
+          <Subspay
+                    modalIsOpen={modalIsOpen}
+                    setModalIsOpen={setModalIsOpen}
+                  ></Subspay>     
+         
+           </div>
+        
+
         </section>
+        
         {/* <div className="product"> */}
         {/* <img
           src="https://i.imgur.com/EHyR2nP.png"
@@ -120,16 +132,7 @@ function Subscribe() {
         </div>
       </div> */}{" "}
       </section>
-      <form
-        action="https://server.yourtechshow.com/create-checkout-session"
-        classname="subs-dash"
-        method="POST"
-      >
-        <button type="submit" id="checkout-button">
-          Stripe
-        </button>
-        <button onClick={InitiatePay}>PayTm</button>
-      </form>
+    
       <br /> <br /> <br />
     </>
   );

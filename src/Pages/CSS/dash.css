@@ -113,7 +113,7 @@
 .profile-div p:hover {
   margin: 0px;
   padding: 10px 20px;
-  background-color: #5643ff;
+  background-color: #2a2552;
   border-radius: 0px;
   color: white;
 }
@@ -155,7 +155,7 @@
   position: absolute;
   right: 8%;
   top: 10%;
-  background-color: #5643ff;
+  background-color: #2a2552;
   padding: 1px 5px;
   color: white;
   border-radius: 20px;
@@ -179,7 +179,7 @@
 .notification-div p:hover {
   margin: 0px;
   padding: 10px 20px;
-  background-color: #5643ff;
+  background-color: #2a2552;
   border-radius: 0px;
   color: white;
 }
@@ -198,7 +198,7 @@
   position: absolute;
   right: 17%;
   top: 25px;
-  background-color: #5643ff;
+  background-color: #2a2552;
   padding: 13px;
   border-radius: 21px;
   color: #fff;
@@ -255,15 +255,15 @@
 }
 .head-1 span {
   float: right;
-  background-color: #5643ff;
+  background-color: #2a2552;
   color: white;
   padding: 3px 10px;
-  font-size: 15px;
+  font-size: 18px;
 }
 .box-icon12 {
   font-size: 20px !important;
   margin-top: 35px !important;
-  color: #5643ff;
+  color: #2a2552;
   padding-right: 10px;
   background-color: #efeff5;
   padding: 15px;
@@ -287,7 +287,7 @@
   padding: 0px 12px;
 }
 .active {
-  background-color: #5646ff;
+  background-color: #3ad4af;
   color: white;
   box-shadow: 4px 3px 7px 3px #3226ad54;
 }
@@ -337,7 +337,7 @@
 }
 .content-box p span {
   float: right;
-  background-color: #5643ff;
+  background-color: #2a2552;
   color: white;
   padding: 3px 10px;
   font-size: 15px;
@@ -364,12 +364,18 @@
 
 .content-box-1 ul li::before {
   content: "\2022";
-  color: rgb(16, 117, 143);
+  color: #2a2552;
   font-weight: 1000;
   display: inline-block;
   width: 1em;
   font-size: 1.4rem;
   margin-left: -1em;
+}.content-box-1 ul  li a{
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2a2552;
+  /* background-color: goldenrod; */
+  border-radius: 10px;padding: .1rem;
 }
 /* table {
   font-family: arial, sans-serif;
@@ -409,7 +415,7 @@ tr:nth-child(even) {
 
 .circle-wrap .circle-dash .mask .fill-dash {
   clip: rect(0px, 75px, 150px, 0px);
-  background-color: #5646ff;
+  background-color:#3ad4af;
 }
 .circle-wrap .circle-dash .mask.full,
 .circle-wrap .circle-dash .fill-dash {

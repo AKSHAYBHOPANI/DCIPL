@@ -1,7 +1,7 @@
 import first from "../assests/first.jpg";
 import second from "../assests/second.jpg";
 import third from "../assests/third.jpg";
-import "./CSS/careers.css";
+import "./CSS/careers.css";import { Link } from "react-router-dom";
 
 function Careers() {
   return (
@@ -182,15 +182,66 @@ function Careers() {
         <div class="current-openings" id="joblistings">
           <h2>CURRENT OPENINGS</h2>
         </div>
+        {/* <div class="job-labels">
+          <h4>POSITION</h4>
+          <h4 class="location">LOCATION</h4>
+          <h4>POSTING DATE</h4>
+        </div> */}
+      
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>POSITION</th>
+          <th>LOCATION</th>
+          <th>POSTING DATE</th>
+         
+        </tr>
+      </thead>
+  
+  {/* </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0"> */}
+      <tbody>
+        <tr>
+        <td>  <Link to="">Consultants</Link></td>
+          <td>Mumbai </td>
+          <td>2021-10-09</td>
+         
+        </tr>
+        <tr>
+        <td><Link to="">Financial Expert</Link></td>
+          <td>Mumbai </td>
+          <td>2021-10-09</td>
+        </tr>
+       
+        <tr>
+        <td><Link to="">Developer</Link></td>
+          <td>Mumbai </td>
+          <td>2021-10-09</td>
+        </tr>
+       
+      
+      </tbody>
+    </table>
+  </div>
+
+
+
+        {/* <div class="current-openings" id="joblistings">
+          <h2>CURRENT OPENINGS</h2>
+        </div>
         <div class="job-labels">
           <h4>POSITION</h4>
           <h4 class="location">LOCATION</h4>
           <h4>POSTING DATE</h4>
         </div>
-        <div id="whr_embed_hook"></div>
+        <div id="whr_embed_hook"></div> */}
       </div>
+      
     </>
   );
 }
+ 
 
 export default Careers;

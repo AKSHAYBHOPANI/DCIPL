@@ -1,13 +1,15 @@
 import React from "react";
 import "./Success.css";
 import { Link } from "react-router-dom";
-// import payss from "../../assests/payments.gif";
+import payss from "../../assests/payments.gif";
 function Success() {
   return (
     <>
       <div className="s-ar"></div>
       <div className="s1-ar">
-        <div className="s11">{/* <img src={payss} alt="#"></img> */}</div>
+        <div className="s11">
+         <img src={payss} alt="#"></img> 
+         </div>
         <h1>Payment Successful</h1>
         <h2>You are now DCIPL PRO Member 🔥</h2>
         <h3>

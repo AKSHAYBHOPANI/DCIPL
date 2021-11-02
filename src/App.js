@@ -15,7 +15,7 @@ function App() {
     mobile: "",
     IsSignIn: "",
     IsonBoarding: "",
-    IsSubscribed: false,
+    IsSubscribed: true,
   });
 
   return (

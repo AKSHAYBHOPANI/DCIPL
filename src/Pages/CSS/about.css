@@ -1,255 +1,265 @@
 /* .body{
     overflow-x: hidden;
   } */
-.aboutpage-components {
-  overflow-x: hidden;
-  margin-left: 7%;
-  margin-right: 5%;
-}
-.about-flaunt-cards {
-  position: relative;
-  margin-top: 5%;
-}
-.about-flaunt-cards .about-cards {
-  display: flex;
-  margin-top: 4%;
-  align-items: center;
-  justify-items: center;
-  align-content: center;
-  align-self: center;
-  justify-self: center;
-  justify-content: center;
-}
-.about-cards .ab-card-heading {
-  width: 50%;
-  margin-top: 20px;
-}
-.about-cards .ab-card-heading .card-highlight-head {
-  color: #2a2552;
-  font-weight: 600;
-  font-size: 30px;
-}
-.about-cards .ab-card-heading .card-min-highlight {
-  color: #3eddb7;
-  font-weight: 600;
-  font-size: 24px;
-}
-.about-cards .ab-card-heading p:last-child {
-  font-size: 20px;
-  width: 80%;
-}
-.about-cards .ab-card-image {
-  width: 50%;
-  margin-left: 10%;
-}
-.about-cards .ab-card-image img {
-  width: 30vw;
-  min-height: 200px;
-  text-align: center;
-}
-.about-cards .ab-card-image img:hover {
-  transform: scale(1.1);
-  transition: 1s ease;
-}
-.ab-card-light-blog {
-  background-color: #3eddb7;
-  border-radius: 15px;
-  padding: 2%;
-  width: 30%;
-  margin-left: 7%;
-  padding-right: 0;
-  align-items: center;
-  justify-items: center;
-  align-content: center;
-  align-self: center;
-  justify-self: center;
-  justify-content: center;
-}
-.ab-card-light-blog .blog-head {
-  font-size: 15px;
-  width: 50%;
-}
-.ab-card-light-blog .blog-img {
-  float: right;
-}
-.ab-card-light-blog .blog-img img {
-  width: 80%;
-}
-.ab-card-light-blog1 {
-  background-color: #3eddb7;
-  border-radius: 15px;
-  padding: 2%;
-  width: 50%;
-  padding-right: 0;
-  height: fit-content;
-}
-.ab-card-light-blog1 .blog-head {
-  font-size: 15px;
-  width: 50%;
-}
-.ab-card-light-blog1 .blog-img {
-  float: right;
-}
-.ab-card-light-blog1 .blog-img img {
-  width: 100%;
-}
-.about-cards-last {
-  margin-top: 3%;
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  align-content: center;
-  align-self: center;
-  justify-self: center;
-  justify-content: center;
-  margin-left: 0;
-}
-.about-cards-last img,
-.about-cards-last .ab-card-light-blog2 {
-  width: 33.333%;
-}
-.ab-card-light-blog2 {
-  background-color: #3eddb7;
-  padding: 2%;
-  border-radius: 15px;
-}
-.Money-blog {
-  position: relative;
-  margin-top: 3%;
-}
-.Money-blog .blog-bg-image img {
-  width: 100%;
-}
-.Money-blog .blog-bg-image .blog-content {
-  position: absolute;
-  top: 20%;
-  width: 100%;
-}
-.Money-blog .blog-bg-image .blog-content h1 {
-  text-align: center;
-  color: #3eddb7;
-}
-.Money-blog .blog-bg-image .blog-content p {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-.image-container {
-  position: relative;
-  margin-top: 5%;
-  display: flex;
-}
-.image-container img {
-  height: 20vw;
-  width: 100%;
-  margin-left: 7%;
-  margin-right: 7%;
-}
-.faq {
-  position: relative;
-  margin-top: 5%;
-}
-.faq img {
-  width: 100%;
-}
-.questions {
-  position: relative;
-  margin-top: 5%;
-  margin-right: 10%;
-  margin-left: 10%;
-  margin-bottom: 5%;
-}
-summary {
-  font-size: 24px;
-  margin-top: 3%;
-  color: #2a2552;
-}
-.questions .answers {
-  margin-top: 2%;
-  margin-left: 2%;
-  width: 80%;
-  font-size: 18px;
-  color: #3eddb7;
-}
-summary:hover {
-  cursor: pointer;
-}
-@media only screen and (max-width: 500px) {
   .aboutpage-components {
-    padding-top: 10%;
+    overflow-x: hidden;
+    margin-left: 7%;
+    margin-right: 5%;
   }
-
-  .Money-blog .blog-bg-image .blog-content h1 {
-    font-size: 14px;
+  .about-flaunt-cards {
+    position: relative;
+    margin-top: 5%;
+  }
+  .about-flaunt-cards .about-cards {
+    display: flex;
+    margin-top: 4%;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+  }
+  .about-cards .ab-card-heading {
+    width: 50%;
+    margin-top: 20px;
   }
   .about-cards .ab-card-heading .card-highlight-head {
-    font-size: 30px;
-    padding-top: 15%;
+    color: #2a2552;
+    font-weight: 900;
+    font-size: 34px;
+    
   }
   .about-cards .ab-card-heading .card-min-highlight {
-    font-size: 25px;
+    color: #3eddb7;
+    font-weight: 700;
+    font-size: 34px;
+   
   }
   .about-cards .ab-card-heading p:last-child {
     font-size: 20px;
-  }
-
-  .Money-blog .blog-bg-image .blog-content p {
-    width: 50%;
-    font-size: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
-}
-@media only screen and (max-width: 800px) {
-  .Money-blog .blog-bg-image .blog-content p {
-    width: 60%;
-    font-size: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
-  .Money-blog .blog-bg-image .blog-content {
-    top: 0;
-  }
-  .image-container {
-    display: block;
-    margin-right: 11%;
-  }
-  .image-container img {
-    height: 300px;
-  }
-  .about-flaunt-cards .about-cards {
-    display: block;
-  }
-  .about-cards .ab-card-heading,
-  .about-cards .ab-card-image {
-    width: 100%;
-  }
-  .about-cards .ab-card-image img {
-    height: 100%;
     width: 80%;
   }
-  .ab-card-light-blog {
-    width: 90%;
-    display: flex;
-    margin-left: 0;
+  .about-cards .ab-card-image {
+    width: 50%;
+    margin-left: 10%;
   }
-  .ab-card-light-blog1 {
-    display: flex;
-    width: 90%;
+  .about-cards .ab-card-image img {
+    width: 30vw;
+    min-height: 200px;
+    text-align: center;
+  }
+  .about-cards .ab-card-image img:hover {
+    transform: scale(1.1);
+    transition: 1s ease;
+  }
+  .ab-card-light-blog {
+    background-color: #3eddb7;
+    border-radius: 15px;
+    padding: 2%;
+    width: 30%;
+    margin-left: 0%;
+    opacity: 0.8;
+    padding-right: 0;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
   }
   .ab-card-light-blog .blog-head {
+    font-size: 20px;
+    width: 50%;
+    font-weight: 500;
+  }
+  .ab-card-light-blog .blog-img {
+    float: right;
+  }
+  .ab-card-light-blog .blog-img img {
+    width: 80%;
+  }
+  .ab-card-light-blog1 {
+    background-color: #3eddb7;
+    border-radius: 15px;
+    padding: 2%;
+    width: 50%;
+    opacity: 0.8;
+    padding-right: 0;
+    height: fit-content;
+  }
+  .ab-card-light-blog1 .blog-head {
+    font-size: 20px;
+    font-weight: 500;
+    width: 50%;
+  }
+  .ab-card-light-blog1 .blog-img {
+    float: right;
+  }
+  .ab-card-light-blog1 .blog-img img {
     width: 100%;
   }
-}
-@media only screen and (max-width: 1000px) {
-  /* .body{
-      height:1500px;
-    } */
-  .about-flaunt-cards {
-    margin-top: 20%;
-    margin-bottom: 20%;
+  .about-cards-last {
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    margin-left: 0;
   }
-}
+  .about-cards-last img,
+  .about-cards-last .ab-card-light-blog2 {
+    width: 33.333%;
+  }
+  .ab-card-light-blog2 {
+    background-color: #3eddb7;
+    padding: 2%;
+    border-radius: 15px;
+    opacity: 0.8;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .Money-blog {
+    position: relative;
+    margin-top: 3%;
+  }
+  .Money-blog .blog-bg-image img {
+    width: 100%;
+  }
+  .Money-blog .blog-bg-image .blog-content {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+  }
+  .Money-blog .blog-bg-image .blog-content h1 {
+    text-align: center;
+    color: #3eddb7;
+  }
+  .Money-blog .blog-bg-image .blog-content p {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 24px;
+  }
+  .image-container {
+    position: relative;
+    margin-top: 5%;
+    display: flex;
+  }
+  .image-container img {
+    height: 20vw;
+    width: 100%;
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+  .faq {
+    position: relative;
+    margin-top: 5%;
+  }
+  .faq img {
+    width: 100%;
+  }
+  .questions {
+    position: relative;
+    margin-top: 5%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+  }
+  summary {
+    font-size: 24px;
+    margin-top: 3%;
+    color: #2a2552;
+  }
+  .questions .answers {
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 80%;
+    font-size: 18px;
+    color: #3eddb7;
+  }
+  summary:hover {
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 500px) {
+    .aboutpage-components {
+      padding-top: 10%;
+    }
+  
+    .Money-blog .blog-bg-image .blog-content h1 {
+      font-size: 14px;
+    }
+    .about-cards .ab-card-heading .card-highlight-head {
+      font-size: 30px;
+      padding-top: 15%;
+    }
+    .about-cards .ab-card-heading .card-min-highlight {
+      font-size: 25px;
+    }
+    .about-cards .ab-card-heading p:last-child {
+      font-size: 20px;
+    }
+  
+    .Money-blog .blog-bg-image .blog-content p {
+      width: 50%;
+      font-size: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    .Money-blog .blog-bg-image .blog-content p {
+      width: 60%;
+      font-size: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+    .Money-blog .blog-bg-image .blog-content {
+      top: 0;
+    }
+    .image-container {
+      display: block;
+      margin-right: 11%;
+    }
+    .image-container img {
+      height: 300px;
+    }
+    .about-flaunt-cards .about-cards {
+      display: block;
+    }
+    .about-cards .ab-card-heading,
+    .about-cards .ab-card-image {
+      width: 100%;
+    }
+    .about-cards .ab-card-image img {
+      height: 100%;
+      width: 80%;
+    }
+    .ab-card-light-blog {
+      width: 90%;
+      display: flex;
+      margin-left: 0;
+    }
+    .ab-card-light-blog1 {
+      display: flex;
+      width: 90%;
+    }
+    .ab-card-light-blog .blog-head {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    /* .body{
+        height:1500px;
+      } */
+    .about-flaunt-cards {
+      margin-top: 20%;
+      margin-bottom: 20%;
+    }
+  }

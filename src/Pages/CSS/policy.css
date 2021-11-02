@@ -1,5 +1,5 @@
 .Policy-Page{
-    height: 9600px;
+    height: 10600px;
 }
 
 .text {
@@ -49,22 +49,25 @@ font-weight: bold;
 font-size: 20px;
 line-height: 174.69%;
 /* or 35px */
-
+right:0px;
+padding:10px;
 
 color: #696969;
 }
 
-.policyheder-image{
+.policyheder-image>img{
 position: absolute;
-left: 422px;
-top: -212.51px;
+width:450px;
+height:300px;
+left: 750px;
+top: -42.51px;
 
 }
 .Terms-header {
 position: absolute;
 width: 321px;
 height: 48px;
-left: 95px;
+left: 125px;
 top: 539px;
 
 font-family: Raleway;
@@ -81,15 +84,15 @@ color: #a9a9a9;
 .Terms-Eclipse{
 position: absolute;
 top : 535px;
-left: 30px;
+left: 60px;
     
 }
 
 .Terms-Content{
     position: absolute;
-    width: 1320px;
+    width: 90%;
     height: 311px;
-    left: 24px;
+    left: 64px;
     top: 601px;
     
     font-family: Roboto;
@@ -108,7 +111,7 @@ left: 30px;
 position: absolute;
 width: 211px;
 height: 50.79px;
-left: 95px;
+left: 125px;
 top: 800px;
 
 font-family: Raleway;
@@ -118,7 +121,8 @@ font-size: 35px;
 line-height: 137.4%;
 /* or 48px */
 
-
+right:0px;
+padding:10px;
 color: #a9a9a9;
 
 }
@@ -126,14 +130,14 @@ color: #a9a9a9;
 .TermsUse-Eclipse{
     position: absolute;
     top : 802px;
-    left: 30px;
+    left: 60px;
         
 }
 .TermsUse-Content{
     position: absolute;
-    width: 1320px;
+    width: 90%;
     height: 311px;
-    left: 24px;
+    left: 64px;
     top: 855px;
     
     font-family: Roboto;
@@ -151,8 +155,8 @@ color: #a9a9a9;
     position: absolute;
     width: 819px;
     height: 48px;
-    left: 95px;
-    top: 2556px;
+    left: 125px;
+    top: 2696px;
     
     font-family: Raleway;
     font-style: normal;
@@ -161,24 +165,25 @@ color: #a9a9a9;
     line-height: 137.4%;
     /* identical to box height, or 48px */
     
-    
+    right:0px;
+    padding:10px;
     color: #a9a9a9;
     
 
 }
 .Protection-Eclipse{
     position: absolute;
-    top : 2556px;
-    left: 30px;
+    top : 2696px;
+    left: 60px;
         
 
 }
 .Protection-Content{
 position: absolute;
-width: 1320px;
+width: 90%;
 height: 108px;
-left: 24px;
-top: 2600px;
+left: 64px;
+top: 2790px;
 
 font-family: Roboto;
 font-style: normal;
@@ -195,8 +200,8 @@ color: #696969
 position: absolute;
 width: 767px;
 height: 48px;
-left: 95px;
-top: 2689px;
+left: 125px;
+top: 2909px;
 
 font-family: Raleway;
 font-style: normal;
@@ -205,22 +210,23 @@ font-size: 35px;
 line-height: 137.4%;
 /* identical to box height, or 48px */
 
-
+right:0px;
+padding:10px;
 color: #a9a9a9;
 
 }
 .Limitation-Eclipse{
     position: absolute;
-    top : 2689px;
-    left: 30px;
+    top : 2909px;
+    left: 60px;
 
 }
 .Limitation-Content{
 position: absolute;
-width: 1320px;
+width: 90%;
 height: 311px;
-left: 20px;
-top: 2730px;
+left: 60px;
+top: 2990px;
 
 font-family: Roboto;
 font-style: normal;
@@ -228,17 +234,19 @@ font-weight: normal;
 font-size: 18px;
 line-height: 139.69%;
 /* or 25px */
-
+right:0px;
+padding:10px;
 
 color: #696969
 
 }
 
-.policy-header{position: absolute;
+.policy-header{
+position: absolute;
 width: 245px;
 height: 48px;
-left: 102px;
-top: 2970px;
+left: 132px;
+top: 3270px;
 
 font-family: Raleway;
 font-style: normal;
@@ -252,16 +260,16 @@ color: #a9a9a9;
 }
 .policy-Eclipse{
     position: absolute;
-    top : 2970px;
-    left: 30px;
+    top : 3270px;
+    left: 60px;
 
 }
 .policy-content{
 position: absolute;
-width: 1320px;
+width: 90%;
 height: 311px;
-left: 20px;
-top: 3010px;
+left: 60px;
+top: 3350px;
 
 font-family: Roboto;
 font-style: normal;
@@ -269,7 +277,8 @@ font-weight: normal;
 font-size: 18px;
 line-height: 139.69%;
 /* or 25px */
-
+right:0px;
+padding:10px;
 
 color: #696969
 
@@ -279,7 +288,7 @@ position: absolute;
 width: 245px;
 height: 48px;
 left: 102px;
-top: 8100px;
+top: 8750px;
 
 font-family: Raleway;
 font-style: normal;
@@ -294,15 +303,15 @@ color: #a9a9a9;
 }
 .Security-Eclipse{
     position: absolute;
-    top : 8100px;
+    top : 8750px;
     left: 30px;
 }
 .Security-content{
     position: absolute;
-    width: 1320px;
+    width: 90%;
     height: 311px;
-    left: 20px;
-    top: 8150px;
+    left: 60px;
+    top: 8800px;
     
     font-family: Roboto;
     font-style: normal;
@@ -310,7 +319,8 @@ color: #a9a9a9;
     font-size: 18px;
     line-height: 139.69%;
     /* or 25px */
-    
+    right:0px;
+    padding:10px;
     
     color: #696969
 }
@@ -318,8 +328,8 @@ color: #a9a9a9;
 position: absolute;
 width: 245px;
 height: 48px;
-left: 102px;
-top: 9210px;
+left: 132px;
+top: 9999px;
 
 font-family: Raleway;
 font-style: normal;
@@ -333,15 +343,15 @@ color: #a9a9a9;
 }
 .confidentiality-Eclipse{
     position: absolute;
-    top : 9210px;
-    left: 30px;
+    top : 9999px;
+    left: 60px;
 }
 .Confidentiality-content{
     position: absolute;
-    width: 1320px;
+    width: 90%;
     height: 311px;
-    left: 20px;
-    top: 9260px;
+    left: 60px;
+    top: 10100px;
     
     font-family: Roboto;
     font-style: normal;
@@ -350,7 +360,1093 @@ color: #a9a9a9;
     line-height: 139.69%;
     /* or 25px */
     
-    
+     right:0px;
+    padding:10px;
     color: #696969
 
+}
+
+@media screen and (max-width:360px){
+
+    .Policy-Page{
+    height: 23200px;
+}
+
+.text {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  margin-top: 123px;
+  min-height: 12307px;
+  width: 1349px;
+}
+.policyheader-container{
+    position: absolute;
+    width: 646px;
+    height: 368px;
+    left: 39px;
+    top: 260px;
+}
+
+.policyheader-content{
+left: 39px;
+top: -135px;
+font-size: 20px;
+}
+.policyheader-content1{
+position: absolute;
+width: 40%;
+height: 140px;
+left: 39px;
+top: -75px;
+font-size: 14px;
+color: #696969;
+}
+
+.policyheder-image>img{
+position: absolute;
+width:40%;
+height:50%;
+left: 20px;
+top: 82.51px;
+
+}
+.Terms-header {
+position: absolute;
+width: 321px;
+height: 48px;
+left: 85px;
+top: 539px;
+font-size: 25px;
+line-height: 137.4%;
+/* identical to box height, or 48px */
+
+
+color: #a9a9a9;
+}
+
+.Terms-Eclipse{
+position: absolute;
+top : 535px;
+left: 30px;
+}
+
+.Terms-Content{
+    position: absolute;
+    width: 70%;
+    height: 311px;
+    left: 64px;
+    top: 601px;
+    
+    
+    font-size: 13px;
+    line-height: 139.69%;
+    /* or 25px */
+    
+    
+    color: #696969
+    
+}
+
+.TermsUse-header{
+position: absolute;
+width: 211px;
+height: 50.79px;
+left: 95px;
+top: 1235px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 600;
+font-size: 25px;
+line-height: 137.4%;
+/* or 48px */
+
+
+color: #a9a9a9;
+
+}
+
+.TermsUse-Eclipse{
+    position: absolute;
+    top : 1230px;
+    left: 30px;
+        
+}
+.TermsUse-Content{
+    position: absolute;
+    width: 80%;
+    height: 311px;
+    left: 44px;
+    top: 1295px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 139.69%;
+    /* or 25px */
+       
+    color: #696969
+
+}
+
+.ProtectionHeader{
+    position: absolute;
+    width: 70%;
+    height: 48px;
+    left: 105px;
+    top: 6356px;
+    
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 137.4%;
+    /* identical to box height, or 48px */
+    
+    
+    color: #a9a9a9;
+    
+
+}
+.Protection-Eclipse{
+    position: absolute;
+    top : 6386px;
+    left: 40px;
+        
+
+}
+
+.Protection-Content{
+position: absolute;
+width: 70%;
+height: 108px;
+left: 64px;
+top: 6500px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 13px;
+line-height: 139.69%;
+
+
+
+color: #696969
+}
+.Limitation-header{
+    
+position: absolute;
+width: 70%;
+height: 48px;
+left: 85px;
+top: 6800px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 600;
+font-size: 25px;
+line-height: 137.4%;
+
+
+
+color: #a9a9a9;
+
+}
+.Limitation-Eclipse{
+    position: absolute;
+    top : 6810px;
+    left: 30px;
+
+}
+.Limitation-Content{
+position: absolute;
+width: 70%;
+height: 311px;
+left: 60px;
+top: 6890px;
+font-size: 13px;
+color: #696969
+
+}
+.policy-header{
+position: absolute;
+width: 245px;
+height: 48px;
+left: 82px;
+top: 7730px;
+font-size: 25px;
+color: #a9a9a9;
+}
+.policy-Eclipse{
+    position: absolute;
+    top : 7730px;
+    left: 30px;
+
+}
+.policy-content{
+position: absolute;
+width: 75%;
+height: 311px;
+left: 40px;
+top: 7790px;
+font-size: 12px;
+color: #696969
+
+}
+.Security-header{
+position: absolute;
+width: 245px;
+height: 48px;
+left: 102px;
+top:20320px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 600;
+font-size: 25px;
+line-height: 137.4%;
+
+
+
+color: #a9a9a9;
+
+}
+.Security-Eclipse{
+    position: absolute;
+    top : 20320px;
+    left: 30px;
+}
+.Security-content{
+    position: absolute;
+    width: 70%;
+    height: 311px;
+    left: 60px;
+    top: 20380px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 139.69%;
+    
+    
+    
+    color: #696969
+}
+.confidentiality-header{
+position: absolute;
+width: 245px;
+height: 48px;
+left: 85px;
+top: 22450px;
+font-size: 25px;
+}
+.confidentiality-Eclipse{
+    position: absolute;
+    top : 22450px;
+    left: 30px;
+}
+.Confidentiality-content{
+    position: absolute;
+    width: 80%;
+    height: 311px;
+    left: 60px;
+    top: 22500px;
+    font-size: 12px;
+}
+}
+@media screen and (min-width:361px) and (max-width:670px){
+
+    .Policy-Page{
+    height: 21500px;
+}
+
+.text {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  margin-top: 123px;
+  min-height: 12307px;
+  width: 1349px;
+}
+.policyheader-container{
+    position: absolute;
+    width: 646px;
+    height: 368px;
+    left: 39px;
+    top: 260px;
+}
+
+.policyheader-content{
+left: 39px;
+top: -135px;
+font-size: 20px;
+}
+.policyheader-content1{
+position: absolute;
+width: 40%;
+height: 140px;
+left: 39px;
+top: -75px;
+font-size: 14px;
+color: #696969;
+}
+
+.policyheder-image>img{
+position: absolute;
+width:40%;
+height:50%;
+left: 20px;
+top: 82.51px;
+
+}
+.Terms-header {
+position: absolute;
+width: 321px;
+height: 48px;
+left: 85px;
+top: 539px;
+font-size: 25px;
+line-height: 137.4%;
+/* identical to box height, or 48px */
+
+
+color: #a9a9a9;
+}
+
+.Terms-Eclipse{
+position: absolute;
+top : 535px;
+left: 30px;
+}
+
+.Terms-Content{
+    position: absolute;
+    width: 70%;
+    height: 311px;
+    left: 64px;
+    top: 601px;
+    
+    
+    font-size: 13px;
+    line-height: 139.69%;
+    /* or 25px */
+    
+    
+    color: #696969
+    
+}
+
+.TermsUse-header{
+position: absolute;
+width: 211px;
+height: 50.79px;
+left: 95px;
+top: 1035px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 600;
+font-size: 25px;
+line-height: 137.4%;
+/* or 48px */
+
+
+color: #a9a9a9;
+
+}
+
+.TermsUse-Eclipse{
+    position: absolute;
+    top : 1030px;
+    left: 30px;
+        
+}
+.TermsUse-Content{
+    position: absolute;
+    width: 80%;
+    height: 311px;
+    left: 44px;
+    top: 1095px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 139.69%;
+    /* or 25px */
+       
+    color: #696969
+
+}
+
+.ProtectionHeader{
+    position: absolute;
+    width: 80%;
+    height: 48px;
+    left: 105px;
+    top:4796px;
+    
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 137.4%;
+    /* identical to box height, or 48px */
+    
+    
+    color: #a9a9a9;
+    
+
+}
+.Protection-Eclipse{
+    position: absolute;
+    top : 4796px;
+    left: 40px;
+        
+
+}
+
+.Protection-Content{
+position: absolute;
+width: 70%;
+height: 108px;
+left: 64px;
+top: 4870px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 13px;
+line-height: 139.69%;
+
+
+
+color: #696969
+}
+.Limitation-header{
+    
+position: absolute;
+width: 80%;
+height: 48px;
+left: 85px;
+top: 5219px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 600;
+font-size: 25px;
+line-height: 137.4%;
+
+
+
+color: #a9a9a9;
+
+}
+.Limitation-Eclipse{
+    position: absolute;
+    top : 5210px;
+    left: 30px;
+
+}
+.Limitation-Content{
+position: absolute;
+width: 70%;
+height: 311px;
+left: 60px;
+top: 5290px;
+font-size: 13px;
+color: #696969
+
+}
+.policy-header{
+position: absolute;
+width: 245px;
+height: 48px;
+left: 82px;
+top: 6010px;
+font-size: 25px;
+color: #a9a9a9;
+}
+.policy-Eclipse{
+    position: absolute;
+    top : 6000px;
+    left: 30px;
+
+}
+.policy-content{
+position: absolute;
+width: 75%;
+height: 311px;
+left: 40px;
+top: 6080px;
+font-size: 13px;
+color: #696969
+
+}
+.Security-header{
+position: absolute;
+width: 245px;
+height: 48px;
+left: 102px;
+top: 17920px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 600;
+font-size: 25px;
+line-height: 137.4%;
+
+
+
+color: #a9a9a9;
+
+}
+.Security-Eclipse{
+    position: absolute;
+    top : 17920px;
+    left: 30px;
+}
+.Security-content{
+    position: absolute;
+    width: 70%;
+    height: 311px;
+    left: 60px;
+    top: 17980px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 139.69%;
+    
+    
+    
+    color: #696969
+}
+.confidentiality-header{
+position: absolute;
+width: 245px;
+height: 48px;
+left: 85px;
+top: 19980px;
+font-size: 25px;
+}
+.confidentiality-Eclipse{
+    position: absolute;
+    top : 19980px;
+    left: 30px;
+}
+.Confidentiality-content{
+    position: absolute;
+    width: 80%;
+    height: 311px;
+    left: 60px;
+    top: 20000px;
+    font-size: 13px;
+}
+}
+@media screen and (min-width:671px) and (max-width:950px) {
+    .Policy-Page{
+        height: 14000px;
+    }
+    
+    .text {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      margin-left: 40px;
+      margin-top: 123px;
+      min-height: 12307px;
+      width: 1349px;
+    }
+    .policyheader-container{
+        position: absolute;
+        width: 646px;
+        height: 368px;
+        left: 30px;
+        top: 260px;
+    }
+    
+    .policyheader-content{
+    position: absolute;
+    width: 680px;
+    height: 59px;
+    left: 30px;
+    top: -50px;
+    font-size: 30px;
+    }
+    .policyheader-content1{
+    position: absolute;
+    width: 60%;
+    left: 30px;
+    top: 30px;
+    font-size: 16px;
+    right:0px;
+    padding:10px;
+    }
+    
+    .policyheder-image>img{
+    position: absolute;
+    width:250px;
+    height:300px;
+    left: 320px;
+    top: -42.51px;
+    
+    }
+    .Terms-header {
+    position: absolute;
+    width: 321px;
+    height: 48px;
+    left: 85px;
+    top: 495px;
+    font-size: 30px;
+    }
+    
+    .Terms-Eclipse{
+    position: absolute;
+    top : 500px;
+    left: 40px;
+        
+    }
+    
+    .Terms-Content{
+        position: absolute;
+        width: 80%;
+        height: 311px;
+        left: 44px;
+        top: 561px;
+        font-size: 16px;
+        right:0px;
+    padding:10px;
+        
+    }
+    
+    .TermsUse-header{
+    position: absolute;
+    width: 211px;
+    height: 50.79px;
+    left: 85px;
+    top: 880px;
+    font-size: 30px;
+     }
+    
+    .TermsUse-Eclipse{
+        position: absolute;
+        top : 888px;
+        left: 40px;
+            
+    }
+    .TermsUse-Content{
+        position: absolute;
+        width: 80%;
+        height: 311px;
+        left: 44px;
+        top: 955px;
+        font-size: 14px;
+        right:0px;
+    padding:10px;
+    
+    }
+    
+    .ProtectionHeader{
+        position: absolute;
+        width: 80%;
+        height: 48px;
+        left: 85px;
+        top: 3486px;
+        font-size: 30px;
+        
+    
+    }
+    .Protection-Eclipse{
+        position: absolute;
+        top : 3506px;
+        left: 40px;
+            
+    
+    }
+    .Protection-Content{
+    position: absolute;
+    width: 80%;
+    height: 108px;
+    left: 44px;
+    top: 3620px;
+    font-size: 16px;
+    right:0px;
+    padding:10px;
+    }
+    .Limitation-header{
+        
+    position: absolute;
+    width: 80%;
+    height: 48px;
+    left: 95px;
+    top: 3750px;
+    font-size: 30px;
+    }
+    .Limitation-Eclipse{
+        position: absolute;
+        top : 3756px;
+        left: 50px;
+    
+    }
+    .Limitation-Content{
+    position: absolute;
+    width: 80%;
+    height: 311px;
+    left: 40px;
+    top: 3800px;
+    font-size: 14px;
+    right:0px;
+    padding:10px;
+    }
+    
+    .policy-header{
+    position: absolute;
+    width: 245px;
+    height: 48px;
+    left: 82px;
+    top: 4280px;
+    font-size: 25px;
+    }
+    .policy-Eclipse{
+        position: absolute;
+        top : 4275px;
+        left: 40px;
+    
+    }
+    .policy-content{
+    position: absolute;
+    width: 80%;
+    height: 311px;
+    left: 40px;
+    top: 4320px;
+    font-size: 15px;
+    right:0px;
+    padding:10px;
+    
+    }
+    .Security-header{
+    position: absolute;
+    width: 245px;
+    height: 48px;
+    left: 82px;
+    top: 11550px;
+    
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 137.4%;
+    /* identical to box height, or 48px */
+    
+    
+    color: #a9a9a9;
+    
+    }
+    .Security-Eclipse{
+        position: absolute;
+        top : 11550px;
+        left: 40px;
+    }
+    .Security-content{
+        position: absolute;
+        width: 80%;
+        height: 311px;
+        left: 40px;
+        top: 11600px;
+        font-size: 15px;
+        right:0px;
+    padding:10px;
+    
+    }
+    .confidentiality-header{
+    position: absolute;
+    width: 245px;
+    height: 48px;
+    left: 82px;
+    top: 13200px;
+    
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 137.4%;
+    /* identical to box height, or 48px */
+    
+    
+    color: #a9a9a9;
+    }
+    .confidentiality-Eclipse{
+        position: absolute;
+        top : 13205px;
+        left: 40px;
+    }
+    .Confidentiality-content{
+        position: absolute;
+        width: 80%;
+        height: 311px;
+        left: 40px;
+        top: 13250px;
+        font-size: 16px;
+        right:0px;
+        padding:10px;
+    
+    }
+    
+}
+@media screen  and (min-width:951px) and (max-width:1280px) {
+    .Policy-Page{
+        height: 15400px;
+    }
+    
+    .text {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      margin-left: 40px;
+      margin-top: 123px;
+      min-height: 12307px;
+      width: 1349px;
+    }
+    .policyheader-container{
+        position: absolute;
+        width: 646px;
+        height: 368px;
+        left: 30px;
+        top: 260px;
+    }
+    
+    .policyheader-content{
+    position: absolute;
+    width: 680px;
+    height: 59px;
+    left: 30px;
+    top: -50px;
+    font-size: 30px;
+    }
+    .policyheader-content1{
+    position: absolute;
+    width: 60%;
+    left: 30px;
+    top: 30px;
+    font-size: 16px;
+    right:0px;
+    padding:10px;
+    }
+    
+    .policyheder-image>img{
+    position: absolute;
+    width:400px;
+    height:300px;
+    left: 420px;
+    top: -42.51px;
+    
+    }
+    .Terms-header {
+    position: absolute;
+    width: 321px;
+    height: 48px;
+    left: 85px;
+    top: 495px;
+    font-size: 30px;
+    }
+    
+    .Terms-Eclipse{
+    position: absolute;
+    top : 500px;
+    left: 40px;
+        
+    }
+    
+    .Terms-Content{
+        position: absolute;
+        width: 80%;
+        height: 311px;
+        left: 44px;
+        top: 561px;
+        font-size: 16px;
+        right:0px;
+    padding:10px;
+        
+    }
+    
+    .TermsUse-header{
+    position: absolute;
+    width: 211px;
+    height: 50.79px;
+    left: 85px;
+    top: 860px;
+    font-size: 30px;
+     }
+    
+    .TermsUse-Eclipse{
+        position: absolute;
+        top : 858px;
+        left: 40px;
+            
+    }
+    .TermsUse-Content{
+        position: absolute;
+        width: 80%;
+        height: 311px;
+        left: 44px;
+        top: 925px;
+        font-size: 16px;
+        right:0px;
+    padding:10px;
+    
+    }
+    
+    .ProtectionHeader{
+        position: absolute;
+        width: 80%;
+        height: 48px;
+        left: 85px;
+        top: 3246px;
+        font-size: 30px;
+        
+    
+    }
+    .Protection-Eclipse{
+        position: absolute;
+        top : 3246px;
+        left: 40px;
+            
+    
+    }
+    .Protection-Content{
+    position: absolute;
+    width: 80%;
+    height: 108px;
+    left: 44px;
+    top: 3280px;
+    font-size: 16px;
+    right:0px;
+    padding:10px;
+    }
+    .Limitation-header{
+        
+    position: absolute;
+    width: 80%;
+    height: 48px;
+    left: 105px;
+    top: 3450px;
+    font-size: 30px;
+    }
+    .Limitation-Eclipse{
+        position: absolute;
+        top : 3445px;
+        left: 60px;
+    
+    }
+    .Limitation-Content{
+    position: absolute;
+    width: 80%;
+    height: 311px;
+    left: 40px;
+    top: 3470px;
+    font-size: 16px;
+    right:0px;
+    padding:10px;
+    }
+    
+    .policy-header{
+    position: absolute;
+    width: 245px;
+    height: 48px;
+    left: 95px;
+    top: 3860px;
+    font-size: 25px;
+    }
+    .policy-Eclipse{
+        position: absolute;
+        top : 3859px;
+        left: 40px;
+    
+    }
+    .policy-content{
+    position: absolute;
+    width: 80%;
+    height: 311px;
+    left: 40px;
+    top: 3940px;
+    font-size: 16px;
+    right:0px;
+    padding:10px;
+    
+    }
+    .Security-header{
+    position: absolute;
+    width: 245px;
+    height: 48px;
+    left: 92px;
+    top: 10270px;
+    
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 137.4%;
+    /* identical to box height, or 48px */
+    
+    
+    color: #a9a9a9;
+    
+    }
+    .Security-Eclipse{
+        position: absolute;
+        top : 10270px;
+        left: 40px;
+    }
+    .Security-content{
+        position: absolute;
+        width: 80%;
+        height: 311px;
+        left: 40px;
+        top: 10350px;
+        font-size: 16px;
+        right:0px;
+    padding:10px;
+    
+    }
+    .confidentiality-header{
+    position: absolute;
+    width: 245px;
+    height: 48px;
+    left: 92px;
+    top: 11729px;
+    
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 137.4%;
+    /* identical to box height, or 48px */
+    
+    
+    color: #a9a9a9;
+    }
+    .confidentiality-Eclipse{
+        position: absolute;
+        top : 11725px;
+        left: 40px;
+    }
+    .Confidentiality-content{
+        position: absolute;
+        width: 80%;
+        height: 311px;
+        left: 40px;
+        top: 11769px;
+        font-size: 16px;
+        right:0px;
+        padding:10px;
+    
+    }
+    
 }

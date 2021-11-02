@@ -88,7 +88,9 @@ const execution = () => {
             </div>
             <div className="serconcolumn serconright">
               <p>If you have any questions about Financial Planning please feel free to give our Financial Experts a call on 9999 9999 999 or 
-              drop us an e-mail to enquiries@dcipl.co.in <button className="serbutton serytbutton">Who we are</button> <button className="serbutton serytbutton">Sign Up for Free Trial</button> </p>
+              drop us an e-mail to enquiries@dcipl.co.in 
+              <button className="ser1button seryt1button">Who we are</button> 
+              <button className="ser1button seryt1button">Sign Up for Free Trial</button> </p>
             </div>
           </div>
         </div>

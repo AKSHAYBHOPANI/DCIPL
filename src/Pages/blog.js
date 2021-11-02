@@ -76,7 +76,7 @@ const blog = () => {
         </div>
         <div className="rightcolumn">
           <div className="card121">
-            <h2>Giving your savings the opportunity to grow!!!</h2>
+            <h3>Giving your savings the opportunity to grow!!!</h3>
             <img src={blogw6} className="fakeimg" style={{ height: 200 }} />
 
             <p>Ten Steps To Creating A Solid Financial Plan For Yourself.</p>
@@ -93,6 +93,7 @@ const blog = () => {
               Security!
             </p>
             <br /> <br />
+            <h3>Giving your savings the opportunity to grow!!!</h3>
             <img
               src={blogw7}
               className="fakeimg"
@@ -100,6 +101,7 @@ const blog = () => {
             />{" "}
             <p>Money-Savings Charts To Save More Money.</p>
             <br /> <br />
+            <h3>Giving your savings the opportunity to grow!!!</h3>
             <img
               src={blogw8}
               className="fakeimg"

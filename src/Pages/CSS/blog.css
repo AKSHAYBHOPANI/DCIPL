@@ -1,15 +1,16 @@
 .header121 {
-  padding: 30px;
+  /* padding: 30px; */
   font-family: jost, sans-serif;
   font-size: 1.2rem;
   text-align: center;
   background: white;
   color: #2a2552;
 }
-h2 {
+.card121 h2 {
+
   /* justify-content: center;
-   align-items: center;
-      color: black; */
+   align-items: center; */
+      color: #25054d;
 }
 
 /* Create two unequal columns that floats next to each other */
@@ -29,7 +30,8 @@ h2 {
 
 /* Fake image */
 .fakeimg {
-  background-color: rgb(21, 38, 56);
+  background-color: transparent;
+  border-radius: 10px;
   /* border: 2px dashed rgb(21, 38, 56); */
   width: 100%;
   padding: 5px;

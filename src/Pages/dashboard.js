@@ -131,10 +131,10 @@ function Dashboard(Profile) {
               <div class="col-div-4-1">
                 <div class="box-dash">
                   <p class="head-1">Invested</p>
-                  <p class="number-dash">67343</p>
+                  <p class="number-dash">67</p>
                   <p class="percent">
                     <i class="fa fa-long-arrow-up" aria-hidden="true"></i>{" "}
-                    5.674% <span>Since Last Months</span>
+                    _% <span>Since Last Months</span>
                   </p>
                   <i class="fa fa-shopping-bag box-icon12"></i>
                 </div>
@@ -142,10 +142,10 @@ function Dashboard(Profile) {
               <div class="col-div-4-1">
                 <div class="box-dash">
                   <p class="head-1">Market</p>
-                  <p class="number-dash">2343</p>
+                  <p class="number-dash">2</p>
                   <p class="percent">
                     <i class="fa fa-long-arrow-down" aria-hidden="true"></i>{" "}
-                    5.64% <span>Since Last Months</span>
+                    _% <span>Since Last Months</span>
                   </p>
                   <i class="fa fa-shopping-bag box-icon12"></i>
                 </div>
@@ -153,10 +153,10 @@ function Dashboard(Profile) {
               <div class="col-div-4-1">
                 <div class="box-dash">
                   <p class="head-1">Growth</p>
-                  <p class="number-dash">35343</p>
+                  <p class="number-dash">3</p>
                   <p class="percent">
                     <i class="fa fa-long-arrow-up" aria-hidden="true"></i>{" "}
-                    5.674% <span>Since Last Months</span>
+                    _% <span>Since Last Months</span>
                   </p>
                   <i class="fa fa-shopping-bag box-icon12"></i>
                 </div>
@@ -176,7 +176,7 @@ function Dashboard(Profile) {
                         <br />
                         <span class="no-1">Last Months</span>
                       </p>
-                      <span class="no">+2343</span>
+                      <span class="no">+2</span>
                     </div>
 
                     <div class="m-box">
@@ -185,7 +185,7 @@ function Dashboard(Profile) {
                         <br />
                         <span class="no-1">Last Months</span>
                       </p>
-                      <span class="no">+2343</span>
+                      <span class="no">+2</span>
                     </div>
 
                     <div class="m-box">
@@ -194,7 +194,7 @@ function Dashboard(Profile) {
                         <br />
                         <span class="no-1">Last Months</span>
                       </p>
-                      <span class="no">+2343</span>
+                      <span class="no">+2</span>
                     </div>
                   </div>
                 </div>
@@ -268,26 +268,7 @@ function Dashboard(Profile) {
                         <td>Francisco Chang</td>
                         <td>Mexico</td>
                       </tr>
-                      <tr>
-                        <td>Ernst Handel</td>
-                        <td>Roland Mendel</td>
-                        <td>Austria</td>
-                      </tr>
-                      <tr>
-                        <td>Island Trading</td>
-                        <td>Helen Bennett</td>
-                        <td>UK</td>
-                      </tr>
-                      <tr>
-                        <td>Ernst Handel</td>
-                        <td>Roland Mendel</td>
-                        <td>Austria</td>
-                      </tr>
-                      <tr>
-                        <td>Island Trading</td>
-                        <td>Helen Bennett</td>
-                        <td>UK</td>
-                      </tr>
+                     
                     </table>
                   </div>
                 </div>
@@ -309,7 +290,7 @@ function Dashboard(Profile) {
           <br />
           <div className="Form99">
             <form onSubmit={onSubmitSignIn}>
-              <label for="age">Age: </label>
+              <label for="age">Age: </label>  <br />
               <input
                 type="number"
                 name="age"
@@ -320,8 +301,8 @@ function Dashboard(Profile) {
                   setage(event.target.value);
                 }}
                 value={age}
-              ></input>
-              <label for="assests">Assests: </label>
+              ></input>  <br />
+              <label for="assests">Assests: </label>  <br />
               <input
                 type="number"
                 name="assests"
@@ -332,8 +313,8 @@ function Dashboard(Profile) {
                   setassets(event.target.value);
                 }}
                 value={assets}
-              ></input>
-              <label for="liabilities">Liabilities: </label>
+              ></input>  <br />
+              <label for="liabilities">Liabilities: </label>  <br />
               <input
                 type="number"
                 name="liabilities"
@@ -344,8 +325,8 @@ function Dashboard(Profile) {
                   setliabilities(event.target.value);
                 }}
                 value={liabilities}
-              ></input>
-              <label for="cibil">Fixed Income </label>
+              ></input>  <br />
+              <label for="cibil">Fixed Income </label>  <br />
               <input
                 type="number"
                 name="fixedincome"
@@ -356,8 +337,8 @@ function Dashboard(Profile) {
                   setfixedincome(event.target.value);
                 }}
                 value={fixedincome}
-              ></input>
-              <label for="cibil">Fixed Expense </label>
+              ></input> <br />
+              <label for="cibil">Fixed Expense </label> <br />
               <input
                 type="number"
                 name="fixedexpense"
@@ -368,11 +349,11 @@ function Dashboard(Profile) {
                   setfixedexpense(event.target.value);
                 }}
                 value={fixedexpense}
-              ></input>
+              ></input> <br />
               <label for="cibil">
                 CIBIL Score -{" "}
                 <a href="https://www.cibil.com/freecibilscore">Check Now</a>{" "}
-              </label>
+              </label> <br />
               <input
                 type="number"
                 name="cibil"
@@ -383,8 +364,8 @@ function Dashboard(Profile) {
                   setcibil(event.target.value);
                 }}
                 value={cibil}
-              ></input>
-              <label for="">What is your expected salary?</label>
+              ></input> <br />
+              <label for="">What is your expected salary?</label>  <br />
               <input
                 type=""
                 name=""
@@ -394,8 +375,8 @@ function Dashboard(Profile) {
                   setexpectedSal(event.target.value);
                 }}
                 value={expectedSal}
-              ></input>
-              <label for="">
+              ></input> <br />
+              <label for=""> <br />
                 By when does you expect to start withdrawing principal?
               </label>
               <input
@@ -407,11 +388,11 @@ function Dashboard(Profile) {
                   setwithdrawPrincipal(event.target.value);
                 }}
                 value={withdrawPrincipal}
-              ></input>
-              <label for="">
+              ></input> <br />
+              <label for=""> <br />
                 Once you begin using the money you accumulated,you expect to use
                 that money for a period of{" "}
-              </label>
+              </label> <br />
               <input
                 type=""
                 name=""
@@ -421,15 +402,15 @@ function Dashboard(Profile) {
                   setperiod(event.target.value);
                 }}
                 value={period}
-              ></input>
-              <label>Current and future source of income: - </label>
+              ></input> <br />
+              <label>Current and future source of income: - </label> <br />
               <select
                 required
                 onChange={(event) => {
                   setsourceOfIncome(event.target.value);
                 }}
                 value={sourceOfIncome}
-              >
+              > <br />
                 <option value="" defaultValue disabled hidden>
                   Choose Here
                 </option>
@@ -443,7 +424,7 @@ function Dashboard(Profile) {
               <label>
                 Aside from portfolio, Do you have adequate liquid assets to meet
                 major expenses in next 6-9 months ?{" "}
-              </label>
+              </label> <br />
               <select
                 required
                 onChange={(event) => {
@@ -460,12 +441,12 @@ function Dashboard(Profile) {
                 <option value="Disagree">Disagree</option>
                 <option value="Strongly Disagree">Strongly Disagree</option>
               </select>
-              <br />
+              <br />  <br />
 
               <label>
                 If you owned a stock investment portfolio that lost more than
                 25% in 7 months, you would
-              </label>
+              </label> <br />
               <select
                 required
                 onChange={(event) => {
@@ -489,12 +470,12 @@ function Dashboard(Profile) {
                   Buy more of the investments
                 </option>
               </select>
-              <br />
+              <br />  <br />
 
               <label>
                 If you owned a bond investment portfolio that lost 9% in 11
                 months, you would
-              </label>
+              </label> <br />
               <select
                 required
                 onChange={(event) => {
@@ -519,14 +500,14 @@ function Dashboard(Profile) {
                 </option>
               </select>
               <br />
-
+              <br />
               <label>
                 Before you make a decision on any investment, you need to
                 consider how you feel about the prospect of potential loss of
                 principal. This is a basic principle of investing: the higher
                 return you seek, the more risk you face. Based on your feelings
                 about risk and potential returns, your goal is to
-              </label>
+              </label> <br />
               <select
                 required
                 onChange={(event) => {
@@ -558,7 +539,7 @@ function Dashboard(Profile) {
 
               <label>
                 How many years have you been investing in Financial Markets?
-              </label>
+              </label> <br />
               <select
                 required
                 onChange={(event) => {
@@ -583,7 +564,7 @@ function Dashboard(Profile) {
               <label>
                 Assuming normal market conditions you expect your portfolio to,
                 overtime:
-              </label>
+              </label> <br />
               <select
                 required
                 onChange={(event) => {
@@ -609,7 +590,7 @@ function Dashboard(Profile) {
               </select>
               <br />
 
-              <label>You would prefer investments that have yearly:</label>
+              <label>You would prefer investments that have yearly:</label> <br />
               <select
                 required
                 onChange={(event) => {
@@ -642,7 +623,7 @@ function Dashboard(Profile) {
                 Do you believe that you can endure significant ups and downs in
                 the market, because you are looking for as much long-term growth
                 for your investments as possible
-              </label>
+              </label> <br />
               <select
                 required
                 onChange={(event) => {
@@ -665,7 +646,7 @@ function Dashboard(Profile) {
                 Using given five year illustration, choose which scenario
                 appeals to you the most: <br />
                 <br />
-              </label>
+              </label> <br />
               <img width="100%" src={Portfolio} alt="Portfolio" />
               <br />
               <br />
@@ -754,10 +735,10 @@ function Dashboard(Profile) {
                   To assure the safety for principal
                 </option>
               </select>
-              <br />
+              <br /> <br /> 
 
-              <button type="submit">Submit</button>
-            </form>
+              <button type="submit">Submit</button> <br />
+            </form> <br />
           </div>
           <div id="logo" className="loadingio-spinner-rolling-kswyn6f3gj7">
             <div className="ldio-c9p079igqka">

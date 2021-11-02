@@ -14,6 +14,7 @@ import Contact from "./Pages/contact";
 import Planning from "./Pages/Service Components/Planning/planning";
 import Execution from "./Pages/Service Components/Execution/execution";
 import Monitoring from "./Pages/Service Components/Monitoring/monitoring";
+import AppointmentModal from "./Pages/AppointmentModal";
 import Investment from "./Pages/features/investment";
 import Wealth from "./Pages/features/wealth";
 import Tax from "./Pages/features/tax";
@@ -22,6 +23,7 @@ import PortfolioAllocation from "./Pages/features/PortfolioAllocation.js";
 import WealthPortfolioAllocation from "./Pages/features/wealthPortfolioAllocation.js";
 import RetirementPortfolioAllocation from "./Pages/features/RetirementPortfolioAllocation.js";
 import TaxPortfolioAllocation from "./Pages/features/TaxPortfolioAllocation.js";
+import Scheduler from "./Pages/scheduler";
 import Admin from "./Pages/admin";
 import MyProfile from "./Pages/profile";
 import Policy from "./Pages/policy";
@@ -68,6 +70,12 @@ const Main = ({ Profile, setProfile }) => {
         </Route>{" "}
         <Route exact path="/monitoring">
           <Monitoring />
+        </Route>{" "}
+        <Route exact path="/AppointmentModal">
+          <AppointmentModal />
+        </Route>{" "}
+        <Route exact path="/scheduler">
+          <Scheduler />
         </Route>{" "}
         <Route exact path="/contact">
           <Contact />
